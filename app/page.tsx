@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Generator from "@/components/Generator";
+import CategorySection from "@/components/CategorySection";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import { PAGES } from "@/lib/pages";
 import { OLD_ENGLISH_FAMILY } from "@/lib/fonts";
@@ -48,14 +49,14 @@ const PILLS = [
 ];
 
 const USE_CASES = [
-  { h: "Instagram bios & captions", p: "Drop blackletter text into your bio for instant personality. Works in captions and comments too." },
-  { h: "Discord usernames & status", p: "Stand out on every server. Gothic Unicode renders the same on desktop, web, and mobile clients." },
-  { h: "Tattoo lettering mockups", p: "Preview how a name or quote looks in dozens of blackletter variants before talking to an artist." },
-  { h: "Logo & brand text", p: "Sketch logo wordmarks in gothic styles before committing to a vector typeface." },
-  { h: "Gaming profiles", p: "Steam, Xbox, and PSN accept most blackletter ranges in display names." },
-  { h: "YouTube titles", p: "Use Old English text in video titles, end-screen cards, and channel descriptions." },
-  { h: "TikTok captions", p: "Catch the eye on the For You feed without changing video copy." },
-  { h: "Wedding & invites", p: "Mock up event titles in a few medieval scripts before sending to your designer." },
+  { icon: "📷", h: "Instagram bios & captions", p: "Drop blackletter text into your bio for instant personality. Works in captions and comments too." },
+  { icon: "💬", h: "Discord usernames & status", p: "Stand out on every server. Gothic Unicode renders the same on desktop, web, and mobile clients." },
+  { icon: "🎨", h: "Tattoo lettering mockups", p: "Preview how a name or quote looks in dozens of blackletter variants before talking to an artist." },
+  { icon: "✦", h: "Logo & brand text", p: "Sketch logo wordmarks in gothic styles before committing to a vector typeface." },
+  { icon: "🎮", h: "Gaming profiles", p: "Steam, Xbox, and PSN accept most blackletter ranges in display names." },
+  { icon: "▶", h: "YouTube titles", p: "Use Old English text in video titles, end-screen cards, and channel descriptions." },
+  { icon: "🎵", h: "TikTok captions", p: "Catch the eye on the For You feed without changing video copy." },
+  { icon: "💌", h: "Wedding & invites", p: "Mock up event titles in medieval scripts before sending to your designer." },
 ];
 
 const FAQ = [
@@ -68,8 +69,16 @@ const FAQ = [
     a: "It's text. The generator swaps each letter for a Unicode codepoint that looks like Old English. Because the result is still plain text, it pastes into apps that don't let you change fonts.",
   },
   {
-    q: "Will it work on Instagram, TikTok, and Discord?",
-    a: "Yes. Bios, captions, comments, and most username fields accept the Unicode ranges used here. A few apps strip rare characters from usernames — if that happens, try a different variant.",
+    q: "How do I use Old English fonts on Instagram?",
+    a: "Type your text in the generator, tap a style to copy it, then open Instagram and paste it into your bio, post caption, or comment. Bios accept the widest range; usernames sometimes filter unusual characters.",
+  },
+  {
+    q: "How do I add blackletter text to TikTok?",
+    a: "Copy a style here, then paste it into your TikTok bio (Profile → Edit profile → Bio) or directly into a video caption. The Unicode renders identically on web and the iOS/Android apps.",
+  },
+  {
+    q: "Will it work on Discord?",
+    a: "Yes. Discord accepts Unicode in messages, server nicknames, custom status, and channel names. For bold or italic inside a message you can also use Discord's markdown (**bold**, *italic*) — Unicode is the only option for usernames.",
   },
   {
     q: "Old English vs. gothic vs. blackletter — what's the difference?",
@@ -78,6 +87,10 @@ const FAQ = [
   {
     q: "Can I use this for a tattoo?",
     a: "For mockups, absolutely — preview your phrase in every style. For the actual tattoo, your artist will need a real vector font (TTF/OTF) so the linework stays sharp at any size. Use the generator to decide which style you want.",
+  },
+  {
+    q: "Are these fonts safe to use in usernames?",
+    a: "Bios and captions accept the full Unicode range across all major platforms. Username fields are stricter — Instagram, X, and TikTok filter some exotic characters. If a variant won't save, try one closer to standard letters (Small Caps, Bold Serif).",
   },
   {
     q: "Why do some characters look like empty boxes?",
@@ -98,6 +111,10 @@ const FAQ = [
   {
     q: "Can I combine multiple styles in one post?",
     a: "Yes — paste different styles into different parts of your text. Each chunk of Unicode is independent.",
+  },
+  {
+    q: "Which Unicode blocks power these styles?",
+    a: "Most of the variants come from the Mathematical Alphanumeric Symbols block (U+1D400–U+1D7FF), which covers bold, italic, fraktur, script, double-struck, and monospace alphabets. Decorative variants pull from Enclosed Alphanumerics (U+2460–U+24FF), Halfwidth and Fullwidth Forms (U+FF00–U+FFEF), and Combining Diacritical Marks (U+0300–U+036F) for glitch and underline effects.",
   },
 ];
 
@@ -121,7 +138,78 @@ export default function Home() {
               resultsTitle="Old English Font Styles"
               initialVisible={8}
             />
+
+            <div className="ad-slot" aria-hidden="true">Advertisement</div>
           </section>
+        </div>
+
+        <div className="container">
+          <CategorySection
+            title="Cursive Fonts"
+            description="Smooth, flowing script styles that read like fountain-pen handwriting."
+            href="/font-generator/cursive"
+            styles={["script", "script-bold", "italic-serif", "bold-italic-serif"]}
+            sample="cursive text"
+          />
+          <CategorySection
+            title="Bold Fonts"
+            description="Heavy, attention-grabbing letterforms in serif, sans, and italic."
+            href="/font-generator/bold"
+            styles={["bold-serif", "bold-italic-serif", "sans-bold", "sans-bold-italic"]}
+            sample="bold text"
+          />
+          <CategorySection
+            title="Fancy Fonts"
+            description="Decorative, ornate styles for headlines, posts, and profiles."
+            href="/font-generator/fancy"
+            styles={["script", "fraktur", "double-struck", "small-caps"]}
+            sample="fancy text"
+          />
+          <CategorySection
+            title="Italic Fonts"
+            description="Slanted Unicode variants for emphasis where formatting isn't available."
+            href="/font-generator/italic"
+            styles={["italic-serif", "bold-italic-serif", "sans-italic", "sans-bold-italic"]}
+            sample="italic text"
+          />
+
+          <div className="ad-slot" aria-hidden="true">Advertisement</div>
+
+          <CategorySection
+            title="Bubble Fonts"
+            description="Circled, balloon-like letters in outlined and filled variants."
+            href="/font-generator/bubble"
+            styles={["bubble", "bubble-filled", "squared"]}
+            sample="bubble text"
+          />
+          <CategorySection
+            title="Small Caps"
+            description="ʟᴏᴡᴇʀᴄᴀsᴇ ʟᴇᴛᴛᴇʀs ɪɴ ᴄᴀᴘɪᴛᴀʟ shapes — minimal and typographic."
+            href="/font-generator/small-caps"
+            styles={["small-caps", "fraktur", "sans-bold"]}
+            sample="small caps"
+          />
+          <CategorySection
+            title="Glitch & Zalgo"
+            description="Stacked combining marks for corrupted, eerie, and unsettling text."
+            href="/font-generator/glitch"
+            styles={["zalgo-soft", "zalgo", "zalgo-extreme"]}
+            sample="glitch text"
+          />
+          <CategorySection
+            title="Instagram Fonts"
+            description="The styles people actually use in IG bios, captions, and stories."
+            href="/font-generator/instagram"
+            styles={["script", "fraktur", "small-caps", "double-struck"]}
+            sample="instagram bio"
+          />
+          <CategorySection
+            title="Discord Fonts"
+            description="Username, status, and message styles that survive Discord's filters."
+            href="/font-generator/discord"
+            styles={["fraktur", "bold-serif", "italic-serif", "monospace"]}
+            sample="discord name"
+          />
         </div>
 
         <section className="section" id="how">
@@ -156,6 +244,7 @@ export default function Home() {
             <div className="usecases">
               {USE_CASES.map((u) => (
                 <div className="usecase" key={u.h}>
+                  <div className="usecase-icon" aria-hidden="true">{u.icon}</div>
                   <h3>{u.h}</h3>
                   <p>{u.p}</p>
                 </div>
@@ -163,6 +252,10 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <div className="container">
+          <div className="ad-slot" aria-hidden="true">Advertisement</div>
+        </div>
 
         <section className="section" id="about">
           <div className="container">
@@ -179,14 +272,14 @@ export default function Home() {
             </p>
             <h2 style={{ marginTop: 36 }}>Old English vs. gothic vs. blackletter</h2>
             <p>
-              These are three names for one family. &ldquo;Blackletter&rdquo;
-              is the typographer&rsquo;s term; &ldquo;gothic&rdquo; is the
-              everyday word; &ldquo;Old English&rdquo; is what most sign
-              shops, tattoo artists, and font marketplaces call it. Inside
-              the family there are subgenres — textura, rotunda, schwabacher,
-              fraktur — that differ in how strokes break and curve. The styles
-              you see in this generator approximate the most recognizable of
-              those subgenres using Unicode characters.
+              These are three names for one family. Blackletter is the
+              typographer&rsquo;s term; gothic is the everyday word; Old
+              English is what most sign shops, tattoo artists, and font
+              marketplaces call it. Inside the family there are subgenres —
+              textura, rotunda, schwabacher, fraktur — that differ in how
+              strokes break and curve. The styles you see in this generator
+              approximate the most recognizable of those subgenres using
+              Unicode characters.
             </p>
             <h2 style={{ marginTop: 36 }}>How the Unicode trick works</h2>
             <p>
@@ -197,16 +290,18 @@ export default function Home() {
               block (U+1D400–U+1D7FF) covers bold, italic, fraktur, script,
               double-struck, and monospace. When the generator outputs a
               blackletter A, it&rsquo;s sending codepoint U+1D504. Because
-              the result is plain text, it survives copy/paste into any app —
-              even apps that don&rsquo;t let you change fonts.
+              the result is plain text, it survives copy/paste into any app
+              — even apps that don&rsquo;t let you change fonts. Decorative
+              variants pull from Enclosed Alphanumerics (U+2460–U+24FF),
+              Fullwidth Forms (U+FF00–U+FFEF), and Combining Diacritical
+              Marks (U+0300–U+036F) for glitch and underline effects.
             </p>
           </div>
         </section>
 
         <section className="section faq" id="faq">
           <div className="container">
-            <div className="eyebrow">Questions</div>
-            <h2>Frequently asked questions</h2>
+            <h2>Frequently Asked Questions</h2>
             {FAQ.map((f) => (
               <details key={f.q}>
                 <summary>{f.q}</summary>
