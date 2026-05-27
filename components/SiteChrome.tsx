@@ -109,11 +109,23 @@ export function SiteHeader() {
           <Link href="/username-generator" onClick={close} className="mn-top">
             Username Generator
           </Link>
+          <Link href="/headcanon-generator" onClick={close} className="mn-top">
+            Headcanon Generator
+          </Link>
+          <Link href="/story-generator" onClick={close} className="mn-top">
+            Story Generator
+          </Link>
+          <Link href="/uuid-generator" onClick={close} className="mn-top">
+            UUID Generator
+          </Link>
           <Link href="/ascii-generator" onClick={close} className="mn-top">
             ASCII Art
           </Link>
           <Link href="/image-to-ascii" onClick={close} className="mn-top">
             Image to ASCII
+          </Link>
+          <Link href="/favorites" onClick={close} className="mn-top">
+            ★ Favorites
           </Link>
           <Link href="/sitemap" onClick={close} className="mn-top">
             Sitemap
@@ -151,13 +163,12 @@ export function SiteFooter() {
             <ul>
               <li><Link href="/font-mixer"><Icon d={ICONS.bolt} /> Font Mixer</Link></li>
               <li><Link href="/username-generator"><Icon d={ICONS.generator} /> Username Generator</Link></li>
+              <li><Link href="/headcanon-generator"><Icon d={ICONS.book} /> Headcanon Generator</Link></li>
+              <li><Link href="/story-generator"><Icon d={ICONS.book} /> Story Generator</Link></li>
+              <li><Link href="/uuid-generator"><Icon d={ICONS.bolt} /> UUID Generator</Link></li>
               <li><Link href="/ascii-generator"><Icon d={ICONS.ascii} /> ASCII Generator</Link></li>
               <li><Link href="/image-to-ascii"><Icon d={ICONS.image} /> Image to ASCII</Link></li>
-              <li><Link href="/font-generator/cursive"><Icon d={ICONS.bolt} /> Cursive Generator</Link></li>
-              <li><Link href="/font-generator/bold"><Icon d={ICONS.bolt} /> Bold Generator</Link></li>
-              <li><Link href="/font-generator/instagram"><Icon d={ICONS.bolt} /> Instagram Fonts</Link></li>
-              <li><Link href="/font-generator/discord"><Icon d={ICONS.bolt} /> Discord Fonts</Link></li>
-              <li><Link href="/font-generator/zalgo"><Icon d={ICONS.bolt} /> Zalgo Generator</Link></li>
+              <li><Link href="/favorites"><Icon d={ICONS.bolt} /> ★ Favorites</Link></li>
             </ul>
           </div>
           <div className="footer-col">

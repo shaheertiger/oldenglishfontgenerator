@@ -10,6 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/font-generator`, priority: 0.9, changeFrequency: "weekly" as const },
     { url: `${BASE}/font-mixer`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE}/username-generator`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${BASE}/headcanon-generator`, priority: 0.7, changeFrequency: "monthly" as const },
+    { url: `${BASE}/story-generator`, priority: 0.7, changeFrequency: "monthly" as const },
+    { url: `${BASE}/uuid-generator`, priority: 0.6, changeFrequency: "monthly" as const },
     { url: `${BASE}/ascii-generator`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE}/image-to-ascii`, priority: 0.8, changeFrequency: "monthly" as const },
   ];
