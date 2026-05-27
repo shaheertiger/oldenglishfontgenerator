@@ -12,7 +12,20 @@ export type PageConfig = {
   defaultText?: string;
   about: { heading: string; body: string }[];
   faq: { q: string; a: string }[];
+  whereToUse?: { app: string; note: string }[];
+  examples?: string[];
 };
+
+const COMMON_PLATFORMS = [
+  { app: "Instagram", note: "Bios, captions, comments" },
+  { app: "TikTok", note: "Usernames, captions, comments" },
+  { app: "Discord", note: "Messages, status, nicknames" },
+  { app: "Twitter / X", note: "Display name, bio, tweets" },
+  { app: "Facebook", note: "Posts and comments" },
+  { app: "WhatsApp", note: "Messages and status" },
+  { app: "YouTube", note: "Channel name, video titles" },
+  { app: "Telegram", note: "Messages and bios" },
+];
 
 const ALL_VARIETY = [
   "fraktur",
@@ -596,4 +609,9 @@ export const PAGE_INDEX_DESCRIPTION =
 
 export function getPage(slug: string): PageConfig | undefined {
   return PAGES.find((p) => p.slug === slug);
+}
+
+export function platformsFor(page: PageConfig) {
+  if (page.whereToUse) return page.whereToUse;
+  return COMMON_PLATFORMS;
 }
