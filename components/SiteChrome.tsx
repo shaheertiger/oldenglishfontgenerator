@@ -21,23 +21,48 @@ const ICONS = {
   bolt: "M13 2 4.5 14h6L9 22l9-13h-6L13 2z",
 };
 
-const NAV = [
-  { href: "/", label: "Home" },
-  { href: "/font-generator", label: "Font Generator" },
-  { href: "/ascii-generator", label: "ASCII" },
-  { href: "/image-to-ascii", label: "Image → ASCII" },
+const MOBILE_GENERATORS: { label: string; slug: string }[] = [
+  { label: "Bold", slug: "bold" },
+  { label: "Cursive", slug: "cursive" },
+  { label: "Fancy", slug: "fancy" },
+  { label: "Italic", slug: "italic" },
+  { label: "Cool", slug: "cool" },
+  { label: "Stylish", slug: "stylish" },
+  { label: "Glitch", slug: "glitch" },
+  { label: "Weird", slug: "weird" },
+  { label: "Zalgo", slug: "zalgo" },
+  { label: "Cursed", slug: "cursed" },
+  { label: "Creepy", slug: "creepy" },
+  { label: "Big", slug: "big" },
+  { label: "Small", slug: "small" },
+  { label: "Small Caps", slug: "small-caps" },
+  { label: "Upside Down", slug: "upside-down" },
+  { label: "Reverse", slug: "reverse" },
+  { label: "Bubble", slug: "bubble" },
+  { label: "Strikethrough", slug: "strikethrough" },
+  { label: "Underline", slug: "underline" },
+  { label: "Instagram", slug: "instagram" },
+  { label: "IG Font", slug: "ig-font" },
+  { label: "TikTok", slug: "tiktok" },
+  { label: "Twitter", slug: "twitter" },
+  { label: "Facebook", slug: "facebook" },
+  { label: "Discord", slug: "discord" },
 ];
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [genOpen, setGenOpen] = useState(true);
+  const close = () => setOpen(false);
+
   return (
     <header className="site-header">
       <div className="container-wide row">
-        <Link href="/" className="logo" onClick={() => setOpen(false)}>Old English Fonts</Link>
+        <Link href="/" className="logo" onClick={close}>Old English Fonts</Link>
         <nav className="nav">
-          {NAV.map((l) => (
-            <Link key={l.href} href={l.href}>{l.label}</Link>
-          ))}
+          <Link href="/">Home</Link>
+          <Link href="/font-generator">Font Generator</Link>
+          <Link href="/ascii-generator">ASCII</Link>
+          <Link href="/image-to-ascii">Image → ASCII</Link>
         </nav>
         <button
           className="menu-btn"
@@ -49,17 +74,46 @@ export function SiteHeader() {
           {open ? "✕" : "☰"}
         </button>
       </div>
-      <nav
-        id="mobile-nav"
-        className={`mobile-nav ${open ? "open" : ""}`}
-        aria-hidden={!open}
-      >
-        {NAV.map((l) => (
-          <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>
-            {l.label}
+
+      {open && (
+        <div id="mobile-nav" className="mobile-nav" role="dialog" aria-label="Site menu">
+          <button
+            className="mn-group"
+            onClick={() => setGenOpen((v) => !v)}
+            aria-expanded={genOpen}
+          >
+            <span>Font Generators</span>
+            <span className={`mn-caret ${genOpen ? "up" : ""}`}>▾</span>
+          </button>
+          {genOpen && (
+            <div className="mn-grid">
+              {MOBILE_GENERATORS.map((g) => (
+                <Link
+                  key={g.slug}
+                  href={`/font-generator/${g.slug}`}
+                  onClick={close}
+                  className="mn-item"
+                >
+                  {g.label}
+                </Link>
+              ))}
+            </div>
+          )}
+
+          <Link href="/font-generator" onClick={close} className="mn-top">
+            All Font Generators
           </Link>
-        ))}
-      </nav>
+          <Link href="/ascii-generator" onClick={close} className="mn-top">
+            ASCII Art
+          </Link>
+          <Link href="/image-to-ascii" onClick={close} className="mn-top">
+            Image to ASCII
+          </Link>
+          <Link href="/sitemap" onClick={close} className="mn-top">
+            Sitemap
+          </Link>
+        </div>
+      )}
     </header>
   );
 }
