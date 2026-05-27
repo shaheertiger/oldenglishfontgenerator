@@ -103,6 +103,9 @@ export function SiteHeader() {
           <Link href="/font-generator" onClick={close} className="mn-top">
             All Font Generators
           </Link>
+          <Link href="/auto-font-styler" onClick={close} className="mn-top">
+            Auto Font Styler
+          </Link>
           <Link href="/font-mixer" onClick={close} className="mn-top">
             Font Mixer
           </Link>
@@ -161,6 +164,7 @@ export function SiteFooter() {
           <div className="footer-col">
             <h4>More tools</h4>
             <ul>
+              <li><Link href="/auto-font-styler"><Icon d={ICONS.bolt} /> Auto Font Styler</Link></li>
               <li><Link href="/font-mixer"><Icon d={ICONS.bolt} /> Font Mixer</Link></li>
               <li><Link href="/username-generator"><Icon d={ICONS.generator} /> Username Generator</Link></li>
               <li><Link href="/headcanon-generator"><Icon d={ICONS.book} /> Headcanon Generator</Link></li>

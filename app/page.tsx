@@ -9,9 +9,9 @@ import { OLD_ENGLISH_FAMILY } from "@/lib/fonts";
 const SITE_URL = "https://www.oldenglishfontgenerator.com";
 
 export const metadata: Metadata = {
-  title: "Old English Font Generator – 25+ Blackletter, Gothic & Fraktur Styles",
+  title: "Old English Font Generator – 60+ Blackletter, Gothic & Fraktur Styles",
   description:
-    "Free Old English font generator with 25+ blackletter, gothic, medieval, and fraktur styles. Copy and paste into Instagram, TikTok, Discord, YouTube, bios, and usernames.",
+    "Free Old English font generator with 60+ blackletter, gothic, medieval, and fraktur styles. Copy and paste into Instagram, TikTok, Discord, YouTube, bios, and usernames.",
   keywords: [
     "old english font",
     "old english font generator",
@@ -127,7 +127,7 @@ export default function Home() {
           <section className="hero" id="generator">
             <h1>Old English Font Generator</h1>
             <p className="lead">
-              Convert any text into 25+ Old English, gothic, blackletter, and
+              Convert any text into 60+ Old English, gothic, blackletter, and
               medieval Unicode styles. Copy and paste into Instagram, TikTok,
               Discord, YouTube, bios, usernames, and more.
             </p>
@@ -225,7 +225,7 @@ export default function Home() {
               <div className="step">
                 <div className="num">02</div>
                 <h3>Pick a style</h3>
-                <p>Scroll through 25+ blackletter, gothic, and medieval variants until one fits the tone.</p>
+                <p>Scroll through 60+ blackletter, gothic, and medieval variants until one fits the tone.</p>
               </div>
               <div className="step">
                 <div className="num">03</div>

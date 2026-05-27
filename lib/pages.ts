@@ -62,7 +62,7 @@ export const PAGES: PageConfig[] = [
     h1: "Cursive Font Generator",
     intro:
       "Turn anything you type into smooth cursive and script styles. Copy a variant and paste it into your bio, captions, comments, or DMs — no app or sign-up needed.",
-    styles: ["script", "script-bold", "italic-serif", "bold-italic-serif", "sans-italic", "sans-bold-italic"],
+    styles: ["script", "script-bold", "italic-serif", "bold-italic-serif", "sans-italic", "sans-bold-italic", "cursive-underline", "cursive-strike", "cursive-spaced", "cursive-bold-spaced", "italic-underline", "italic-strike", "italic-spaced", "script-zalgo", "medieval-script"],
     about: [
       {
         heading: "What counts as a cursive font?",
@@ -151,7 +151,7 @@ export const PAGES: PageConfig[] = [
     h1: "Bold Font Generator",
     intro:
       "Type your message and grab a bold version that survives copy-paste. Use it where rich-text formatting isn't available.",
-    styles: ["bold-serif", "bold-italic-serif", "sans-bold", "sans-bold-italic", "fraktur-bold", "script-bold"],
+    styles: ["bold-serif", "bold-italic-serif", "sans-bold", "sans-bold-italic", "fraktur-bold", "script-bold", "bold-spaced", "bold-underline", "bold-strike", "sans-bold-spaced", "gothic-bold", "blackletter-bold", "alternating", "stacked-bold-strike", "tattoo-gothic"],
     about: [
       {
         heading: "Bold via Unicode vs. bold via formatting",
@@ -381,7 +381,7 @@ export const PAGES: PageConfig[] = [
     h1: "Italics Generator",
     intro:
       "Get italic text you can paste anywhere — even in fields that don't support formatting.",
-    styles: ["italic-serif", "bold-italic-serif", "sans-italic", "sans-bold-italic", "script"],
+    styles: ["italic-serif", "bold-italic-serif", "sans-italic", "sans-bold-italic", "script", "script-bold", "italic-underline", "italic-strike", "italic-spaced", "alternating", "cursive-underline", "cursive-strike"],
     about: [
       {
         heading: "Italic Unicode vs. italic styling",
@@ -427,7 +427,7 @@ export const PAGES: PageConfig[] = [
     h1: "Fancy Font Generator",
     intro:
       "Type once, copy a style that fits your vibe — calligraphic, gothic, outlined, or vintage.",
-    styles: ["script", "script-bold", "fraktur", "fraktur-bold", "double-struck", "italic-serif", "small-caps"],
+    styles: ["script", "script-bold", "fraktur", "fraktur-bold", "double-struck", "italic-serif", "small-caps", "outline-gothic", "decorative-gothic", "royal-gothic", "medieval-script", "bold-italic-serif", "fullwidth", "ye-olde"],
     about: [
       {
         heading: "Picking the right fancy style",
@@ -565,7 +565,7 @@ export const PAGES: PageConfig[] = [
     h1: "Small Caps Generator",
     intro:
       "ʟᴏᴡᴇʀᴄᴀsᴇ ʟᴇᴛᴛᴇʀs sʜᴀᴘᴇᴅ ʟɪᴋᴇ ᴄᴀᴘɪᴛᴀʟs. Type below to convert.",
-    styles: ["small-caps"],
+    styles: ["small-caps", "small-caps-spaced", "small-caps-underline", "fraktur", "sans-bold", "italic-serif", "double-struck"],
     about: [
       {
         heading: "Why small caps look 'designy'",
@@ -700,7 +700,7 @@ export const PAGES: PageConfig[] = [
     h1: "Stylish Text Generator",
     intro:
       "A wall of styles for whatever look you're going for — clean, bold, vintage, or chaotic. Pick one and paste it anywhere.",
-    styles: ["script", "script-bold", "fraktur", "fraktur-bold", "bold-serif", "italic-serif", "bold-italic-serif", "double-struck", "small-caps", "bubble", "squared", "fullwidth"],
+    styles: ["script", "script-bold", "fraktur", "fraktur-bold", "bold-serif", "italic-serif", "bold-italic-serif", "double-struck", "small-caps", "bubble", "squared", "fullwidth", "outline-gothic", "decorative-gothic", "royal-gothic", "alternating", "cursive-underline", "bold-spaced", "italic-spaced", "small-caps-spaced"],
     about: [
       {
         heading: "Picking a style that fits the vibe",

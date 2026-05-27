@@ -17,6 +17,7 @@ const SLUGS = [
 const urlList = [
   `https://${HOST}/`,
   `https://${HOST}/font-generator`,
+  `https://${HOST}/auto-font-styler`,
   `https://${HOST}/font-mixer`,
   `https://${HOST}/username-generator`,
   `https://${HOST}/headcanon-generator`,
