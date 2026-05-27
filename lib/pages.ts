@@ -602,6 +602,145 @@ export const PAGES: PageConfig[] = [
       },
     ],
   },
+  {
+    slug: "tiktok",
+    keyword: "tiktok font generator",
+    title: "TikTok Font Generator – Fonts for Bio, Username, Captions",
+    description:
+      "Stylish fonts for TikTok bios, usernames, and video captions. Cursive, bold, gothic, and aesthetic — copy and paste instantly.",
+    h1: "TikTok Font Generator",
+    intro:
+      "Pick a font, copy it, paste it into your TikTok bio, display name, or caption. Works on iOS, Android, and tiktok.com.",
+    styles: ["script", "fraktur", "bold-serif", "italic-serif", "small-caps", "bubble", "squared", "double-struck"],
+    about: [
+      {
+        heading: "Which fonts render best on TikTok?",
+        body: "Cursive script and small-caps usually look the cleanest on the For You feed because they stay readable at small caption sizes. Heavily decorated styles can clip on shorter videos — preview before posting.",
+      },
+      {
+        heading: "Username vs. caption restrictions",
+        body: "TikTok captions accept the full Unicode range. The @-handle is restricted to a safe alphanumeric set; the display name above your handle accepts most styled letters but a few exotic ones get filtered.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will a stylized name hurt my discoverability?",
+        a: "TikTok's search indexes plain text, so styled display names are slightly harder to find. Most creators put the styled name on the profile and keep their @-handle in plain text — best of both worlds.",
+      },
+      {
+        q: "Can I use these in TikTok comments?",
+        a: "Yes — comments accept Unicode the same way captions do.",
+      },
+    ],
+  },
+  {
+    slug: "ig-font",
+    keyword: "ig font",
+    title: "IG Font Generator – Instagram Fonts Copy & Paste",
+    description:
+      "Quick Instagram fonts: cursive, bold, gothic, aesthetic, and small caps. Generated from your text — copy and paste into bio, captions, or comments.",
+    h1: "IG Font Generator",
+    intro:
+      "The fastest way to stylize your Instagram text. Type once, pick a style, paste into your bio.",
+    styles: ["script", "script-bold", "fraktur", "bold-serif", "italic-serif", "small-caps", "bubble", "double-struck", "monospace"],
+    about: [
+      {
+        heading: "Where styled fonts fit on Instagram",
+        body: "Bios are the safest place — Instagram displays the full Unicode range, and styled bios catch the eye on profile previews. Captions work too; usernames are stricter and filter unusual characters.",
+      },
+    ],
+    faq: [
+      {
+        q: "Does Instagram count styled letters toward the bio character limit?",
+        a: "Yes. Some styles use surrogate pairs that count as two units, so you may fit fewer characters than the plain text equivalent.",
+      },
+      {
+        q: "Why does the style look different on my friend's phone?",
+        a: "Different devices ship different fonts. Older phones may show fallbacks or empty boxes for rarer Unicode ranges.",
+      },
+    ],
+  },
+  {
+    slug: "underline",
+    keyword: "underline copy paste",
+    title: "Underline Text Generator – Copy & Paste Underlined Text",
+    description:
+      "Underline text using combining Unicode characters. Single, double, and slashed variants — copy and paste into any app.",
+    h1: "Underline Text Generator",
+    intro:
+      "Add an underline that survives copy-paste. Each character gets an invisible combining mark, so the result is still plain text.",
+    styles: ["underline", "double-underline", "strikethrough", "slash-through"],
+    about: [
+      {
+        heading: "How underline works without formatting",
+        body: "Most apps don't let you underline text directly. The trick is the 'combining low line' character (U+0332), which the renderer draws underneath the previous letter. Stack two of them for a double underline.",
+      },
+      {
+        heading: "When to use it",
+        body: "Useful for emphasis in chats, captions, and bios where rich text isn't available. Skip it in headlines that need to look polished — combining-mark underlines render slightly inconsistent across fonts.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will the underline copy as a real underline in Word or Google Docs?",
+        a: "No — it pastes as the combining characters. To get a real underline in a word processor, use the app's underline button instead.",
+      },
+      {
+        q: "Why does the underline sometimes look broken between letters?",
+        a: "Each character has its own underline mark, so spacing between glyphs leaves tiny gaps. It's a Unicode limitation, not a bug in the generator.",
+      },
+    ],
+  },
+  {
+    slug: "stylish",
+    keyword: "stylish text",
+    title: "Stylish Text Generator – Aesthetic Fonts Copy & Paste",
+    description:
+      "Stylish text in dozens of Unicode fonts: cursive, gothic, bold, outline, small caps. Generated instantly and copy-paste ready.",
+    h1: "Stylish Text Generator",
+    intro:
+      "A wall of styles for whatever look you're going for — clean, bold, vintage, or chaotic. Pick one and paste it anywhere.",
+    styles: ["script", "script-bold", "fraktur", "fraktur-bold", "bold-serif", "italic-serif", "bold-italic-serif", "double-struck", "small-caps", "bubble", "squared", "fullwidth"],
+    about: [
+      {
+        heading: "Picking a style that fits the vibe",
+        body: "Script and italic styles read as warm. Bold and double-struck read as confident. Fraktur reads as formal or vintage. Bubble and squared read as playful. Match the style to the message, not just to what looks the coolest.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I combine multiple styles in one message?",
+        a: "Yes — paste different styles into different parts of your text. Each Unicode chunk is independent.",
+      },
+    ],
+  },
+  {
+    slug: "reverse",
+    keyword: "backwards b copy paste",
+    title: "Reverse Text Generator – Backwards Text Copy & Paste",
+    description:
+      "Reverse and mirror text using Unicode. Includes the famous backwards-B for stylized usernames and ironic captions.",
+    h1: "Reverse Text Generator",
+    intro:
+      "Flip your text backwards — or just grab a backwards B. Reverse mode swaps character order; the mirror styles use Unicode look-alikes.",
+    styles: ["reverse", "upside-down"],
+    about: [
+      {
+        heading: "Reverse vs. upside-down vs. mirrored",
+        body: "Reverse simply flips the character order (so 'hello' becomes 'olleh'). Upside-down also rotates each letter 180° using Unicode counterparts. A true mirror image (left-right flip) isn't possible in plain text — most letters don't have a horizontally-flipped Unicode equivalent.",
+      },
+      {
+        heading: "Where the backwards B came from",
+        body: "Pop culture made the backwards B a recognizable visual — it shows up in usernames and album art constantly. The character we use here is U+0411, the Cyrillic capital Be (Б), which sits just left of its Latin twin in any font that covers Cyrillic.",
+      },
+    ],
+    faq: [
+      {
+        q: "Does reversed text break right-to-left languages?",
+        a: "It can. Mixing reversed Latin with naturally right-to-left scripts (Arabic, Hebrew) confuses the bidirectional rendering algorithm. Use it for novelty, not real bilingual content.",
+      },
+    ],
+  },
 ];
 
 export const PAGE_INDEX_DESCRIPTION =

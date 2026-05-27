@@ -11,6 +11,7 @@ const SLUGS = [
   "fonts-copy-and-paste", "weird", "small", "discord", "discord-font",
   "glitch", "facebook", "italic", "upside-down", "fancy", "cursed",
   "creepy", "twitter", "big", "bold-text-generator", "small-caps", "zalgo",
+  "tiktok", "ig-font", "underline", "stylish", "reverse",
 ];
 
 const urlList = [
