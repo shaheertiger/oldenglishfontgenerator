@@ -10,6 +10,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/`, priority: 1, changeFrequency: "weekly" as const },
     { url: `${BASE}/es`, priority: 0.9, changeFrequency: "weekly" as const },
     { url: `${BASE}/blog`, priority: 0.8, changeFrequency: "weekly" as const },
+    { url: `${BASE}/preppy`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${BASE}/coquette`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${BASE}/different-fonts`, priority: 0.7, changeFrequency: "monthly" as const },
     { url: `${BASE}/font-generator`, priority: 0.9, changeFrequency: "weekly" as const },
     { url: `${BASE}/auto-font-styler`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE}/font-mixer`, priority: 0.8, changeFrequency: "monthly" as const },
@@ -30,5 +33,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
     changeFrequency: "monthly" as const,
   }));
-  return [...staticUrls, ...slugUrls, ...blogUrls].map((u) => ({ ...u, lastModified: now }));
+  const letterUrls = "abcdefghijklmnopqrstuvwxyz0123456789".split("").map((c) => ({
+    url: `${BASE}/different-fonts/${c}`,
+    priority: 0.6,
+    changeFrequency: "monthly" as const,
+  }));
+  return [...staticUrls, ...slugUrls, ...blogUrls, ...letterUrls].map((u) => ({ ...u, lastModified: now }));
 }

@@ -22,10 +22,16 @@ const BLOG_SLUGS = [
   "best-old-english-fonts-for-discord",
 ];
 
+const LETTERS = "abcdefghijklmnopqrstuvwxyz0123456789".split("");
+
 const urlList = [
   `https://${HOST}/`,
   `https://${HOST}/es`,
   `https://${HOST}/blog`,
+  `https://${HOST}/preppy`,
+  `https://${HOST}/coquette`,
+  `https://${HOST}/different-fonts`,
+  ...LETTERS.map((l) => `https://${HOST}/different-fonts/${l}`),
   `https://${HOST}/font-generator`,
   `https://${HOST}/auto-font-styler`,
   `https://${HOST}/font-mixer`,

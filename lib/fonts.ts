@@ -393,6 +393,123 @@ for (const s of EXTRA) {
   if (!ALL_STYLES[s.id]) ALL_STYLES[s.id] = s;
 }
 
+// ----- Novelty styles -----
+
+// Love Parenthesis: wraps each non-space char in parens
+function loveParens(text: string): string {
+  let out = "";
+  for (const ch of text) {
+    if (ch === " " || ch === "\n") out += ch;
+    else out += `(${ch})`;
+  }
+  return out;
+}
+
+// Leet Speak: classic 1337 substitutions
+const LEET_MAP: CharMap = {
+  a: "4", b: "8", e: "3", g: "9", i: "1", l: "1", o: "0",
+  s: "5", t: "7", z: "2",
+  A: "4", B: "8", E: "3", G: "9", I: "1", L: "1", O: "0",
+  S: "5", T: "7", Z: "2",
+};
+function leetSpeak(text: string): string {
+  let out = "";
+  for (const ch of text) out += LEET_MAP[ch] ?? ch;
+  return out;
+}
+
+// Japanese-style: Latin → katakana/halfwidth-katakana lookalikes
+const JAPANESE_MAP: CharMap = {
+  A: "ﾑ", B: "乃", C: "ᄃ", D: "り", E: "乇", F: "ｷ", G: "Ꮆ", H: "卄",
+  I: "丨", J: "ﾌ", K: "Ҝ", L: "ㄥ", M: "爪", N: "几", O: "ㄖ", P: "卩",
+  Q: "Ҩ", R: "尺", S: "丂", T: "ㄒ", U: "ㄩ", V: "ᐯ", W: "山", X: "乂",
+  Y: "ㄚ", Z: "乙",
+};
+function japaneseStyle(text: string): string {
+  let out = "";
+  for (const ch of text) {
+    const up = ch.toUpperCase();
+    out += JAPANESE_MAP[up] ?? ch;
+  }
+  return out;
+}
+
+// Bent: alternating between superscript and subscript-like characters
+const SUB_MAP: CharMap = {
+  a: "ₐ", e: "ₑ", h: "ₕ", i: "ᵢ", j: "ⱼ", k: "ₖ", l: "ₗ", m: "ₘ",
+  n: "ₙ", o: "ₒ", p: "ₚ", r: "ᵣ", s: "ₛ", t: "ₜ", u: "ᵤ", v: "ᵥ", x: "ₓ",
+  "0": "₀", "1": "₁", "2": "₂", "3": "₃", "4": "₄", "5": "₅",
+  "6": "₆", "7": "₇", "8": "₈", "9": "₉",
+};
+function bent(text: string): string {
+  let out = "";
+  let i = 0;
+  for (const ch of text) {
+    if (ch === " " || ch === "\n") { out += ch; continue; }
+    const lo = ch.toLowerCase();
+    const up = (i++ % 2 === 0)
+      ? (superscriptMap[lo] ?? ch)
+      : (SUB_MAP[lo] ?? ch);
+    out += up;
+  }
+  return out;
+}
+
+// Mirrored: horizontal mirror — uses Unicode reversed-form lookalikes
+const MIRROR_MAP: CharMap = {
+  a: "ɒ", b: "d", c: "ɔ", d: "b", e: "ɘ", f: "ʇ", g: "ǫ", h: "ʜ",
+  i: "i", j: "ꞁ", k: "ʞ", l: "l", m: "m", n: "n", o: "o", p: "q",
+  q: "p", r: "ɿ", s: "ƨ", t: "ƚ", u: "u", v: "v", w: "w", x: "x",
+  y: "y", z: "z",
+  A: "A", B: "ᙠ", C: "Ↄ", D: "ᗡ", E: "Ǝ", F: "ꟻ", G: "Ꭾ", H: "H",
+  I: "I", J: "Ⴑ", K: "ꓘ", L: "⅃", M: "M", N: "И", O: "O", P: "ꟼ",
+  Q: "Ϙ", R: "ᴙ", S: "Ƨ", T: "T", U: "U", V: "V", W: "W", X: "X",
+  Y: "Y", Z: "Ƹ",
+  "?": "⸮", "!": "¡", "&": "⅋", ",": "ʼ",
+};
+function mirrored(text: string): string {
+  const out: string[] = [];
+  for (const ch of text) out.push(MIRROR_MAP[ch] ?? ch);
+  return out.reverse().join("");
+}
+
+// Morse code
+const MORSE_MAP: Record<string, string> = {
+  a: ".-", b: "-...", c: "-.-.", d: "-..", e: ".", f: "..-.",
+  g: "--.", h: "....", i: "..", j: ".---", k: "-.-", l: ".-..",
+  m: "--", n: "-.", o: "---", p: ".--.", q: "--.-", r: ".-.",
+  s: "...", t: "-", u: "..-", v: "...-", w: ".--", x: "-..-",
+  y: "-.--", z: "--..",
+  "0": "-----", "1": ".----", "2": "..---", "3": "...--", "4": "....-",
+  "5": ".....", "6": "-....", "7": "--...", "8": "---..", "9": "----.",
+  ".": ".-.-.-", ",": "--..--", "?": "..--..", "!": "-.-.--",
+  "'": ".----.", "/": "-..-.", "(": "-.--.", ")": "-.--.-",
+  "&": ".-...", ":": "---...", ";": "-.-.-.", "=": "-...-",
+  "+": ".-.-.", "-": "-....-", "_": "..--.-", '"': ".-..-.",
+  "@": ".--.-.",
+};
+function morse(text: string): string {
+  const out: string[] = [];
+  for (const ch of text) {
+    if (ch === " ") out.push("/");
+    else if (ch === "\n") out.push("\n");
+    else out.push(MORSE_MAP[ch.toLowerCase()] ?? ch);
+  }
+  return out.join(" ");
+}
+
+const NOVELTY: FontStyle[] = [
+  { id: "love-parens", name: "Love Parenthesis", transform: loveParens },
+  { id: "leet", name: "Leet Speak", transform: leetSpeak },
+  { id: "japanese-style", name: "Japanese Style", transform: japaneseStyle },
+  { id: "bent", name: "Bent", transform: bent },
+  { id: "mirrored", name: "Mirrored", transform: mirrored },
+  { id: "morse", name: "Morse Code", transform: morse },
+];
+for (const s of NOVELTY) {
+  if (!ALL_STYLES[s.id]) ALL_STYLES[s.id] = s;
+}
+
 export const OLD_ENGLISH_FAMILY = [
   "gothic-classic",
   "gothic-bold",
