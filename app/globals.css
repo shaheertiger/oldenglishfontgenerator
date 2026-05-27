@@ -470,6 +470,53 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   border-color: var(--text);
 }
 
+/* ===== Symbol grid ===== */
+.sym-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+  gap: 6px;
+  margin-top: 8px;
+}
+.sym-tile {
+  position: relative;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0;
+  width: 100%;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.12s ease;
+}
+.sym-tile:hover { background: var(--bg-elev); border-color: var(--border-strong); transform: translateY(-1px); }
+.sym-tile.copied { background: var(--text); color: #fff; border-color: var(--text); }
+.sym-glyph {
+  font-size: 24px;
+  line-height: 1;
+  color: inherit;
+}
+.sym-toast {
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--text);
+  color: #fff;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 5;
+}
+
 /* ===== Use case illustration ===== */
 .usecase-art {
   width: 56px;

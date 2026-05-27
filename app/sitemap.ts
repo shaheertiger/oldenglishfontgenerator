@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { PAGES } from "@/lib/pages";
 import { POSTS } from "@/lib/blog";
+import { SYMBOL_CATEGORIES } from "@/lib/symbols";
 
 const BASE = "https://www.oldenglishfontgenerator.com";
 
@@ -13,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/preppy`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE}/coquette`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE}/different-fonts`, priority: 0.7, changeFrequency: "monthly" as const },
+    { url: `${BASE}/symbols`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE}/font-generator`, priority: 0.9, changeFrequency: "weekly" as const },
     { url: `${BASE}/auto-font-styler`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE}/font-mixer`, priority: 0.8, changeFrequency: "monthly" as const },
@@ -38,5 +40,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
     changeFrequency: "monthly" as const,
   }));
-  return [...staticUrls, ...slugUrls, ...blogUrls, ...letterUrls].map((u) => ({ ...u, lastModified: now }));
+  const symbolUrls = SYMBOL_CATEGORIES.map((c) => ({
+    url: `${BASE}/symbols/${c.slug}`,
+    priority: 0.7,
+    changeFrequency: "monthly" as const,
+  }));
+  return [...staticUrls, ...slugUrls, ...blogUrls, ...letterUrls, ...symbolUrls].map((u) => ({ ...u, lastModified: now }));
 }

@@ -24,6 +24,13 @@ const BLOG_SLUGS = [
 
 const LETTERS = "abcdefghijklmnopqrstuvwxyz0123456789".split("");
 
+const SYMBOL_SLUGS = [
+  "down-arrow", "up-arrow", "left-arrow", "right-arrow",
+  "heart", "star", "sun", "moon", "music",
+  "check-mark", "cross", "currency", "infinity",
+  "bullet", "triangle", "crown",
+];
+
 const urlList = [
   `https://${HOST}/`,
   `https://${HOST}/es`,
@@ -31,7 +38,9 @@ const urlList = [
   `https://${HOST}/preppy`,
   `https://${HOST}/coquette`,
   `https://${HOST}/different-fonts`,
+  `https://${HOST}/symbols`,
   ...LETTERS.map((l) => `https://${HOST}/different-fonts/${l}`),
+  ...SYMBOL_SLUGS.map((s) => `https://${HOST}/symbols/${s}`),
   `https://${HOST}/font-generator`,
   `https://${HOST}/auto-font-styler`,
   `https://${HOST}/font-mixer`,
