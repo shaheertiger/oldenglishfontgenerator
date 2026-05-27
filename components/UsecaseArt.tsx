@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 type Art = "instagram" | "discord" | "tattoo" | "logo" | "gaming" | "youtube" | "tiktok" | "invite";
 
 const COMMON = {
@@ -8,7 +10,7 @@ const COMMON = {
   strokeLinejoin: "round" as const,
 };
 
-const ARTS: Record<Art, JSX.Element> = {
+const ARTS: Record<Art, ReactNode> = {
   instagram: (
     <svg viewBox="0 0 64 64" {...COMMON} aria-hidden="true">
       <rect x="12" y="12" width="40" height="40" rx="10" />
