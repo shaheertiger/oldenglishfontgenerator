@@ -33,6 +33,11 @@ export async function generateMetadata(
   };
 }
 
+const SIBLING_PILLS = (currentSlug: string) =>
+  PAGES.filter((p) => p.slug !== currentSlug)
+    .slice(0, 10)
+    .map((p) => ({ label: p.h1.replace(/ (Generator|Font Generator)$/i, ""), href: `/font-generator/${p.slug}` }));
+
 export default async function Page({ params }: { params: Promise<Params> }) {
   const { slug } = await params;
   const page = getPage(slug);
@@ -41,11 +46,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   const others = PAGES.filter((p) => p.slug !== page.slug).slice(0, 12);
   const platforms = platformsFor(page);
   const sampleStyles = page.styles.slice(0, 3).map((id) => ALL_STYLES[id]).filter(Boolean);
-  const samplePhrases = page.examples ?? [
-    "hello world",
-    "good vibes only",
-    "stay weird",
-  ];
+  const samplePhrases = page.examples ?? ["hello world", "good vibes only", "stay weird"];
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -71,19 +72,28 @@ export default async function Page({ params }: { params: Promise<Params> }) {
     <>
       <SiteHeader />
       <main>
-        <div className="container breadcrumb">
-          <Link href="/">Home</Link>
-          <span className="sep">/</span>
-          <Link href="/font-generator">Font Generator</Link>
-          <span className="sep">/</span>
-          <span className="current">{page.h1}</span>
-        </div>
+        <div className="container">
+          <div className="breadcrumb">
+            <Link href="/">Home</Link>
+            <span className="sep">/</span>
+            <Link href="/font-generator">Font Generator</Link>
+            <span className="sep">/</span>
+            <span className="current">{page.h1.replace(/ Generator$/i, "")}</span>
+          </div>
 
-        <section className="hero container" id="generator">
-          <h1>{page.h1}</h1>
-          <p>{page.intro}</p>
-          <Generator styles={page.styles} defaultText={page.defaultText} />
-        </section>
+          <section className="hero" id="generator">
+            <h1>{page.h1}</h1>
+            <p className="lead">{page.intro}</p>
+
+            <Generator
+              styles={page.styles}
+              defaultText={page.defaultText}
+              pills={SIBLING_PILLS(page.slug)}
+              resultsTitle={`${page.h1.replace(/ Generator$/i, "")} Styles`}
+              initialVisible={8}
+            />
+          </section>
+        </div>
 
         {page.about[0] && (
           <section className="section">
@@ -96,34 +106,38 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
         <section className="section">
           <div className="container">
+            <div className="eyebrow">Quick guide</div>
             <h2>How to use the {page.h1.toLowerCase()}</h2>
-            <ol style={{ paddingLeft: 20, color: "var(--muted)" }}>
-              <li>Type or paste your text into the box above.</li>
-              <li>Browse the generated styles — previews update as you type.</li>
-              <li>
-                Hit <strong>Copy</strong> on the style you want and paste it
-                wherever plain text is allowed.
-              </li>
-            </ol>
-            <p>
-              Nothing is uploaded, nothing is stored. Every transformation
-              runs in your browser using Unicode characters that look like
-              different fonts but remain plain text.
-            </p>
+            <div className="steps">
+              <div className="step">
+                <div className="num">01</div>
+                <h3>Type your text</h3>
+                <p>Enter text in the box above — previews update as you type.</p>
+              </div>
+              <div className="step">
+                <div className="num">02</div>
+                <h3>Pick a variant</h3>
+                <p>Scroll through the generated styles and find the one that fits.</p>
+              </div>
+              <div className="step">
+                <div className="num">03</div>
+                <h3>Tap to copy</h3>
+                <p>Click any row to copy it, then paste it wherever you need.</p>
+              </div>
+            </div>
           </div>
         </section>
 
         <section className="section">
           <div className="container">
+            <div className="eyebrow">Compatibility</div>
             <h2>Where these styles work</h2>
-            <p>
-              Because the output is Unicode, you can paste it into almost any
-              app that accepts text:
-            </p>
+            <p>The output is plain Unicode, so it pastes into any app that accepts text:</p>
             <ul className="where-list">
               {platforms.map((p) => (
                 <li key={p.app}>
-                  <strong>{p.app}</strong> — {p.note}
+                  <strong>{p.app}</strong>
+                  {p.note}
                 </li>
               ))}
             </ul>
@@ -133,8 +147,8 @@ export default async function Page({ params }: { params: Promise<Params> }) {
         {sampleStyles.length > 0 && (
           <section className="section">
             <div className="container">
-              <h2>Examples</h2>
-              <p>Preview how short phrases look in the top styles:</p>
+              <div className="eyebrow">Examples</div>
+              <h2>Previews</h2>
               <div className="examples">
                 {sampleStyles.flatMap((s) =>
                   samplePhrases.map((phrase) => (
@@ -160,7 +174,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
         <section className="section faq" id="faq">
           <div className="container">
-            <h2>FAQ</h2>
+            <h2>Frequently Asked Questions</h2>
             {page.faq.map((f) => (
               <details key={f.q}>
                 <summary>{f.q}</summary>
@@ -172,6 +186,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
         <section className="section">
           <div className="container">
+            <div className="eyebrow">Keep exploring</div>
             <h2>More font generators</h2>
             <div className="features">
               {others.map((o) => (
@@ -179,7 +194,6 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                   key={o.slug}
                   href={`/font-generator/${o.slug}`}
                   className="feature"
-                  style={{ textDecoration: "none" }}
                 >
                   <h3>{o.h1}</h3>
                   <p>{o.description}</p>
