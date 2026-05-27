@@ -89,9 +89,11 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
     display: block;
     border-top: 1px solid var(--border);
     background: var(--bg);
-    padding: 16px 20px 24px;
-    max-height: calc(100vh - 64px);
+    padding: 16px 20px calc(40px + env(safe-area-inset-bottom));
+    max-height: calc(100dvh - 64px);
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
   }
   .mn-group {
     width: 100%;
