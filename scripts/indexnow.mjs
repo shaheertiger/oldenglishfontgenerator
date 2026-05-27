@@ -14,8 +14,18 @@ const SLUGS = [
   "tiktok", "ig-font", "underline", "stylish", "reverse",
 ];
 
+const BLOG_SLUGS = [
+  "blackletter-gothic-fraktur-difference",
+  "old-english-fonts-instagram-bio",
+  "old-english-fonts-tattoo-guide",
+  "how-unicode-fonts-actually-work",
+  "best-old-english-fonts-for-discord",
+];
+
 const urlList = [
   `https://${HOST}/`,
+  `https://${HOST}/es`,
+  `https://${HOST}/blog`,
   `https://${HOST}/font-generator`,
   `https://${HOST}/auto-font-styler`,
   `https://${HOST}/font-mixer`,
@@ -25,7 +35,9 @@ const urlList = [
   `https://${HOST}/uuid-generator`,
   `https://${HOST}/ascii-generator`,
   `https://${HOST}/image-to-ascii`,
+  `https://${HOST}/favorites`,
   ...SLUGS.map((s) => `https://${HOST}/font-generator/${s}`),
+  ...BLOG_SLUGS.map((s) => `https://${HOST}/blog/${s}`),
 ];
 
 const body = { host: HOST, key: KEY, keyLocation: KEY_LOCATION, urlList };

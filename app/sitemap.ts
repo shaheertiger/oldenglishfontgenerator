@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { PAGES } from "@/lib/pages";
+import { POSTS } from "@/lib/blog";
 
 const BASE = "https://www.oldenglishfontgenerator.com";
 
@@ -7,6 +8,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
   const staticUrls = [
     { url: `${BASE}/`, priority: 1, changeFrequency: "weekly" as const },
+    { url: `${BASE}/es`, priority: 0.9, changeFrequency: "weekly" as const },
+    { url: `${BASE}/blog`, priority: 0.8, changeFrequency: "weekly" as const },
     { url: `${BASE}/font-generator`, priority: 0.9, changeFrequency: "weekly" as const },
     { url: `${BASE}/auto-font-styler`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE}/font-mixer`, priority: 0.8, changeFrequency: "monthly" as const },
@@ -22,5 +25,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
     changeFrequency: "monthly" as const,
   }));
-  return [...staticUrls, ...slugUrls].map((u) => ({ ...u, lastModified: now }));
+  const blogUrls = POSTS.map((p) => ({
+    url: `${BASE}/blog/${p.slug}`,
+    priority: 0.7,
+    changeFrequency: "monthly" as const,
+  }));
+  return [...staticUrls, ...slugUrls, ...blogUrls].map((u) => ({ ...u, lastModified: now }));
 }

@@ -130,6 +130,9 @@ export function SiteHeader() {
           <Link href="/favorites" onClick={close} className="mn-top">
             ★ Favorites
           </Link>
+          <Link href="/blog" onClick={close} className="mn-top">
+            Blog
+          </Link>
           <Link href="/sitemap" onClick={close} className="mn-top">
             Sitemap
           </Link>
@@ -158,6 +161,7 @@ export function SiteFooter() {
             <ul>
               <li><Link href="/"><Icon d={ICONS.home} /> Home</Link></li>
               <li><Link href="/font-generator"><Icon d={ICONS.generator} /> Font Generator</Link></li>
+              <li><Link href="/blog"><Icon d={ICONS.book} /> Blog</Link></li>
               <li><Link href="/sitemap"><Icon d={ICONS.book} /> Sitemap</Link></li>
             </ul>
           </div>
@@ -180,6 +184,12 @@ export function SiteFooter() {
             <ul>
               <li><a href="mailto:hello@oldenglishfontgenerator.com"><Icon d={ICONS.mail} /> Contact</a></li>
             </ul>
+          </div>
+        </div>
+        <div style={{ display: "flex", justifyContent: "center", marginBottom: 16 }}>
+          <div className="lang-switcher">
+            <Link href="/" className="active">EN</Link>
+            <Link href="/es">ES</Link>
           </div>
         </div>
         <div className="footer-bottom">

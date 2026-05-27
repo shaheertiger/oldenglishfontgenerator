@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Generator from "@/components/Generator";
 import CategorySection from "@/components/CategorySection";
+import UsecaseArt from "@/components/UsecaseArt";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import { PAGES } from "@/lib/pages";
 import { OLD_ENGLISH_FAMILY } from "@/lib/fonts";
@@ -20,7 +21,13 @@ export const metadata: Metadata = {
     "fraktur generator",
     "medieval text generator",
   ],
-  alternates: { canonical: `${SITE_URL}/` },
+  alternates: {
+    canonical: `${SITE_URL}/`,
+    languages: {
+      "en-US": `${SITE_URL}/`,
+      "es-ES": `${SITE_URL}/es`,
+    },
+  },
   openGraph: {
     title: "Old English Font Generator – Gothic & Blackletter Styles",
     description:
@@ -49,14 +56,14 @@ const PILLS = [
 ];
 
 const USE_CASES = [
-  { icon: "📷", h: "Instagram bios & captions", p: "Drop blackletter text into your bio for instant personality. Works in captions and comments too." },
-  { icon: "💬", h: "Discord usernames & status", p: "Stand out on every server. Gothic Unicode renders the same on desktop, web, and mobile clients." },
-  { icon: "🎨", h: "Tattoo lettering mockups", p: "Preview how a name or quote looks in dozens of blackletter variants before talking to an artist." },
-  { icon: "✦", h: "Logo & brand text", p: "Sketch logo wordmarks in gothic styles before committing to a vector typeface." },
-  { icon: "🎮", h: "Gaming profiles", p: "Steam, Xbox, and PSN accept most blackletter ranges in display names." },
-  { icon: "▶", h: "YouTube titles", p: "Use Old English text in video titles, end-screen cards, and channel descriptions." },
-  { icon: "🎵", h: "TikTok captions", p: "Catch the eye on the For You feed without changing video copy." },
-  { icon: "💌", h: "Wedding & invites", p: "Mock up event titles in medieval scripts before sending to your designer." },
+  { art: "instagram" as const, h: "Instagram bios & captions", p: "Drop blackletter text into your bio for instant personality. Works in captions and comments too." },
+  { art: "discord" as const, h: "Discord usernames & status", p: "Stand out on every server. Gothic Unicode renders the same on desktop, web, and mobile clients." },
+  { art: "tattoo" as const, h: "Tattoo lettering mockups", p: "Preview how a name or quote looks in dozens of blackletter variants before talking to an artist." },
+  { art: "logo" as const, h: "Logo & brand text", p: "Sketch logo wordmarks in gothic styles before committing to a vector typeface." },
+  { art: "gaming" as const, h: "Gaming profiles", p: "Steam, Xbox, and PSN accept most blackletter ranges in display names." },
+  { art: "youtube" as const, h: "YouTube titles", p: "Use Old English text in video titles, end-screen cards, and channel descriptions." },
+  { art: "tiktok" as const, h: "TikTok captions", p: "Catch the eye on the For You feed without changing video copy." },
+  { art: "invite" as const, h: "Wedding & invites", p: "Mock up event titles in medieval scripts before sending to your designer." },
 ];
 
 const FAQ = [
@@ -244,7 +251,7 @@ export default function Home() {
             <div className="usecases">
               {USE_CASES.map((u) => (
                 <div className="usecase" key={u.h}>
-                  <div className="usecase-icon" aria-hidden="true">{u.icon}</div>
+                  <UsecaseArt name={u.art} />
                   <h3>{u.h}</h3>
                   <p>{u.p}</p>
                 </div>
