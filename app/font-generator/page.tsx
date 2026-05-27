@@ -8,11 +8,11 @@ export const metadata: Metadata = {
   title: "Font Generator – Free Special Fonts Copy & Paste",
   description: PAGE_INDEX_DESCRIPTION,
   keywords: ["special font generator", "font generator", "copy paste fonts"],
-  alternates: { canonical: "https://oldenglishfontgenerator.com/font-generator" },
+  alternates: { canonical: "https://www.oldenglishfontgenerator.com/font-generator" },
   openGraph: {
     title: "Font Generator – Free Special Fonts Copy & Paste",
     description: PAGE_INDEX_DESCRIPTION,
-    url: "https://oldenglishfontgenerator.com/font-generator",
+    url: "https://www.oldenglishfontgenerator.com/font-generator",
     type: "website",
   },
 };

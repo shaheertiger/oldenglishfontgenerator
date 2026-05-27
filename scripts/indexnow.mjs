@@ -2,7 +2,7 @@
 // Submits all site URLs to the IndexNow API. Run after deploy:
 //   npm run indexnow
 
-const HOST = "oldenglishfontgenerator.com";
+const HOST = "www.oldenglishfontgenerator.com";
 const KEY = "257716b88f564b339f3f2c4f9dd56ba0";
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 

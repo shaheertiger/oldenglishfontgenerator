@@ -18,7 +18,7 @@ export async function generateMetadata(
   const { slug } = await params;
   const page = getPage(slug);
   if (!page) return {};
-  const url = `https://oldenglishfontgenerator.com/font-generator/${page.slug}`;
+  const url = `https://www.oldenglishfontgenerator.com/font-generator/${page.slug}`;
   return {
     title: page.title,
     description: page.description,
@@ -61,9 +61,9 @@ export default async function Page({ params }: { params: Promise<Params> }) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://oldenglishfontgenerator.com/" },
-      { "@type": "ListItem", position: 2, name: "Font Generator", item: "https://oldenglishfontgenerator.com/font-generator" },
-      { "@type": "ListItem", position: 3, name: page.h1, item: `https://oldenglishfontgenerator.com/font-generator/${page.slug}` },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.oldenglishfontgenerator.com/" },
+      { "@type": "ListItem", position: 2, name: "Font Generator", item: "https://www.oldenglishfontgenerator.com/font-generator" },
+      { "@type": "ListItem", position: 3, name: page.h1, item: `https://www.oldenglishfontgenerator.com/font-generator/${page.slug}` },
     ],
   };
 

@@ -14,12 +14,12 @@ export const metadata: Metadata = {
     "gothic font generator",
     "old english text generator",
   ],
-  alternates: { canonical: "https://oldenglishfontgenerator.com/" },
+  alternates: { canonical: "https://www.oldenglishfontgenerator.com/" },
   openGraph: {
     title: "Old English Font Generator",
     description:
       "Turn any text into Old English, blackletter and gothic Unicode styles. Copy & paste ready.",
-    url: "https://oldenglishfontgenerator.com/",
+    url: "https://www.oldenglishfontgenerator.com/",
     type: "website",
   },
 };

@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   description:
     "Free ASCII art generator. Turn any text into block-letter ASCII you can copy and paste into chats, code comments, READMEs, and signatures.",
   keywords: ["ascii generator", "text to ascii", "ascii art"],
-  alternates: { canonical: "https://oldenglishfontgenerator.com/ascii-generator" },
+  alternates: { canonical: "https://www.oldenglishfontgenerator.com/ascii-generator" },
   openGraph: {
     title: "ASCII Generator – Text to ASCII Art",
     description: "Turn text into block-letter ASCII art. Copy and paste anywhere.",
-    url: "https://oldenglishfontgenerator.com/ascii-generator",
+    url: "https://www.oldenglishfontgenerator.com/ascii-generator",
     type: "website",
   },
 };

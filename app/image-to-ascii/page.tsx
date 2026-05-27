@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   description:
     "Convert any photo into ASCII art in your browser. Adjustable width, invertable, copy-paste ready. Nothing is uploaded.",
   keywords: ["photo to ascii converter", "image to ascii", "ascii art from image"],
-  alternates: { canonical: "https://oldenglishfontgenerator.com/image-to-ascii" },
+  alternates: { canonical: "https://www.oldenglishfontgenerator.com/image-to-ascii" },
   openGraph: {
     title: "Image to ASCII Converter",
     description: "Turn photos into ASCII art entirely in your browser.",
-    url: "https://oldenglishfontgenerator.com/image-to-ascii",
+    url: "https://www.oldenglishfontgenerator.com/image-to-ascii",
     type: "website",
   },
 };

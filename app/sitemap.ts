@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { PAGES } from "@/lib/pages";
 
-const BASE = "https://oldenglishfontgenerator.com";
+const BASE = "https://www.oldenglishfontgenerator.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   title: "Sitemap – All Font Generators",
   description:
     "Every page on oldenglishfontgenerator.com — font generators, ASCII tools, and more.",
-  alternates: { canonical: "https://oldenglishfontgenerator.com/sitemap" },
+  alternates: { canonical: "https://www.oldenglishfontgenerator.com/sitemap" },
 };
 
 export default function SitemapPage() {
