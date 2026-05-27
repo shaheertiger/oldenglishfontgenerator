@@ -17,6 +17,8 @@ const SLUGS = [
 const urlList = [
   `https://${HOST}/`,
   `https://${HOST}/font-generator`,
+  `https://${HOST}/font-mixer`,
+  `https://${HOST}/username-generator`,
   `https://${HOST}/ascii-generator`,
   `https://${HOST}/image-to-ascii`,
   ...SLUGS.map((s) => `https://${HOST}/font-generator/${s}`),

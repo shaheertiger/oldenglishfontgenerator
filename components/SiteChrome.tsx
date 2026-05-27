@@ -103,6 +103,12 @@ export function SiteHeader() {
           <Link href="/font-generator" onClick={close} className="mn-top">
             All Font Generators
           </Link>
+          <Link href="/font-mixer" onClick={close} className="mn-top">
+            Font Mixer
+          </Link>
+          <Link href="/username-generator" onClick={close} className="mn-top">
+            Username Generator
+          </Link>
           <Link href="/ascii-generator" onClick={close} className="mn-top">
             ASCII Art
           </Link>
@@ -143,6 +149,8 @@ export function SiteFooter() {
           <div className="footer-col">
             <h4>More tools</h4>
             <ul>
+              <li><Link href="/font-mixer"><Icon d={ICONS.bolt} /> Font Mixer</Link></li>
+              <li><Link href="/username-generator"><Icon d={ICONS.generator} /> Username Generator</Link></li>
               <li><Link href="/ascii-generator"><Icon d={ICONS.ascii} /> ASCII Generator</Link></li>
               <li><Link href="/image-to-ascii"><Icon d={ICONS.image} /> Image to ASCII</Link></li>
               <li><Link href="/font-generator/cursive"><Icon d={ICONS.bolt} /> Cursive Generator</Link></li>

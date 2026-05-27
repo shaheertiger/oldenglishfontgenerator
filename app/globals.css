@@ -324,6 +324,85 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 }
 .load-more:hover { background: #1f1f1f; }
 
+/* ===== Mixer ===== */
+.mixer-controls {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px;
+  margin: 20px 0 8px;
+}
+.mixer-field { display: flex; flex-direction: column; gap: 6px; }
+.mixer-field span {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.mixer-field select {
+  background: var(--bg);
+  border: 1px solid var(--border-strong);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--text);
+  outline: none;
+  cursor: pointer;
+}
+.mixer-field select:focus { border-color: var(--text); }
+.mixer-output {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+  margin-top: 20px;
+}
+.mixer-output-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.mixer-output-text {
+  font-size: 24px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* ===== Favorite star ===== */
+.fav-btn {
+  background: transparent;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--muted-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  font-size: 18px;
+}
+.fav-btn:hover { background: var(--bg-elev); color: var(--text); }
+.fav-btn.active { color: var(--star); }
+.fav-divider {
+  border: none;
+  border-top: 1px dashed var(--border-strong);
+  margin: 16px 0;
+}
+.fav-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--muted-2);
+  font-weight: 600;
+  padding: 12px 0 4px;
+}
+
 /* ===== Category sections (homepage browse) ===== */
 .cat-section {
   padding: 48px 0 16px;

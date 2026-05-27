@@ -350,6 +350,49 @@ for (const s of COMPOSED) {
   if (!ALL_STYLES[s.id]) ALL_STYLES[s.id] = s;
 }
 
+// ----- More composed variants for deeper category pages -----
+const EXTRA: FontStyle[] = [
+  { id: "cursive-underline", name: "Cursive Underlined", transform: compose(oscr, underline) },
+  { id: "cursive-strike", name: "Cursive Strikethrough", transform: compose(oscr, strikethrough) },
+  { id: "cursive-spaced", name: "Cursive Spaced", transform: compose(oscr, spaced) },
+  { id: "cursive-bold-spaced", name: "Cursive Bold Spaced", transform: compose(oscrb, spaced) },
+  { id: "bold-spaced", name: "Bold Spaced", transform: compose((s) => applyMap(s, boldSerif), spaced) },
+  { id: "bold-underline", name: "Bold Underlined", transform: compose((s) => applyMap(s, boldSerif), underline) },
+  { id: "bold-strike", name: "Bold Strikethrough", transform: compose((s) => applyMap(s, boldSerif), strikethrough) },
+  { id: "sans-bold-spaced", name: "Sans Bold Spaced", transform: compose((s) => applyMap(s, sansBold), spaced) },
+  { id: "italic-underline", name: "Italic Underlined", transform: compose((s) => applyMap(s, italicSerif), underline) },
+  { id: "italic-strike", name: "Italic Strikethrough", transform: compose((s) => applyMap(s, italicSerif), strikethrough) },
+  { id: "italic-spaced", name: "Italic Spaced", transform: compose((s) => applyMap(s, italicSerif), spaced) },
+  { id: "small-caps-spaced", name: "Small Caps Spaced", transform: compose(smallCaps, spaced) },
+  { id: "small-caps-underline", name: "Small Caps Underlined", transform: compose(smallCaps, underline) },
+  { id: "outline-spaced", name: "Outline Spaced", transform: compose((s) => applyMap(s, doubleStruck), spaced) },
+  { id: "outline-underline", name: "Outline Underlined", transform: compose((s) => applyMap(s, doubleStruck), underline) },
+  { id: "mono-spaced", name: "Monospace Spaced", transform: compose((s) => applyMap(s, monospace), spaced) },
+  { id: "bubble-underline", name: "Bubble Underlined", transform: compose((s) => applyMap(s, bubble), underline) },
+  { id: "squared-spaced", name: "Squared Spaced", transform: compose((s) => applyMap(s, squared), spaced) },
+  { id: "fullwidth-underline", name: "Big Underlined", transform: compose((s) => applyMap(s, fullwidth), underline) },
+  { id: "fraktur-strike", name: "Fraktur Strikethrough", transform: compose(ofr, strikethrough) },
+  { id: "fraktur-double-underline", name: "Fraktur Double Underline", transform: compose(ofr, doubleUnderline) },
+  { id: "fraktur-bold-spaced", name: "Fraktur Bold Spaced", transform: compose(ofrb, spaced) },
+  { id: "script-zalgo", name: "Glitch Script", transform: compose(oscr, (s) => zalgo(s, 0.5)) },
+  { id: "sans-zalgo", name: "Glitch Sans", transform: compose((s) => applyMap(s, sansBold), (s) => zalgo(s, 0.6)) },
+  { id: "alternating", name: "Alt Bold/Italic", transform: (s) => {
+      let out = ""; let i = 0;
+      for (const ch of s) {
+        out += (i++ % 2 === 0)
+          ? (boldSerif[ch] ?? ch)
+          : (italicSerif[ch] ?? ch);
+      }
+      return out;
+    },
+  },
+  { id: "stacked-bold-strike", name: "Bold Slash", transform: compose((s) => applyMap(s, boldSerif), slashThrough) },
+  { id: "tiny-spaced", name: "Tiny Spaced", transform: compose(superscript, spaced) },
+];
+for (const s of EXTRA) {
+  if (!ALL_STYLES[s.id]) ALL_STYLES[s.id] = s;
+}
+
 export const OLD_ENGLISH_FAMILY = [
   "gothic-classic",
   "gothic-bold",

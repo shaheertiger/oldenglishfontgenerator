@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { pickStyles } from "@/lib/fonts";
 
 type Pill = { label: string; href: string };
@@ -13,6 +13,8 @@ type Props = {
   initialVisible?: number;
   resultsTitle?: string;
 };
+
+const FAV_KEY = "oef-favorites";
 
 function CopyIcon() {
   return (
@@ -49,6 +51,24 @@ export default function Generator({
   const [text, setText] = useState("");
   const [copiedId, setCopiedId] = useState<string | null>(null);
   const [showAll, setShowAll] = useState(false);
+  const [favs, setFavs] = useState<string[]>([]);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+    try {
+      const raw = localStorage.getItem(FAV_KEY);
+      if (raw) setFavs(JSON.parse(raw));
+    } catch {}
+  }, []);
+
+  function toggleFav(id: string) {
+    setFavs((prev) => {
+      const next = prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id];
+      try { localStorage.setItem(FAV_KEY, JSON.stringify(next)); } catch {}
+      return next;
+    });
+  }
 
   const source = text.length === 0 ? "Type or paste your text" : text;
 
@@ -58,17 +78,62 @@ export default function Generator({
     [styleObjs, source]
   );
 
-  const visible = showAll ? allResults : allResults.slice(0, initialVisible);
-  const hasMore = allResults.length > initialVisible && !showAll;
+  const favResults = mounted
+    ? allResults.filter((r) => favs.includes(r.id))
+    : [];
+  const nonFavResults = mounted
+    ? allResults.filter((r) => !favs.includes(r.id))
+    : allResults;
+  const visibleNonFav = showAll ? nonFavResults : nonFavResults.slice(0, initialVisible);
+  const hasMore = nonFavResults.length > initialVisible && !showAll;
 
   async function copy(id: string, value: string) {
     try {
       await navigator.clipboard.writeText(value);
       setCopiedId(id);
       setTimeout(() => setCopiedId((c) => (c === id ? null : c)), 1400);
-    } catch {
-      /* clipboard unavailable */
-    }
+    } catch {}
+  }
+
+  function renderCard(r: { id: string; name: string; output: string }) {
+    const isFav = favs.includes(r.id);
+    return (
+      <div
+        key={r.id}
+        className="style-card"
+        onClick={() => copy(r.id, r.output)}
+        role="button"
+        tabIndex={0}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            copy(r.id, r.output);
+          }
+        }}
+      >
+        <div className="left">
+          <div className="name">{r.name}</div>
+          <div className="preview">{r.output}</div>
+        </div>
+        <div className="actions">
+          <button
+            className={`fav-btn ${isFav ? "active" : ""}`}
+            onClick={(e) => { e.stopPropagation(); toggleFav(r.id); }}
+            aria-label={isFav ? `Remove ${r.name} from favorites` : `Save ${r.name} to favorites`}
+            title={isFav ? "Remove from favorites" : "Save to favorites"}
+          >
+            {isFav ? "★" : "☆"}
+          </button>
+          <button
+            className={`icon-btn ${copiedId === r.id ? "copied" : ""}`}
+            onClick={(e) => { e.stopPropagation(); copy(r.id, r.output); }}
+            aria-label={`Copy ${r.name}`}
+          >
+            {copiedId === r.id ? <CheckIcon /> : <CopyIcon />}
+          </button>
+        </div>
+      </div>
+    );
   }
 
   return (
@@ -84,7 +149,7 @@ export default function Generator({
         <button
           className="go-btn"
           onClick={() => {
-            const first = visible[0];
+            const first = allResults[0];
             if (first) copy(first.id, first.output);
           }}
           aria-label="Copy first style"
@@ -105,40 +170,15 @@ export default function Generator({
 
       {resultsTitle && <div className="results-title">{resultsTitle}</div>}
 
-      <div className="results">
-        {visible.map((r) => (
-          <div
-            key={r.id}
-            className="style-card"
-            onClick={() => copy(r.id, r.output)}
-            role="button"
-            tabIndex={0}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                copy(r.id, r.output);
-              }
-            }}
-          >
-            <div className="left">
-              <div className="name">{r.name}</div>
-              <div className="preview">{r.output}</div>
-            </div>
-            <div className="actions">
-              <button
-                className={`icon-btn ${copiedId === r.id ? "copied" : ""}`}
-                onClick={(e) => {
-                  e.stopPropagation();
-                  copy(r.id, r.output);
-                }}
-                aria-label={`Copy ${r.name}`}
-              >
-                {copiedId === r.id ? <CheckIcon /> : <CopyIcon />}
-              </button>
-            </div>
-          </div>
-        ))}
-      </div>
+      {mounted && favResults.length > 0 && (
+        <>
+          <div className="fav-label">★ Favorites</div>
+          <div className="results">{favResults.map(renderCard)}</div>
+          <hr className="fav-divider" />
+        </>
+      )}
+
+      <div className="results">{visibleNonFav.map(renderCard)}</div>
 
       {hasMore && (
         <div className="load-more-wrap">
