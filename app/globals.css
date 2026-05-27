@@ -80,9 +80,30 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   display: none;
   padding: 4px 8px;
 }
+.mobile-nav { display: none; }
+
 @media (max-width: 720px) {
   .nav { display: none; }
   .menu-btn { display: block; }
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--border);
+    background: var(--bg);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+  .mobile-nav.open { max-height: 400px; }
+  .mobile-nav a {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 15px;
+  }
+  .mobile-nav a:last-child { border-bottom: none; }
+  .mobile-nav a:hover { background: var(--bg-soft); }
 }
 
 /* ===== Breadcrumb ===== */

@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 function Icon({ d }: { d: string }) {
   return (
@@ -13,27 +16,50 @@ const ICONS = {
   generator: "M14.7 6.3a4 4 0 0 1 5.6 5.6L9 23.2 2.8 24l.8-6.2L14.7 6.3z",
   ascii: "M4 17 10 11 4 5 M12 19h8",
   image: "M3 5h18v14H3zM7 10a2 2 0 1 0 0-.1ZM21 16l-5-5-9 9",
-  user: "M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2 M12 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z",
-  star: "M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 18l-6.2 3.1L7 14.2 2 9.3l6.9-1L12 2z",
   book: "M2 4h7a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2zM22 4h-7a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h8z",
   mail: "M3 5h18v14H3zM3 5l9 8 9-8",
   bolt: "M13 2 4.5 14h6L9 22l9-13h-6L13 2z",
-  globe: "M2 12h20 M12 2a15 15 0 0 1 0 20 M12 2a15 15 0 0 0 0 20",
 };
 
+const NAV = [
+  { href: "/", label: "Home" },
+  { href: "/font-generator", label: "Font Generator" },
+  { href: "/ascii-generator", label: "ASCII" },
+  { href: "/image-to-ascii", label: "Image → ASCII" },
+];
+
 export function SiteHeader() {
+  const [open, setOpen] = useState(false);
   return (
     <header className="site-header">
       <div className="container-wide row">
-        <Link href="/" className="logo">Old English Fonts</Link>
+        <Link href="/" className="logo" onClick={() => setOpen(false)}>Old English Fonts</Link>
         <nav className="nav">
-          <Link href="/">Home</Link>
-          <Link href="/font-generator">Font Generator</Link>
-          <Link href="/ascii-generator">ASCII</Link>
-          <Link href="/image-to-ascii">Image → ASCII</Link>
+          {NAV.map((l) => (
+            <Link key={l.href} href={l.href}>{l.label}</Link>
+          ))}
         </nav>
-        <button className="menu-btn" aria-label="Menu">☰</button>
+        <button
+          className="menu-btn"
+          aria-label={open ? "Close menu" : "Open menu"}
+          aria-expanded={open}
+          aria-controls="mobile-nav"
+          onClick={() => setOpen((v) => !v)}
+        >
+          {open ? "✕" : "☰"}
+        </button>
       </div>
+      <nav
+        id="mobile-nav"
+        className={`mobile-nav ${open ? "open" : ""}`}
+        aria-hidden={!open}
+      >
+        {NAV.map((l) => (
+          <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>
+            {l.label}
+          </Link>
+        ))}
+      </nav>
     </header>
   );
 }
