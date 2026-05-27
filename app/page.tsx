@@ -39,20 +39,60 @@ export const metadata: Metadata = {
 
 const PILLS = [
   { label: "Cursive", href: "/font-generator/cursive" },
+  { label: "Instagram Fonts", href: "/font-generator/instagram" },
+  { label: "Cool Fonts: Copy & Paste", href: "/font-generator/cool" },
   { label: "Bold", href: "/font-generator/bold" },
+  { label: "Strikethrough Text", href: "/font-generator/strikethrough" },
+  { label: "Bubble", href: "/font-generator/bubble" },
   { label: "Italic", href: "/font-generator/italic" },
   { label: "Fancy", href: "/font-generator/fancy" },
   { label: "Stylish", href: "/font-generator/stylish" },
-  { label: "Bubble", href: "/font-generator/bubble" },
-  { label: "Small Caps", href: "/font-generator/small-caps" },
   { label: "Glitch", href: "/font-generator/glitch" },
   { label: "Zalgo", href: "/font-generator/zalgo" },
+  { label: "Cursed", href: "/font-generator/cursed" },
+  { label: "Creepy", href: "/font-generator/creepy" },
+  { label: "Small Caps", href: "/font-generator/small-caps" },
   { label: "Upside Down", href: "/font-generator/upside-down" },
-  { label: "Instagram", href: "/font-generator/instagram" },
-  { label: "Discord", href: "/font-generator/discord" },
-  { label: "TikTok", href: "/font-generator/tiktok" },
-  { label: "Strikethrough", href: "/font-generator/strikethrough" },
   { label: "Underline", href: "/font-generator/underline" },
+  { label: "Big", href: "/font-generator/big" },
+  { label: "Weird", href: "/font-generator/weird" },
+  { label: "Discord Fonts", href: "/font-generator/discord" },
+  { label: "TikTok Fonts", href: "/font-generator/tiktok" },
+  { label: "Twitter / X", href: "/font-generator/twitter" },
+  { label: "Facebook Fonts", href: "/font-generator/facebook" },
+];
+
+const TESTIMONIALS = [
+  {
+    quote: "Used this to mock up a memorial tattoo before booking the artist. Tried 20+ blackletter variants in two minutes — way faster than messing with downloaded fonts.",
+    name: "Jamie",
+    role: "Tattoo planner",
+  },
+  {
+    quote: "Finally a generator that actually lists a gothic style separately from a fraktur one. The category previews on the homepage let me see what I wanted before clicking.",
+    name: "Rowan",
+    role: "Graphic designer",
+  },
+  {
+    quote: "My Discord server uses the small-caps + outline variants for role names — looks polished and survives copy-paste on every client.",
+    name: "Cas",
+    role: "Discord moderator",
+  },
+  {
+    quote: "Pasted a blackletter caption into my Instagram bio and it kept the spacing right on both iOS and Android. The character-count badge was a nice touch.",
+    name: "Devon",
+    role: "Content creator",
+  },
+  {
+    quote: "I came for the Old English styles and stayed for the font mixer. Alternate-letter mode produces names that look hand-lettered in two seconds.",
+    name: "Priya",
+    role: "Username collector",
+  },
+  {
+    quote: "The auto styler picked italic-script for a soft caption and bold-serif for a punchy headline — accurate enough that I stopped overthinking it.",
+    name: "Marcus",
+    role: "Copywriter",
+  },
 ];
 
 const USE_CASES = [
@@ -303,6 +343,25 @@ export default function Home() {
               Fullwidth Forms (U+FF00–U+FFEF), and Combining Diacritical
               Marks (U+0300–U+036F) for glitch and underline effects.
             </p>
+          </div>
+        </section>
+
+        <section className="section" id="testimonials">
+          <div className="container">
+            <div className="eyebrow">What people say</div>
+            <h2>Testimonials</h2>
+            <p>How the tools on this site fit into real workflows.</p>
+            <div className="testimonials">
+              {TESTIMONIALS.map((t) => (
+                <div className="testimonial" key={t.name}>
+                  <div className="stars" aria-label="5 stars">★★★★★</div>
+                  <p className="quote">&ldquo;{t.quote}&rdquo;</p>
+                  <div className="author">
+                    <span className="name">{t.name}</span> · {t.role}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

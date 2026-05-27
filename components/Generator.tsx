@@ -159,12 +159,14 @@ export default function Generator({
       </div>
 
       {pills && pills.length > 0 && (
-        <div className="pill-row" role="list">
-          {pills.map((p) => (
-            <Link key={p.href} href={p.href} className="pill" role="listitem">
-              {p.label}
-            </Link>
-          ))}
+        <div className="pill-row-wrap">
+          <div className="pill-row" role="list">
+            {pills.map((p) => (
+              <Link key={p.href} href={p.href} className="pill" role="listitem">
+                {p.label}
+              </Link>
+            ))}
+          </div>
         </div>
       )}
 

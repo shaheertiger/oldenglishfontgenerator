@@ -224,19 +224,44 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 .input-row .go-btn:hover { background: #1f1f1f; }
 
 /* ===== Pill tabs under input ===== */
+.pill-row-wrap {
+  position: relative;
+  margin-top: 16px;
+}
+.pill-row-wrap::before,
+.pill-row-wrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 12px;
+  width: 32px;
+  pointer-events: none;
+  z-index: 2;
+}
+.pill-row-wrap::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg), transparent);
+}
+.pill-row-wrap::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg), transparent);
+}
 .pill-row {
   display: flex;
   gap: 8px;
-  margin-top: 16px;
   overflow-x: auto;
-  padding: 4px 2px 12px;
+  padding: 4px 24px 12px;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
 }
-.pill-row::-webkit-scrollbar { display: none; }
+.pill-row::-webkit-scrollbar { height: 4px; }
+.pill-row::-webkit-scrollbar-track { background: transparent; }
+.pill-row::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 2px; }
 .pill {
   flex-shrink: 0;
-  padding: 8px 18px;
+  scroll-snap-align: start;
+  padding: 9px 18px;
   border: 1px solid var(--border-strong);
   border-radius: 999px;
   background: var(--bg);
@@ -247,6 +272,38 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   transition: all 0.15s ease;
 }
 .pill:hover { background: var(--text); color: #fff; border-color: var(--text); text-decoration: none; }
+
+/* ===== Testimonials ===== */
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin-top: 24px;
+}
+.testimonial {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+}
+.testimonial .stars {
+  color: var(--star);
+  letter-spacing: 1px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.testimonial .quote {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-soft);
+  margin: 0 0 14px;
+}
+.testimonial .author {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.testimonial .author .name { color: var(--text); }
 
 /* ===== Results list ===== */
 .results-title {
