@@ -305,3 +305,75 @@ export const ALL_STYLES: Record<string, FontStyle> = {
 export function pickStyles(ids: string[]): FontStyle[] {
   return ids.map((id) => ALL_STYLES[id]).filter(Boolean);
 }
+
+// ----- Composed / labeled Old English variants -----
+// These combine existing transforms with a different display name so the
+// homepage can offer 20+ themed Old English / Gothic / Blackletter options.
+
+const compose = (...fns: Array<(s: string) => string>) =>
+  (s: string) => fns.reduce((acc, fn) => fn(acc), s);
+
+const ofr = (s: string) => applyMap(s, fraktur);
+const ofrb = (s: string) => applyMap(s, frakturBold);
+const oscr = (s: string) => applyMap(s, script);
+const oscrb = (s: string) => applyMap(s, scriptBold);
+
+const COMPOSED: FontStyle[] = [
+  { id: "gothic-classic", name: "Gothic Classic", transform: ofr },
+  { id: "gothic-bold", name: "Gothic Bold", transform: ofrb },
+  { id: "blackletter", name: "Blackletter", transform: ofr },
+  { id: "blackletter-bold", name: "Blackletter Bold", transform: ofrb },
+  { id: "medieval-script", name: "Medieval Script", transform: oscr },
+  { id: "medieval-bold-script", name: "Medieval Bold Script", transform: oscrb },
+  { id: "old-english-spaced", name: "Old English Spaced", transform: compose(ofr, spaced) },
+  { id: "gothic-spaced", name: "Gothic Spaced", transform: compose(ofrb, spaced) },
+  { id: "tattoo-gothic", name: "Tattoo Gothic", transform: ofrb },
+  { id: "royal-gothic", name: "Royal Gothic", transform: compose(ofrb, underline) },
+  { id: "dark-gothic", name: "Dark Gothic", transform: compose(ofrb, strikethrough) },
+  { id: "diploma-style", name: "Diploma Style", transform: ofr },
+  { id: "church-style", name: "Church Style", transform: compose(ofr, underline) },
+  { id: "newspaper-gothic", name: "Newspaper Gothic", transform: ofrb },
+  { id: "band-logo", name: "Band Logo Style", transform: compose(ofrb, underline) },
+  { id: "german-gothic", name: "German Gothic", transform: ofr },
+  { id: "decorative-gothic", name: "Decorative Gothic", transform: compose(ofr, (s) => zalgo(s, 0.2)) },
+  { id: "cursed-gothic", name: "Cursed Gothic", transform: compose(ofr, (s) => zalgo(s, 0.6)) },
+  { id: "outline-gothic", name: "Outline Gothic", transform: (s) => applyMap(s, doubleStruck) },
+  { id: "manuscript-mono", name: "Manuscript Mono", transform: (s) => applyMap(s, monospace) },
+  { id: "small-gothic", name: "Small Gothic", transform: smallCaps },
+  { id: "gothic-glitch", name: "Gothic Glitch", transform: compose(ofr, (s) => zalgo(s, 0.4)) },
+  { id: "fraktur-reversed", name: "Fraktur Reversed", transform: compose(ofr, reverse) },
+  { id: "fraktur-flipped", name: "Fraktur Upside Down", transform: compose(ofr, upsideDown) },
+  { id: "ye-olde", name: "Ye Olde", transform: compose(ofr, spaced, underline) },
+];
+
+for (const s of COMPOSED) {
+  if (!ALL_STYLES[s.id]) ALL_STYLES[s.id] = s;
+}
+
+export const OLD_ENGLISH_FAMILY = [
+  "gothic-classic",
+  "gothic-bold",
+  "blackletter",
+  "blackletter-bold",
+  "medieval-script",
+  "medieval-bold-script",
+  "old-english-spaced",
+  "gothic-spaced",
+  "tattoo-gothic",
+  "royal-gothic",
+  "dark-gothic",
+  "diploma-style",
+  "church-style",
+  "newspaper-gothic",
+  "band-logo",
+  "german-gothic",
+  "decorative-gothic",
+  "cursed-gothic",
+  "outline-gothic",
+  "manuscript-mono",
+  "small-gothic",
+  "gothic-glitch",
+  "fraktur-reversed",
+  "fraktur-flipped",
+  "ye-olde",
+];
