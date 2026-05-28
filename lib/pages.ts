@@ -182,6 +182,121 @@ export const PAGES: PageConfig[] = [
     ],
   },
   {
+    slug: "superscript",
+    keyword: "superscript generator",
+    title: "Superscript Generator – Copy & Paste Small Raised Text",
+    description:
+      "Convert text into superscript using Unicode characters. Tiny raised letters you can copy and paste into bios, footnotes, captions, and chat.",
+    h1: "Superscript Generator",
+    intro:
+      "Turn your text into small, raised superscript letters. Copy a variant and paste it anywhere — bios, footnotes, math notation, or minimalist captions.",
+    styles: ["superscript", "small-caps", "tiny-spaced", "small-caps-spaced", "small-gothic", "monospace"],
+    about: [
+      {
+        heading: "How superscript text works",
+        body: "Superscript characters were designed for math and footnote notation (like xⁿ), but they render smaller and raised compared to regular letters and copy as plain text. We map each letter to its Unicode superscript form where one exists.",
+      },
+    ],
+    faq: [
+      {
+        q: "Why are some superscript letters missing or substituted?",
+        a: "Unicode never assigned a superscript form for every Latin letter. Most are covered, but a few fall back to the closest similar-looking character.",
+      },
+    ],
+  },
+  {
+    slug: "aesthetic",
+    keyword: "aesthetic fonts",
+    title: "Aesthetic Font Generator – Copy & Paste Aesthetic Text",
+    description:
+      "Generate aesthetic fonts — fullwidth, spaced, script, and soft Unicode styles you can copy and paste into Instagram bios, captions, and usernames.",
+    h1: "Aesthetic Font Generator",
+    intro:
+      "Type once and browse soft, spaced, and vaporwave-style aesthetic fonts. Copy whichever fits your vibe and paste it into your bio, captions, or profile.",
+    styles: ["fullwidth", "script", "small-caps-spaced", "squared", "cursive-spaced", "italic-spaced", "double-struck", "bubble", "outline-spaced", "spaced", "small-caps", "fullwidth-underline"],
+    about: [
+      {
+        heading: "What makes a font look 'aesthetic'?",
+        body: "Aesthetic styles lean on airy spacing, soft script, and fullwidth letters that take up more room — the look that defines vaporwave, soft-girl, and minimalist profiles. The effect comes from real Unicode characters, so it pastes anywhere as plain text.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I use aesthetic fonts in my Instagram bio?",
+        a: "Yes — bios accept the full Unicode range. Some username fields filter unusual characters, so test before saving a handle.",
+      },
+    ],
+  },
+  {
+    slug: "fortnite",
+    keyword: "fortnite font",
+    title: "Fortnite Font Generator – Sweaty Tryhard Name Fonts",
+    description:
+      "Generate Fortnite-style fonts for sweaty, tryhard usernames and display names. Gothic, bold, and decorative Unicode styles — copy and paste ready.",
+    h1: "Fortnite Font Generator",
+    intro:
+      "Build a sweaty Fortnite-style name. Pick a bold, gothic, or symbol-laden variant, copy it, and paste it into your Epic display name or clan tag.",
+    styles: ["gothic-bold", "fraktur", "blackletter", "sans-bold", "monospace", "small-caps", "double-struck", "squared", "fullwidth", "tattoo-gothic", "outline-gothic", "fraktur-bold"],
+    about: [
+      {
+        heading: "Where Fortnite-style fonts work",
+        body: "Epic Games display names accept a wide range of Unicode, which is why 'sweaty' players use styled letters and symbols to stand out. The same styles work in clan tags and on most gaming profiles like Steam, Xbox, and PSN.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will Fortnite accept these characters in my name?",
+        a: "Most do, but Epic filters some ranges and blocks duplicate display names. If a variant won't save, try one closer to standard letters or remove the heaviest symbols.",
+      },
+    ],
+  },
+  {
+    slug: "vaporwave",
+    keyword: "vaporwave text generator",
+    title: "Vaporwave Text Generator – Aesthetic Fullwidth Text",
+    description:
+      "Generate vaporwave aesthetic text using fullwidth Unicode characters — the ａｅｓｔｈｅｔｉｃ wide-spaced look. Copy and paste anywhere.",
+    h1: "Vaporwave Text Generator",
+    intro:
+      "Get the classic ｖａｐｏｒｗａｖｅ look — wide fullwidth letters with airy spacing. Copy a style and paste it into captions, art, or your profile.",
+    styles: ["fullwidth", "fullwidth-underline", "squared", "squared-spaced", "spaced", "small-caps-spaced", "double-struck", "script"],
+    about: [
+      {
+        heading: "Where the vaporwave look comes from",
+        body: "Vaporwave text uses fullwidth forms (ＡＢＣ) originally designed to sit alongside East Asian characters on the same em-square. Pasted into a Latin context they render wide and evenly spaced — the aesthetic that became shorthand for the vaporwave and 80s-retro vibe.",
+      },
+    ],
+    faq: [
+      {
+        q: "Why does vaporwave text take up so much space?",
+        a: "Fullwidth characters are designed to be as wide as a CJK character, so each letter is roughly double the width of normal text. It can wrap awkwardly on narrow screens — preview before posting.",
+      },
+    ],
+  },
+  {
+    slug: "hacked",
+    keyword: "hacker font",
+    title: "Hacked Text Generator – Glitchy Hacker Font Copy & Paste",
+    description:
+      "Generate hacked, glitchy, and leetspeak hacker fonts using Unicode. Copy and paste corrupted, matrix-style text anywhere.",
+    h1: "Hacked Text Generator",
+    intro:
+      "Make your text look hacked — leetspeak, glitched, and monospace 'terminal' styles. Copy a variant and paste it wherever plain text is allowed.",
+    styles: ["leet", "gothic-glitch", "zalgo", "zalgo-soft", "sans-zalgo", "monospace", "double-struck", "squared", "strikethrough"],
+    about: [
+      {
+        heading: "How 'hacked' text is built",
+        body: "The hacker look mixes a few tricks: leetspeak swaps letters for numbers and symbols (h4ck3d), monospace mimics a terminal, and combining diacritics add a glitched, corrupted overlay. All of it stays as copyable Unicode text.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will glitchy hacked text break anyone's app?",
+        a: "Heavy combining-mark styles can slow older renderers, and some platforms throttle high-density Unicode. Use it for fun, not to evade moderation.",
+      },
+    ],
+  },
+  {
     slug: "instagram",
     keyword: "ig fonts",
     title: "Instagram Fonts Generator – IG Bio & Caption Fonts",
