@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import { PAGES } from "@/lib/pages";
+import { POSTS } from "@/lib/blog";
+import { SYMBOL_CATEGORIES } from "@/lib/symbols";
 
 export const metadata: Metadata = {
   title: "Sitemap – All Font Generators",
@@ -9,6 +11,8 @@ export const metadata: Metadata = {
     "Every page on oldenglishfontgenerator.com — font generators, ASCII tools, and more.",
   alternates: { canonical: "https://www.oldenglishfontgenerator.com/sitemap" },
 };
+
+const LETTERS = "abcdefghijklmnopqrstuvwxyz0123456789".split("");
 
 export default function SitemapPage() {
   return (
@@ -25,9 +29,38 @@ export default function SitemapPage() {
             <h2>Main</h2>
             <ul className="sitemap-list">
               <li><Link href="/">Home</Link></li>
+              <li><Link href="/es">Spanish (Español)</Link></li>
               <li><Link href="/font-generator">Font Generator</Link></li>
+              <li><Link href="/blog">Blog</Link></li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="container">
+            <h2>Tools</h2>
+            <ul className="sitemap-list">
+              <li><Link href="/auto-font-styler">Auto Font Styler</Link></li>
+              <li><Link href="/font-mixer">Font Mixer</Link></li>
+              <li><Link href="/username-generator">Username Generator</Link></li>
+              <li><Link href="/headcanon-generator">Headcanon Generator</Link></li>
+              <li><Link href="/story-generator">Story Generator</Link></li>
+              <li><Link href="/uuid-generator">UUID Generator</Link></li>
               <li><Link href="/ascii-generator">ASCII Generator</Link></li>
               <li><Link href="/image-to-ascii">Image to ASCII</Link></li>
+              <li><Link href="/favorites">★ Favorites</Link></li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="container">
+            <h2>Aesthetic &amp; reference</h2>
+            <ul className="sitemap-list">
+              <li><Link href="/preppy">Preppy Fonts</Link></li>
+              <li><Link href="/coquette">Coquette Fonts</Link></li>
+              <li><Link href="/different-fonts">Letters in Different Fonts</Link></li>
+              <li><Link href="/symbols">Cool Symbols</Link></li>
             </ul>
           </div>
         </section>
@@ -44,6 +77,47 @@ export default function SitemapPage() {
             </ul>
           </div>
         </section>
+
+        <section className="section">
+          <div className="container">
+            <h2>Symbols by category</h2>
+            <ul className="sitemap-list">
+              {SYMBOL_CATEGORIES.map((c) => (
+                <li key={c.slug}>
+                  <Link href={`/symbols/${c.slug}`}>{c.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="container">
+            <h2>Letters in different fonts</h2>
+            <ul className="sitemap-list">
+              {LETTERS.map((c) => (
+                <li key={c}>
+                  <Link href={`/different-fonts/${c}`}>{c.toUpperCase()}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {POSTS.length > 0 && (
+          <section className="section">
+            <div className="container">
+              <h2>Blog posts</h2>
+              <ul className="sitemap-list">
+                {POSTS.map((p) => (
+                  <li key={p.slug}>
+                    <Link href={`/blog/${p.slug}`}>{p.title}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        )}
 
         <section className="section">
           <div className="container">
