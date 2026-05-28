@@ -89,6 +89,37 @@ export const PAGES: PageConfig[] = [
     ],
   },
   {
+    slug: "calligraphy",
+    keyword: "calligraphy generator",
+    title: "Calligraphy Font Generator – Copy & Paste Calligraphy Text",
+    description:
+      "Turn plain text into elegant calligraphy and script fonts. Free, instant Unicode calligraphy you can copy and paste into Instagram, bios, invitations, and more.",
+    h1: "Calligraphy Font Generator",
+    intro:
+      "Type anything and get flowing, hand-lettered calligraphy styles — script, italic, and ornate medieval forms. Copy a variant and paste it anywhere, no font file required.",
+    styles: ["script", "script-bold", "italic-serif", "bold-italic-serif", "sans-italic", "cursive-underline", "cursive-spaced", "medieval-script", "royal-gothic", "decorative-gothic", "fraktur", "ye-olde"],
+    about: [
+      {
+        heading: "Is this real calligraphy?",
+        body: "Not in the pen-and-ink sense — true calligraphy is drawn by hand with a nib or brush. What you get here are Unicode script and italic alphabets that mimic the flowing look of calligraphic lettering, mapped one-to-one from your input so the result stays as plain, copyable text.",
+      },
+      {
+        heading: "Where calligraphy text works best",
+        body: "Calligraphy styles read as elegant and personal, so they suit Instagram bios and captions, wedding and event mockups, quote graphics, signatures, and profile names. Pair a script style with regular text so longer passages stay readable at a glance.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I use this calligraphy for wedding invitations?",
+        a: "For digital previews and mockups, yes. For printed invitations, hand the chosen look to your designer so they can set it in a proper vector font — Unicode characters won't print as crisply as a real typeface.",
+      },
+      {
+        q: "Why do some calligraphy letters look like boxes?",
+        a: "The viewer's device is missing a font that covers those script characters. Pick a different variant and the recipient should see it correctly.",
+      },
+    ],
+  },
+  {
     slug: "instagram",
     keyword: "ig fonts",
     title: "Instagram Fonts Generator – IG Bio & Caption Fonts",
