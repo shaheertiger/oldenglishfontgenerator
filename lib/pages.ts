@@ -120,6 +120,68 @@ export const PAGES: PageConfig[] = [
     ],
   },
   {
+    slug: "gothic",
+    keyword: "gothic text generator",
+    title: "Gothic Font Generator – Copy & Paste Gothic Text",
+    description:
+      "Convert plain text into gothic, blackletter, and fraktur fonts. Free, instant Unicode gothic text you can copy and paste into Instagram, Discord, bios, and usernames.",
+    h1: "Gothic Font Generator",
+    intro:
+      "Turn anything you type into dark, angular gothic and blackletter styles. Copy a variant and paste it into your bio, captions, usernames, or messages — no app or font file needed.",
+    styles: ["fraktur", "fraktur-bold", "gothic-bold", "blackletter-bold", "outline-gothic", "decorative-gothic", "royal-gothic", "medieval-script", "script", "double-struck", "small-caps", "tattoo-gothic"],
+    about: [
+      {
+        heading: "What makes a font 'gothic'?",
+        body: "Gothic is the everyday name for blackletter — the dense, angular scripts medieval European scribes used, later cast as type by early printers. The styles here approximate the most recognizable blackletter forms (textura, fraktur, schwabacher) using Unicode characters, so the result stays as plain, copyable text.",
+      },
+      {
+        heading: "Gothic vs. blackletter vs. Old English",
+        body: "All three name the same broad family. Blackletter is the typographic term, gothic is the common word, and Old English is what most tattoo artists and sign shops call it. They're stylistic siblings, not different writing systems.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will gothic text work in my Instagram or Discord name?",
+        a: "Bios and messages accept the full Unicode range. Username fields are stricter — if a heavily decorated variant won't save, pick one closer to standard letters like Small Caps or Bold.",
+      },
+      {
+        q: "Can I use gothic text for a tattoo?",
+        a: "For mockups, yes — preview your phrase in every style. For the actual tattoo, your artist needs a real vector font so the linework stays sharp; use the generator to choose the look you want.",
+      },
+    ],
+  },
+  {
+    slug: "cute",
+    keyword: "cute font copy and paste",
+    title: "Cute Font Generator – Copy & Paste Cute Aesthetic Text",
+    description:
+      "Make cute, soft, aesthetic fonts you can copy and paste. Bubble, script, small caps, and decorative Unicode styles — instant and free for bios, captions, and usernames.",
+    h1: "Cute Font Generator",
+    intro:
+      "Type once and grab soft, playful, aesthetic styles — bubbly circled letters, flowing script, and tiny small caps. Copy whichever looks cutest and paste it anywhere.",
+    styles: ["bubble", "bubble-filled", "script", "script-bold", "small-caps", "small-caps-spaced", "squared", "fullwidth", "cursive-underline", "italic-serif", "double-struck", "superscript"],
+    about: [
+      {
+        heading: "What makes a font look cute?",
+        body: "Cute styles lean on rounded, soft, or dainty shapes — circled bubble letters, flowing script, and small caps all read as friendly and aesthetic. Mixing them with symbols and spacing creates the soft 'kawaii' look popular in bios and usernames.",
+      },
+      {
+        heading: "Pairing cute text with symbols",
+        body: "Cute aesthetics often combine styled letters with decorative symbols — hearts, stars, sparkles. Generate your text here, then add a few glyphs from the symbols pages for a finished look.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I use cute fonts in my Instagram bio?",
+        a: "Yes — bios accept the full Unicode range. Some username fields filter unusual characters, so test before saving your handle.",
+      },
+      {
+        q: "Why do some cute letters look the same in upper and lowercase?",
+        a: "A few Unicode styles (like filled bubble letters) only have one case, so we use them for both. Pick the outlined variant if you need distinct upper and lowercase.",
+      },
+    ],
+  },
+  {
     slug: "instagram",
     keyword: "ig fonts",
     title: "Instagram Fonts Generator – IG Bio & Caption Fonts",
