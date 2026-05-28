@@ -297,6 +297,114 @@ export const PAGES: PageConfig[] = [
     ],
   },
   {
+    slug: "tattoo",
+    keyword: "tattoo fonts",
+    title: "Tattoo Font Generator – Blackletter & Gothic Tattoo Lettering",
+    description:
+      "Preview tattoo lettering in dozens of blackletter, gothic, and script styles. Free Unicode tattoo fonts you can copy and paste to mock up a design.",
+    h1: "Tattoo Font Generator",
+    intro:
+      "Mock up a name or quote in tattoo lettering before you book. Browse blackletter, gothic, and script styles, copy your favorite, and share it with your artist.",
+    styles: ["tattoo-gothic", "blackletter", "blackletter-bold", "gothic-bold", "fraktur", "royal-gothic", "dark-gothic", "church-style", "medieval-script", "decorative-gothic", "band-logo", "old-english-spaced"],
+    about: [
+      {
+        heading: "Using this to plan a tattoo",
+        body: "Type your phrase and preview it instantly across blackletter, gothic, and script variants — far faster than installing downloaded fonts. Once you find the look you want, screenshot it or copy the text to show your artist.",
+      },
+      {
+        heading: "From mockup to real ink",
+        body: "These are Unicode characters for previewing, not print-ready type. For the actual tattoo, your artist needs a true vector font (TTF/OTF) so the linework stays crisp at any size. Use the generator to decide the style; let the artist handle the stencil.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I use these characters as a tattoo stencil?",
+        a: "They're meant for previewing the style, not as a stencil. Hand the chosen look to your tattoo artist so they can set it in a proper vector font for clean linework.",
+      },
+      {
+        q: "Which style is most popular for tattoos?",
+        a: "Blackletter and Old English gothic are the classic tattoo scripts; flowing script suits names and quotes. Try a few and see what fits the placement.",
+      },
+    ],
+  },
+  {
+    slug: "signature",
+    keyword: "signature font",
+    title: "Signature Font Generator – Copy & Paste Signature Style Text",
+    description:
+      "Turn your name into elegant signature-style script fonts. Free Unicode signature fonts you can copy and paste into bios, emails, and profiles.",
+    h1: "Signature Font Generator",
+    intro:
+      "Give your name a signature look with flowing script and italic styles. Copy a variant and paste it into your bio, email sign-off, or profile.",
+    styles: ["script", "script-bold", "cursive-spaced", "cursive-underline", "italic-serif", "bold-italic-serif", "sans-italic", "medieval-script"],
+    about: [
+      {
+        heading: "What a signature font is here",
+        body: "True signatures are hand-drawn, but these Unicode script and italic styles mimic that flowing, personal look. Because the result is plain text, it pastes into email signatures, bios, and profiles that don't let you change fonts.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I use this as a legally binding signature?",
+        a: "No — it's styled text for cosmetic use, not a legal e-signature. For documents, use a dedicated e-signature service.",
+      },
+    ],
+  },
+  {
+    slug: "handwriting",
+    keyword: "handwriting font",
+    title: "Handwriting Font Generator – Copy & Paste Handwritten Text",
+    description:
+      "Convert text into handwritten-style script fonts. Free Unicode handwriting fonts you can copy and paste into bios, captions, and messages.",
+    h1: "Handwriting Font Generator",
+    intro:
+      "Make your text look handwritten with flowing script and cursive styles. Copy a variant and paste it anywhere plain text is allowed.",
+    styles: ["script", "script-bold", "cursive-spaced", "cursive-underline", "cursive-strike", "italic-serif", "sans-italic", "medieval-script"],
+    about: [
+      {
+        heading: "How handwriting fonts work as text",
+        body: "These styles use Unicode script and cursive alphabets that resemble handwriting, mapped one-to-one from your input. They aren't real fonts installed on your device — they're characters, so they survive copy-paste into apps with no formatting controls.",
+      },
+    ],
+    faq: [
+      {
+        q: "Why do some handwritten letters show as boxes?",
+        a: "The viewer's device lacks a font covering those script characters. Pick a different variant and the recipient should see it correctly.",
+      },
+    ],
+  },
+  {
+    slug: "old-english",
+    keyword: "old english font",
+    title: "Old English Font Generator – Copy & Paste Old English Text",
+    description:
+      "Convert text into authentic Old English, blackletter, and gothic styles. Free Unicode Old English fonts you can copy and paste into Instagram, Discord, and bios.",
+    h1: "Old English Font Generator",
+    intro:
+      "Turn anything you type into Old English blackletter and gothic lettering. Copy a variant and paste it into your bio, captions, usernames, or tattoo mockups.",
+    styles: ["gothic-classic", "gothic-bold", "blackletter", "fraktur", "fraktur-bold", "old-english-spaced", "german-gothic", "church-style", "medieval-script", "royal-gothic", "decorative-gothic", "tattoo-gothic"],
+    about: [
+      {
+        heading: "What is an Old English font?",
+        body: "Old English is the everyday name for blackletter — the dense, angular scripts medieval scribes used and early printers cast as type. The styles here approximate the most recognizable blackletter forms using Unicode characters, so the result stays as plain, copyable text.",
+      },
+      {
+        heading: "Old English vs. gothic vs. blackletter",
+        body: "All three name the same family. Blackletter is the typographic term, gothic is the common word, and Old English is what most tattoo artists and sign shops call it — stylistic siblings, not different writing systems.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will Old English text work in my Instagram or Discord name?",
+        a: "Bios and messages accept the full Unicode range. Username fields are stricter — if a decorated variant won't save, pick one closer to standard letters.",
+      },
+      {
+        q: "Can I use Old English text for a tattoo?",
+        a: "For mockups, yes — preview your phrase in every style. For the actual tattoo, your artist needs a real vector font so the linework stays sharp.",
+      },
+    ],
+  },
+  {
     slug: "instagram",
     keyword: "ig fonts",
     title: "Instagram Fonts Generator – IG Bio & Caption Fonts",
