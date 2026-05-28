@@ -4,6 +4,7 @@ import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import { PAGES } from "@/lib/pages";
 import { POSTS } from "@/lib/blog";
 import { SYMBOL_CATEGORIES } from "@/lib/symbols";
+import { NAME_CATEGORIES } from "@/lib/names";
 
 export const metadata: Metadata = {
   title: "Sitemap – All Font Generators",
@@ -31,6 +32,7 @@ export default function SitemapPage() {
               <li><Link href="/">Home</Link></li>
               <li><Link href="/es">Spanish (Español)</Link></li>
               <li><Link href="/font-generator">Font Generator</Link></li>
+              <li><Link href="/es/font-generator">Spanish Font Generator (Generador de letras)</Link></li>
               <li><Link href="/blog">Blog</Link></li>
             </ul>
           </div>
@@ -43,6 +45,8 @@ export default function SitemapPage() {
               <li><Link href="/auto-font-styler">Auto Font Styler</Link></li>
               <li><Link href="/font-mixer">Font Mixer</Link></li>
               <li><Link href="/username-generator">Username Generator</Link></li>
+              <li><Link href="/name-generator">Name Generator</Link></li>
+              <li><Link href="/emoticons">Emoticons (Kaomoji)</Link></li>
               <li><Link href="/headcanon-generator">Headcanon Generator</Link></li>
               <li><Link href="/story-generator">Story Generator</Link></li>
               <li><Link href="/uuid-generator">UUID Generator</Link></li>
@@ -85,6 +89,19 @@ export default function SitemapPage() {
               {SYMBOL_CATEGORIES.map((c) => (
                 <li key={c.slug}>
                   <Link href={`/symbols/${c.slug}`}>{c.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="container">
+            <h2>Name generators</h2>
+            <ul className="sitemap-list">
+              {NAME_CATEGORIES.map((c) => (
+                <li key={c.slug}>
+                  <Link href={`/name-generator/${c.slug}`}>{c.h1}</Link>
                 </li>
               ))}
             </ul>
