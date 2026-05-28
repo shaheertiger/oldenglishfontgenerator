@@ -5,6 +5,7 @@ import { PAGES } from "@/lib/pages";
 import { POSTS } from "@/lib/blog";
 import { SYMBOL_CATEGORIES } from "@/lib/symbols";
 import { NAME_CATEGORIES } from "@/lib/names";
+import { EMOTICON_CATEGORIES } from "@/lib/emoticons";
 
 export const metadata: Metadata = {
   title: "Sitemap – All Font Generators",
@@ -89,6 +90,19 @@ export default function SitemapPage() {
               {SYMBOL_CATEGORIES.map((c) => (
                 <li key={c.slug}>
                   <Link href={`/symbols/${c.slug}`}>{c.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="container">
+            <h2>Emoticons (kaomoji)</h2>
+            <ul className="sitemap-list">
+              {EMOTICON_CATEGORIES.map((c) => (
+                <li key={c.slug}>
+                  <Link href={`/emoticons/${c.slug}`}>{c.label}</Link>
                 </li>
               ))}
             </ul>

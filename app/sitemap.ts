@@ -3,6 +3,7 @@ import { PAGES } from "@/lib/pages";
 import { POSTS } from "@/lib/blog";
 import { SYMBOL_CATEGORIES } from "@/lib/symbols";
 import { NAME_CATEGORIES } from "@/lib/names";
+import { EMOTICON_CATEGORIES } from "@/lib/emoticons";
 
 const BASE = "https://www.oldenglishfontgenerator.com";
 
@@ -19,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/es/font-generator`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE}/es/cool-symbols/hearts`, priority: 0.6, changeFrequency: "monthly" as const },
     { url: `${BASE}/name-generator`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${BASE}/emoticons`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE}/font-generator`, priority: 0.9, changeFrequency: "weekly" as const },
     { url: `${BASE}/auto-font-styler`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE}/font-mixer`, priority: 0.8, changeFrequency: "monthly" as const },
@@ -59,5 +61,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
     changeFrequency: "monthly" as const,
   }));
-  return [...staticUrls, ...slugUrls, ...blogUrls, ...letterUrls, ...symbolUrls, ...nameUrls, ...esSlugUrls].map((u) => ({ ...u, lastModified: now }));
+  const emoticonUrls = EMOTICON_CATEGORIES.map((c) => ({
+    url: `${BASE}/emoticons/${c.slug}`,
+    priority: 0.7,
+    changeFrequency: "monthly" as const,
+  }));
+  return [...staticUrls, ...slugUrls, ...blogUrls, ...letterUrls, ...symbolUrls, ...nameUrls, ...esSlugUrls, ...emoticonUrls].map((u) => ({ ...u, lastModified: now }));
 }
