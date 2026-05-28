@@ -1057,6 +1057,215 @@ export const PAGES: PageConfig[] = [
       },
     ],
   },
+  {
+    slug: "japanese",
+    keyword: "japanese font",
+    title: "Japanese Font Generator – Copy & Paste Japanese Style Text",
+    description:
+      "Generate Japanese-style Unicode text for bios, captions, and usernames. Wide, spaced characters that evoke East Asian typography — no Japanese keyboard needed.",
+    h1: "Japanese Font Generator",
+    intro:
+      "Type in English and get a wide, East Asian-inspired style using fullwidth Unicode characters. Copy and paste anywhere plain text works.",
+    styles: ["japanese-style", "fullwidth", "fullwidth-underline", "squared", "small-caps-spaced"],
+    about: [
+      {
+        heading: "How this works without actual Japanese characters",
+        body: "The output isn't Japanese — it's fullwidth Latin text using the Unicode Halfwidth and Fullwidth Forms block (U+FF01–U+FF60). Each character takes the same horizontal space as a CJK glyph, giving the wide, spaced aesthetic associated with East Asian typography.",
+      },
+      {
+        heading: "Where it works",
+        body: "Social bios, username handles, captions, and overlay text on graphics all render it cleanly. Works wherever plain text is accepted.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will Japanese speakers see this as Japanese?",
+        a: "No — these are Latin letters in fullwidth form, not Japanese characters. Japanese readers will recognize the Latin alphabet, just wider.",
+      },
+      {
+        q: "Why do some platforms strip the wide characters?",
+        a: "A few apps normalize Unicode on input, collapsing fullwidth letters to standard ASCII. Bios usually survive; username validation fields sometimes don't.",
+      },
+    ],
+  },
+  {
+    slug: "mirror",
+    keyword: "mirror text generator",
+    title: "Mirror Text Generator – Flipped Text Copy & Paste",
+    description:
+      "Flip and mirror your text using Unicode. Upside-down, reversed, and mirrored styles that copy and paste as plain text into any app.",
+    h1: "Mirror Text Generator",
+    intro:
+      "Flip your text left-right, upside-down, or both. Each variant is plain Unicode — copy it and paste it anywhere.",
+    styles: ["mirrored", "reverse", "upside-down"],
+    about: [
+      {
+        heading: "What 'mirrored' actually means in Unicode",
+        body: "A true mirror image would require horizontally-flipped glyphs, which Unicode doesn't provide for most letters. Instead, mirrored text uses look-alike characters — letters from Cyrillic, IPA, and other blocks that visually resemble flipped Latin forms.",
+      },
+    ],
+    faq: [
+      {
+        q: "Why don't all letters flip perfectly?",
+        a: "Unicode doesn't have mirror-image versions of every Latin letter. Where a convincing look-alike exists, we use it; where it doesn't, the closest available character fills in.",
+      },
+      {
+        q: "Is this different from upside-down text?",
+        a: "Yes — upside-down rotates each letter 180° using Unicode counterparts and reverses the word order. Mirrored flips left-right. They can be combined.",
+      },
+    ],
+  },
+  {
+    slug: "mocking-text",
+    keyword: "spongebob text generator",
+    title: "Mocking Text Generator – SpongeBob Font Copy & Paste",
+    description:
+      "Generate the SpongeBob mocking meme font: alternating caps that reads as sarcastic and dismissive. Copy and paste as plain text anywhere.",
+    h1: "Mocking Text Generator",
+    intro:
+      "TyPe AnYtHiNg AnD gEt ThE sPoNgEbOb SaRcAsM fOrMaT. Copy and paste it wherever the bit lands.",
+    styles: ["alternating", "weird"],
+    defaultText: "this is fine",
+    about: [
+      {
+        heading: "Where the mocking format came from",
+        body: "The alternating-caps style took off in 2017 when a SpongeBob screenshot — the one where Patrick is held like a baby, mockingly repeating words — went viral as a reaction image format. The alternating case became the visual shorthand for sarcastic mimicry.",
+      },
+    ],
+    faq: [
+      {
+        q: "Should the pattern start with uppercase or lowercase?",
+        a: "Either works — the key is the alternation. Most generators start with lowercase, which is what this one does.",
+      },
+    ],
+  },
+  {
+    slug: "square",
+    keyword: "box font",
+    title: "Square Font Generator – Box Text Copy & Paste",
+    description:
+      "Generate square and box-style Unicode text. Squared letters and fullwidth styles for usernames, bios, and captions — copy and paste anywhere.",
+    h1: "Square Font Generator",
+    intro:
+      "Turn your text into square, boxed-in characters. Each letter gets its own frame — copy the result and paste it anywhere plain text works.",
+    styles: ["squared", "squared-spaced", "bubble", "bubble-filled", "fullwidth"],
+    about: [
+      {
+        heading: "How squared text works",
+        body: "The squared style wraps each letter in a Unicode enclosed-alphanumeric box. These characters sit in the Enclosed Alphanumeric Supplement block and render as bold boxed letters on most modern devices.",
+      },
+    ],
+    faq: [
+      {
+        q: "Why are some squared letters missing?",
+        a: "Unicode's enclosed alphanumeric blocks cover A–Z and 0–9. Punctuation and characters outside that range fall through unchanged.",
+      },
+      {
+        q: "What's the difference between squared and bubble?",
+        a: "Squared encloses letters in angular boxes. Bubble rounds them into circles. Both use Unicode enclosed-alphanumeric characters.",
+      },
+    ],
+  },
+  {
+    slug: "typewriter",
+    keyword: "typewriter font generator",
+    title: "Typewriter Font Generator – Monospace Text Copy & Paste",
+    description:
+      "Generate typewriter-style monospace Unicode text for bios, captions, and messages. Classic fixed-width look without any app or font file.",
+    h1: "Typewriter Font Generator",
+    intro:
+      "The classic fixed-width look — every character the same width, like text hammered onto paper. Type, copy, paste anywhere.",
+    styles: ["monospace"],
+    about: [
+      {
+        heading: "Why monospace looks like a typewriter",
+        body: "Typewriters couldn't vary character spacing, so every letter took the same horizontal slot. The Unicode Mathematical Monospace block replicates that look using fixed-width letterforms mapped one-to-one from your input.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is this the same as a code block?",
+        a: "Visually similar, different mechanism. A code block is a formatting wrapper that tells the app to render in a monospace font. This is actual monospace Unicode characters, so it works in plain-text fields that don't support formatting.",
+      },
+      {
+        q: "Can I use this in Discord to look like a code block?",
+        a: "You can, though Discord's backtick code blocks render cleaner. Use the monospace Unicode style in fields that don't support markdown, like bios.",
+      },
+    ],
+  },
+  {
+    slug: "leet",
+    keyword: "leet speak translator",
+    title: "Leet Speak Generator – 1337 Text Translator Copy & Paste",
+    description:
+      "Translate text into leet speak (1337). Classic number-and-symbol substitutions from early internet culture — copy and paste anywhere.",
+    h1: "Leet Speak Generator",
+    intro:
+      "Turn normal text into 1337 5P34K. Classic letter-to-number substitutions straight from early hacker and gaming culture.",
+    styles: ["leet", "gothic-glitch", "monospace"],
+    about: [
+      {
+        heading: "What is leet speak?",
+        body: "Leet (from 'elite') is an informal writing system that substitutes numbers and symbols for letters — A becomes 4, E becomes 3, and so on. It originated in early online communities and BBS boards in the 1980s as a way to slip past keyword filters, then became a marker of internet identity through the 1990s gaming scene.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is leet speak still used?",
+        a: "Mostly ironically. It's a recognizable shorthand for old-school hacker or gamer identity, and it still appears in usernames, memes, and nostalgia content.",
+      },
+      {
+        q: "Why doesn't every letter get substituted?",
+        a: "Some letters don't have a widely recognized leet equivalent. Those pass through unchanged so the result stays readable.",
+      },
+    ],
+  },
+  {
+    slug: "satanic",
+    keyword: "demon font",
+    title: "Satanic Font Generator – Demon Text Copy & Paste",
+    description:
+      "Generate dark, demonic, and cursed text with gothic and glitch effects. Zalgo corruption, gothic scripts, and cursed styles for usernames, bios, and horror aesthetics.",
+    h1: "Satanic Font Generator",
+    intro:
+      "Dark, corrupted, and gothic text styles — from subtle gothic script to full zalgo chaos. Copy and paste into any platform that accepts plain text.",
+    styles: ["cursed-gothic", "dark-gothic", "zalgo-extreme", "zalgo", "gothic-glitch", "fraktur-bold"],
+    about: [
+      {
+        heading: "How the corrupted text effect works",
+        body: "The glitchy, overflowing look comes from Unicode combining diacritics — accent marks and modifiers that stack above and below a base character. Zalgo stacks dozens of these on each letter, which most renderers draw outside the normal line bounds, creating the distorted overflow effect.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will the zalgo text display correctly everywhere?",
+        a: "Most modern apps handle it, but some clip the overflow or refuse to save the string. If a platform rejects it, try a less-corrupted variant like Cursed Gothic instead.",
+      },
+    ],
+  },
+  {
+    slug: "freaky",
+    keyword: "freaky font",
+    title: "Freaky Font Generator – Weird Glitch Text Copy & Paste",
+    description:
+      "Generate freaky, glitchy, and distorted Unicode text. Zalgo effects, weird characters, and corrupted styles for a chaotic, unhinged aesthetic.",
+    h1: "Freaky Font Generator",
+    intro:
+      "Glitchy, chaotic, and hard to read on purpose — pick a freaky style, copy it, and drop it anywhere plain text is accepted.",
+    styles: ["zalgo-soft", "zalgo", "zalgo-extreme", "weird", "gothic-glitch", "cursed-gothic"],
+    about: [
+      {
+        heading: "Why freaky text looks the way it does",
+        body: "The distorted look combines two techniques: unusual Unicode characters that look broken or alien, and combining diacritics that overflow above and below the text line. Cranked up, the result reads as genuinely unhinged — which is exactly what the aesthetic is for.",
+      },
+    ],
+    faq: [
+      {
+        q: "What's the difference between freaky and zalgo?",
+        a: "Zalgo is specifically the combining-diacritic overflow effect. Freaky is broader — it includes zalgo but also weird Unicode substitutions, gothic glitch, and other styles that read as distorted or off.",
+      },
+    ],
+  },
 ];
 
 export const PAGE_INDEX_DESCRIPTION =
