@@ -124,6 +124,21 @@ export default function SitemapPage() {
 
         <section className="section">
           <div className="container">
+            <h2>Spanish (Español)</h2>
+            <ul className="sitemap-list">
+              <li><Link href="/es">Inicio</Link></li>
+              <li><Link href="/es/font-generator">Generador de letras</Link></li>
+              <li><Link href="/es/font-generator/cursive">Letra cursiva</Link></li>
+              <li><Link href="/es/font-generator/fancy">Letras bonitas</Link></li>
+              <li><Link href="/es/font-generator/bold">Letras en negrita</Link></li>
+              <li><Link href="/es/font-generator/instagram">Letras para Instagram</Link></li>
+              <li><Link href="/es/cool-symbols/hearts">Símbolos de corazón</Link></li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="section">
+          <div className="container">
             <h2>Letters in different fonts</h2>
             <ul className="sitemap-list">
               {LETTERS.map((c) => (

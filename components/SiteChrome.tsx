@@ -130,6 +130,12 @@ export function SiteHeader() {
           <Link href="/emoticons" onClick={close} className="mn-top">
             Emoticons (Kaomoji)
           </Link>
+          <Link href="/name-generator" onClick={close} className="mn-top">
+            Name Generator
+          </Link>
+          <Link href="/emoticons" onClick={close} className="mn-top">
+            Emoticons (Kaomoji)
+          </Link>
           <Link href="/headcanon-generator" onClick={close} className="mn-top">
             Headcanon Generator
           </Link>
@@ -189,6 +195,8 @@ export function SiteFooter() {
               <li><Link href="/auto-font-styler"><Icon d={ICONS.bolt} /> Auto Font Styler</Link></li>
               <li><Link href="/font-mixer"><Icon d={ICONS.bolt} /> Font Mixer</Link></li>
               <li><Link href="/username-generator"><Icon d={ICONS.generator} /> Username Generator</Link></li>
+              <li><Link href="/name-generator"><Icon d={ICONS.generator} /> Name Generator</Link></li>
+              <li><Link href="/emoticons"><Icon d={ICONS.generator} /> Emoticons (Kaomoji)</Link></li>
               <li><Link href="/name-generator"><Icon d={ICONS.generator} /> Name Generator</Link></li>
               <li><Link href="/emoticons"><Icon d={ICONS.book} /> Emoticons (Kaomoji)</Link></li>
               <li><Link href="/headcanon-generator"><Icon d={ICONS.book} /> Headcanon Generator</Link></li>
