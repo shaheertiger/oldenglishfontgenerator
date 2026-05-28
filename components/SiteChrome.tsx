@@ -103,6 +103,18 @@ export function SiteHeader() {
           <Link href="/font-generator" onClick={close} className="mn-top">
             All Font Generators
           </Link>
+          <Link href="/preppy" onClick={close} className="mn-top">
+            Preppy Fonts
+          </Link>
+          <Link href="/coquette" onClick={close} className="mn-top">
+            Coquette Fonts
+          </Link>
+          <Link href="/different-fonts" onClick={close} className="mn-top">
+            Different Fonts (A–Z)
+          </Link>
+          <Link href="/symbols" onClick={close} className="mn-top">
+            Cool Symbols
+          </Link>
           <Link href="/auto-font-styler" onClick={close} className="mn-top">
             Auto Font Styler
           </Link>
@@ -177,6 +189,15 @@ export function SiteFooter() {
               <li><Link href="/ascii-generator"><Icon d={ICONS.ascii} /> ASCII Generator</Link></li>
               <li><Link href="/image-to-ascii"><Icon d={ICONS.image} /> Image to ASCII</Link></li>
               <li><Link href="/favorites"><Icon d={ICONS.bolt} /> ★ Favorites</Link></li>
+            </ul>
+          </div>
+          <div className="footer-col">
+            <h4>Aesthetic &amp; reference</h4>
+            <ul>
+              <li><Link href="/preppy"><Icon d={ICONS.generator} /> Preppy Fonts</Link></li>
+              <li><Link href="/coquette"><Icon d={ICONS.generator} /> Coquette Fonts</Link></li>
+              <li><Link href="/different-fonts"><Icon d={ICONS.generator} /> Different Fonts (A–Z)</Link></li>
+              <li><Link href="/symbols"><Icon d={ICONS.bolt} /> Cool Symbols</Link></li>
             </ul>
           </div>
           <div className="footer-col">
