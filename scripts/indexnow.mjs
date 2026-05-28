@@ -12,6 +12,8 @@ const SLUGS = [
   "glitch", "facebook", "italic", "upside-down", "fancy", "cursed",
   "creepy", "twitter", "big", "bold-text-generator", "small-caps", "zalgo",
   "tiktok", "ig-font", "underline", "stylish", "reverse",
+  "japanese", "mirror", "mocking-text", "square", "typewriter", "leet",
+  "satanic", "freaky",
 ];
 
 const BLOG_SLUGS = [
