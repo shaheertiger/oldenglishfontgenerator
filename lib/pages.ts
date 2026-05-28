@@ -89,6 +89,322 @@ export const PAGES: PageConfig[] = [
     ],
   },
   {
+    slug: "calligraphy",
+    keyword: "calligraphy generator",
+    title: "Calligraphy Font Generator – Copy & Paste Calligraphy Text",
+    description:
+      "Turn plain text into elegant calligraphy and script fonts. Free, instant Unicode calligraphy you can copy and paste into Instagram, bios, invitations, and more.",
+    h1: "Calligraphy Font Generator",
+    intro:
+      "Type anything and get flowing, hand-lettered calligraphy styles — script, italic, and ornate medieval forms. Copy a variant and paste it anywhere, no font file required.",
+    styles: ["script", "script-bold", "italic-serif", "bold-italic-serif", "sans-italic", "cursive-underline", "cursive-spaced", "medieval-script", "royal-gothic", "decorative-gothic", "fraktur", "ye-olde"],
+    about: [
+      {
+        heading: "Is this real calligraphy?",
+        body: "Not in the pen-and-ink sense — true calligraphy is drawn by hand with a nib or brush. What you get here are Unicode script and italic alphabets that mimic the flowing look of calligraphic lettering, mapped one-to-one from your input so the result stays as plain, copyable text.",
+      },
+      {
+        heading: "Where calligraphy text works best",
+        body: "Calligraphy styles read as elegant and personal, so they suit Instagram bios and captions, wedding and event mockups, quote graphics, signatures, and profile names. Pair a script style with regular text so longer passages stay readable at a glance.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I use this calligraphy for wedding invitations?",
+        a: "For digital previews and mockups, yes. For printed invitations, hand the chosen look to your designer so they can set it in a proper vector font — Unicode characters won't print as crisply as a real typeface.",
+      },
+      {
+        q: "Why do some calligraphy letters look like boxes?",
+        a: "The viewer's device is missing a font that covers those script characters. Pick a different variant and the recipient should see it correctly.",
+      },
+    ],
+  },
+  {
+    slug: "gothic",
+    keyword: "gothic text generator",
+    title: "Gothic Font Generator – Copy & Paste Gothic Text",
+    description:
+      "Convert plain text into gothic, blackletter, and fraktur fonts. Free, instant Unicode gothic text you can copy and paste into Instagram, Discord, bios, and usernames.",
+    h1: "Gothic Font Generator",
+    intro:
+      "Turn anything you type into dark, angular gothic and blackletter styles. Copy a variant and paste it into your bio, captions, usernames, or messages — no app or font file needed.",
+    styles: ["fraktur", "fraktur-bold", "gothic-bold", "blackletter-bold", "outline-gothic", "decorative-gothic", "royal-gothic", "medieval-script", "script", "double-struck", "small-caps", "tattoo-gothic"],
+    about: [
+      {
+        heading: "What makes a font 'gothic'?",
+        body: "Gothic is the everyday name for blackletter — the dense, angular scripts medieval European scribes used, later cast as type by early printers. The styles here approximate the most recognizable blackletter forms (textura, fraktur, schwabacher) using Unicode characters, so the result stays as plain, copyable text.",
+      },
+      {
+        heading: "Gothic vs. blackletter vs. Old English",
+        body: "All three name the same broad family. Blackletter is the typographic term, gothic is the common word, and Old English is what most tattoo artists and sign shops call it. They're stylistic siblings, not different writing systems.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will gothic text work in my Instagram or Discord name?",
+        a: "Bios and messages accept the full Unicode range. Username fields are stricter — if a heavily decorated variant won't save, pick one closer to standard letters like Small Caps or Bold.",
+      },
+      {
+        q: "Can I use gothic text for a tattoo?",
+        a: "For mockups, yes — preview your phrase in every style. For the actual tattoo, your artist needs a real vector font so the linework stays sharp; use the generator to choose the look you want.",
+      },
+    ],
+  },
+  {
+    slug: "cute",
+    keyword: "cute font copy and paste",
+    title: "Cute Font Generator – Copy & Paste Cute Aesthetic Text",
+    description:
+      "Make cute, soft, aesthetic fonts you can copy and paste. Bubble, script, small caps, and decorative Unicode styles — instant and free for bios, captions, and usernames.",
+    h1: "Cute Font Generator",
+    intro:
+      "Type once and grab soft, playful, aesthetic styles — bubbly circled letters, flowing script, and tiny small caps. Copy whichever looks cutest and paste it anywhere.",
+    styles: ["bubble", "bubble-filled", "script", "script-bold", "small-caps", "small-caps-spaced", "squared", "fullwidth", "cursive-underline", "italic-serif", "double-struck", "superscript"],
+    about: [
+      {
+        heading: "What makes a font look cute?",
+        body: "Cute styles lean on rounded, soft, or dainty shapes — circled bubble letters, flowing script, and small caps all read as friendly and aesthetic. Mixing them with symbols and spacing creates the soft 'kawaii' look popular in bios and usernames.",
+      },
+      {
+        heading: "Pairing cute text with symbols",
+        body: "Cute aesthetics often combine styled letters with decorative symbols — hearts, stars, sparkles. Generate your text here, then add a few glyphs from the symbols pages for a finished look.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I use cute fonts in my Instagram bio?",
+        a: "Yes — bios accept the full Unicode range. Some username fields filter unusual characters, so test before saving your handle.",
+      },
+      {
+        q: "Why do some cute letters look the same in upper and lowercase?",
+        a: "A few Unicode styles (like filled bubble letters) only have one case, so we use them for both. Pick the outlined variant if you need distinct upper and lowercase.",
+      },
+    ],
+  },
+  {
+    slug: "superscript",
+    keyword: "superscript generator",
+    title: "Superscript Generator – Copy & Paste Small Raised Text",
+    description:
+      "Convert text into superscript using Unicode characters. Tiny raised letters you can copy and paste into bios, footnotes, captions, and chat.",
+    h1: "Superscript Generator",
+    intro:
+      "Turn your text into small, raised superscript letters. Copy a variant and paste it anywhere — bios, footnotes, math notation, or minimalist captions.",
+    styles: ["superscript", "small-caps", "tiny-spaced", "small-caps-spaced", "small-gothic", "monospace"],
+    about: [
+      {
+        heading: "How superscript text works",
+        body: "Superscript characters were designed for math and footnote notation (like xⁿ), but they render smaller and raised compared to regular letters and copy as plain text. We map each letter to its Unicode superscript form where one exists.",
+      },
+    ],
+    faq: [
+      {
+        q: "Why are some superscript letters missing or substituted?",
+        a: "Unicode never assigned a superscript form for every Latin letter. Most are covered, but a few fall back to the closest similar-looking character.",
+      },
+    ],
+  },
+  {
+    slug: "aesthetic",
+    keyword: "aesthetic fonts",
+    title: "Aesthetic Font Generator – Copy & Paste Aesthetic Text",
+    description:
+      "Generate aesthetic fonts — fullwidth, spaced, script, and soft Unicode styles you can copy and paste into Instagram bios, captions, and usernames.",
+    h1: "Aesthetic Font Generator",
+    intro:
+      "Type once and browse soft, spaced, and vaporwave-style aesthetic fonts. Copy whichever fits your vibe and paste it into your bio, captions, or profile.",
+    styles: ["fullwidth", "script", "small-caps-spaced", "squared", "cursive-spaced", "italic-spaced", "double-struck", "bubble", "outline-spaced", "spaced", "small-caps", "fullwidth-underline"],
+    about: [
+      {
+        heading: "What makes a font look 'aesthetic'?",
+        body: "Aesthetic styles lean on airy spacing, soft script, and fullwidth letters that take up more room — the look that defines vaporwave, soft-girl, and minimalist profiles. The effect comes from real Unicode characters, so it pastes anywhere as plain text.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I use aesthetic fonts in my Instagram bio?",
+        a: "Yes — bios accept the full Unicode range. Some username fields filter unusual characters, so test before saving a handle.",
+      },
+    ],
+  },
+  {
+    slug: "fortnite",
+    keyword: "fortnite font",
+    title: "Fortnite Font Generator – Sweaty Tryhard Name Fonts",
+    description:
+      "Generate Fortnite-style fonts for sweaty, tryhard usernames and display names. Gothic, bold, and decorative Unicode styles — copy and paste ready.",
+    h1: "Fortnite Font Generator",
+    intro:
+      "Build a sweaty Fortnite-style name. Pick a bold, gothic, or symbol-laden variant, copy it, and paste it into your Epic display name or clan tag.",
+    styles: ["gothic-bold", "fraktur", "blackletter", "sans-bold", "monospace", "small-caps", "double-struck", "squared", "fullwidth", "tattoo-gothic", "outline-gothic", "fraktur-bold"],
+    about: [
+      {
+        heading: "Where Fortnite-style fonts work",
+        body: "Epic Games display names accept a wide range of Unicode, which is why 'sweaty' players use styled letters and symbols to stand out. The same styles work in clan tags and on most gaming profiles like Steam, Xbox, and PSN.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will Fortnite accept these characters in my name?",
+        a: "Most do, but Epic filters some ranges and blocks duplicate display names. If a variant won't save, try one closer to standard letters or remove the heaviest symbols.",
+      },
+    ],
+  },
+  {
+    slug: "vaporwave",
+    keyword: "vaporwave text generator",
+    title: "Vaporwave Text Generator – Aesthetic Fullwidth Text",
+    description:
+      "Generate vaporwave aesthetic text using fullwidth Unicode characters — the ａｅｓｔｈｅｔｉｃ wide-spaced look. Copy and paste anywhere.",
+    h1: "Vaporwave Text Generator",
+    intro:
+      "Get the classic ｖａｐｏｒｗａｖｅ look — wide fullwidth letters with airy spacing. Copy a style and paste it into captions, art, or your profile.",
+    styles: ["fullwidth", "fullwidth-underline", "squared", "squared-spaced", "spaced", "small-caps-spaced", "double-struck", "script"],
+    about: [
+      {
+        heading: "Where the vaporwave look comes from",
+        body: "Vaporwave text uses fullwidth forms (ＡＢＣ) originally designed to sit alongside East Asian characters on the same em-square. Pasted into a Latin context they render wide and evenly spaced — the aesthetic that became shorthand for the vaporwave and 80s-retro vibe.",
+      },
+    ],
+    faq: [
+      {
+        q: "Why does vaporwave text take up so much space?",
+        a: "Fullwidth characters are designed to be as wide as a CJK character, so each letter is roughly double the width of normal text. It can wrap awkwardly on narrow screens — preview before posting.",
+      },
+    ],
+  },
+  {
+    slug: "hacked",
+    keyword: "hacker font",
+    title: "Hacked Text Generator – Glitchy Hacker Font Copy & Paste",
+    description:
+      "Generate hacked, glitchy, and leetspeak hacker fonts using Unicode. Copy and paste corrupted, matrix-style text anywhere.",
+    h1: "Hacked Text Generator",
+    intro:
+      "Make your text look hacked — leetspeak, glitched, and monospace 'terminal' styles. Copy a variant and paste it wherever plain text is allowed.",
+    styles: ["leet", "gothic-glitch", "zalgo", "zalgo-soft", "sans-zalgo", "monospace", "double-struck", "squared", "strikethrough"],
+    about: [
+      {
+        heading: "How 'hacked' text is built",
+        body: "The hacker look mixes a few tricks: leetspeak swaps letters for numbers and symbols (h4ck3d), monospace mimics a terminal, and combining diacritics add a glitched, corrupted overlay. All of it stays as copyable Unicode text.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will glitchy hacked text break anyone's app?",
+        a: "Heavy combining-mark styles can slow older renderers, and some platforms throttle high-density Unicode. Use it for fun, not to evade moderation.",
+      },
+    ],
+  },
+  {
+    slug: "tattoo",
+    keyword: "tattoo fonts",
+    title: "Tattoo Font Generator – Blackletter & Gothic Tattoo Lettering",
+    description:
+      "Preview tattoo lettering in dozens of blackletter, gothic, and script styles. Free Unicode tattoo fonts you can copy and paste to mock up a design.",
+    h1: "Tattoo Font Generator",
+    intro:
+      "Mock up a name or quote in tattoo lettering before you book. Browse blackletter, gothic, and script styles, copy your favorite, and share it with your artist.",
+    styles: ["tattoo-gothic", "blackletter", "blackletter-bold", "gothic-bold", "fraktur", "royal-gothic", "dark-gothic", "church-style", "medieval-script", "decorative-gothic", "band-logo", "old-english-spaced"],
+    about: [
+      {
+        heading: "Using this to plan a tattoo",
+        body: "Type your phrase and preview it instantly across blackletter, gothic, and script variants — far faster than installing downloaded fonts. Once you find the look you want, screenshot it or copy the text to show your artist.",
+      },
+      {
+        heading: "From mockup to real ink",
+        body: "These are Unicode characters for previewing, not print-ready type. For the actual tattoo, your artist needs a true vector font (TTF/OTF) so the linework stays crisp at any size. Use the generator to decide the style; let the artist handle the stencil.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I use these characters as a tattoo stencil?",
+        a: "They're meant for previewing the style, not as a stencil. Hand the chosen look to your tattoo artist so they can set it in a proper vector font for clean linework.",
+      },
+      {
+        q: "Which style is most popular for tattoos?",
+        a: "Blackletter and Old English gothic are the classic tattoo scripts; flowing script suits names and quotes. Try a few and see what fits the placement.",
+      },
+    ],
+  },
+  {
+    slug: "signature",
+    keyword: "signature font",
+    title: "Signature Font Generator – Copy & Paste Signature Style Text",
+    description:
+      "Turn your name into elegant signature-style script fonts. Free Unicode signature fonts you can copy and paste into bios, emails, and profiles.",
+    h1: "Signature Font Generator",
+    intro:
+      "Give your name a signature look with flowing script and italic styles. Copy a variant and paste it into your bio, email sign-off, or profile.",
+    styles: ["script", "script-bold", "cursive-spaced", "cursive-underline", "italic-serif", "bold-italic-serif", "sans-italic", "medieval-script"],
+    about: [
+      {
+        heading: "What a signature font is here",
+        body: "True signatures are hand-drawn, but these Unicode script and italic styles mimic that flowing, personal look. Because the result is plain text, it pastes into email signatures, bios, and profiles that don't let you change fonts.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I use this as a legally binding signature?",
+        a: "No — it's styled text for cosmetic use, not a legal e-signature. For documents, use a dedicated e-signature service.",
+      },
+    ],
+  },
+  {
+    slug: "handwriting",
+    keyword: "handwriting font",
+    title: "Handwriting Font Generator – Copy & Paste Handwritten Text",
+    description:
+      "Convert text into handwritten-style script fonts. Free Unicode handwriting fonts you can copy and paste into bios, captions, and messages.",
+    h1: "Handwriting Font Generator",
+    intro:
+      "Make your text look handwritten with flowing script and cursive styles. Copy a variant and paste it anywhere plain text is allowed.",
+    styles: ["script", "script-bold", "cursive-spaced", "cursive-underline", "cursive-strike", "italic-serif", "sans-italic", "medieval-script"],
+    about: [
+      {
+        heading: "How handwriting fonts work as text",
+        body: "These styles use Unicode script and cursive alphabets that resemble handwriting, mapped one-to-one from your input. They aren't real fonts installed on your device — they're characters, so they survive copy-paste into apps with no formatting controls.",
+      },
+    ],
+    faq: [
+      {
+        q: "Why do some handwritten letters show as boxes?",
+        a: "The viewer's device lacks a font covering those script characters. Pick a different variant and the recipient should see it correctly.",
+      },
+    ],
+  },
+  {
+    slug: "old-english",
+    keyword: "old english font",
+    title: "Old English Font Generator – Copy & Paste Old English Text",
+    description:
+      "Convert text into authentic Old English, blackletter, and gothic styles. Free Unicode Old English fonts you can copy and paste into Instagram, Discord, and bios.",
+    h1: "Old English Font Generator",
+    intro:
+      "Turn anything you type into Old English blackletter and gothic lettering. Copy a variant and paste it into your bio, captions, usernames, or tattoo mockups.",
+    styles: ["gothic-classic", "gothic-bold", "blackletter", "fraktur", "fraktur-bold", "old-english-spaced", "german-gothic", "church-style", "medieval-script", "royal-gothic", "decorative-gothic", "tattoo-gothic"],
+    about: [
+      {
+        heading: "What is an Old English font?",
+        body: "Old English is the everyday name for blackletter — the dense, angular scripts medieval scribes used and early printers cast as type. The styles here approximate the most recognizable blackletter forms using Unicode characters, so the result stays as plain, copyable text.",
+      },
+      {
+        heading: "Old English vs. gothic vs. blackletter",
+        body: "All three name the same family. Blackletter is the typographic term, gothic is the common word, and Old English is what most tattoo artists and sign shops call it — stylistic siblings, not different writing systems.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will Old English text work in my Instagram or Discord name?",
+        a: "Bios and messages accept the full Unicode range. Username fields are stricter — if a decorated variant won't save, pick one closer to standard letters.",
+      },
+      {
+        q: "Can I use Old English text for a tattoo?",
+        a: "For mockups, yes — preview your phrase in every style. For the actual tattoo, your artist needs a real vector font so the linework stays sharp.",
+      },
+    ],
+  },
+  {
     slug: "instagram",
     keyword: "ig fonts",
     title: "Instagram Fonts Generator – IG Bio & Caption Fonts",
