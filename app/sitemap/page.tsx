@@ -53,6 +53,12 @@ export default function SitemapPage() {
               <li><Link href="/uuid-generator">UUID Generator</Link></li>
               <li><Link href="/ascii-generator">ASCII Generator</Link></li>
               <li><Link href="/image-to-ascii">Image to ASCII</Link></li>
+              <li><Link href="/case-converter">Case Converter</Link></li>
+              <li><Link href="/pig-latin-translator">Pig Latin Translator</Link></li>
+              <li><Link href="/subscript-generator">Subscript &amp; Superscript Generator</Link></li>
+              <li><Link href="/binary-code-translator">Binary Code Translator</Link></li>
+              <li><Link href="/stacked-text-generator">Stacked Text Generator</Link></li>
+              <li><Link href="/invisible-text-generator">Invisible Text Generator</Link></li>
               <li><Link href="/favorites">★ Favorites</Link></li>
             </ul>
           </div>
