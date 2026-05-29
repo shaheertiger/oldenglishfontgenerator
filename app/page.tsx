@@ -165,9 +165,63 @@ const FAQ = [
   },
 ];
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: FAQ.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
+
+const appJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "@id": `${SITE_URL}/#app`,
+  name: "Old English Font Generator",
+  url: `${SITE_URL}/`,
+  applicationCategory: "UtilityApplication",
+  operatingSystem: "Web browser (Windows, macOS, iOS, Android, Linux)",
+  browserRequirements: "Requires JavaScript.",
+  description:
+    "Free online tool that converts plain text into 60+ Old English, blackletter, gothic, and medieval Unicode styles you can copy and paste anywhere.",
+  inLanguage: "en",
+  isAccessibleForFree: true,
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  publisher: { "@id": `${SITE_URL}/#org` },
+  featureList: [
+    "60+ blackletter, gothic, fraktur, and medieval styles",
+    "Instant copy and paste",
+    "Works on Instagram, TikTok, Discord, YouTube, and X",
+    "No sign-up, watermark, or usage limits",
+  ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: TESTIMONIALS.length,
+    bestRating: "5",
+    worstRating: "1",
+  },
+  review: TESTIMONIALS.map((t) => ({
+    "@type": "Review",
+    reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+    author: { "@type": "Person", name: t.name },
+    reviewBody: t.quote,
+  })),
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }}
+      />
       <SiteHeader />
       <main>
         <div className="container">

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import SymbolGrid from "@/components/SymbolGrid";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbLd } from "@/lib/seo";
 import { SYMBOL_BY_SLUG } from "@/lib/symbols";
 
 const SITE_URL = "https://www.oldenglishfontgenerator.com";
@@ -79,6 +81,13 @@ export default function HeartsSymbolsES() {
         </section>
       </main>
       <SiteFooter />
+      <JsonLd
+        data={breadcrumbLd([
+          { name: "Inicio", path: "/" },
+          { name: "Símbolos", path: "/symbols" },
+          { name: "Corazones", path: "/es/cool-symbols/hearts" },
+        ])}
+      />
     </>
   );
 }

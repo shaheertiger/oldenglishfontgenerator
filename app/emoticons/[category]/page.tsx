@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import SymbolGrid from "@/components/SymbolGrid";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbLd } from "@/lib/seo";
 import { EMOTICON_CATEGORIES, EMOTICON_BY_SLUG } from "@/lib/emoticons";
 
 const SITE_URL = "https://www.oldenglishfontgenerator.com";
@@ -94,6 +96,13 @@ export default async function EmoticonCategoryPage({ params }: { params: Promise
         </section>
       </main>
       <SiteFooter />
+      <JsonLd
+        data={breadcrumbLd([
+          { name: "Home", path: "/" },
+          { name: "Emoticons", path: "/emoticons" },
+          { name: cat.label, path: `/emoticons/${cat.slug}` },
+        ])}
+      />
     </>
   );
 }

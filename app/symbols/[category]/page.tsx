@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import SymbolGrid from "@/components/SymbolGrid";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbLd } from "@/lib/seo";
 import { SYMBOL_CATEGORIES, SYMBOL_BY_SLUG } from "@/lib/symbols";
 
 const SITE_URL = "https://www.oldenglishfontgenerator.com";
@@ -93,6 +95,13 @@ export default async function SymbolCategoryPage({ params }: { params: Promise<P
         </section>
       </main>
       <SiteFooter />
+      <JsonLd
+        data={breadcrumbLd([
+          { name: "Home", path: "/" },
+          { name: "Symbols", path: "/symbols" },
+          { name: cat.label, path: `/symbols/${cat.slug}` },
+        ])}
+      />
     </>
   );
 }

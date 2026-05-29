@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import NameClient from "@/components/NameClient";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbLd, faqLd } from "@/lib/seo";
 import { NAME_CATEGORIES, NAME_BY_SLUG } from "@/lib/names";
 
 const SITE_URL = "https://www.oldenglishfontgenerator.com";
@@ -98,6 +100,16 @@ export default async function NameTypePage({ params }: { params: Promise<Params>
         </section>
       </main>
       <SiteFooter />
+      <JsonLd
+        data={[
+          breadcrumbLd([
+            { name: "Home", path: "/" },
+            { name: "Name Generator", path: "/name-generator" },
+            { name: cat.label, path: `/name-generator/${cat.slug}` },
+          ]),
+          faqLd(cat.faq),
+        ]}
+      />
     </>
   );
 }
