@@ -3,6 +3,8 @@ import Link from "next/link";
 import Generator from "@/components/Generator";
 import UsecaseArt from "@/components/UsecaseArt";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
+import JsonLd from "@/components/JsonLd";
+import { faqLd } from "@/lib/seo";
 import { OLD_ENGLISH_FAMILY } from "@/lib/fonts";
 
 const SITE_URL = "https://www.oldenglishfontgenerator.com";
@@ -198,6 +200,7 @@ export default function HomeES() {
         </section>
       </main>
       <SiteFooter />
+      <JsonLd data={faqLd(FAQ)} />
     </>
   );
 }

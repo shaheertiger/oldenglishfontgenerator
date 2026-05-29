@@ -53,6 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE}/blog/${p.slug}`,
     priority: 0.7,
     changeFrequency: "monthly" as const,
+    lastModified: new Date(p.date),
   }));
   const letterUrls = "abcdefghijklmnopqrstuvwxyz0123456789".split("").map((c) => ({
     url: `${BASE}/different-fonts/${c}`,
@@ -79,5 +80,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
     changeFrequency: "monthly" as const,
   }));
-  return [...staticUrls, ...slugUrls, ...blogUrls, ...letterUrls, ...symbolUrls, ...nameUrls, ...esSlugUrls, ...emoticonUrls].map((u) => ({ ...u, lastModified: now }));
+  return [...staticUrls, ...slugUrls, ...blogUrls, ...letterUrls, ...symbolUrls, ...nameUrls, ...esSlugUrls, ...emoticonUrls].map((u) => ({ lastModified: now, ...u }));
 }

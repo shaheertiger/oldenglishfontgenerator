@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbLd } from "@/lib/seo";
 import { ALL_STYLES, OLD_ENGLISH_FAMILY } from "@/lib/fonts";
 
 const SITE_URL = "https://www.oldenglishfontgenerator.com";
@@ -128,6 +130,13 @@ export default async function LetterPage({ params }: { params: Promise<Params> }
         </section>
       </main>
       <SiteFooter />
+      <JsonLd
+        data={breadcrumbLd([
+          { name: "Home", path: "/" },
+          { name: "Different Fonts", path: "/different-fonts" },
+          { name: isDigit ? ch : upper, path: `/different-fonts/${ch}` },
+        ])}
+      />
     </>
   );
 }

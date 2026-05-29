@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Generator from "@/components/Generator";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbLd } from "@/lib/seo";
 
 const SITE_URL = "https://www.oldenglishfontgenerator.com";
 
@@ -113,6 +115,12 @@ export default function FontGeneratorIndexES() {
         </section>
       </main>
       <SiteFooter />
+      <JsonLd
+        data={breadcrumbLd([
+          { name: "Inicio", path: "/" },
+          { name: "Generador de letras", path: "/es/font-generator" },
+        ])}
+      />
     </>
   );
 }

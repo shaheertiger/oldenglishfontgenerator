@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Generator from "@/components/Generator";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbLd, faqLd } from "@/lib/seo";
 import { getPage } from "@/lib/pages";
 
 const SITE_URL = "https://www.oldenglishfontgenerator.com";
@@ -252,6 +254,16 @@ export default async function PageES({ params }: { params: Promise<Params> }) {
         </section>
       </main>
       <SiteFooter />
+      <JsonLd
+        data={[
+          breadcrumbLd([
+            { name: "Inicio", path: "/" },
+            { name: "Generador de letras", path: "/es/font-generator" },
+            { name: sp.label, path: `/es/font-generator/${slug}` },
+          ]),
+          faqLd(sp.faq),
+        ]}
+      />
     </>
   );
 }
