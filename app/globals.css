@@ -8,7 +8,7 @@
   --text: #0a0a0a;
   --text-soft: #1f1f1f;
   --muted: #6b6b6b;
-  --muted-2: #9a9a9a;
+  --muted-2: #717171; /* WCAG AA: 4.8:1 on #fff, 4.6:1 on #fafafa */
   --accent: #0a0a0a;
   --star: #f5b800;
   --radius: 14px;
@@ -67,9 +67,19 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   text-decoration: none;
   letter-spacing: 1px;
   text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
 }
-.nav { display: flex; gap: 24px; font-size: 14px; }
-.nav a { color: var(--muted); text-decoration: none; }
+.nav { display: flex; align-items: center; gap: 24px; font-size: 14px; }
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 4px 0;
+}
 .nav a:hover { color: var(--text); text-decoration: none; }
 .menu-btn {
   background: transparent;
@@ -79,12 +89,16 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   cursor: pointer;
   display: none;
   padding: 4px 8px;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
 }
 .mobile-nav { display: none; }
 
 @media (max-width: 720px) {
   .nav { display: none; }
-  .menu-btn { display: block; }
+  .menu-btn { display: inline-flex; }
   .mobile-nav {
     display: block;
     border-top: 1px solid var(--border);
