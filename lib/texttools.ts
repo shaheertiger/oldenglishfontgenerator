@@ -207,3 +207,95 @@ export function toStacked(text: string, intensity = 6): string {
     })
     .join("");
 }
+
+/* ------------------------------------------------------------------ */
+/* Morse code <-> text                                                */
+/* ------------------------------------------------------------------ */
+
+const MORSE: Record<string, string> = {
+  a: ".-", b: "-...", c: "-.-.", d: "-..", e: ".", f: "..-.",
+  g: "--.", h: "....", i: "..", j: ".---", k: "-.-", l: ".-..",
+  m: "--", n: "-.", o: "---", p: ".--.", q: "--.-", r: ".-.",
+  s: "...", t: "-", u: "..-", v: "...-", w: ".--", x: "-..-",
+  y: "-.--", z: "--..",
+  "0": "-----", "1": ".----", "2": "..---", "3": "...--", "4": "....-",
+  "5": ".....", "6": "-....", "7": "--...", "8": "---..", "9": "----.",
+  ".": ".-.-.-", ",": "--..--", "?": "..--..", "!": "-.-.--",
+  "'": ".----.", "/": "-..-.", "(": "-.--.", ")": "-.--.-",
+  "&": ".-...", ":": "---...", ";": "-.-.-.", "=": "-...-",
+  "+": ".-.-.", "-": "-....-", "_": "..--.-", '"': ".-..-.",
+  "@": ".--.-.",
+};
+
+const MORSE_INVERSE: Record<string, string> = Object.fromEntries(
+  Object.entries(MORSE).map(([k, v]) => [v, k])
+);
+
+// Letters are separated by a single space, words by " / ".
+export function toMorse(text: string): string {
+  return text
+    .trim()
+    .toLowerCase()
+    .split(/\s+/)
+    .map((word) =>
+      word
+        .split("")
+        .map((c) => MORSE[c] ?? "")
+        .filter(Boolean)
+        .join(" ")
+    )
+    .filter(Boolean)
+    .join(" / ");
+}
+
+export function fromMorse(code: string): string {
+  return code
+    .trim()
+    .split(/\s*\/\s*/) // split into words on the "/" separator
+    .map((word) =>
+      word
+        .trim()
+        .split(/\s+/)
+        .map((tok) => MORSE_INVERSE[tok] ?? "")
+        .join("")
+    )
+    .join(" ");
+}
+
+/* ------------------------------------------------------------------ */
+/* Medieval / "ye olde" English translator                           */
+/* ------------------------------------------------------------------ */
+
+// Whole-word modern -> archaic substitutions. Keys are lowercase; the caller
+// preserves the original word's capitalization.
+const MEDIEVAL_WORDS: Record<string, string> = {
+  you: "thou", your: "thy", yours: "thine", yourself: "thyself",
+  are: "art", "you're": "thou art", "you'll": "thou shalt",
+  "you've": "thou hast", "you'd": "thou wouldst",
+  is: "be", am: "be", have: "hath", has: "hath", do: "doth", does: "doth",
+  did: "didst", will: "shall", "can't": "cannot", "won't": "shall not",
+  my: "mine", me: "mine own self",
+  hello: "well met", hi: "good morrow", hey: "hark", goodbye: "fare thee well",
+  yes: "aye", no: "nay", ok: "verily", okay: "verily", sure: "indeed",
+  please: "prithee", thanks: "gramercy", "thank": "gramercy",
+  friend: "good fellow", friends: "good fellows", stranger: "wanderer",
+  before: "ere", here: "hither", there: "yonder", where: "whither",
+  often: "oft", maybe: "mayhap", perhaps: "perchance", very: "most",
+  really: "verily", because: "for that", about: "concerning",
+  beautiful: "fair", pretty: "comely", ugly: "ill-favoured",
+  crazy: "mad", happy: "merry", sad: "woeful", angry: "wroth",
+  tired: "weary", scared: "affrighted", money: "coin", food: "victuals",
+  drink: "ale", house: "dwelling", town: "village", king: "liege",
+  fight: "duel", run: "flee", look: "behold", listen: "hark",
+  speak: "speaketh", think: "ween", know: "knoweth", said: "quoth",
+  girl: "maiden", woman: "lady", man: "gentleman", child: "bairn",
+  now: "anon", soon: "ere long", quickly: "apace", today: "this day",
+};
+
+export function toMedieval(text: string): string {
+  return text.replace(/[A-Za-z']+/g, (word) => {
+    const replacement = MEDIEVAL_WORDS[word.toLowerCase()];
+    if (!replacement) return word;
+    return matchCase(word, replacement);
+  });
+}

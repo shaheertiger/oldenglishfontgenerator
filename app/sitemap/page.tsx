@@ -59,6 +59,8 @@ export default function SitemapPage() {
               <li><Link href="/binary-code-translator">Binary Code Translator</Link></li>
               <li><Link href="/stacked-text-generator">Stacked Text Generator</Link></li>
               <li><Link href="/invisible-text-generator">Invisible Text Generator</Link></li>
+              <li><Link href="/morse-code-translator">Morse Code Translator</Link></li>
+              <li><Link href="/medieval-translator">Medieval English Translator</Link></li>
               <li><Link href="/favorites">★ Favorites</Link></li>
             </ul>
           </div>

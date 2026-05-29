@@ -169,6 +169,12 @@ export function SiteHeader() {
           <Link href="/invisible-text-generator" onClick={close} className="mn-top">
             Invisible Text Generator
           </Link>
+          <Link href="/morse-code-translator" onClick={close} className="mn-top">
+            Morse Code Translator
+          </Link>
+          <Link href="/medieval-translator" onClick={close} className="mn-top">
+            Medieval English Translator
+          </Link>
           <Link href="/favorites" onClick={close} className="mn-top">
             ★ Favorites
           </Link>
@@ -228,6 +234,8 @@ export function SiteFooter() {
               <li><Link href="/binary-code-translator"><Icon d={ICONS.bolt} /> Binary Code Translator</Link></li>
               <li><Link href="/stacked-text-generator"><Icon d={ICONS.generator} /> Stacked Text Generator</Link></li>
               <li><Link href="/invisible-text-generator"><Icon d={ICONS.bolt} /> Invisible Text Generator</Link></li>
+              <li><Link href="/morse-code-translator"><Icon d={ICONS.bolt} /> Morse Code Translator</Link></li>
+              <li><Link href="/medieval-translator"><Icon d={ICONS.book} /> Medieval English Translator</Link></li>
               <li><Link href="/favorites"><Icon d={ICONS.bolt} /> ★ Favorites</Link></li>
             </ul>
           </div>
