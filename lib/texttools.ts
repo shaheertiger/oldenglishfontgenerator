@@ -299,3 +299,125 @@ export function toMedieval(text: string): string {
     return matchCase(word, replacement);
   });
 }
+
+/* ------------------------------------------------------------------ */
+/* Runes (Elder Futhark)                                              */
+/* ------------------------------------------------------------------ */
+
+// Phonetic English -> Elder Futhark (Unicode Runic block, U+16A0–U+16FF).
+const RUNES: Record<string, string> = {
+  a: "ᚨ", b: "ᛒ", c: "ᚲ", d: "ᛞ", e: "ᛖ", f: "ᚠ", g: "ᚷ", h: "ᚺ",
+  i: "ᛁ", j: "ᛃ", k: "ᚲ", l: "ᛚ", m: "ᛗ", n: "ᚾ", o: "ᛟ", p: "ᛈ",
+  q: "ᚲ", r: "ᚱ", s: "ᛋ", t: "ᛏ", u: "ᚢ", v: "ᚠ", w: "ᚹ", x: "ᚲᛋ",
+  y: "ᛃ", z: "ᛉ",
+};
+
+export function toRunes(text: string): string {
+  // Handle the "th" digraph (þ, thorn rune) before single letters.
+  return text
+    .replace(/th/gi, "ᚦ")
+    .replace(/[a-z]/gi, (c) => RUNES[c.toLowerCase()] ?? c);
+}
+
+/* ------------------------------------------------------------------ */
+/* Egyptian hieroglyphs                                               */
+/* ------------------------------------------------------------------ */
+
+// Phonetic English -> Gardiner uniliteral signs (Unicode Egyptian
+// Hieroglyphs block, U+13000+). An approximate transliteration for fun.
+const HIEROGLYPHS: Record<string, string> = {
+  a: "𓄿", b: "𓃀", c: "𓎡", d: "𓂧", e: "𓇋", f: "𓆑", g: "𓎼", h: "𓉔",
+  i: "𓇋", j: "𓆓", k: "𓎡", l: "𓃭", m: "𓅓", n: "𓈖", o: "𓅱", p: "𓊪",
+  q: "𓈎", r: "𓂋", s: "𓋴", t: "𓏏", u: "𓅱", v: "𓆑", w: "𓅱", x: "𓎢",
+  y: "𓇌", z: "𓊃",
+};
+
+export function toHieroglyphs(text: string): string {
+  return text.replace(/[a-z]/gi, (c) => HIEROGLYPHS[c.toLowerCase()] ?? c);
+}
+
+/* ------------------------------------------------------------------ */
+/* Cuneiform                                                          */
+/* ------------------------------------------------------------------ */
+
+// Decorative English -> Sumero-Akkadian cuneiform signs (Unicode
+// Cuneiform block, U+12000+). A stylized transliteration, not scholarly.
+const CUNEIFORM: Record<string, string> = {
+  a: "𒀀", b: "𒁀", c: "𒍝", d: "𒁕", e: "𒂊", f: "𒁉", g: "𒂵", h: "𒄩",
+  i: "𒅖", j: "𒍞", k: "𒅗", l: "𒆷", m: "𒈠", n: "𒈾", o: "𒌋", p: "𒉺",
+  q: "𒆥", r: "𒊏", s: "𒊓", t: "𒋫", u: "𒌑", v: "𒅴", w: "𒉿", x: "𒍢",
+  y: "𒅀", z: "𒍣",
+};
+
+export function toCuneiform(text: string): string {
+  return text.replace(/[a-z]/gi, (c) => CUNEIFORM[c.toLowerCase()] ?? c);
+}
+
+/* ------------------------------------------------------------------ */
+/* Pirate speak                                                       */
+/* ------------------------------------------------------------------ */
+
+const PIRATE_WORDS: Record<string, string> = {
+  hello: "ahoy", hi: "ahoy", hey: "arr", yes: "aye", no: "nay",
+  my: "me", you: "ye", your: "yer", "you're": "ye be", are: "be",
+  is: "be", am: "be", the: "th'", for: "fer", of: "o'", over: "o'er",
+  to: "t'", and: "an'", "isn't": "be not", friend: "matey",
+  friends: "hearties", stranger: "scallywag", woman: "lass",
+  women: "lasses", man: "landlubber", men: "landlubbers",
+  money: "doubloons", treasure: "booty", gold: "loot", drink: "grog",
+  beer: "grog", food: "grub", boat: "ship", ship: "vessel",
+  sea: "briny deep", ocean: "seven seas", stop: "avast", look: "look ye",
+  hello_there: "ahoy there", everyone: "all hands", happy: "jolly",
+  good: "fine", great: "grand", quickly: "smartly", now: "this instant",
+  why: "whyever", really: "verily", dead: "in Davy Jones' locker",
+};
+
+export function toPirate(text: string): string {
+  return text.replace(/[A-Za-z']+/g, (word) => {
+    const replacement = PIRATE_WORDS[word.toLowerCase()];
+    if (!replacement) return word;
+    return matchCase(word, replacement);
+  });
+}
+
+/* ------------------------------------------------------------------ */
+/* Roman numerals                                                     */
+/* ------------------------------------------------------------------ */
+
+const ROMAN_TABLE: [number, string][] = [
+  [1000, "M"], [900, "CM"], [500, "D"], [400, "CD"], [100, "C"],
+  [90, "XC"], [50, "L"], [40, "XL"], [10, "X"], [9, "IX"],
+  [5, "V"], [4, "IV"], [1, "I"],
+];
+
+// Returns the Roman numeral for 1–3999, or null if out of range.
+export function toRoman(n: number): string | null {
+  if (!Number.isInteger(n) || n < 1 || n > 3999) return null;
+  let remaining = n;
+  let out = "";
+  for (const [value, sym] of ROMAN_TABLE) {
+    while (remaining >= value) {
+      out += sym;
+      remaining -= value;
+    }
+  }
+  return out;
+}
+
+const ROMAN_VALUES: Record<string, number> = {
+  I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000,
+};
+
+// Parses a Roman numeral string, or returns null if invalid.
+export function fromRoman(roman: string): number | null {
+  const s = roman.trim().toUpperCase();
+  if (!s || !/^[IVXLCDM]+$/.test(s)) return null;
+  let total = 0;
+  for (let i = 0; i < s.length; i++) {
+    const cur = ROMAN_VALUES[s[i]];
+    const next = ROMAN_VALUES[s[i + 1]] ?? 0;
+    total += cur < next ? -cur : cur;
+  }
+  // Round-trip check rejects malformed numerals like "IIII" or "VX".
+  return toRoman(total) === s ? total : null;
+}

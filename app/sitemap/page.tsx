@@ -61,6 +61,11 @@ export default function SitemapPage() {
               <li><Link href="/invisible-text-generator">Invisible Text Generator</Link></li>
               <li><Link href="/morse-code-translator">Morse Code Translator</Link></li>
               <li><Link href="/medieval-translator">Medieval English Translator</Link></li>
+              <li><Link href="/runic-translator">Runic Translator (Elder Futhark)</Link></li>
+              <li><Link href="/hieroglyphics-translator">Hieroglyphics Translator</Link></li>
+              <li><Link href="/cuneiform-translator">Cuneiform Translator</Link></li>
+              <li><Link href="/pirate-translator">Pirate Translator</Link></li>
+              <li><Link href="/roman-numeral-converter">Roman Numeral Converter</Link></li>
               <li><Link href="/favorites">★ Favorites</Link></li>
             </ul>
           </div>

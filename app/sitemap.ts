@@ -38,6 +38,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/invisible-text-generator`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE}/morse-code-translator`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE}/medieval-translator`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${BASE}/runic-translator`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${BASE}/hieroglyphics-translator`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${BASE}/cuneiform-translator`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${BASE}/pirate-translator`, priority: 0.8, changeFrequency: "monthly" as const },
+    { url: `${BASE}/roman-numeral-converter`, priority: 0.8, changeFrequency: "monthly" as const },
   ];
   const slugUrls = PAGES.map((p) => ({
     url: `${BASE}/font-generator/${p.slug}`,
