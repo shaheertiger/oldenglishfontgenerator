@@ -151,6 +151,45 @@ export function SiteHeader() {
           <Link href="/image-to-ascii" onClick={close} className="mn-top">
             Image to ASCII
           </Link>
+          <Link href="/case-converter" onClick={close} className="mn-top">
+            Case Converter
+          </Link>
+          <Link href="/pig-latin-translator" onClick={close} className="mn-top">
+            Pig Latin Translator
+          </Link>
+          <Link href="/subscript-generator" onClick={close} className="mn-top">
+            Subscript &amp; Superscript
+          </Link>
+          <Link href="/binary-code-translator" onClick={close} className="mn-top">
+            Binary Code Translator
+          </Link>
+          <Link href="/stacked-text-generator" onClick={close} className="mn-top">
+            Stacked Text Generator
+          </Link>
+          <Link href="/invisible-text-generator" onClick={close} className="mn-top">
+            Invisible Text Generator
+          </Link>
+          <Link href="/morse-code-translator" onClick={close} className="mn-top">
+            Morse Code Translator
+          </Link>
+          <Link href="/medieval-translator" onClick={close} className="mn-top">
+            Medieval English Translator
+          </Link>
+          <Link href="/runic-translator" onClick={close} className="mn-top">
+            Runic Translator
+          </Link>
+          <Link href="/hieroglyphics-translator" onClick={close} className="mn-top">
+            Hieroglyphics Translator
+          </Link>
+          <Link href="/cuneiform-translator" onClick={close} className="mn-top">
+            Cuneiform Translator
+          </Link>
+          <Link href="/pirate-translator" onClick={close} className="mn-top">
+            Pirate Translator
+          </Link>
+          <Link href="/roman-numeral-converter" onClick={close} className="mn-top">
+            Roman Numeral Converter
+          </Link>
           <Link href="/favorites" onClick={close} className="mn-top">
             ★ Favorites
           </Link>
@@ -204,6 +243,19 @@ export function SiteFooter() {
               <li><Link href="/uuid-generator"><Icon d={ICONS.bolt} /> UUID Generator</Link></li>
               <li><Link href="/ascii-generator"><Icon d={ICONS.ascii} /> ASCII Generator</Link></li>
               <li><Link href="/image-to-ascii"><Icon d={ICONS.image} /> Image to ASCII</Link></li>
+              <li><Link href="/case-converter"><Icon d={ICONS.generator} /> Case Converter</Link></li>
+              <li><Link href="/pig-latin-translator"><Icon d={ICONS.generator} /> Pig Latin Translator</Link></li>
+              <li><Link href="/subscript-generator"><Icon d={ICONS.generator} /> Subscript &amp; Superscript</Link></li>
+              <li><Link href="/binary-code-translator"><Icon d={ICONS.bolt} /> Binary Code Translator</Link></li>
+              <li><Link href="/stacked-text-generator"><Icon d={ICONS.generator} /> Stacked Text Generator</Link></li>
+              <li><Link href="/invisible-text-generator"><Icon d={ICONS.bolt} /> Invisible Text Generator</Link></li>
+              <li><Link href="/morse-code-translator"><Icon d={ICONS.bolt} /> Morse Code Translator</Link></li>
+              <li><Link href="/medieval-translator"><Icon d={ICONS.book} /> Medieval English Translator</Link></li>
+              <li><Link href="/runic-translator"><Icon d={ICONS.generator} /> Runic Translator</Link></li>
+              <li><Link href="/hieroglyphics-translator"><Icon d={ICONS.generator} /> Hieroglyphics Translator</Link></li>
+              <li><Link href="/cuneiform-translator"><Icon d={ICONS.generator} /> Cuneiform Translator</Link></li>
+              <li><Link href="/pirate-translator"><Icon d={ICONS.book} /> Pirate Translator</Link></li>
+              <li><Link href="/roman-numeral-converter"><Icon d={ICONS.bolt} /> Roman Numeral Converter</Link></li>
               <li><Link href="/favorites"><Icon d={ICONS.bolt} /> ★ Favorites</Link></li>
             </ul>
           </div>
