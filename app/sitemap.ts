@@ -22,6 +22,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE}/name-generator`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE}/emoticons`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE}/font-generator`, priority: 0.9, changeFrequency: "weekly" as const },
+    { url: `${BASE}/tools`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE}/auto-font-styler`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE}/font-mixer`, priority: 0.8, changeFrequency: "monthly" as const },
     { url: `${BASE}/username-generator`, priority: 0.8, changeFrequency: "monthly" as const },
