@@ -10,7 +10,7 @@ import { OLD_ENGLISH_FAMILY } from "@/lib/fonts";
 const SITE_URL = "https://www.oldenglishfontgenerator.com";
 
 export const metadata: Metadata = {
-  title: "Old English Font Generator – 60+ Blackletter, Gothic & Fraktur Styles",
+  title: "Old English Font Generator – Copy & Paste Gothic & Blackletter Text",
   description:
     "Free Old English font generator with 60+ blackletter, gothic, medieval, and fraktur styles. Copy and paste into Instagram, TikTok, Discord, YouTube, bios, and usernames.",
   keywords: [
@@ -62,37 +62,44 @@ const PILLS = [
   { label: "Facebook Fonts", href: "/font-generator/facebook" },
 ];
 
-const TESTIMONIALS = [
+const LINK_GROUPS = [
   {
-    quote: "Used this to mock up a memorial tattoo before booking the artist. Tried 20+ blackletter variants in two minutes — way faster than messing with downloaded fonts.",
-    name: "Jamie",
-    role: "Tattoo planner",
+    title: "Popular Font Generators",
+    links: [
+      { label: "Cursive Font Generator", href: "/font-generator/cursive" },
+      { label: "Instagram Font Generator", href: "/font-generator/instagram" },
+      { label: "Cool Fonts Generator", href: "/font-generator/cool" },
+      { label: "Bold Text Generator", href: "/font-generator/bold" },
+    ],
   },
   {
-    quote: "Finally a generator that actually lists a gothic style separately from a fraktur one. The category previews on the homepage let me see what I wanted before clicking.",
-    name: "Rowan",
-    role: "Graphic designer",
+    title: "Gothic & Old English Tools",
+    links: [
+      { label: "Old English Font Generator", href: "/font-generator/old-english" },
+      { label: "Gothic Font Generator", href: "/font-generator/gothic" },
+      { label: "Blackletter Font Generator", href: "/font-generator/blackletter" },
+      { label: "Fraktur Font Generator", href: "/font-generator/fraktur" },
+      { label: "Tattoo Font Generator", href: "/font-generator/tattoo" },
+    ],
   },
   {
-    quote: "My Discord server uses the small-caps + outline variants for role names — looks polished and survives copy-paste on every client.",
-    name: "Cas",
-    role: "Discord moderator",
+    title: "Social Media Fonts",
+    links: [
+      { label: "Instagram Fonts", href: "/font-generator/instagram" },
+      { label: "TikTok Fonts", href: "/font-generator/tiktok" },
+      { label: "Discord Fonts", href: "/font-generator/discord" },
+      { label: "Facebook Fonts", href: "/font-generator/facebook" },
+    ],
   },
-  {
-    quote: "Pasted a blackletter caption into my Instagram bio and it kept the spacing right on both iOS and Android. The character-count badge was a nice touch.",
-    name: "Devon",
-    role: "Content creator",
-  },
-  {
-    quote: "I came for the Old English styles and stayed for the font mixer. Alternate-letter mode produces names that look hand-lettered in two seconds.",
-    name: "Priya",
-    role: "Username collector",
-  },
-  {
-    quote: "The auto styler picked italic-script for a soft caption and bold-serif for a punchy headline — accurate enough that I stopped overthinking it.",
-    name: "Marcus",
-    role: "Copywriter",
-  },
+];
+
+const POPULAR_USES = [
+  { art: "tattoo" as const, h: "Tattoo mockups", p: "Preview a name or quote in dozens of blackletter variants before booking your artist." },
+  { art: "instagram" as const, h: "Instagram bios", p: "Drop Old English text into your bio, captions, and comments for instant personality." },
+  { art: "discord" as const, h: "Discord usernames", p: "Gothic nicknames and status text that render the same across every Discord client." },
+  { art: "logo" as const, h: "Gothic logos", p: "Sketch wordmarks and band-style logos in blackletter before committing to a vector typeface." },
+  { art: "invite" as const, h: "Wedding invites", p: "Mock up event titles and names in medieval scripts before sending them to your designer." },
+  { art: "youtube" as const, h: "YouTube titles", p: "Use Old English text in video titles, end-screen cards, and channel descriptions." },
 ];
 
 const USE_CASES = [
@@ -177,38 +184,34 @@ const faqJsonLd = {
 
 const appJsonLd = {
   "@context": "https://schema.org",
-  "@type": "WebApplication",
+  "@type": "SoftwareApplication",
   "@id": `${SITE_URL}/#app`,
   name: "Old English Font Generator",
   url: `${SITE_URL}/`,
-  applicationCategory: "UtilityApplication",
-  operatingSystem: "Web browser (Windows, macOS, iOS, Android, Linux)",
+  applicationCategory: "DesignApplication",
+  operatingSystem: "Web",
   browserRequirements: "Requires JavaScript.",
   description:
     "Free online tool that converts plain text into 60+ Old English, blackletter, gothic, and medieval Unicode styles you can copy and paste anywhere.",
   inLanguage: "en",
   isAccessibleForFree: true,
   offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-  publisher: { "@id": `${SITE_URL}/#org` },
   featureList: [
     "60+ blackletter, gothic, fraktur, and medieval styles",
     "Instant copy and paste",
     "Works on Instagram, TikTok, Discord, YouTube, and X",
     "No sign-up, watermark, or usage limits",
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: TESTIMONIALS.length,
-    bestRating: "5",
-    worstRating: "1",
-  },
-  review: TESTIMONIALS.map((t) => ({
-    "@type": "Review",
-    reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
-    author: { "@type": "Person", name: t.name },
-    reviewBody: t.quote,
-  })),
+};
+
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` },
+    { "@type": "ListItem", position: 2, name: "Font Generator", item: `${SITE_URL}/font-generator` },
+    { "@type": "ListItem", position: 3, name: "Old English Font Generator", item: `${SITE_URL}/` },
+  ],
 };
 
 export default function Home() {
@@ -222,15 +225,20 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <SiteHeader />
       <main>
         <div className="container">
           <section className="hero" id="generator">
             <h1>Old English Font Generator</h1>
             <p className="lead">
-              Convert any text into 60+ Old English, gothic, blackletter, and
-              medieval Unicode styles. Copy and paste into Instagram, TikTok,
-              Discord, YouTube, bios, usernames, and more.
+              Type your text and instantly convert it into Old English, gothic,
+              blackletter, Fraktur, and medieval Unicode fonts. Copy and paste
+              the result into Instagram, TikTok, Discord, YouTube, bios,
+              usernames, and captions.
             </p>
 
             <Generator
@@ -312,6 +320,28 @@ export default function Home() {
             sample="discord name"
           />
         </div>
+
+        <section className="section" id="more-generators">
+          <div className="container">
+            <div className="eyebrow">Keep exploring</div>
+            <h2>More font generators</h2>
+            <p>Jump straight to the most popular styles, grouped by what people search for.</p>
+            <div className="link-cards">
+              {LINK_GROUPS.map((group) => (
+                <div className="link-card" key={group.title}>
+                  <h3>{group.title}</h3>
+                  <ul>
+                    {group.links.map((l) => (
+                      <li key={l.href}>
+                        <Link href={l.href}>{l.label}</Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         <section className="section" id="how">
           <div className="container">
@@ -400,19 +430,17 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="section" id="testimonials">
+        <section className="section" id="popular-uses">
           <div className="container">
-            <div className="eyebrow">What people say</div>
-            <h2>Testimonials</h2>
-            <p>How the tools on this site fit into real workflows.</p>
-            <div className="testimonials">
-              {TESTIMONIALS.map((t) => (
-                <div className="testimonial" key={t.name}>
-                  <div className="stars" aria-label="5 stars">★★★★★</div>
-                  <p className="quote">&ldquo;{t.quote}&rdquo;</p>
-                  <div className="author">
-                    <span className="name">{t.name}</span> · {t.role}
-                  </div>
+            <div className="eyebrow">Popular uses</div>
+            <h2>Popular ways people use Old English fonts</h2>
+            <p>A few of the most common places this gothic and blackletter text ends up.</p>
+            <div className="usecases">
+              {POPULAR_USES.map((u) => (
+                <div className="usecase" key={u.h}>
+                  <UsecaseArt name={u.art} />
+                  <h3>{u.h}</h3>
+                  <p>{u.p}</p>
                 </div>
               ))}
             </div>

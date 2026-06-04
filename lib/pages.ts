@@ -1266,6 +1266,223 @@ export const PAGES: PageConfig[] = [
       },
     ],
   },
+  {
+    slug: "blackletter",
+    keyword: "blackletter font generator",
+    title: "Blackletter Font Generator – Copy & Paste Blackletter Text",
+    description:
+      "Convert plain text into blackletter, textura, and fraktur fonts. Free Unicode blackletter text you can copy and paste into Instagram, Discord, bios, and tattoo mockups.",
+    h1: "Blackletter Font Generator",
+    intro:
+      "Turn anything you type into dense, angular blackletter lettering. Copy a variant and paste it into your bio, captions, usernames, or tattoo mockups — no font file needed.",
+    styles: ["blackletter", "blackletter-bold", "fraktur", "fraktur-bold", "gothic-classic", "gothic-bold", "german-gothic", "church-style", "royal-gothic", "medieval-script", "decorative-gothic", "old-english-spaced"],
+    about: [
+      {
+        heading: "What is blackletter?",
+        body: "Blackletter is the typographic name for the dense, angular scripts medieval scribes used across Europe and early printers cast as the first metal type. The styles here approximate the most recognizable blackletter forms — textura, fraktur, schwabacher — using Unicode characters, so the result stays as plain, copyable text.",
+      },
+      {
+        heading: "Blackletter vs. gothic vs. Old English",
+        body: "All three name the same family. Blackletter is the typographer's term, gothic is the everyday word, and Old English is what most tattoo artists and sign shops call it — stylistic siblings, not different writing systems.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will blackletter text work in my Instagram or Discord name?",
+        a: "Bios and messages accept the full Unicode range. Username fields are stricter — if a heavily decorated variant won't save, pick one closer to standard letters like Bold or Small Caps.",
+      },
+      {
+        q: "Can I use blackletter text for a tattoo?",
+        a: "For mockups, yes — preview your phrase in every style. For the actual tattoo, your artist needs a real vector font so the linework stays sharp.",
+      },
+    ],
+  },
+  {
+    slug: "fraktur",
+    keyword: "fraktur font generator",
+    title: "Fraktur Font Generator – Copy & Paste Fraktur Text",
+    description:
+      "Convert plain text into Fraktur and blackletter fonts. Free Unicode Fraktur text you can copy and paste into Instagram, Discord, bios, usernames, and more.",
+    h1: "Fraktur Font Generator",
+    intro:
+      "Turn anything you type into Fraktur — the ornate German blackletter style. Copy a variant and paste it into your bio, captions, usernames, or messages.",
+    styles: ["fraktur", "fraktur-bold", "blackletter", "blackletter-bold", "gothic-classic", "gothic-bold", "german-gothic", "church-style", "royal-gothic", "decorative-gothic", "medieval-script", "old-english-spaced"],
+    about: [
+      {
+        heading: "What is Fraktur?",
+        body: "Fraktur is a subgenre of blackletter that became the dominant print typeface in German-speaking Europe for centuries. Its name comes from the 'fractured' look of the strokes. The Unicode Mathematical Alphanumeric Symbols block includes a Fraktur alphabet (U+1D504–U+1D537), which is exactly what this generator outputs.",
+      },
+      {
+        heading: "Fraktur vs. other blackletter",
+        body: "Fraktur is one branch of the broader blackletter family, alongside textura, rotunda, and schwabacher. They differ in how strokes break and curve. The styles here approximate those subgenres so you can copy the exact look you want.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is the Fraktur output a real font?",
+        a: "No — it's Unicode text. Each letter maps to a Fraktur codepoint that looks styled, so it pastes anywhere plain text is accepted without installing a font.",
+      },
+      {
+        q: "Where can I use Fraktur text?",
+        a: "Bios, captions, and messages on Instagram, TikTok, Discord, X, and most apps. Username fields sometimes filter unusual characters — try a different variant if one won't save.",
+      },
+    ],
+  },
+  {
+    slug: "medieval",
+    keyword: "medieval font generator",
+    title: "Medieval Font Generator – Copy & Paste Medieval Text",
+    description:
+      "Convert plain text into medieval, gothic, and blackletter fonts. Free Unicode medieval text you can copy and paste into Instagram, Discord, bios, and game profiles.",
+    h1: "Medieval Font Generator",
+    intro:
+      "Turn anything you type into medieval gothic and script lettering. Copy a variant and paste it into your bio, captions, usernames, or fantasy game profiles.",
+    styles: ["medieval-script", "gothic-classic", "gothic-bold", "blackletter", "fraktur", "church-style", "royal-gothic", "german-gothic", "decorative-gothic", "old-english-spaced", "script", "small-caps"],
+    about: [
+      {
+        heading: "What makes a font look medieval?",
+        body: "The medieval look comes from blackletter — the dense, angular scripts scribes used in manuscripts between the 12th and 17th centuries. These Unicode styles approximate those forms, so anything you type reads as period-accurate without an installed font.",
+      },
+      {
+        heading: "Great for fantasy and games",
+        body: "Medieval lettering suits RPG names, guild tags, fantasy usernames, D&D character sheets, and wedding or event invitations. Copy a style and drop it wherever plain text is accepted.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will medieval text work in game usernames?",
+        a: "Steam, Xbox, and many game clients accept most blackletter Unicode in display names. Stricter username fields may filter exotic characters — pick a variant closer to standard letters if one won't save.",
+      },
+      {
+        q: "Is this the same as Old English?",
+        a: "Effectively, yes. Medieval, gothic, blackletter, and Old English all describe the same broad family of scripts.",
+      },
+    ],
+  },
+  {
+    slug: "old-english-tattoo",
+    keyword: "old english tattoo font",
+    title: "Old English Tattoo Font – Blackletter Tattoo Lettering",
+    description:
+      "Preview Old English tattoo lettering in dozens of blackletter and gothic styles. Free Unicode tattoo fonts to copy, paste, and mock up your design before you book.",
+    h1: "Old English Tattoo Font Generator",
+    intro:
+      "Mock up a name or quote in Old English tattoo lettering before you book. Browse blackletter and gothic styles, copy your favorite, and share it with your artist.",
+    styles: ["tattoo-gothic", "blackletter", "blackletter-bold", "gothic-bold", "fraktur", "royal-gothic", "dark-gothic", "church-style", "medieval-script", "decorative-gothic", "band-logo", "old-english-spaced"],
+    about: [
+      {
+        heading: "Planning an Old English tattoo",
+        body: "Old English blackletter is the classic tattoo script — used for names, memorial dates, and quotes. Type your phrase and preview it instantly across blackletter and gothic variants, far faster than installing downloaded fonts. Screenshot the look you want to show your artist.",
+      },
+      {
+        heading: "From mockup to real ink",
+        body: "These are Unicode characters for previewing, not print-ready type. For the actual tattoo, your artist needs a true vector font (TTF/OTF) so the linework stays crisp at any size. Use the generator to choose the style; let the artist handle the stencil.",
+      },
+    ],
+    faq: [
+      {
+        q: "Which Old English style is most popular for tattoos?",
+        a: "Classic blackletter and gothic scripts are the most requested for names and memorial pieces. Try a few variants and see which suits the placement and length of your text.",
+      },
+      {
+        q: "Can I use these characters as a tattoo stencil?",
+        a: "They're meant for previewing the style, not as a stencil. Hand the chosen look to your artist so they can set it in a proper vector font for clean linework.",
+      },
+    ],
+  },
+  {
+    slug: "gothic-letters",
+    keyword: "gothic letters generator",
+    title: "Gothic Letters Generator – Copy & Paste Gothic Letters A–Z",
+    description:
+      "Generate gothic letters A–Z in blackletter, fraktur, and medieval styles. Free Unicode gothic letters you can copy and paste into Instagram, Discord, and bios.",
+    h1: "Gothic Letters Generator",
+    intro:
+      "Turn any word into gothic letters — dark, angular blackletter A–Z. Copy a variant and paste it into your bio, captions, usernames, or messages.",
+    styles: ["gothic-classic", "gothic-bold", "blackletter", "blackletter-bold", "fraktur", "fraktur-bold", "outline-gothic", "decorative-gothic", "royal-gothic", "german-gothic", "medieval-script", "tattoo-gothic"],
+    about: [
+      {
+        heading: "Gothic letters, character by character",
+        body: "Each gothic letter you see is a separate Unicode codepoint that looks like a styled A–Z. Because they're real characters and not an installed font, the letters survive copy-paste into apps that don't let you change fonts.",
+      },
+      {
+        heading: "Single letters or whole words",
+        body: "Use the generator for a full phrase, or copy just one gothic capital for a monogram, initial, or logo mark. The styles cover the most recognizable blackletter and fraktur forms.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I copy a single gothic letter?",
+        a: "Yes — generate your text, then select and copy just the letter you need. Each gothic character is independent.",
+      },
+      {
+        q: "Do gothic letters work everywhere?",
+        a: "Bios, captions, and messages accept the full range. Some username fields filter unusual characters — try a variant closer to standard letters if one won't save.",
+      },
+    ],
+  },
+  {
+    slug: "old-english-copy-paste",
+    keyword: "old english font copy and paste",
+    title: "Old English Font Copy and Paste – Gothic Text Generator",
+    description:
+      "Copy and paste Old English fonts instantly. Free Unicode Old English, blackletter, and gothic text that pastes into Instagram, TikTok, Discord, bios, and usernames.",
+    h1: "Old English Font Copy and Paste",
+    intro:
+      "Type your text, tap a style, and copy Old English lettering in one click. Paste it straight into Instagram, TikTok, Discord, bios, usernames, or anywhere plain text is accepted.",
+    styles: ["gothic-classic", "gothic-bold", "blackletter", "fraktur", "fraktur-bold", "old-english-spaced", "german-gothic", "church-style", "medieval-script", "royal-gothic", "decorative-gothic", "tattoo-gothic"],
+    about: [
+      {
+        heading: "How copy and paste works here",
+        body: "The generator swaps each letter for an Old English Unicode character, so the result is plain text — not an installed font. That's why you can copy it from this page and paste it into almost any app, even ones that don't let you change fonts.",
+      },
+      {
+        heading: "Where the pasted text works",
+        body: "Instagram bios and captions, TikTok captions, Discord messages and nicknames, YouTube titles, X, WhatsApp, and most messaging apps. Username fields are the only place that sometimes strips unusual characters.",
+      },
+    ],
+    faq: [
+      {
+        q: "How do I copy the Old English text?",
+        a: "Tap any style row above to copy it instantly, then paste wherever you need it. No selecting or right-clicking required.",
+      },
+      {
+        q: "Why does pasted text sometimes show as boxes?",
+        a: "The receiving device doesn't have a font covering those Unicode codepoints. Modern iOS and Android render most ranges; some older systems fall back to boxes.",
+      },
+    ],
+  },
+  {
+    slug: "blackletter-copy-paste",
+    keyword: "blackletter font copy and paste",
+    title: "Blackletter Font Copy and Paste – Gothic Text Generator",
+    description:
+      "Copy and paste blackletter fonts instantly. Free Unicode blackletter, fraktur, and gothic text that pastes into Instagram, Discord, bios, usernames, and tattoo mockups.",
+    h1: "Blackletter Font Copy and Paste",
+    intro:
+      "Type your text, tap a style, and copy blackletter lettering in one click. Paste it straight into Instagram, Discord, bios, usernames, or tattoo mockups.",
+    styles: ["blackletter", "blackletter-bold", "fraktur", "fraktur-bold", "gothic-classic", "gothic-bold", "german-gothic", "church-style", "royal-gothic", "medieval-script", "decorative-gothic", "old-english-spaced"],
+    about: [
+      {
+        heading: "Copy blackletter text in one tap",
+        body: "Each blackletter character is a Unicode codepoint that looks like a styled letter, so the output is plain text. Tap a row to copy it and paste it into nearly any app — no font file or sign-up needed.",
+      },
+      {
+        heading: "Where pasted blackletter works",
+        body: "Instagram and TikTok bios and captions, Discord messages and nicknames, X, YouTube titles, and most messaging apps. Username fields sometimes filter unusual characters — try a different variant if one won't save.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is the copied blackletter a real font?",
+        a: "No — it's Unicode text styled to look like blackletter. That's why it pastes anywhere without installing anything.",
+      },
+      {
+        q: "Can I use copied blackletter for a tattoo mockup?",
+        a: "Yes — copy your phrase to preview the style and share it with your artist. For the real tattoo, the artist will set it in a proper vector font.",
+      },
+    ],
+  },
 ];
 
 export const PAGE_INDEX_DESCRIPTION =

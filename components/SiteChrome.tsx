@@ -61,8 +61,9 @@ export function SiteHeader() {
         <nav className="nav">
           <Link href="/">Home</Link>
           <Link href="/font-generator">Font Generator</Link>
-          <Link href="/ascii-generator">ASCII</Link>
-          <Link href="/image-to-ascii">Image → ASCII</Link>
+          <Link href="/ascii-generator">ASCII Art</Link>
+          <Link href="/tools">Tools</Link>
+          <Link href="/blog">Blog</Link>
         </nav>
         <button
           className="menu-btn"
@@ -103,6 +104,9 @@ export function SiteHeader() {
           <Link href="/font-generator" onClick={close} className="mn-top">
             All Font Generators
           </Link>
+          <Link href="/tools" onClick={close} className="mn-top">
+            All Tools
+          </Link>
           <Link href="/preppy" onClick={close} className="mn-top">
             Preppy Fonts
           </Link>
@@ -123,12 +127,6 @@ export function SiteHeader() {
           </Link>
           <Link href="/username-generator" onClick={close} className="mn-top">
             Username Generator
-          </Link>
-          <Link href="/name-generator" onClick={close} className="mn-top">
-            Name Generator
-          </Link>
-          <Link href="/emoticons" onClick={close} className="mn-top">
-            Emoticons (Kaomoji)
           </Link>
           <Link href="/name-generator" onClick={close} className="mn-top">
             Name Generator
@@ -224,6 +222,7 @@ export function SiteFooter() {
             <ul>
               <li><Link href="/"><Icon d={ICONS.home} /> Home</Link></li>
               <li><Link href="/font-generator"><Icon d={ICONS.generator} /> Font Generator</Link></li>
+              <li><Link href="/tools"><Icon d={ICONS.bolt} /> All Tools</Link></li>
               <li><Link href="/blog"><Icon d={ICONS.book} /> Blog</Link></li>
               <li><Link href="/sitemap"><Icon d={ICONS.book} /> Sitemap</Link></li>
             </ul>
@@ -236,8 +235,6 @@ export function SiteFooter() {
               <li><Link href="/username-generator"><Icon d={ICONS.generator} /> Username Generator</Link></li>
               <li><Link href="/name-generator"><Icon d={ICONS.generator} /> Name Generator</Link></li>
               <li><Link href="/emoticons"><Icon d={ICONS.generator} /> Emoticons (Kaomoji)</Link></li>
-              <li><Link href="/name-generator"><Icon d={ICONS.generator} /> Name Generator</Link></li>
-              <li><Link href="/emoticons"><Icon d={ICONS.book} /> Emoticons (Kaomoji)</Link></li>
               <li><Link href="/headcanon-generator"><Icon d={ICONS.book} /> Headcanon Generator</Link></li>
               <li><Link href="/story-generator"><Icon d={ICONS.book} /> Story Generator</Link></li>
               <li><Link href="/uuid-generator"><Icon d={ICONS.bolt} /> UUID Generator</Link></li>
