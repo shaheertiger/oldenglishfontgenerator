@@ -45,6 +45,22 @@ function renderBlock(b: BlogBlock, i: number) {
     case "ul": return <ul key={i}>{b.items.map((it, j) => <li key={j}>{it}</li>)}</ul>;
     case "ol": return <ol key={i}>{b.items.map((it, j) => <li key={j}>{it}</li>)}</ol>;
     case "quote": return <blockquote key={i}>{b.text}</blockquote>;
+    case "cta": return (
+      <p key={i} className="blog-cta">
+        {b.text}{" "}
+        <Link href={b.href}>{b.label} →</Link>
+      </p>
+    );
+    case "links": return (
+      <div key={i} className="blog-links">
+        {b.heading && <h3>{b.heading}</h3>}
+        <ul>
+          {b.items.map((it, j) => (
+            <li key={j}><Link href={it.href}>{it.label}</Link></li>
+          ))}
+        </ul>
+      </div>
+    );
   }
 }
 
