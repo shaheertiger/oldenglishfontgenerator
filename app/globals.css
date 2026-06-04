@@ -463,6 +463,27 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   color: var(--muted);
   font-style: italic;
 }
+.blog-body a { color: var(--text); text-decoration: underline; text-underline-offset: 2px; }
+.blog-body a:hover { color: var(--muted); }
+.blog-cta {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 20px;
+  margin: 22px 0;
+}
+.blog-cta a { font-weight: 700; white-space: nowrap; }
+.blog-links {
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  margin: 24px 0;
+}
+.blog-links h3 { margin: 0 0 10px; font-size: 15px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+.blog-links ul { margin: 0; padding-left: 20px; }
+.blog-links li { margin: 6px 0; }
+.blog-links a { font-weight: 600; }
 
 /* ===== Language switcher ===== */
 .lang-switcher {
