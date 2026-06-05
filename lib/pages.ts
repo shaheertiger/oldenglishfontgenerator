@@ -1576,6 +1576,194 @@ export const PAGES: PageConfig[] = [
       },
     ],
   },
+  {
+    slug: "font-changer",
+    keyword: "font changer",
+    title: "Font Changer – Change Your Text Font Online (Copy & Paste)",
+    description:
+      "Free online font changer. Type your text and instantly change it into dozens of Unicode font styles you can copy and paste into Instagram, Discord, and anywhere.",
+    h1: "Font Changer",
+    intro:
+      "Change your text into a different font in seconds. Type once, browse dozens of styles, copy the one you like, and paste it anywhere — no app, no sign-up, no font files.",
+    styles: ALL_VARIETY,
+    defaultText: "Change my font",
+    about: [
+      {
+        heading: "How an online font changer works",
+        body: "This isn't changing the font installed on your device — it swaps each letter for a Unicode character that already looks styled. Because the output is plain text, the new look travels with it when you copy and paste, even into apps with no font settings of their own.",
+      },
+      {
+        heading: "Where the changed text works",
+        body: "Instagram bios and captions, TikTok, Discord, Facebook, X, YouTube, WhatsApp, and most messaging apps. Username fields are the main exception — they sometimes strip unusual characters, so pick a simpler style if one won't save.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is the font changer free?",
+        a: "Yes — no sign-up, no watermark, and no limits. Everything runs in your browser.",
+      },
+      {
+        q: "Does it actually change the font?",
+        a: "It changes how your text looks by substituting styled Unicode characters. Your device's installed fonts don't change, which is exactly why the result pastes anywhere.",
+      },
+    ],
+  },
+  {
+    slug: "font-converter",
+    keyword: "font converter",
+    title: "Font Converter – Convert Text to Stylish Fonts (Copy & Paste)",
+    description:
+      "Free font converter. Convert plain text into bold, italic, cursive, gothic, and dozens of other Unicode fonts you can copy and paste into any app.",
+    h1: "Font Converter",
+    intro:
+      "Convert plain text into a stylish font instantly. Type your text, choose from dozens of converted styles, copy your favorite, and paste it wherever you need it.",
+    styles: ALL_VARIETY,
+    defaultText: "Convert my text",
+    about: [
+      {
+        heading: "What the converter actually does",
+        body: "It converts each letter you type into a matching Unicode character that looks bold, italic, cursive, gothic, or otherwise styled. The conversion produces plain text, so the styled result can be pasted into apps that don't let you change fonts.",
+      },
+      {
+        heading: "Converting for different apps",
+        body: "Most converted styles work everywhere text is accepted. For maximum compatibility — especially in usernames or on older devices — bold, italic, and small caps convert most reliably. Decorative styles are best kept for bios and captions.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I convert text back to normal?",
+        a: "Yes — just retype or delete the styled version. Since it's plain Unicode text, there's nothing installed to undo; the normal alphabet is always one click away.",
+      },
+      {
+        q: "Will the converted font show on every device?",
+        a: "Most do on modern phones and computers. If a viewer's device lacks a font for a rare character, it shows a box — switch to a more common style like bold or small caps.",
+      },
+    ],
+  },
+  {
+    slug: "graffiti",
+    keyword: "graffiti font generator",
+    title: "Graffiti Font Generator – Bold Street-Style Text Copy & Paste",
+    description:
+      "Generate graffiti-style text with bold, bubble, and decorative Unicode fonts. Copy and paste street-style lettering into bios, usernames, and captions.",
+    h1: "Graffiti Font Generator",
+    intro:
+      "Give your text a bold, street-style graffiti look. Browse heavy, bubble, and decorative Unicode styles, copy your favorite, and paste it into your bio, username, or caption.",
+    styles: ["bubble", "bubble-filled", "squared", "fullwidth", "gothic-bold", "outline-gothic", "sans-bold", "double-struck", "blackletter", "fraktur-bold", "weird", "small-caps"],
+    about: [
+      {
+        heading: "Graffiti style with Unicode",
+        body: "True spray-can graffiti is a hand-drawn art form, so no plain-text tool can reproduce it exactly. What this generator does is gather the boldest, chunkiest, and most decorative Unicode styles — bubble letters, heavy gothic, squared, and outline forms — that capture a similar street-style energy and still copy-paste anywhere.",
+      },
+      {
+        heading: "Where graffiti-style text fits",
+        body: "It's popular for usernames, gaming tags, comment sections, and bios where you want letters that shout. For an actual graffiti piece or logo, use a dedicated graffiti font file; use this to mock up the vibe quickly.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is this real graffiti lettering?",
+        a: "It's a Unicode approximation — bold, bubble, and decorative characters that give a graffiti-like feel. Real graffiti needs hand lettering or a vector font, but this is great for a quick street-style look online.",
+      },
+      {
+        q: "Which style looks most like graffiti?",
+        a: "The filled bubble and squared styles read as the most 'tag-like,' while heavy gothic gives a darker street feel. Try a few and see which fits.",
+      },
+    ],
+  },
+  {
+    slug: "minecraft",
+    keyword: "minecraft font generator",
+    title: "Minecraft Font Generator – Stylish Names & Text Copy & Paste",
+    description:
+      "Generate stylish Minecraft-style names and text with Unicode fonts. Copy and paste bold, gothic, and decorative letters into usernames, signs, and chat.",
+    h1: "Minecraft Font Generator",
+    intro:
+      "Make a stylish name or message for Minecraft. Pick a bold, gothic, or decorative Unicode style, copy it, and paste it into your username, server name, or chat.",
+    styles: ["monospace", "gothic-bold", "fraktur", "sans-bold", "bold-serif", "small-caps", "squared", "fullwidth", "double-struck", "blackletter", "outline-gothic", "bubble"],
+    about: [
+      {
+        heading: "Using styled fonts in Minecraft",
+        body: "Minecraft chat, signs, and many launchers and servers accept Unicode characters, so styled letters from this generator show up in-game. Bedrock and Java handle most ranges, though some servers sanitize unusual characters — test before relying on a heavily decorated name.",
+      },
+      {
+        heading: "Names, signs, and server text",
+        body: "Use styled text for display names, server titles, MOTDs, and signs to stand out from default text. Keep critical commands and coordinates in normal letters so they stay readable and typable by other players.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will these fonts work in Minecraft chat and signs?",
+        a: "Most Unicode styles display in chat and on signs, especially on modern versions. Some servers filter non-standard characters, so if a style doesn't appear, switch to a simpler one like bold or small caps.",
+      },
+      {
+        q: "Can I use this for my Minecraft username?",
+        a: "Mojang/Microsoft account usernames are restricted to standard characters, but in-game display names, nicknames, and server profiles usually accept Unicode styling.",
+      },
+    ],
+  },
+  {
+    slug: "roblox",
+    keyword: "roblox font generator",
+    title: "Roblox Font Generator – Stylish Names & Text Copy & Paste",
+    description:
+      "Generate stylish Roblox-style names and text with Unicode fonts. Copy and paste bold, cute, and gothic letters into display names, groups, and chat.",
+    h1: "Roblox Font Generator",
+    intro:
+      "Create a stylish name or text for Roblox. Choose a bold, cute, or gothic Unicode style, copy it, and paste it into your display name, group name, or chat.",
+    styles: ["sans-bold", "bold-serif", "gothic-bold", "small-caps", "double-struck", "fullwidth", "monospace", "bubble", "fraktur", "script", "squared", "outline-gothic"],
+    about: [
+      {
+        heading: "Styled text in Roblox",
+        body: "Roblox display names, group names, and chat accept a range of Unicode characters, which is how players get stylish names that stand out in lobbies and leaderboards. Roblox's text filter is strict, so cleaner styles like bold and small caps pass more reliably than heavily decorated ones.",
+      },
+      {
+        heading: "Display names vs. usernames",
+        body: "Your Roblox username has tight character rules, but the separate display name is more flexible and is where most styling goes. Group names and in-experience text also support Unicode in many cases.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will Roblox accept these fonts in my name?",
+        a: "Roblox runs every name through a filter, so simpler styles (bold, small caps) are the safest. Very decorative or symbol-heavy variants may be rejected — try a cleaner one if it won't save.",
+      },
+      {
+        q: "Is this allowed by Roblox?",
+        a: "Using Unicode characters in display names is common and the text still passes Roblox moderation. Always follow Roblox's name and chat rules — styling doesn't exempt text from the filter.",
+      },
+    ],
+  },
+  {
+    slug: "linkedin",
+    keyword: "linkedin font generator",
+    title: "LinkedIn Font Generator – Bold Text for Posts & Profiles",
+    description:
+      "Make bold and italic text for LinkedIn posts, headlines, and profiles. Free Unicode font generator you can copy and paste into LinkedIn in seconds.",
+    h1: "LinkedIn Font Generator",
+    intro:
+      "Add bold or italic emphasis to your LinkedIn posts, headline, and About section. LinkedIn has no formatting button, so copy a Unicode style here and paste it straight in.",
+    styles: ["bold-serif", "sans-bold", "italic-serif", "bold-italic-serif", "sans-italic", "small-caps", "double-struck", "monospace", "underline", "fraktur", "script", "sans-bold-italic"],
+    about: [
+      {
+        heading: "Why bold text stands out on LinkedIn",
+        body: "LinkedIn posts and profiles use one default font with no bold or italic controls. Unicode bold and italic characters let you emphasize a hook, a headline, or a key phrase so your post stops the scroll in a busy feed — a tactic many creators use to lift engagement.",
+      },
+      {
+        heading: "Where to use it on LinkedIn",
+        body: "Post body text, your headline, the About section, and featured titles all accept Unicode. Use emphasis sparingly and professionally — one bold line or a few key terms reads as polished, while a fully styled post reads as spam.",
+      },
+    ],
+    faq: [
+      {
+        q: "Does LinkedIn support bold text?",
+        a: "Not natively, but it displays Unicode bold characters. Paste them into a post or your profile and they render as bold on desktop and mobile.",
+      },
+      {
+        q: "Is bold Unicode text accessible on LinkedIn?",
+        a: "Screen readers can read Unicode bold inconsistently, so keep essential information in normal text and use styled characters only for light emphasis.",
+      },
+    ],
+  },
 ];
 
 export const PAGE_INDEX_DESCRIPTION =
