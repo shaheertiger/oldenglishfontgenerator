@@ -1483,6 +1483,99 @@ export const PAGES: PageConfig[] = [
       },
     ],
   },
+  {
+    slug: "sweaty-fortnite",
+    keyword: "sweaty fortnite fonts",
+    title: "Sweaty Fortnite Fonts – Tryhard Name Generator (Copy & Paste)",
+    description:
+      "Make a sweaty Fortnite name with tryhard Unicode fonts and symbols. Copy and paste gothic, bold, and decorative styles straight into your Epic display name.",
+    h1: "Sweaty Fortnite Font Generator",
+    intro:
+      "Build a sweaty, tryhard Fortnite name in seconds. Pick a bold, gothic, or symbol-heavy variant, copy it, and paste it into your Epic display name or clan tag.",
+    styles: ["gothic-bold", "fraktur", "blackletter", "sans-bold", "monospace", "small-caps", "double-struck", "squared", "fullwidth", "tattoo-gothic", "outline-gothic", "fraktur-bold"],
+    about: [
+      {
+        heading: "What makes a Fortnite name look 'sweaty'?",
+        body: "Sweaty (or tryhard) names lean on styled Unicode letters, symbols, and tight spacing to read as competitive and intimidating. Bold gothic and fullwidth styles are the most popular because they stay legible while still looking different from a default name.",
+      },
+      {
+        heading: "Where these names work",
+        body: "Epic Games display names accept a wide Unicode range, so the same styles work in Fortnite, clan tags, and most gaming profiles like Steam, Xbox, and PSN. Copy a variant and paste it wherever you set your name.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will Fortnite accept these sweaty fonts?",
+        a: "Most styles save fine in Epic display names, but Epic filters some ranges and blocks duplicate names. If a variant won't save, try one closer to standard letters or drop the heaviest symbols.",
+      },
+      {
+        q: "Can I copy and paste these into my Epic name?",
+        a: "Yes — tap a style to copy it, then paste it into Epic account settings → display name. It's plain Unicode text, so nothing needs installing.",
+      },
+    ],
+  },
+  {
+    slug: "small-gothic",
+    keyword: "small gothic font generator",
+    title: "Small Gothic Font Generator – Tiny Gothic Text Copy & Paste",
+    description:
+      "Generate small gothic text — compact gothic and small-caps Unicode letters you can copy and paste into bios, usernames, and Discord profiles.",
+    h1: "Small Gothic Font Generator",
+    intro:
+      "Turn your text into small, compact gothic lettering. Copy a variant and paste it into your bio, username, or Discord profile for a clean, understated look.",
+    styles: ["small-gothic", "small-caps", "small-caps-spaced", "tiny-spaced", "gothic-classic", "fraktur", "superscript", "monospace"],
+    about: [
+      {
+        heading: "What is small gothic text?",
+        body: "Small gothic combines two ideas: the angular, blackletter-inspired gothic look and the compact, shrunken feel of small-caps and tiny Unicode letters. The result is gothic styling that stays subtle instead of dominating a bio or name.",
+      },
+      {
+        heading: "Where small gothic fits best",
+        body: "It's ideal for a secondary line in a bio, a tidy Discord display name, or a username where you want gothic character without a heavy, hard-to-read string. The contrast between small and normal text is the whole effect.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is small gothic readable on every device?",
+        a: "The small-caps and gothic sets are well supported on modern phones. A few of the tiniest characters can show boxes on older systems — preview before posting and fall back to small caps if needed.",
+      },
+      {
+        q: "Can I use it in a username?",
+        a: "Bios and display names accept it freely. Strict username fields may filter the rarer characters, so choose a simpler variant if one won't save.",
+      },
+    ],
+  },
+  {
+    slug: "old-english-ig",
+    keyword: "old english font for ig",
+    title: "Old English Font for IG – Instagram Gothic Text Copy & Paste",
+    description:
+      "Old English font for Instagram. Copy and paste blackletter and gothic Unicode text into your IG bio, captions, and display name in seconds.",
+    h1: "Old English Font for Instagram",
+    intro:
+      "Add Old English blackletter text to your Instagram bio, captions, or display name. Type your text, copy a gothic style, and paste it straight into IG — no app needed.",
+    styles: ["gothic-classic", "gothic-bold", "blackletter", "fraktur", "fraktur-bold", "old-english-spaced", "german-gothic", "church-style", "medieval-script", "royal-gothic", "decorative-gothic", "tattoo-gothic"],
+    about: [
+      {
+        heading: "How to use Old English text on Instagram",
+        body: "Instagram has no font picker, so the trick is Unicode: type your text here, tap a gothic style to copy it, then paste it into your IG bio, caption, or display name. Because it's plain text, it renders the same on iOS, Android, and the web.",
+      },
+      {
+        heading: "Which IG fields accept it",
+        body: "Bios and captions take the full range. Your display name usually works too. Your @username is plain Latin only, so keep that simple and put the Old English styling in your display name and bio.",
+      },
+    ],
+    faq: [
+      {
+        q: "Why does my Old English IG bio show as boxes for some people?",
+        a: "Their device lacks a font for those Unicode codepoints. Modern phones render them fine; some older devices fall back to boxes. Bold and small-caps variants have the widest coverage.",
+      },
+      {
+        q: "Will styled text hurt my Instagram search visibility?",
+        a: "Instagram indexes the underlying characters, not the style, so fully styled text is hard to find via search. Keep important keywords in plain text and use Old English for personality.",
+      },
+    ],
+  },
 ];
 
 export const PAGE_INDEX_DESCRIPTION =
