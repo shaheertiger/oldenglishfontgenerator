@@ -71,7 +71,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
     changeFrequency: "monthly" as const,
   }));
-  const esSlugUrls = ["cursive", "fancy", "bold", "instagram"].map((s) => ({
+  const esSlugUrls = ["cursive", "fancy", "bold", "instagram", "old-english"].map((s) => ({
     url: `${BASE}/es/font-generator/${s}`,
     priority: 0.7,
     changeFrequency: "monthly" as const,

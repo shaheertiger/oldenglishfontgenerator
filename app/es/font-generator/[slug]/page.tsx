@@ -23,7 +23,7 @@ type SpanishPage = {
   faq: { q: string; a: string }[];
 };
 
-const SLUGS = ["cursive", "fancy", "bold", "instagram"] as const;
+const SLUGS = ["cursive", "fancy", "bold", "instagram", "old-english"] as const;
 
 const SPANISH: Record<string, SpanishPage> = {
   cursive: {
@@ -147,6 +147,37 @@ const SPANISH: Record<string, SpanishPage> = {
       {
         q: "¿Los lectores de pantalla pueden leer estos caracteres?",
         a: "Normalmente los leen letra por letra o los omiten. Si la accesibilidad te importa, deja la información clave en caracteres normales.",
+      },
+    ],
+  },
+  "old-english": {
+    label: "Letras Old English",
+    h1: "Generador de Letras Old English",
+    lead:
+      "Convierte lo que escribas en letras Old English: caligrafía gótica y blackletter medieval. Copia el estilo que quieras y pégalo en tu biografía, nombre de usuario o diseños de tatuaje.",
+    title: "Generador de Letras Old English – Texto Gótico para Copiar y Pegar",
+    description:
+      "Convierte texto en letras Old English, blackletter y góticas con Unicode. Gratis y al instante para copiar y pegar en Instagram, Discord, biografías y nombres.",
+    keyword: "letras old english",
+    resultsTitle: "Estilos de letras Old English",
+    about: [
+      {
+        heading: "¿Qué son las letras Old English?",
+        body: "Old English es el nombre popular de la blackletter: las escrituras densas y angulares que usaban los escribas medievales y que los primeros impresores fundieron como tipo. Los estilos de aquí imitan esas formas con caracteres Unicode, así que el resultado es texto plano que puedes copiar.",
+      },
+      {
+        heading: "Old English, gótico y blackletter",
+        body: "Los tres nombres describen la misma familia. Blackletter es el término tipográfico, gótico es la palabra cotidiana y Old English es como lo llaman tatuadores y rotulistas — son hermanos de estilo, no sistemas de escritura distintos.",
+      },
+    ],
+    faq: [
+      {
+        q: "¿Funcionan las letras Old English en Instagram o Discord?",
+        a: "Las biografías y los mensajes aceptan todo el rango Unicode. El campo del nombre de usuario es más estricto — si una variante muy decorada no se guarda, elige una más cercana a las letras normales.",
+      },
+      {
+        q: "¿Puedo usar letras Old English para un tatuaje?",
+        a: "Para una vista previa, sí — prueba tu frase en cada estilo. Para el tatuaje real, tu artista necesita una fuente vectorial real para que el trazo se mantenga nítido.",
       },
     ],
   },
