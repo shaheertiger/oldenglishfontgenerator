@@ -1860,6 +1860,38 @@ export const PAGES: PageConfig[] = [
       },
     ],
   },
+  {
+    slug: "distorted-text",
+    keyword: "distorted text generator",
+    title: "Distorted Text Generator – Glitchy, Warped Text Copy & Paste",
+    description:
+      "Generate distorted text — glitchy, warped, and corrupted Unicode styles you can copy and paste into bios, captions, usernames, and chat.",
+    h1: "Distorted Text Generator",
+    intro:
+      "Warp your text into glitchy, distorted styles. Stack combining marks, flip and mix characters, then copy the look you like and paste it anywhere plain text is accepted.",
+    styles: ["zalgo-soft", "zalgo", "zalgo-extreme", "weird", "gothic-glitch", "cursed-gothic", "upside-down", "reverse", "fullwidth", "squared", "fraktur-flipped"],
+    defaultText: "distorted text",
+    about: [
+      {
+        heading: "How distorted text is made",
+        body: "The glitchy, melting look comes from combining diacritical marks (Unicode U+0300–U+036F) stacked on top of your letters until the glyphs overlap. Other distorted styles mix scripts, flip characters, or widen them — all still plain Unicode text, so the warped result copies and pastes anywhere.",
+      },
+      {
+        heading: "Where distorted text fits",
+        body: "It's popular for horror and gaming aesthetics, edgy bios, Discord names, and captions that need to look broken on purpose. A short distorted phrase reads as intentional; a long one can get hard to read and may be trimmed by stricter apps.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will distorted text work everywhere?",
+        a: "Most apps render it, but some that sanitize combining marks (a few username fields and older systems) may strip the effect or refuse to save it. If that happens, choose a lighter, less-distorted variant.",
+      },
+      {
+        q: "What's the difference between distorted, glitch, and zalgo text?",
+        a: "They overlap. Zalgo is specifically the stacked combining-mark overflow; glitch is a broader corrupted look; distorted is broadest of all — it includes those effects plus flipped, mixed, and widened characters.",
+      },
+    ],
+  },
 ];
 
 export const PAGE_INDEX_DESCRIPTION =
