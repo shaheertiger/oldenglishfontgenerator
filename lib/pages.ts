@@ -1764,6 +1764,102 @@ export const PAGES: PageConfig[] = [
       },
     ],
   },
+  {
+    slug: "cool-text",
+    keyword: "cool text generator",
+    title: "Cool Text Generator – Copy & Paste Cool Text Online",
+    description:
+      "Free cool text generator. Type your text and turn it into dozens of cool Unicode styles you can copy and paste into Instagram, Discord, games, and anywhere.",
+    h1: "Cool Text Generator",
+    intro:
+      "Turn plain text into cool, eye-catching styles in seconds. Type once, scroll a wall of variants, copy whichever looks coolest, and paste it anywhere — no app or sign-up.",
+    styles: ALL_VARIETY,
+    defaultText: "cool text",
+    about: [
+      {
+        heading: "What makes text look 'cool'?",
+        body: "Cool text is just normal letters swapped for styled Unicode characters — bold, gothic, cursive, bubble, glitch, and more. Because the result is plain text, it keeps its look when you copy and paste it, even into apps with no font settings.",
+      },
+      {
+        heading: "Where cool text works",
+        body: "Instagram, TikTok, Discord, X, Facebook, YouTube, gaming names, and most messaging apps. For usernames and older devices, the cleaner styles (bold, small caps) are the safest; save the heavier glitch and bubble looks for bios and captions.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is the cool text generator free?",
+        a: "Yes — no sign-up, no watermark, no limits. Everything runs in your browser.",
+      },
+      {
+        q: "Why do some cool fonts show as boxes?",
+        a: "The viewer's device doesn't have a font for those Unicode characters. Switch to a more widely supported style like bold or small caps and they'll render everywhere.",
+      },
+    ],
+  },
+  {
+    slug: "cool-letters",
+    keyword: "cool letters to copy and paste",
+    title: "Cool Letters to Copy and Paste – Stylish Unicode Letters",
+    description:
+      "Cool letters you can copy and paste. Turn your text into stylish Unicode letters — bold, gothic, cursive, bubble, and more — ready for bios, names, and captions.",
+    h1: "Cool Letters to Copy and Paste",
+    intro:
+      "Get cool, stylish letters in one click. Type a word or name, browse the styles, and copy the letters you like — they paste into bios, usernames, captions, and chat.",
+    styles: ALL_VARIETY,
+    defaultText: "cool letters",
+    about: [
+      {
+        heading: "Cool letters, one character at a time",
+        body: "Each cool letter is a Unicode character that looks like a styled A–Z. You can copy a whole word or just a single decorative letter for a monogram or initial — they're all real, copyable characters, not images.",
+      },
+      {
+        heading: "Copy and paste anywhere",
+        body: "Because cool letters are plain text, they paste into Instagram, Discord, TikTok, games, and almost any app. Some username fields filter unusual characters, so pick a simpler style if a letter won't save.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I copy just one cool letter?",
+        a: "Yes — generate your text, then select and copy the single letter you want. Each character stands on its own.",
+      },
+      {
+        q: "Do cool letters work in usernames?",
+        a: "Bios and display names accept the full range. Strict username fields may reject decorated characters, so choose a cleaner style like bold or small caps there.",
+      },
+    ],
+  },
+  {
+    slug: "fun",
+    keyword: "fun fonts",
+    title: "Fun Fonts Generator – Playful Text Copy & Paste",
+    description:
+      "Generate fun, playful fonts — bubble, squared, wide, and quirky Unicode styles you can copy and paste into bios, captions, names, and chat.",
+    h1: "Fun Fonts Generator",
+    intro:
+      "Add a playful twist to your text. Browse bubble, squared, wide, and other fun Unicode styles, copy your favorite, and paste it into your bio, caption, or username.",
+    styles: ["bubble", "bubble-filled", "squared", "fullwidth", "script", "small-caps", "double-struck", "weird", "upside-down", "strikethrough", "fraktur", "monospace"],
+    defaultText: "fun fonts",
+    about: [
+      {
+        heading: "What makes a font fun?",
+        body: "Fun fonts trade formality for personality — rounded bubble letters, blocky squared characters, wide vaporwave-style text, and quirky flipped or weird variants. They're built from Unicode, so the playful look copies and pastes anywhere.",
+      },
+      {
+        heading: "Where fun fonts fit best",
+        body: "Great for casual bios, group chats, gaming names, birthday messages, and comments where you want something lighthearted. A word or two in a fun style pops more than a whole paragraph.",
+      },
+    ],
+    faq: [
+      {
+        q: "Are fun fonts free to use?",
+        a: "Yes — copy and paste as much as you like, with no sign-up or watermark.",
+      },
+      {
+        q: "Will fun fonts work on every app?",
+        a: "Most do on modern devices. The bubble and squared styles are widely supported; if a rare character shows a box on an older phone, switch to a simpler style.",
+      },
+    ],
+  },
 ];
 
 export const PAGE_INDEX_DESCRIPTION =
