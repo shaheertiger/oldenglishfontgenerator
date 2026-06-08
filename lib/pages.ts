@@ -3356,6 +3356,151 @@ export const PAGES: PageConfig[] = [
       },
     ],
   },
+  {
+    slug: "fancy-letters",
+    keyword: "fancy letters",
+    title: "Fancy Letters Generator – Fancy A–Z Alphabet to Copy & Paste",
+    description:
+      "Turn text into fancy letters and browse the full A–Z alphabet in dozens of decorative Unicode styles to copy and paste. Free, instant, no sign-up.",
+    h1: "Fancy Letters Generator",
+    intro:
+      "Type a word for fancy lettering, or copy single decorative letters straight from the A–Z alphabet below. Script, gothic, outline, and bold styles — all plain Unicode, so they paste into bios, captions, and usernames.",
+    styles: ["script", "script-bold", "fraktur", "double-struck", "italic-serif", "bold-serif", "small-caps", "outline-gothic", "cursive-spaced", "decorative-gothic", "royal-gothic", "bubble"],
+    defaultText: "Fancy",
+    alphabet: "letters",
+    about: [
+      {
+        heading: "Fancy letters, one at a time",
+        body: "Fancy lettering is often about a single standout character — a decorative initial, a monogram, a stylish first letter. The A–Z chart below maps every letter to a fancy form you can copy on its own, without retyping a whole word. Uppercase and lowercase are shown separately because decorative styles draw them differently.",
+      },
+      {
+        heading: "These are characters, not a font file",
+        body: "Each fancy letter is a real Unicode character that looks decorative, not an installed typeface — which is exactly why it survives copy-paste into apps with no font controls. For print or a logo, hand the look to a designer who can set it in a true vector font.",
+      },
+    ],
+    faq: [
+      {
+        q: "How do I copy a single fancy letter?",
+        a: "Use the A–Z chart on this page — each tile is one decorative character you can select and copy on its own. For whole words, type into the generator at the top.",
+      },
+      {
+        q: "Why do some fancy letters look like boxes?",
+        a: "The viewer's device is missing a font that covers those characters. Pick a different style and it should display correctly for everyone.",
+      },
+      {
+        q: "Will fancy letters work in my Instagram or Discord name?",
+        a: "Bios and messages accept the full Unicode range. Username fields are stricter — if a decorated letter won't save, choose a style closer to standard letters.",
+      },
+    ],
+  },
+  {
+    slug: "fancy-writing",
+    keyword: "fancy writing",
+    title: "Fancy Writing Generator – Elegant Script & Handwriting Text",
+    description:
+      "Convert plain text into fancy writing — elegant script, cursive, and decorative handwriting styles you can copy and paste. Free and instant.",
+    h1: "Fancy Writing Generator",
+    intro:
+      "Turn anything you type into fancy writing — flowing script, elegant cursive, and ornate handwriting. Copy a style and paste it into bios, captions, signatures, and invitations, no app needed.",
+    styles: ["script", "script-bold", "cursive-spaced", "cursive-bold-spaced", "italic-serif", "bold-italic-serif", "cursive-underline", "medieval-script", "royal-gothic", "decorative-gothic", "ye-olde", "sans-italic"],
+    defaultText: "fancy writing",
+    about: [
+      {
+        heading: "What makes writing look fancy",
+        body: "Fancy writing leans on flow and ornament — connected script, graceful slants, and decorative flourishes that read as handwritten rather than typed. The styles here approximate that range so you can match the mood, from soft and romantic to ornate and formal.",
+      },
+      {
+        heading: "Where fancy writing works best",
+        body: "Script and handwriting styles read as elegant and personal, so they suit Instagram bios and captions, signatures, quote graphics, and wedding or event mockups. Pair a fancy style with plain text so longer passages stay readable.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is this real handwriting?",
+        a: "No — these are Unicode script and cursive alphabets that imitate handwriting, mapped one-to-one from your input. That's what lets them copy-paste as plain text anywhere.",
+      },
+      {
+        q: "Can I use fancy writing for a signature?",
+        a: "For a digital signature look in bios or graphics, yes. For a legal or printed signature, you'll still need a real signature or a designer's vector lettering.",
+      },
+      {
+        q: "Why do some letters look like boxes?",
+        a: "The viewer's device lacks a font covering those characters. Pick a different style and it should display correctly.",
+      },
+    ],
+  },
+  {
+    slug: "tiny-text",
+    keyword: "tiny text generator",
+    title: "Tiny Text Generator – Small Superscript & Subscript Text",
+    description:
+      "Make tiny text with small superscript, subscript, and small-caps Unicode characters you can copy and paste into bios, captions, and comments. Free and instant.",
+    h1: "Tiny Text Generator",
+    intro:
+      "Shrink your text into tiny Unicode letters — small superscript, subscript-style, and miniature caps. Copy a tiny style and paste it into bios, captions, comments, and footnotes, no app needed.",
+    styles: ["superscript", "tiny-spaced", "small-caps", "small-caps-spaced", "mono-spaced", "spaced"],
+    defaultText: "tiny text",
+    about: [
+      {
+        heading: "How tiny text works",
+        body: "There's no real shrink button — instead, Unicode includes small superscript and subscript letters plus miniature small-caps. We swap your characters for those smaller codepoints, so the result stays as plain, copyable text that pastes anywhere.",
+      },
+      {
+        heading: "Where tiny text fits",
+        body: "Tiny styles read as subtle and decorative, so they suit aesthetic bios, footnote-style captions, hashtags, and understated usernames. Note that not every letter has a small form in Unicode, so a few characters may fall back to normal size.",
+      },
+    ],
+    faq: [
+      {
+        q: "Why are some tiny letters bigger than others?",
+        a: "Unicode is missing small versions of a few letters (q and some capitals are common gaps), so those fall back to normal size. Try another tiny style if a letter looks off.",
+      },
+      {
+        q: "Does tiny text work on Instagram and Discord?",
+        a: "Yes — it's plain Unicode, so it pastes into bios, captions, and messages. Username fields can be stricter, so test before saving.",
+      },
+      {
+        q: "Is this the same as small caps?",
+        a: "Small caps shrinks lowercase into mini capitals; tiny text uses raised superscript and subscript characters that sit even smaller. Both are offered here — pick the look you prefer.",
+      },
+    ],
+  },
+  {
+    slug: "brat",
+    keyword: "brat text generator",
+    title: "Brat Text Generator – Lowercase Minimal Brat-Style Text",
+    description:
+      "Style text in the minimal, lowercase brat aesthetic — plain, blunt, and all-lowercase. Copy and paste Unicode styles for captions, bios, and edits.",
+    h1: "Brat Text Generator",
+    intro:
+      "Channel the stripped-back brat aesthetic — plain, blunt, all-lowercase lettering for captions, edits, and bios. Type your text and copy a minimal style straight into any app.",
+    styles: ["mono-spaced", "monospace", "sans-bold", "spaced", "fullwidth", "small-caps", "tiny-spaced", "squared"],
+    defaultText: "brat",
+    about: [
+      {
+        heading: "The brat look, in text",
+        body: "The brat aesthetic is deliberately plain — lowercase, blunt, and unfussy, the opposite of decorative fonts. The minimal monospace and clean styles here capture that stripped-back energy for captions and edits.",
+      },
+      {
+        heading: "Getting the full effect",
+        body: "The signature brat treatment also includes a flat lime-green background and a soft blur — those are graphic effects you add in a photo or design editor, not text characters. Use this generator for the lowercase, minimal text and layer the color and blur on top.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can this make the lime-green blurred brat look?",
+        a: "Not the color or blur — those are image effects you apply in an editor. This tool handles the minimal, lowercase brat-style text you place on top.",
+      },
+      {
+        q: "Why is brat text all lowercase?",
+        a: "The aesthetic is intentionally understated and anti-glamorous, so lowercase and plain styling are part of the look. Keep it simple for the most on-brand result.",
+      },
+      {
+        q: "Does it paste into Instagram and TikTok?",
+        a: "Yes — the styles are plain Unicode, so they paste into bios, captions, and comments everywhere.",
+      },
+    ],
+  },
 ];
 
 export const PAGE_INDEX_DESCRIPTION =
