@@ -3252,6 +3252,110 @@ export const PAGES: PageConfig[] = [
       },
     ],
   },
+  {
+    slug: "facebook-bold-text",
+    keyword: "facebook bold text generator",
+    title: "Facebook Bold Text Generator – Bold Posts & Comments",
+    description:
+      "Make bold text for Facebook posts, comments, and your bio. Facebook has no bold button — this generator creates Unicode bold you can paste straight in.",
+    h1: "Facebook Bold Text Generator",
+    intro:
+      "Facebook has no bold button, so type your text here and copy a bold Unicode version that pastes straight into posts, comments, Marketplace listings, and your bio. No formatting tools needed.",
+    styles: ["sans-bold", "bold-serif", "sans-bold-italic", "bold-italic-serif", "bold-spaced", "gothic-bold", "double-struck", "bold-underline"],
+    defaultText: "important update",
+    about: [
+      {
+        heading: "Why Facebook has no bold button",
+        body: "Facebook's post and comment boxes accept plain text only — there's no built-in formatting toolbar. The workaround is Unicode: each bold letter here is its own character, so the boldness travels with the text when you paste it into a status, comment, or listing.",
+      },
+      {
+        heading: "Where bold text works on Facebook",
+        body: "Bold pastes cleanly into posts, comments, Marketplace titles and descriptions, event details, and your intro/bio. Group posts and page updates work too. Use it for headlines and key points — a whole bold post is harder to read.",
+      },
+    ],
+    faq: [
+      {
+        q: "How do I bold text on Facebook?",
+        a: "Type your text above, tap a bold style to copy it, then paste it into your Facebook post, comment, or bio. Facebook keeps the bold characters because they're Unicode, not formatting.",
+      },
+      {
+        q: "Will bold text work in Facebook comments?",
+        a: "Yes — comments accept the same Unicode characters as posts, so bold pastes in fine. Some very old app versions may render it plainly.",
+      },
+      {
+        q: "Is it safe for my account?",
+        a: "Yes — you're just pasting standard Unicode characters, the same kind used in emoji and accented letters. Nothing is added to your account.",
+      },
+    ],
+  },
+  {
+    slug: "linkedin-bold-text",
+    keyword: "linkedin bold text generator",
+    title: "LinkedIn Bold Text Generator – Bold Posts, Headlines & Bio",
+    description:
+      "Create bold text for LinkedIn posts, headlines, and your About section. LinkedIn has no formatting button — paste in Unicode bold to make key points stand out.",
+    h1: "LinkedIn Bold Text Generator",
+    intro:
+      "LinkedIn offers no bold formatting, so type your text here and copy a professional bold Unicode version to paste into posts, your headline, About section, and experience entries. Make key points stand out in the feed.",
+    styles: ["sans-bold", "bold-serif", "sans-bold-italic", "bold-italic-serif", "small-caps", "bold-spaced", "double-struck", "bold-underline"],
+    defaultText: "now hiring",
+    about: [
+      {
+        heading: "Bold that survives the LinkedIn editor",
+        body: "LinkedIn's post composer and profile fields strip rich formatting, so a normal bold button won't help. Unicode bold sidesteps that — the characters themselves are bold, so they keep their weight when pasted into the feed, your headline, or your About section.",
+      },
+      {
+        heading: "Use it sparingly and professionally",
+        body: "Bold works best on hooks, section labels, and one or two key phrases per post. Bolding entire paragraphs reads as shouting and can hurt readability. A clean bold sans usually looks most professional in a business feed.",
+      },
+    ],
+    faq: [
+      {
+        q: "How do I make bold text on LinkedIn?",
+        a: "Type your text above, copy a bold style, and paste it into your LinkedIn post, headline, or About section. The bold sticks because it's Unicode characters, not formatting LinkedIn can strip.",
+      },
+      {
+        q: "Does bold text affect LinkedIn search or accessibility?",
+        a: "Screen readers can struggle with Unicode bold, and search may treat the characters differently from plain letters. Use it for emphasis on short phrases, and keep your name and core keywords in normal text.",
+      },
+      {
+        q: "Will it work in my headline and About section?",
+        a: "Yes — both accept Unicode, so bold pastes in. The headline has a character limit, and bold characters count the same as normal ones.",
+      },
+    ],
+  },
+  {
+    slug: "bold-italic",
+    keyword: "bold italic text generator",
+    title: "Bold Italic Text Generator – Bold + Slanted Unicode Text",
+    description:
+      "Generate bold italic text that's both heavy and slanted in one style. Free Unicode bold italics to copy and paste into Instagram, Facebook, LinkedIn, and more.",
+    h1: "Bold Italic Text Generator",
+    intro:
+      "Get text that's bold and italic at once — heavy strokes with a confident slant. Type your text and copy a bold italic style that pastes anywhere, no formatting button required.",
+    styles: ["bold-italic-serif", "sans-bold-italic", "italic-serif", "sans-italic", "bold-serif", "italic-spaced", "italic-underline", "script-bold"],
+    defaultText: "stand out",
+    about: [
+      {
+        heading: "Bold and italic in a single style",
+        body: "Most apps make you choose one or the other. Unicode includes dedicated bold-italic alphabets, so each character carries both the heavy weight and the slant at the same time — and it stays as copyable plain text.",
+      },
+      {
+        heading: "Where bold italic works",
+        body: "It pastes into Instagram bios and captions, Facebook and LinkedIn posts, Discord, and most messaging apps. Use it for emphasis with attitude — a tagline, a quote, or a standout phrase.",
+      },
+    ],
+    faq: [
+      {
+        q: "How is this different from regular bold or italic?",
+        a: "Plain bold is heavy and upright; plain italic is light and slanted. Bold italic combines both in one character, so your text is simultaneously strong and angled.",
+      },
+      {
+        q: "Does bold italic paste everywhere?",
+        a: "Almost — it's standard Unicode, so it works in most apps. Username fields sometimes filter these characters, so test before saving a profile name.",
+      },
+    ],
+  },
 ];
 
 export const PAGE_INDEX_DESCRIPTION =
