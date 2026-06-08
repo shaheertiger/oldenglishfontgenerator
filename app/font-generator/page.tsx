@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Generator from "@/components/Generator";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
-import { PAGES, PAGE_INDEX_DESCRIPTION } from "@/lib/pages";
+import { CATEGORIES, getPage, PAGE_INDEX_DESCRIPTION } from "@/lib/pages";
 
 export const metadata: Metadata = {
   title: "Font Generator – Free Special Fonts Copy & Paste",
@@ -39,18 +39,41 @@ export default function FontGeneratorIndex() {
 
         <section className="section">
           <div className="container">
-            <h2>All font generators</h2>
-            <p>Dedicated pages for the most-searched styles:</p>
-            <div className="features" style={{ marginTop: 20 }}>
-              {PAGES.map((p) => (
-                <Link key={p.slug} href={`/font-generator/${p.slug}`} className="feature" style={{ textDecoration: "none" }}>
-                  <h3>{p.h1}</h3>
-                  <p>{p.description}</p>
-                </Link>
+            <h2>Browse font generators by category</h2>
+            <p>
+              Every dedicated style page, grouped by what you&rsquo;re going for.
+              Jump to a category:
+            </p>
+            <div className="cat-strip" style={{ marginTop: 16 }}>
+              {CATEGORIES.map((c) => (
+                <a key={c.id} href={`#${c.id}`} className="cat-pill">
+                  {c.title}
+                </a>
               ))}
             </div>
           </div>
         </section>
+
+        {CATEGORIES.map((c) => (
+          <section className="section" id={c.id} key={c.id} style={{ scrollMarginTop: 80 }}>
+            <div className="container">
+              <h2>{c.title}</h2>
+              <p>{c.intro}</p>
+              <div className="features" style={{ marginTop: 20 }}>
+                {c.slugs.map((slug) => {
+                  const p = getPage(slug);
+                  if (!p) return null;
+                  return (
+                    <Link key={p.slug} href={`/font-generator/${p.slug}`} className="feature" style={{ textDecoration: "none" }}>
+                      <h3>{p.h1}</h3>
+                      <p>{p.description}</p>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          </section>
+        ))}
       </main>
       <SiteFooter />
     </>

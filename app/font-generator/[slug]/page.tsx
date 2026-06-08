@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Generator from "@/components/Generator";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
-import { PAGES, getPage, platformsFor } from "@/lib/pages";
+import { PAGES, getPage, platformsFor, getCategory, relatedPages } from "@/lib/pages";
 import { ALL_STYLES } from "@/lib/fonts";
 
 type Params = { slug: string };
@@ -34,8 +34,7 @@ export async function generateMetadata(
 }
 
 const SIBLING_PILLS = (currentSlug: string) =>
-  PAGES.filter((p) => p.slug !== currentSlug)
-    .slice(0, 10)
+  relatedPages(currentSlug, 10)
     .map((p) => ({ label: p.h1.replace(/ (Generator|Font Generator)$/i, ""), href: `/font-generator/${p.slug}` }));
 
 export default async function Page({ params }: { params: Promise<Params> }) {
@@ -43,7 +42,8 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   const page = getPage(slug);
   if (!page) notFound();
 
-  const others = PAGES.filter((p) => p.slug !== page.slug).slice(0, 12);
+  const category = getCategory(page.slug);
+  const others = relatedPages(page.slug, 12);
   const platforms = platformsFor(page);
   const sampleStyles = page.styles.slice(0, 3).map((id) => ALL_STYLES[id]).filter(Boolean);
   const samplePhrases = page.examples ?? ["hello world", "good vibes only", "stay weird"];
@@ -248,7 +248,16 @@ export default async function Page({ params }: { params: Promise<Params> }) {
         <section className="section">
           <div className="container">
             <div className="eyebrow">Keep exploring</div>
-            <h2>More font generators</h2>
+            <h2>{category ? `More ${category.title.toLowerCase()} generators` : "More font generators"}</h2>
+            {category && (
+              <p>
+                {category.intro}{" "}
+                <Link href={`/font-generator#${category.id}`}>
+                  See all {category.title.toLowerCase()} styles
+                </Link>{" "}
+                or <Link href="/font-generator">browse every generator</Link>.
+              </p>
+            )}
             <div className="features">
               {others.map((o) => (
                 <Link
