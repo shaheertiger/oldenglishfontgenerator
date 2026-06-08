@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Generator from "@/components/Generator";
+import RichText from "@/components/RichText";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import { PAGES, getPage, platformsFor, getCategory, relatedPages } from "@/lib/pages";
 import { ALL_STYLES } from "@/lib/fonts";
@@ -112,7 +113,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
 
           <section className="hero" id="generator">
             <h1>{page.h1}</h1>
-            <p className="lead">{page.intro}</p>
+            <p className="lead"><RichText text={page.intro} /></p>
 
             <Generator
               styles={page.styles}
@@ -128,7 +129,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
           <section className="section">
             <div className="container">
               <h2>{page.about[0].heading}</h2>
-              <p>{page.about[0].body}</p>
+              <p><RichText text={page.about[0].body} /></p>
             </div>
           </section>
         )}
@@ -228,7 +229,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
           <section className="section" key={b.heading}>
             <div className="container">
               <h2>{b.heading}</h2>
-              <p>{b.body}</p>
+              <p><RichText text={b.body} /></p>
             </div>
           </section>
         ))}
@@ -239,7 +240,7 @@ export default async function Page({ params }: { params: Promise<Params> }) {
             {page.faq.map((f) => (
               <details key={f.q}>
                 <summary>{f.q}</summary>
-                <p>{f.a}</p>
+                <p><RichText text={f.a} /></p>
               </details>
             ))}
           </div>

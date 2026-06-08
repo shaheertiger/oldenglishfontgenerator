@@ -2074,7 +2074,7 @@ export const PAGES: PageConfig[] = [
       "Turn text into mismatched, ransom-note style letters that alternate styles like cut-out magazine clippings. Free, copy and paste, no sign-up.",
     h1: "Ransom Note Font Generator",
     intro:
-      "Type a message and get the classic cut-and-paste ransom note look — every letter in a clashing style, like clippings glued from different magazines. Copy it and drop it into a caption, a meme, or a spooky DM.",
+      "Type a message and get the classic cut-and-paste ransom note look — every letter in a clashing style, like clippings glued from different magazines. Copy it and drop it into a caption, a meme, or a [spooky DM](/font-generator/creepy).",
     styles: ["alternating", "weird", "squared", "bubble", "fullwidth", "double-struck", "small-caps", "fraktur"],
     defaultText: "pay up",
     about: [
@@ -2112,7 +2112,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "From Gutenberg to the masthead",
-        body: "The earliest European printing used blackletter type because it imitated the manuscript hands scribes already wrote. That dense, vertical look survives today on newspaper mastheads, diplomas, and certificates — and that's exactly the feel these styles capture.",
+        body: "The earliest European printing used [blackletter](/font-generator/blackletter) type because it imitated the manuscript hands scribes already wrote. That dense, vertical look survives today on newspaper mastheads, diplomas, and certificates — and that's exactly the feel these styles capture. For the spiky, hand-penned version, try the [Old English](/font-generator/old-english) generator.",
       },
     ],
     faq: [
@@ -2140,7 +2140,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Old roots, new attitude",
-        body: "Modern gothic keeps blackletter's heavy strokes but strips away the fussiest ornament, so it reads sharp and editorial rather than medieval. It's the look you see on streetwear graphics, rap covers, and high-fashion logos.",
+        body: "Modern gothic keeps [blackletter's](/font-generator/blackletter) heavy strokes but strips away the fussiest ornament, so it reads sharp and editorial rather than [medieval](/font-generator/medieval). It's the look you see on streetwear graphics, rap covers, and high-fashion logos.",
       },
     ],
     faq: [
@@ -2168,7 +2168,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Big, bold, and built for fun",
-        body: "Show and musical posters use chunky, high-contrast title type so a name reads across a crowded room. These bold and wide Unicode styles bring that same exclamation-point energy to plain text.",
+        body: "Show and musical posters use chunky, high-contrast title type so a name reads across a crowded room. These [bold](/font-generator/bold) and wide Unicode styles bring that same exclamation-point energy to plain text.",
       },
     ],
     faq: [
@@ -2196,13 +2196,13 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Stark, blocky, instantly recognizable",
-        body: "The show's identity leans on flat shapes — circle, triangle, square — and clean, heavy type. The squared and wide styles here echo that minimal, high-impact look for fan content.",
+        body: "The show's identity leans on flat shapes — circle, triangle, square — and clean, heavy type. The [squared](/font-generator/square) and wide styles here echo that minimal, high-impact look for fan content.",
       },
     ],
     faq: [
       {
         q: "Can I get the circle-triangle-square symbols?",
-        a: "Those are graphic shapes rather than letters. For symbols, check our symbols library — the styles here cover the bold title text.",
+        a: "Those are graphic shapes rather than letters. For symbols, check our [symbols library](/symbols) — the styles here cover the bold title text.",
       },
       {
         q: "Is this the official font?",
@@ -2224,7 +2224,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Stamped, official, a little austere",
-        body: "Dystopian franchise posters favor narrow, engraved serifs in all caps — type that looks chiseled into metal. The bold serif and small-caps styles here lean into that cold, official mood.",
+        body: "Dystopian franchise posters favor narrow, engraved serifs in all caps — type that looks chiseled into metal. The bold serif and [small-caps](/font-generator/small-caps) styles here lean into that cold, official mood.",
       },
     ],
     faq: [
@@ -2252,7 +2252,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Elegant, ornate, a little regal",
-        body: "JRPG title art often pairs flowing italics with delicate ornament for a refined, magical feel. The italic, script, and decorative styles here capture that elegance for fan posts and guild branding.",
+        body: "JRPG title art often pairs flowing italics with delicate ornament for a refined, magical feel. The [italic](/font-generator/italic), [script](/font-generator/cursive), and decorative styles here capture that elegance for fan posts and guild branding.",
       },
     ],
     faq: [
@@ -2280,7 +2280,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Loud and unapologetic",
-        body: "Pulp posters and paperbacks shouted with fat, blocky type and wide spacing. These bold and wide Unicode styles bring that retro, in-your-face poster energy to plain text.",
+        body: "Pulp posters and paperbacks shouted with fat, blocky type and wide spacing. These [bold](/font-generator/bold) and wide Unicode styles bring that retro, in-your-face poster energy to plain text.",
       },
     ],
     faq: [
@@ -2308,7 +2308,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Dread over chaos",
-        body: "The scariest titles suggest something is wrong without becoming illegible. A light glitch or distressed blackletter on a short word lands harder than maxed-out static.",
+        body: "The scariest titles suggest something is wrong without becoming illegible. A light [glitch](/font-generator/glitch) or distressed [blackletter](/font-generator/blackletter) on a short word lands harder than maxed-out static.",
       },
     ],
     faq: [
@@ -2346,7 +2346,7 @@ export const PAGES: PageConfig[] = [
       },
       {
         q: "Is heavy zalgo too much?",
-        a: "Often, yes. A little distortion reads as creepy; a lot reads as noise. Start light and add more only if you need it.",
+        a: "Often, yes. A little distortion reads as [creepy](/font-generator/creepy); a lot reads as noise. Start light and add more only if you need it.",
       },
     ],
   },
@@ -2364,7 +2364,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Where the gangster look comes from",
-        body: "The style borrows from West Coast tattoo lettering and old-school blackletter — bold, angular, and unapologetic. It's the look you see on jerseys, mixtape covers, and crew logos.",
+        body: "The style borrows from West Coast [tattoo](/font-generator/tattoo) lettering and old-school [blackletter](/font-generator/blackletter) — bold, angular, and unapologetic. It's the look you see on jerseys, mixtape covers, and crew logos.",
       },
     ],
     faq: [
@@ -2392,7 +2392,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Soft, elegant, a little magical",
-        body: "Princess styles lean on flowing script and gentle ornament for a fairytale feel. They suit birthday themes, nursery mockups, cute bios, and anything that wants a touch of sparkle.",
+        body: "Princess styles lean on flowing [script](/font-generator/cursive) and gentle ornament for a fairytale feel. They suit birthday themes, nursery mockups, [cute](/font-generator/cute) bios, and anything that wants a touch of sparkle.",
       },
     ],
     faq: [
@@ -2420,7 +2420,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Romance in plain text",
-        body: "Flowing script reads as warm and personal, which is why it suits love notes and anniversary captions. The styles here stay copyable as plain Unicode, so they work in DMs, bios, and graphics alike.",
+        body: "Flowing [script](/font-generator/cursive) reads as warm and personal, which is why it suits love notes and anniversary captions. The styles here stay copyable as plain Unicode, so they work in DMs, bios, and graphics alike.",
       },
     ],
     faq: [
@@ -2448,7 +2448,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Soft, airy, a little divine",
-        body: "Angelic styles favor light strokes and open spacing for a calm, heavenly mood. They pair well with star and sparkle symbols and suit soft, aesthetic profiles.",
+        body: "Angelic styles favor light strokes and open spacing for a calm, heavenly mood. They pair well with star and sparkle [symbols](/symbols) and suit soft, [aesthetic](/font-generator/aesthetic) profiles.",
       },
     ],
     faq: [
@@ -2476,7 +2476,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Untamed by design",
-        body: "Animalistic styles distress and sharpen the letters so they feel scratched, clawed, or growled rather than typed. A short, punchy word carries the effect best.",
+        body: "Animalistic styles distress and sharpen the letters so they feel [scratched](/font-generator/scratchy), clawed, or growled rather than typed. A short, punchy word carries the effect best.",
       },
     ],
     faq: [
@@ -2504,7 +2504,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Cute and friendly",
-        body: "Rounded bubble letters and bouncy scripts read as playful and warm — exactly the vibe for pet content. Pair them with a paw or heart symbol for extra charm.",
+        body: "Rounded [bubble](/font-generator/bubble) letters and bouncy scripts read as playful and warm — exactly the vibe for pet content. Pair them with a paw or heart symbol for extra charm.",
       },
     ],
     faq: [
@@ -2532,7 +2532,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Make it look appetizing",
-        body: "Food branding mixes friendly script with bold, readable headers. Use a flowing style for a café name and a bold one for prices or dish names to keep menus clear.",
+        body: "Food branding mixes friendly [script](/font-generator/cursive) with [bold](/font-generator/bold), readable headers. Use a flowing style for a café name and a bold one for prices or dish names to keep menus clear.",
       },
     ],
     faq: [
@@ -2560,7 +2560,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Light and airy",
-        body: "Rounded bubble and softly spaced styles read as gentle and dreamy — the cloudcore aesthetic. Pair them with cloud or star symbols for a complete soft look.",
+        body: "Rounded [bubble](/font-generator/bubble) and softly spaced styles read as gentle and dreamy — the cloudcore [aesthetic](/font-generator/aesthetic). Pair them with cloud or star symbols for a complete soft look.",
       },
     ],
     faq: [
@@ -2588,7 +2588,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Sweet and rounded",
-        body: "Cookie-style script is soft, friendly, and a little indulgent — perfect for bakeries, dessert blogs, and cute branding. Flowing script paired with rounded shapes carries the warmth.",
+        body: "Cookie-style script is soft, friendly, and a little indulgent — perfect for bakeries, dessert blogs, and [cute](/font-generator/cute) branding. Flowing [script](/font-generator/cursive) paired with rounded shapes carries the warmth.",
       },
     ],
     faq: [
@@ -2616,7 +2616,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Built to stand out in a lobby",
-        body: "Gaming text favors blocky, squared, and sci-fi styles that read clearly at small sizes in a lobby or chat. Leet-style swaps add a classic hacker flavor for tags and handles.",
+        body: "Gaming text favors blocky, [squared](/font-generator/square), and sci-fi styles that read clearly at small sizes in a lobby or chat. [Leet-style](/font-generator/leet) swaps add a classic hacker flavor for tags and handles.",
       },
     ],
     faq: [
@@ -2644,7 +2644,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "The anime aesthetic, in text",
-        body: "The look mixes Japanese-style halfwidth letters and wide fullwidth characters with clean, stylish scripts — exactly the vibe of anime fan edits and aesthetic profiles.",
+        body: "The look mixes [Japanese-style](/font-generator/japanese) halfwidth letters and wide fullwidth characters with clean, [stylish](/font-generator/stylish) scripts — exactly the vibe of anime fan edits and aesthetic profiles.",
       },
     ],
     faq: [
@@ -2672,7 +2672,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Precise and legible",
-        body: "Scientific text values clarity over flourish. Monospace and small-caps styles read as neat and technical, and italics suit species names and Latin terms the way journals format them.",
+        body: "Scientific text values clarity over flourish. Monospace and [small-caps](/font-generator/small-caps) styles read as neat and technical, and [italics](/font-generator/italic) suit species names and Latin terms the way journals format them.",
       },
     ],
     faq: [
@@ -2700,7 +2700,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Machine-made by feel",
-        body: "Cybernetic text leans on squared, technical, and faintly glitched styles to feel engineered rather than handwritten. A little glitch adds a cyberpunk edge without losing legibility.",
+        body: "Cybernetic text leans on [squared](/font-generator/square), technical, and faintly glitched styles to feel engineered rather than handwritten. A little [glitch](/font-generator/glitch) adds a cyberpunk edge without losing legibility.",
       },
     ],
     faq: [
@@ -2728,7 +2728,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Turn it up to eleven",
-        body: "Rock and metal lettering ranges from spiky blackletter to bold, distressed logos. The band-logo and heavy gothic styles here capture that loud, rebellious feel for posters and merch mockups.",
+        body: "Rock and metal lettering ranges from spiky [blackletter](/font-generator/blackletter) to bold, distressed logos. The band-logo and heavy [gothic](/font-generator/gothic) styles here capture that loud, rebellious feel for posters and merch mockups.",
       },
     ],
     faq: [
@@ -2756,7 +2756,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Classic collegiate look",
-        body: "Varsity lettering is bold, serifed, and built to read across a stadium — the look stitched onto jackets and jerseys. Bold serif and small-caps styles capture that athletic, all-caps feel.",
+        body: "Varsity lettering is [bold](/font-generator/bold), serifed, and built to read across a stadium — the look stitched onto jackets and jerseys. Bold serif and [small-caps](/font-generator/small-caps) styles capture that athletic, all-caps feel.",
       },
     ],
     faq: [
@@ -2784,7 +2784,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Loose and flowing",
-        body: "Wide fullwidth letters and open spacing give text a stretched, wavy, laid-back rhythm — popular in vaporwave and chill aesthetics. Pair it with the right caption for a relaxed feel.",
+        body: "Wide fullwidth letters and open spacing give text a stretched, wavy, laid-back rhythm — popular in [vaporwave](/font-generator/vaporwave) and chill aesthetics. Pair it with the right caption for a relaxed feel.",
       },
     ],
     faq: [
@@ -2818,7 +2818,7 @@ export const PAGES: PageConfig[] = [
     faq: [
       {
         q: "How do I get the scratched look?",
-        a: "The strike-through and slash styles add scratch marks across letters; light zalgo adds a damaged texture. Combine sparingly.",
+        a: "The strike-through and slash styles add scratch marks across letters; light [zalgo](/font-generator/zalgo) adds a damaged texture. Combine sparingly.",
       },
       {
         q: "Does it work in a bio?",
@@ -2840,7 +2840,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Built to be read fast",
-        body: "Good signage is bold, spaced, and high-contrast so it reads at a glance. Bold serif and wide styles carry that clarity, while spacing keeps short words easy to scan.",
+        body: "Good signage is [bold](/font-generator/bold), spaced, and high-contrast so it reads at a glance. Bold serif and wide styles carry that clarity, while spacing keeps short words easy to scan.",
       },
     ],
     faq: [
@@ -2868,7 +2868,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Set the mood for a playlist",
-        body: "A stylish script title gives a playlist personality before a single track plays. Flowing scripts read as moody or romantic; bold italics feel energetic. Pick one that matches the vibe.",
+        body: "A [stylish](/font-generator/stylish) script title gives a playlist personality before a single track plays. Flowing scripts read as moody or romantic; [bold italics](/font-generator/bold-italic) feel energetic. Pick one that matches the vibe.",
       },
     ],
     faq: [
@@ -2896,7 +2896,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Find your wordmark's feel",
-        body: "A logotype is your brand name set in a distinctive style. Comparing bold, script, and gothic looks side by side helps you spot which personality fits — clean and corporate, warm and handcrafted, or bold and edgy.",
+        body: "A logotype is your brand name set in a distinctive style. Comparing [bold](/font-generator/bold), [script](/font-generator/cursive), and [gothic](/font-generator/gothic) looks side by side helps you spot which personality fits — clean and corporate, warm and handcrafted, or bold and edgy.",
       },
     ],
     faq: [
@@ -2924,7 +2924,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Classical elegance",
-        body: "Italianate lettering leans on graceful slants and refined proportions — the calligraphic tradition that gave us italic type itself. The italic and script styles here carry that polished, old-world elegance.",
+        body: "Italianate lettering leans on graceful slants and refined proportions — the [calligraphic](/font-generator/calligraphy) tradition that gave us [italic](/font-generator/italic) type itself. The italic and script styles here carry that polished, old-world elegance.",
       },
     ],
     faq: [
@@ -2952,7 +2952,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Not all bold is the same",
-        body: "Bold means different things in different families: a heavy serif feels formal, a bold sans feels modern, a bold italic feels energetic, and bold gothic feels dramatic. Comparing them side by side makes it easy to pick the right weight for the job.",
+        body: "Bold means different things in different families: a heavy serif feels formal, a bold sans feels modern, a [bold italic](/font-generator/bold-italic) feels energetic, and bold [gothic](/font-generator/gothic) feels dramatic. Comparing them side by side makes it easy to pick the right weight for the job.",
       },
     ],
     faq: [
@@ -2980,7 +2980,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "The look of the 1940s",
-        body: "Forties typography mixed sturdy newspaper gothics, typewriter monospace, and bold serif headlines. These styles capture that wartime-era, print-shop feel for vintage projects.",
+        body: "Forties typography mixed sturdy newspaper gothics, [typewriter](/font-generator/typewriter) monospace, and bold serif headlines. These styles capture that wartime-era, print-shop feel for vintage projects.",
       },
     ],
     faq: [
@@ -3014,7 +3014,7 @@ export const PAGES: PageConfig[] = [
     faq: [
       {
         q: "Best style for a Gatsby party invite?",
-        a: "Spaced small-caps and outlined caps read most deco. Pair them with gold-and-black graphics for the full effect.",
+        a: "Spaced [small-caps](/font-generator/small-caps) and outlined caps read most deco. Pair them with gold-and-black graphics for the full effect.",
       },
       {
         q: "Are these real deco fonts?",
@@ -3036,7 +3036,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Early-internet nostalgia",
-        body: "The 2000s web ran on fullwidth 'aesthetic' text, leetspeak handles, and glittery profile fonts. These styles bring back that MySpace-and-AIM energy for nostalgic posts.",
+        body: "The 2000s web ran on fullwidth '[aesthetic](/font-generator/aesthetic)' text, [leetspeak](/font-generator/leet) handles, and glittery profile fonts. These styles bring back that MySpace-and-AIM energy for nostalgic posts.",
       },
     ],
     faq: [
@@ -3064,7 +3064,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Modern romance, softly styled",
-        body: "New romantic styles keep the warmth of classic script but feel cleaner and more contemporary — the look of modern wedding stationery and soft aesthetic profiles.",
+        body: "New romantic styles keep the warmth of classic [script](/font-generator/cursive) but feel cleaner and more contemporary — the look of modern wedding stationery and soft aesthetic profiles. For the heart-and-valentines version, see the [love font generator](/font-generator/love).",
       },
     ],
     faq: [
@@ -3092,7 +3092,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Classic board-game branding",
-        body: "Vintage board-game titles use bold, deco-influenced caps with playful flourish. The bold serif and spaced-caps styles here capture that nostalgic game-box feel.",
+        body: "Vintage board-game titles use [bold](/font-generator/bold), deco-influenced caps with playful flourish. The bold serif and spaced-caps styles here capture that nostalgic game-box feel.",
       },
     ],
     faq: [
@@ -3120,7 +3120,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Gentle and sweet",
-        body: "Newborn announcements call for soft script and rounded shapes that feel tender and warm. Pair a flowing style with a heart or star for a gentle, celebratory touch.",
+        body: "Newborn announcements call for soft [script](/font-generator/cursive) and rounded shapes that feel tender and warm. Pair a flowing style with a heart or star for a gentle, celebratory touch.",
       },
     ],
     faq: [
@@ -3148,7 +3148,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Say it with style",
-        body: "A simple 'thank you' lands warmer in a flowing script or a bold, heartfelt style. Compare the variants and copy the one that matches the message — a thank-you card, a reply, or a caption.",
+        body: "A simple 'thank you' lands warmer in a flowing [script](/font-generator/cursive) or a [bold](/font-generator/bold), heartfelt style. Compare the variants and copy the one that matches the message — a thank-you card, a reply, or a caption.",
       },
     ],
     faq: [
@@ -3177,7 +3177,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Ornate capitals, one at a time",
-        body: "Calligraphy shines in capital letters — the swooping initial that opens a name or monogram. The A–Z chart below maps each letter to an elegant script capital you can copy on its own, without retyping a whole word.",
+        body: "[Calligraphy](/font-generator/calligraphy) shines in capital letters — the swooping initial that opens a name or monogram. The A–Z chart below maps each letter to an elegant [script](/font-generator/cursive) capital you can copy on its own, without retyping a whole word.",
       },
       {
         heading: "Capitals vs. a real pen",
@@ -3210,7 +3210,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Calligraphy, minus the fuss",
-        body: "Modern calligraphy keeps the flow of traditional script but drops the heavy ornament for a cleaner, contemporary look — the style filling today's wedding signs, prints, and brand lettering. The A–Z chart lets you copy single letters for monograms and initials.",
+        body: "Modern [calligraphy](/font-generator/calligraphy) keeps the flow of traditional [script](/font-generator/cursive) but drops the heavy ornament for a cleaner, contemporary look — the style filling today's wedding signs, prints, and brand lettering. The A–Z chart lets you copy single letters for monograms and initials.",
       },
     ],
     faq: [
@@ -3238,7 +3238,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Many hands, one tool",
-        body: "Handwriting varies enormously — formal copperplate, casual cursive, sharp italic, looped print. These Unicode styles approximate that range so you can compare different kinds of penmanship and copy the one that suits your note, bio, or caption.",
+        body: "Handwriting varies enormously — formal copperplate, casual [cursive](/font-generator/cursive), sharp [italic](/font-generator/italic), looped print. These Unicode styles approximate that range so you can compare different kinds of penmanship and copy the one that suits your note, bio, or caption.",
       },
     ],
     faq: [
@@ -3270,7 +3270,7 @@ export const PAGES: PageConfig[] = [
       },
       {
         heading: "Where bold text works on Facebook",
-        body: "Bold pastes cleanly into posts, comments, Marketplace titles and descriptions, event details, and your intro/bio. Group posts and page updates work too. Use it for headlines and key points — a whole bold post is harder to read.",
+        body: "Bold pastes cleanly into posts, comments, Marketplace titles and descriptions, event details, and your intro/bio. Group posts and page updates work too. Use it for headlines and key points — a whole bold post is harder to read. Posting on LinkedIn instead? Use the [LinkedIn bold text generator](/font-generator/linkedin-bold-text). For weight with a slant, try [bold italic](/font-generator/bold-italic).",
       },
     ],
     faq: [
@@ -3306,7 +3306,7 @@ export const PAGES: PageConfig[] = [
       },
       {
         heading: "Use it sparingly and professionally",
-        body: "Bold works best on hooks, section labels, and one or two key phrases per post. Bolding entire paragraphs reads as shouting and can hurt readability. A clean bold sans usually looks most professional in a business feed.",
+        body: "Bold works best on hooks, section labels, and one or two key phrases per post. Bolding entire paragraphs reads as shouting and can hurt readability. A clean bold sans usually looks most professional in a business feed. For Facebook, use the [Facebook bold text generator](/font-generator/facebook-bold-text); for both weight and a slant, see [bold italic](/font-generator/bold-italic).",
       },
     ],
     faq: [
@@ -3338,7 +3338,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Bold and italic in a single style",
-        body: "Most apps make you choose one or the other. Unicode includes dedicated bold-italic alphabets, so each character carries both the heavy weight and the slant at the same time — and it stays as copyable plain text.",
+        body: "Most apps make you choose one or the other. Unicode includes dedicated bold-italic alphabets, so each character carries both the heavy weight and the slant at the same time — and it stays as copyable plain text. Want just one? Use the [bold text generator](/font-generator/bold-text-generator) or the [italic generator](/font-generator/italic).",
       },
       {
         heading: "Where bold italic works",
@@ -3364,7 +3364,7 @@ export const PAGES: PageConfig[] = [
       "Turn text into fancy letters and browse the full A–Z alphabet in dozens of decorative Unicode styles to copy and paste. Free, instant, no sign-up.",
     h1: "Fancy Letters Generator",
     intro:
-      "Type a word for fancy lettering, or copy single decorative letters straight from the A–Z alphabet below. Script, gothic, outline, and bold styles — all plain Unicode, so they paste into bios, captions, and usernames.",
+      "Type a word for fancy lettering, or copy single decorative letters straight from the A–Z alphabet below. [Script](/font-generator/cursive), [gothic](/font-generator/gothic), outline, and [bold](/font-generator/bold) styles — all plain Unicode, so they paste into bios, captions, and usernames.",
     styles: ["script", "script-bold", "fraktur", "double-struck", "italic-serif", "bold-serif", "small-caps", "outline-gothic", "cursive-spaced", "decorative-gothic", "royal-gothic", "bubble"],
     defaultText: "Fancy",
     alphabet: "letters",
@@ -3401,7 +3401,7 @@ export const PAGES: PageConfig[] = [
       "Convert plain text into fancy writing — elegant script, cursive, and decorative handwriting styles you can copy and paste. Free and instant.",
     h1: "Fancy Writing Generator",
     intro:
-      "Turn anything you type into fancy writing — flowing script, elegant cursive, and ornate handwriting. Copy a style and paste it into bios, captions, signatures, and invitations, no app needed.",
+      "Turn anything you type into fancy writing — flowing script, elegant [cursive](/font-generator/cursive), and ornate [handwriting](/font-generator/handwriting). Copy a style and paste it into bios, captions, [signatures](/font-generator/signature), and invitations, no app needed.",
     styles: ["script", "script-bold", "cursive-spaced", "cursive-bold-spaced", "italic-serif", "bold-italic-serif", "cursive-underline", "medieval-script", "royal-gothic", "decorative-gothic", "ye-olde", "sans-italic"],
     defaultText: "fancy writing",
     about: [
@@ -3461,7 +3461,7 @@ export const PAGES: PageConfig[] = [
       },
       {
         q: "Is this the same as small caps?",
-        a: "Small caps shrinks lowercase into mini capitals; tiny text uses raised superscript and subscript characters that sit even smaller. Both are offered here — pick the look you prefer.",
+        a: "[Small caps](/font-generator/small-caps) shrinks lowercase into mini capitals; tiny text uses raised [superscript](/font-generator/superscript) and subscript characters that sit even smaller. Both are offered here — pick the look you prefer.",
       },
     ],
   },
@@ -3479,7 +3479,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "The brat look, in text",
-        body: "The brat aesthetic is deliberately plain — lowercase, blunt, and unfussy, the opposite of decorative fonts. The minimal monospace and clean styles here capture that stripped-back energy for captions and edits.",
+        body: "The brat aesthetic is deliberately plain — lowercase, blunt, and unfussy, the opposite of decorative fonts. The minimal [monospace](/font-generator/typewriter) and clean styles here capture that stripped-back energy for captions and edits.",
       },
       {
         heading: "Getting the full effect",
