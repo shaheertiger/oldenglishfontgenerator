@@ -2066,6 +2066,1192 @@ export const PAGES: PageConfig[] = [
       },
     ],
   },
+  {
+    slug: "ransom-note",
+    keyword: "ransom note font generator",
+    title: "Ransom Note Font Generator – Mismatched Cut-Out Letters",
+    description:
+      "Turn text into mismatched, ransom-note style letters that alternate styles like cut-out magazine clippings. Free, copy and paste, no sign-up.",
+    h1: "Ransom Note Font Generator",
+    intro:
+      "Type a message and get the classic cut-and-paste ransom note look — every letter in a clashing style, like clippings glued from different magazines. Copy it and drop it into a caption, a meme, or a spooky DM.",
+    styles: ["alternating", "weird", "squared", "bubble", "fullwidth", "double-struck", "small-caps", "fraktur"],
+    defaultText: "pay up",
+    about: [
+      {
+        heading: "The cut-out clipping effect",
+        body: "A real ransom note is letters snipped from different sources so nothing matches. The alternating style here mimics that by switching typefaces character by character, while the blockier styles give you a single clashing look if you prefer something cleaner.",
+      },
+      {
+        heading: "It stays plain text",
+        body: "Even though the letters look pasted-on, the result is ordinary Unicode — so it copies into any app that accepts text. No image editing, no fonts to install.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is this a real cut-out image?",
+        a: "No — it's Unicode characters that switch style letter by letter to fake the clipping look. That means you can paste it as text anywhere, not just as a picture.",
+      },
+      {
+        q: "Where do people use ransom note text?",
+        a: "Memes, horror and mystery posts, party invites, and joke threats between friends. Keep it short — the effect reads best on a few words.",
+      },
+    ],
+  },
+  {
+    slug: "gothic-printing",
+    keyword: "gothic printing",
+    title: "Gothic Printing Font Generator – Blackletter Print Styles",
+    description:
+      "Generate gothic printing styles — dense blackletter and textura forms inspired by early printed books. Free Unicode text to copy and paste.",
+    h1: "Gothic Printing Generator",
+    intro:
+      "Recreate the look of early gothic printing — the heavy blackletter that filled the first printed books and newspapers. Type your text and copy a dense, formal print style for titles, logos, and mockups.",
+    styles: ["gothic-classic", "blackletter", "fraktur", "german-gothic", "newspaper-gothic", "gothic-bold", "fraktur-bold", "church-style", "old-english-spaced", "decorative-gothic"],
+    defaultText: "Gazette",
+    about: [
+      {
+        heading: "From Gutenberg to the masthead",
+        body: "The earliest European printing used blackletter type because it imitated the manuscript hands scribes already wrote. That dense, vertical look survives today on newspaper mastheads, diplomas, and certificates — and that's exactly the feel these styles capture.",
+      },
+    ],
+    faq: [
+      {
+        q: "What's the difference between gothic printing and modern gothic?",
+        a: "Gothic printing leans on the formal, book-and-masthead blackletter look. Modern gothic usually means a darker, edgier take. Try both and pick what suits the project.",
+      },
+      {
+        q: "Can I use this on a masthead or certificate mockup?",
+        a: "For a digital preview, yes. For final print, hand the chosen look to your designer so they can set it in a true vector blackletter font.",
+      },
+    ],
+  },
+  {
+    slug: "modern-gothic",
+    keyword: "modern gothic font",
+    title: "Modern Gothic Font Generator – Dark Contemporary Blackletter",
+    description:
+      "Convert text into modern gothic styles — sleek, dark blackletter with a contemporary edge. Free Unicode fonts to copy and paste anywhere.",
+    h1: "Modern Gothic Font Generator",
+    intro:
+      "A cleaner, darker take on blackletter for streetwear, music, and fashion aesthetics. Type your text and copy a modern gothic style for bios, logos, and album-art mockups.",
+    styles: ["dark-gothic", "gothic-bold", "blackletter-bold", "outline-gothic", "tattoo-gothic", "gothic-spaced", "fraktur-bold", "cursed-gothic", "small-gothic"],
+    defaultText: "after dark",
+    about: [
+      {
+        heading: "Old roots, new attitude",
+        body: "Modern gothic keeps blackletter's heavy strokes but strips away the fussiest ornament, so it reads sharp and editorial rather than medieval. It's the look you see on streetwear graphics, rap covers, and high-fashion logos.",
+      },
+    ],
+    faq: [
+      {
+        q: "Why does modern gothic feel different from Old English?",
+        a: "Old English leans ornate and historical; modern gothic is cleaner and bolder. Same family of letters, different mood.",
+      },
+      {
+        q: "Will it work in an Instagram bio?",
+        a: "Yes — it's plain Unicode, so it pastes into bios and captions. Username fields can be stricter, so test before saving.",
+      },
+    ],
+  },
+  {
+    slug: "mamma-mia",
+    keyword: "mamma mia font generator",
+    title: "Mamma Mia Font Generator – Bold Theatrical Title Text",
+    description:
+      "Make bold, playful title-style text inspired by stage and musical posters. Free Unicode fonts to copy and paste into bios, captions, and graphics.",
+    h1: "Mamma Mia Font Generator",
+    intro:
+      "Big, bouncy, theatrical lettering for captions, fan posts, and party graphics. Type your text and copy a bold show-poster style — no font files needed.",
+    styles: ["bold-serif", "sans-bold", "bold-spaced", "fullwidth", "bold-italic-serif", "double-struck", "squared", "outline-gothic"],
+    defaultText: "here we go again",
+    about: [
+      {
+        heading: "Big, bold, and built for fun",
+        body: "Show and musical posters use chunky, high-contrast title type so a name reads across a crowded room. These bold and wide Unicode styles bring that same exclamation-point energy to plain text.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is this the exact poster font?",
+        a: "No — branded posters use licensed custom type we can't reproduce. These are the closest bold, theatrical Unicode styles you can copy and paste anywhere.",
+      },
+      {
+        q: "Where does it work best?",
+        a: "Short titles, fan captions, and party invites. Bold styles lose their punch on long passages, so keep it to a few words.",
+      },
+    ],
+  },
+  {
+    slug: "squid-game",
+    keyword: "squid game font generator",
+    title: "Squid Game Font Generator – Bold Symbol & Title Text",
+    description:
+      "Make bold, blocky title text and shape-style characters inspired by the hit survival series. Free Unicode fonts to copy and paste.",
+    h1: "Squid Game Font Generator",
+    intro:
+      "Bold, blocky lettering with that stark, high-contrast title feel. Type your text and copy a clean, heavy style for fan posts, captions, and channel art.",
+    styles: ["squared", "squared-spaced", "fullwidth", "sans-bold", "bold-serif", "double-struck", "outline-gothic", "monospace"],
+    defaultText: "456",
+    about: [
+      {
+        heading: "Stark, blocky, instantly recognizable",
+        body: "The show's identity leans on flat shapes — circle, triangle, square — and clean, heavy type. The squared and wide styles here echo that minimal, high-impact look for fan content.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I get the circle-triangle-square symbols?",
+        a: "Those are graphic shapes rather than letters. For symbols, check our symbols library — the styles here cover the bold title text.",
+      },
+      {
+        q: "Is this the official font?",
+        a: "No — it's a copy-paste Unicode lookalike. The official title type is licensed and can't be reproduced as plain text.",
+      },
+    ],
+  },
+  {
+    slug: "hunger-games",
+    keyword: "hunger games font",
+    title: "Hunger Games Font Generator – Bold Engraved Title Style",
+    description:
+      "Generate bold, engraved-looking title text inspired by dystopian poster lettering. Free Unicode fonts to copy and paste into bios and graphics.",
+    h1: "Hunger Games Font Generator",
+    intro:
+      "Strong, serif-edged title lettering with a stamped, official feel. Type your text and copy a bold engraved-style font for fan captions, edits, and profiles.",
+    styles: ["bold-serif", "small-caps", "small-caps-spaced", "bold-spaced", "double-struck", "outline-gothic", "fullwidth", "diploma-style"],
+    defaultText: "the odds",
+    about: [
+      {
+        heading: "Stamped, official, a little austere",
+        body: "Dystopian franchise posters favor narrow, engraved serifs in all caps — type that looks chiseled into metal. The bold serif and small-caps styles here lean into that cold, official mood.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is this the real movie font?",
+        a: "No — the films use a custom licensed typeface. These are the closest bold, engraved-feeling Unicode styles for copy-paste.",
+      },
+      {
+        q: "Best style for an all-caps title?",
+        a: "Try the small-caps and bold serif options — they keep that stamped, official look across short titles.",
+      },
+    ],
+  },
+  {
+    slug: "final-fantasy",
+    keyword: "final fantasy font",
+    title: "Final Fantasy Font Generator – Elegant Fantasy Title Text",
+    description:
+      "Make elegant, ornate fantasy-style title text for game fan content. Free Unicode fonts to copy and paste into bios, usernames, and graphics.",
+    h1: "Final Fantasy Font Generator",
+    intro:
+      "Graceful, ornate lettering with a high-fantasy feel for game fans. Type your text and copy an elegant style for guild names, captions, and profiles.",
+    styles: ["italic-serif", "bold-italic-serif", "script", "medieval-script", "decorative-gothic", "royal-gothic", "small-caps", "diploma-style"],
+    defaultText: "crystal",
+    about: [
+      {
+        heading: "Elegant, ornate, a little regal",
+        body: "JRPG title art often pairs flowing italics with delicate ornament for a refined, magical feel. The italic, script, and decorative styles here capture that elegance for fan posts and guild branding.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is this the official logo font?",
+        a: "No — the game's logos are hand-drawn custom art. These are elegant Unicode lookalikes you can copy and paste anywhere.",
+      },
+      {
+        q: "Good for a guild or party name?",
+        a: "Yes — the italic and script styles read as classy and fit short names well. Test in username fields, which can filter rare characters.",
+      },
+    ],
+  },
+  {
+    slug: "pulp-fiction",
+    keyword: "pulp fiction font",
+    title: "Pulp Fiction Font Generator – Bold Retro Poster Text",
+    description:
+      "Generate bold, retro poster-style title text with a punchy mid-century feel. Free Unicode fonts to copy and paste.",
+    h1: "Pulp Fiction Font Generator",
+    intro:
+      "Loud, bold, retro title lettering with that vintage pulp-magazine punch. Type your text and copy a chunky poster style for captions, edits, and graphics.",
+    styles: ["bold-serif", "sans-bold", "fullwidth", "bold-spaced", "double-struck", "squared", "outline-gothic", "small-caps-spaced"],
+    defaultText: "royale",
+    about: [
+      {
+        heading: "Loud and unapologetic",
+        body: "Pulp posters and paperbacks shouted with fat, blocky type and wide spacing. These bold and wide Unicode styles bring that retro, in-your-face poster energy to plain text.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is this the exact movie poster font?",
+        a: "No — that's a custom licensed typeface. These are the closest bold, retro Unicode styles for copy-paste use.",
+      },
+      {
+        q: "Where does it look best?",
+        a: "Short titles and captions. The wide, bold styles lose impact in long blocks of text.",
+      },
+    ],
+  },
+  {
+    slug: "slasher",
+    keyword: "slasher flick font",
+    title: "Slasher Font Generator – Horror Movie Title Text",
+    description:
+      "Make jagged, scratchy horror-style text for slasher and Halloween posts. Free Unicode fonts to copy and paste.",
+    h1: "Slasher Font Generator",
+    intro:
+      "Jagged, unsettling lettering for horror posts, scary stories, and Halloween captions. Type your text and copy a creepy slasher-flick style — no app needed.",
+    styles: ["zalgo-soft", "zalgo", "cursed-gothic", "dark-gothic", "gothic-glitch", "weird", "fraktur", "sans-zalgo"],
+    defaultText: "scream",
+    about: [
+      {
+        heading: "Dread over chaos",
+        body: "The scariest titles suggest something is wrong without becoming illegible. A light glitch or distressed blackletter on a short word lands harder than maxed-out static.",
+      },
+    ],
+    faq: [
+      {
+        q: "What style screams slasher?",
+        a: "Light zalgo or cursed gothic on the title word. Heavy distortion buries the text, so use it sparingly.",
+      },
+      {
+        q: "Does it work for Halloween captions?",
+        a: "Yes — it's plain Unicode, so it pastes into captions, stories, and DMs anywhere.",
+      },
+    ],
+  },
+  {
+    slug: "monster",
+    keyword: "font monster",
+    title: "Monster Font Generator – Spooky Creature Text Styles",
+    description:
+      "Turn text into spooky, monstrous styles with glitchy and gothic energy. Free Unicode fonts to copy and paste for horror and Halloween posts.",
+    h1: "Monster Font Generator",
+    intro:
+      "Creepy, creature-feature lettering for Halloween, horror games, and spooky usernames. Type your text and copy a monstrous style straight into your bio or caption.",
+    styles: ["zalgo", "zalgo-soft", "cursed-gothic", "dark-gothic", "weird", "gothic-glitch", "fraktur-bold", "sans-zalgo"],
+    defaultText: "beware",
+    about: [
+      {
+        heading: "Make the letters feel alive",
+        body: "Monster type works by warping familiar letters just enough to feel wrong — dripping marks, jagged strokes, a hint of glitch. Keep words short so the effect stays readable and menacing.",
+      },
+    ],
+    faq: [
+      {
+        q: "Good for a horror game username?",
+        a: "Yes, though username fields often strip rare characters. Pick a lighter style if a heavily glitched name won't save.",
+      },
+      {
+        q: "Is heavy zalgo too much?",
+        a: "Often, yes. A little distortion reads as creepy; a lot reads as noise. Start light and add more only if you need it.",
+      },
+    ],
+  },
+  {
+    slug: "gangster",
+    keyword: "gangster font",
+    title: "Gangster Font Generator – Bold Street & Graffiti Text",
+    description:
+      "Generate bold, gangster-style street and graffiti text. Free Unicode fonts to copy and paste into bios, captions, and usernames.",
+    h1: "Gangster Font Generator",
+    intro:
+      "Bold, street-style lettering with attitude — heavy gothic and tattoo-flavored looks for bios, captions, and crew names. Type your text and copy a hard-hitting style.",
+    styles: ["tattoo-gothic", "gothic-bold", "blackletter-bold", "dark-gothic", "fraktur-bold", "gothic-spaced", "outline-gothic", "small-gothic"],
+    defaultText: "respect",
+    about: [
+      {
+        heading: "Where the gangster look comes from",
+        body: "The style borrows from West Coast tattoo lettering and old-school blackletter — bold, angular, and unapologetic. It's the look you see on jerseys, mixtape covers, and crew logos.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is this the same as Old English?",
+        a: "It's closely related — gangster lettering grew out of blackletter and tattoo script. Try the tattoo gothic and bold blackletter styles for that exact feel.",
+      },
+      {
+        q: "Will it paste into a username?",
+        a: "Bios and captions accept it freely. Username fields can be stricter, so pick a cleaner style if a decorated one won't save.",
+      },
+    ],
+  },
+  {
+    slug: "princess",
+    keyword: "princess font",
+    title: "Princess Font Generator – Elegant Royal Script Text",
+    description:
+      "Turn text into elegant, royal princess-style script. Free Unicode fonts to copy and paste into bios, captions, and party graphics.",
+    h1: "Princess Font Generator",
+    intro:
+      "Graceful, fairytale lettering with a royal touch — flowing script and delicate styles for bios, party themes, and cute captions. Type your text and copy your favorite.",
+    styles: ["script", "script-bold", "cursive-spaced", "italic-serif", "royal-gothic", "decorative-gothic", "cursive-underline", "bubble"],
+    defaultText: "princess",
+    about: [
+      {
+        heading: "Soft, elegant, a little magical",
+        body: "Princess styles lean on flowing script and gentle ornament for a fairytale feel. They suit birthday themes, nursery mockups, cute bios, and anything that wants a touch of sparkle.",
+      },
+    ],
+    faq: [
+      {
+        q: "Best style for a cute bio?",
+        a: "The flowing script and spaced cursive options read as elegant and soft. Pair them with a heart or star symbol for extra charm.",
+      },
+      {
+        q: "Can I use it for a party invite?",
+        a: "For a digital preview, yes. For print, hand the look to your designer so they can set it in a true script font.",
+      },
+    ],
+  },
+  {
+    slug: "love",
+    keyword: "love typeface",
+    title: "Love Font Generator – Romantic Script & Heart Text",
+    description:
+      "Make romantic, lovely script text for valentines, captions, and bios. Free Unicode fonts to copy and paste anywhere.",
+    h1: "Love Font Generator",
+    intro:
+      "Sweet, romantic lettering for love notes, valentines, anniversary posts, and dreamy captions. Type your text and copy a lovely script style straight into any app.",
+    styles: ["script", "script-bold", "love-parens", "cursive-spaced", "italic-serif", "cursive-underline", "bubble", "bubble-filled"],
+    defaultText: "love you",
+    about: [
+      {
+        heading: "Romance in plain text",
+        body: "Flowing script reads as warm and personal, which is why it suits love notes and anniversary captions. The styles here stay copyable as plain Unicode, so they work in DMs, bios, and graphics alike.",
+      },
+    ],
+    faq: [
+      {
+        q: "Which style feels most romantic?",
+        a: "The flowing script and spaced cursive read as soft and heartfelt. Add a heart symbol for a finishing touch.",
+      },
+      {
+        q: "Will it work on Instagram and WhatsApp?",
+        a: "Yes — it's plain Unicode, so it pastes into bios, captions, and messages on both.",
+      },
+    ],
+  },
+  {
+    slug: "angelic",
+    keyword: "angelic font",
+    title: "Angelic Font Generator – Soft Heavenly Script Text",
+    description:
+      "Turn text into soft, heavenly angelic styles. Free Unicode fonts to copy and paste into bios, captions, and aesthetic posts.",
+    h1: "Angelic Font Generator",
+    intro:
+      "Light, ethereal lettering with a heavenly feel — airy script and delicate styles for dreamy bios and aesthetic captions. Type your text and copy your favorite.",
+    styles: ["script", "cursive-spaced", "italic-serif", "small-caps-spaced", "double-struck", "outline-spaced", "tiny-spaced", "bubble"],
+    defaultText: "halo",
+    about: [
+      {
+        heading: "Soft, airy, a little divine",
+        body: "Angelic styles favor light strokes and open spacing for a calm, heavenly mood. They pair well with star and sparkle symbols and suit soft, aesthetic profiles.",
+      },
+    ],
+    faq: [
+      {
+        q: "What makes text feel angelic?",
+        a: "Light, spaced-out script and delicate symbols. Avoid heavy bold or glitch styles, which break the airy feel.",
+      },
+      {
+        q: "Does it work in a bio?",
+        a: "Yes — the output is plain Unicode and pastes into bios and captions on any platform.",
+      },
+    ],
+  },
+  {
+    slug: "animalistic",
+    keyword: "animalistic font",
+    title: "Animalistic Font Generator – Wild, Clawed & Feral Text",
+    description:
+      "Generate wild, feral-looking text with a clawed, untamed edge. Free Unicode fonts to copy and paste for gaming and fierce captions.",
+    h1: "Animalistic Font Generator",
+    intro:
+      "Wild, untamed lettering with a feral, clawed feel for gaming tags, fierce captions, and creature posts. Type your text and copy a savage style.",
+    styles: ["weird", "zalgo-soft", "cursed-gothic", "dark-gothic", "tattoo-gothic", "fraktur-bold", "gothic-glitch", "slash-through"],
+    defaultText: "feral",
+    about: [
+      {
+        heading: "Untamed by design",
+        body: "Animalistic styles distress and sharpen the letters so they feel scratched, clawed, or growled rather than typed. A short, punchy word carries the effect best.",
+      },
+    ],
+    faq: [
+      {
+        q: "Good for a gaming tag?",
+        a: "Yes — though watch for username filters on rarer characters. Pick a cleaner style if a tag won't save.",
+      },
+      {
+        q: "How wild is too wild?",
+        a: "If you can't read it at a glance, dial the distortion back. A hint of feral edge beats unreadable chaos.",
+      },
+    ],
+  },
+  {
+    slug: "dog",
+    keyword: "dog font",
+    title: "Dog Font Generator – Playful Pet Text Styles",
+    description:
+      "Make playful, cute text for dog and pet accounts, captions, and bios. Free Unicode fonts to copy and paste.",
+    h1: "Dog Font Generator",
+    intro:
+      "Bouncy, friendly lettering for pet accounts, dog memes, and cute captions. Type your text and copy a playful style straight into your bio or post.",
+    styles: ["bubble", "bubble-filled", "bubble-underline", "script", "cursive-spaced", "fullwidth", "squared", "double-struck"],
+    defaultText: "good boy",
+    about: [
+      {
+        heading: "Cute and friendly",
+        body: "Rounded bubble letters and bouncy scripts read as playful and warm — exactly the vibe for pet content. Pair them with a paw or heart symbol for extra charm.",
+      },
+    ],
+    faq: [
+      {
+        q: "Best style for a pet account name?",
+        a: "Bubble and rounded styles feel friendly and fun. Test in username fields, which sometimes filter rare characters.",
+      },
+      {
+        q: "Does it work in captions?",
+        a: "Yes — it's plain Unicode and pastes into captions and bios everywhere.",
+      },
+    ],
+  },
+  {
+    slug: "food",
+    keyword: "food font",
+    title: "Food Font Generator – Tasty, Playful Menu Text",
+    description:
+      "Generate playful, appetizing text for food posts, menus, and recipe captions. Free Unicode fonts to copy and paste.",
+    h1: "Food Font Generator",
+    intro:
+      "Warm, inviting lettering for food blogs, café posts, and recipe captions. Type your text and copy a tasty style for menus, bios, and graphics.",
+    styles: ["script", "bold-serif", "bubble", "cursive-spaced", "fullwidth", "small-caps", "double-struck", "bubble-filled"],
+    defaultText: "fresh menu",
+    about: [
+      {
+        heading: "Make it look appetizing",
+        body: "Food branding mixes friendly script with bold, readable headers. Use a flowing style for a café name and a bold one for prices or dish names to keep menus clear.",
+      },
+    ],
+    faq: [
+      {
+        q: "Good for a menu mockup?",
+        a: "For a digital draft, yes. For a printed menu, hand the look to your designer so they can set it in a real font.",
+      },
+      {
+        q: "Which style for a recipe caption?",
+        a: "A warm script for the title and clean bold for the steps keeps it inviting and easy to read.",
+      },
+    ],
+  },
+  {
+    slug: "cloud",
+    keyword: "cloud fonts",
+    title: "Cloud Font Generator – Soft, Dreamy Bubble Text",
+    description:
+      "Turn text into soft, dreamy cloud-style letters. Free Unicode fonts to copy and paste into aesthetic bios and captions.",
+    h1: "Cloud Font Generator",
+    intro:
+      "Soft, puffy, dreamy lettering for aesthetic bios, soft-grunge captions, and chill posts. Type your text and copy a cloud-soft style anywhere.",
+    styles: ["bubble", "bubble-filled", "bubble-underline", "cursive-spaced", "script", "tiny-spaced", "outline-spaced", "double-struck"],
+    defaultText: "daydream",
+    about: [
+      {
+        heading: "Light and airy",
+        body: "Rounded bubble and softly spaced styles read as gentle and dreamy — the cloudcore aesthetic. Pair them with cloud or star symbols for a complete soft look.",
+      },
+    ],
+    faq: [
+      {
+        q: "What makes text look cloudy?",
+        a: "Round, puffy bubble letters and open spacing. Avoid sharp or bold styles, which break the soft feel.",
+      },
+      {
+        q: "Does it paste into Instagram?",
+        a: "Yes — it's plain Unicode, so it works in bios and captions everywhere.",
+      },
+    ],
+  },
+  {
+    slug: "cookie",
+    keyword: "cookie typeface",
+    title: "Cookie Font Generator – Sweet Rounded Script Text",
+    description:
+      "Make sweet, rounded cookie-style script text for cute bios and food posts. Free Unicode fonts to copy and paste.",
+    h1: "Cookie Font Generator",
+    intro:
+      "Warm, rounded, sweet script lettering for bakery posts, cute bios, and dessert captions. Type your text and copy a cookie-soft style straight into any app.",
+    styles: ["script", "script-bold", "cursive-spaced", "bubble", "bubble-filled", "italic-serif", "cursive-underline", "double-struck"],
+    defaultText: "sweet treats",
+    about: [
+      {
+        heading: "Sweet and rounded",
+        body: "Cookie-style script is soft, friendly, and a little indulgent — perfect for bakeries, dessert blogs, and cute branding. Flowing script paired with rounded shapes carries the warmth.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is this the real Cookie typeface?",
+        a: "No — the Cookie font is a licensed typeface. These are the closest soft, rounded Unicode scripts you can copy and paste.",
+      },
+      {
+        q: "Good for a bakery name?",
+        a: "Yes for digital previews. For print or a logo, hand the look to a designer for a true vector font.",
+      },
+    ],
+  },
+  {
+    slug: "gaming",
+    keyword: "gaming text",
+    title: "Gaming Font Generator – Cool Text for Gamer Tags & Bios",
+    description:
+      "Generate cool gaming text for usernames, clan tags, and stream titles. Free Unicode fonts to copy and paste into Discord, Twitch, and more.",
+    h1: "Gaming Font Generator",
+    intro:
+      "Sharp, blocky, sci-fi-flavored lettering for gamer tags, clan names, and stream titles. Type your text and copy a style that stands out in Discord, Twitch, and game profiles.",
+    styles: ["squared", "squared-spaced", "fullwidth", "double-struck", "leet", "monospace", "sans-bold", "outline-gothic"],
+    defaultText: "game over",
+    about: [
+      {
+        heading: "Built to stand out in a lobby",
+        body: "Gaming text favors blocky, squared, and sci-fi styles that read clearly at small sizes in a lobby or chat. Leet-style swaps add a classic hacker flavor for tags and handles.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will it work in my gamer tag?",
+        a: "Many platforms accept Unicode in display names, but some strip rare characters from login names. Test before committing, and keep a fallback style ready.",
+      },
+      {
+        q: "Best style for a clan tag?",
+        a: "Squared and fullwidth styles read clearly and look bold next to teammates' names.",
+      },
+    ],
+  },
+  {
+    slug: "anime",
+    keyword: "anime typeface",
+    title: "Anime Font Generator – Japanese-Style & Aesthetic Text",
+    description:
+      "Make anime and aesthetic text with Japanese-flavored and stylish Unicode fonts. Free, copy and paste, for bios and captions.",
+    h1: "Anime Font Generator",
+    intro:
+      "Stylish, aesthetic lettering with a Japanese-inspired flavor for anime fan bios, edits, and captions. Type your text and copy a cool style straight into any app.",
+    styles: ["japanese-style", "fullwidth", "squared", "double-struck", "script", "cursive-spaced", "sans-italic", "small-caps-spaced"],
+    defaultText: "senpai",
+    about: [
+      {
+        heading: "The anime aesthetic, in text",
+        body: "The look mixes Japanese-style halfwidth letters and wide fullwidth characters with clean, stylish scripts — exactly the vibe of anime fan edits and aesthetic profiles.",
+      },
+    ],
+    faq: [
+      {
+        q: "Does it write real Japanese?",
+        a: "No — these are Latin letters styled to feel Japanese-inspired. For actual Japanese script, use a proper keyboard or translator.",
+      },
+      {
+        q: "Good for an anime fan bio?",
+        a: "Yes — it's plain Unicode and pastes into bios and captions everywhere.",
+      },
+    ],
+  },
+  {
+    slug: "biology",
+    keyword: "biology font",
+    title: "Biology Font Generator – Clean Scientific Label Text",
+    description:
+      "Generate clean, scientific-style text for labels, notes, and study aesthetics. Free Unicode fonts to copy and paste.",
+    h1: "Biology Font Generator",
+    intro:
+      "Clean, precise lettering with a scientific, lab-label feel — handy for study notes, diagram labels, and academic aesthetics. Type your text and copy a tidy style.",
+    styles: ["monospace", "mono-spaced", "small-caps", "italic-serif", "double-struck", "sans-bold", "manuscript-mono", "superscript"],
+    defaultText: "mitosis",
+    about: [
+      {
+        heading: "Precise and legible",
+        body: "Scientific text values clarity over flourish. Monospace and small-caps styles read as neat and technical, and italics suit species names and Latin terms the way journals format them.",
+      },
+    ],
+    faq: [
+      {
+        q: "Why italics for species names?",
+        a: "Scientific convention italicizes genus and species (like Homo sapiens). The italic style here mimics that for notes and captions.",
+      },
+      {
+        q: "Can I use superscripts for formulas?",
+        a: "Yes — the superscript style covers raised characters useful for simple notation. For full equations, use a dedicated editor.",
+      },
+    ],
+  },
+  {
+    slug: "cybernetic",
+    keyword: "cybernetic font",
+    title: "Cybernetic Font Generator – Futuristic Sci-Fi Text",
+    description:
+      "Turn text into futuristic, cybernetic sci-fi styles. Free Unicode fonts to copy and paste for gaming, tech, and cyberpunk posts.",
+    h1: "Cybernetic Font Generator",
+    intro:
+      "Sharp, futuristic, machine-cool lettering for cyberpunk posts, tech bios, and gaming tags. Type your text and copy a sci-fi style straight into any app.",
+    styles: ["squared", "squared-spaced", "fullwidth", "double-struck", "leet", "monospace", "outline-gothic", "sans-zalgo"],
+    defaultText: "system",
+    about: [
+      {
+        heading: "Machine-made by feel",
+        body: "Cybernetic text leans on squared, technical, and faintly glitched styles to feel engineered rather than handwritten. A little glitch adds a cyberpunk edge without losing legibility.",
+      },
+    ],
+    faq: [
+      {
+        q: "Best style for a cyberpunk bio?",
+        a: "Squared and fullwidth styles read as clean and futuristic; a touch of glitch adds attitude. Keep it readable.",
+      },
+      {
+        q: "Will it work in usernames?",
+        a: "Bios accept it freely. Username fields can filter rare characters, so test before saving.",
+      },
+    ],
+  },
+  {
+    slug: "rock-and-roll",
+    keyword: "rock and roll font",
+    title: "Rock and Roll Font Generator – Bold Band & Metal Text",
+    description:
+      "Generate bold, edgy rock and metal band-style text. Free Unicode fonts to copy and paste into bios, logos, and posters.",
+    h1: "Rock and Roll Font Generator",
+    intro:
+      "Loud, bold, rebellious lettering for band logos, gig posters, and music bios. Type your text and copy a rock-and-roll style straight into any app.",
+    styles: ["band-logo", "gothic-bold", "blackletter-bold", "dark-gothic", "outline-gothic", "tattoo-gothic", "fraktur-bold", "bold-spaced"],
+    defaultText: "encore",
+    about: [
+      {
+        heading: "Turn it up to eleven",
+        body: "Rock and metal lettering ranges from spiky blackletter to bold, distressed logos. The band-logo and heavy gothic styles here capture that loud, rebellious feel for posters and merch mockups.",
+      },
+    ],
+    faq: [
+      {
+        q: "Good for a band logo?",
+        a: "For mockups, yes. For final merch or a printed poster, hand the look to a designer for a vector version.",
+      },
+      {
+        q: "Which style is most metal?",
+        a: "Spiky blackletter and the band-logo style read hardest. Keep the name short for maximum impact.",
+      },
+    ],
+  },
+  {
+    slug: "varsity",
+    keyword: "varsity team font",
+    title: "Varsity Font Generator – Collegiate Team & Jersey Text",
+    description:
+      "Make bold collegiate, varsity team-style text for jerseys, bios, and sports posts. Free Unicode fonts to copy and paste.",
+    h1: "Varsity Font Generator",
+    intro:
+      "Bold, blocky collegiate lettering with that classic team-jersey feel. Type your text and copy a varsity style for sports bios, team names, and graphics.",
+    styles: ["bold-serif", "small-caps", "small-caps-spaced", "double-struck", "fullwidth", "bold-spaced", "squared", "outline-gothic"],
+    defaultText: "champions",
+    about: [
+      {
+        heading: "Classic collegiate look",
+        body: "Varsity lettering is bold, serifed, and built to read across a stadium — the look stitched onto jackets and jerseys. Bold serif and small-caps styles capture that athletic, all-caps feel.",
+      },
+    ],
+    faq: [
+      {
+        q: "Good for a jersey mockup?",
+        a: "For a digital preview, yes. For actual stitching or print, hand the look to your supplier for a true varsity font.",
+      },
+      {
+        q: "Best style for a team name?",
+        a: "Bold serif in all caps reads most collegiate. Add wide spacing for that across-the-back jersey look.",
+      },
+    ],
+  },
+  {
+    slug: "wavy",
+    keyword: "wavy fonts",
+    title: "Wavy Font Generator – Flowing, Stretched Text Styles",
+    description:
+      "Turn text into wavy, flowing, stretched-out styles. Free Unicode fonts to copy and paste into bios, captions, and aesthetic posts.",
+    h1: "Wavy Font Generator",
+    intro:
+      "Loose, flowing, stretched-out lettering for chill, aesthetic, and retro-vibe posts. Type your text and copy a wavy style straight into any app.",
+    styles: ["fullwidth", "fullwidth-underline", "spaced", "cursive-spaced", "script", "tiny-spaced", "double-struck", "japanese-style"],
+    defaultText: "good vibes",
+    about: [
+      {
+        heading: "Loose and flowing",
+        body: "Wide fullwidth letters and open spacing give text a stretched, wavy, laid-back rhythm — popular in vaporwave and chill aesthetics. Pair it with the right caption for a relaxed feel.",
+      },
+    ],
+    faq: [
+      {
+        q: "What makes text look wavy?",
+        a: "Wide fullwidth characters and generous spacing create that stretched, flowing rhythm. Flowing script adds extra movement.",
+      },
+      {
+        q: "Does it paste anywhere?",
+        a: "Yes — it's plain Unicode and works in bios, captions, and messages.",
+      },
+    ],
+  },
+  {
+    slug: "scratchy",
+    keyword: "scratchy font",
+    title: "Scratchy Font Generator – Distressed, Scratched Text",
+    description:
+      "Generate scratchy, distressed text with a rough, scratched-up edge. Free Unicode fonts to copy and paste for grunge and horror posts.",
+    h1: "Scratchy Font Generator",
+    intro:
+      "Rough, scratched-up lettering with a distressed, grungy edge for horror posts, grunge bios, and edgy captions. Type your text and copy a scratchy style.",
+    styles: ["slash-through", "strikethrough", "zalgo-soft", "cursed-gothic", "weird", "double-underline", "gothic-glitch", "dark-gothic"],
+    defaultText: "static",
+    about: [
+      {
+        heading: "Distressed by design",
+        body: "Scratchy text adds strike marks, scratches, and light distortion to make letters look scraped or damaged. A little goes a long way — keep words short so they stay legible.",
+      },
+    ],
+    faq: [
+      {
+        q: "How do I get the scratched look?",
+        a: "The strike-through and slash styles add scratch marks across letters; light zalgo adds a damaged texture. Combine sparingly.",
+      },
+      {
+        q: "Does it work in a bio?",
+        a: "Yes — it's plain Unicode. Username fields may strip rarer marks, so test there.",
+      },
+    ],
+  },
+  {
+    slug: "sign",
+    keyword: "sign font",
+    title: "Sign Font Generator – Bold, Clear Signage Text",
+    description:
+      "Make bold, clear signage-style text for posters, shop signs, and displays. Free Unicode fonts to copy and paste.",
+    h1: "Sign Font Generator",
+    intro:
+      "Bold, legible lettering built to read from a distance — handy for poster mockups, shop signs, and display text. Type your text and copy a clear style.",
+    styles: ["bold-serif", "sans-bold", "fullwidth", "bold-spaced", "small-caps-spaced", "double-struck", "squared", "outline-gothic"],
+    defaultText: "open",
+    about: [
+      {
+        heading: "Built to be read fast",
+        body: "Good signage is bold, spaced, and high-contrast so it reads at a glance. Bold serif and wide styles carry that clarity, while spacing keeps short words easy to scan.",
+      },
+    ],
+    faq: [
+      {
+        q: "Good for a printed sign?",
+        a: "For mockups, yes. For final printing, hand the look to your designer for a true display font that scales cleanly.",
+      },
+      {
+        q: "Which style reads best from far away?",
+        a: "Bold, wide styles with extra spacing. Avoid script and decorative styles for distance signage.",
+      },
+    ],
+  },
+  {
+    slug: "playlist",
+    keyword: "playlist script",
+    title: "Playlist Font Generator – Stylish Script for Music Names",
+    description:
+      "Generate stylish script text for playlist names, music bios, and cover art. Free Unicode fonts to copy and paste.",
+    h1: "Playlist Font Generator",
+    intro:
+      "Cool, stylish script for playlist titles, music bios, and cover-art mockups. Type your text and copy a script style straight into Spotify descriptions, bios, and posts.",
+    styles: ["script", "script-bold", "cursive-spaced", "italic-serif", "bold-italic-serif", "cursive-underline", "sans-italic", "double-struck"],
+    defaultText: "late night",
+    about: [
+      {
+        heading: "Set the mood for a playlist",
+        body: "A stylish script title gives a playlist personality before a single track plays. Flowing scripts read as moody or romantic; bold italics feel energetic. Pick one that matches the vibe.",
+      },
+    ],
+    faq: [
+      {
+        q: "Will it work in a Spotify playlist name?",
+        a: "Most apps accept Unicode in titles and descriptions, but some trim rare characters. Test the name and keep a simpler fallback.",
+      },
+      {
+        q: "Best style for a chill playlist?",
+        a: "A soft flowing script sets a relaxed mood. For hype playlists, try bold italic instead.",
+      },
+    ],
+  },
+  {
+    slug: "logotype",
+    keyword: "logotype font",
+    title: "Logotype Font Generator – Brand & Logo Text Styles",
+    description:
+      "Generate clean, distinctive logotype-style text for brand and logo mockups. Free Unicode fonts to copy and paste.",
+    h1: "Logotype Font Generator",
+    intro:
+      "Distinctive lettering for brand names, logo mockups, and wordmarks. Type your name and compare bold, script, and gothic styles to find the right identity.",
+    styles: ["band-logo", "bold-serif", "sans-bold", "outline-gothic", "small-caps-spaced", "gothic-bold", "double-struck", "script-bold"],
+    defaultText: "brandname",
+    about: [
+      {
+        heading: "Find your wordmark's feel",
+        body: "A logotype is your brand name set in a distinctive style. Comparing bold, script, and gothic looks side by side helps you spot which personality fits — clean and corporate, warm and handcrafted, or bold and edgy.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I use this as my actual logo?",
+        a: "Use it to explore directions, then hand the look you like to a designer. Real logos need vector files and proper licensing — Unicode text won't scale crisply for print.",
+      },
+      {
+        q: "Which style suits a startup?",
+        a: "Clean bold sans and spaced small-caps read modern and trustworthy. Script and gothic suit warmer or edgier brands.",
+      },
+    ],
+  },
+  {
+    slug: "italianate",
+    keyword: "italianate font",
+    title: "Italianate Font Generator – Elegant Italic & Script Text",
+    description:
+      "Turn text into elegant, italianate italic and script styles. Free Unicode fonts to copy and paste into bios, captions, and graphics.",
+    h1: "Italianate Font Generator",
+    intro:
+      "Refined, slanted, classically elegant lettering with an Italian flourish. Type your text and copy a graceful italic or script style straight into any app.",
+    styles: ["italic-serif", "bold-italic-serif", "sans-italic", "script", "script-bold", "cursive-spaced", "italic-spaced", "small-caps-spaced"],
+    defaultText: "bellissimo",
+    about: [
+      {
+        heading: "Classical elegance",
+        body: "Italianate lettering leans on graceful slants and refined proportions — the calligraphic tradition that gave us italic type itself. The italic and script styles here carry that polished, old-world elegance.",
+      },
+    ],
+    faq: [
+      {
+        q: "What does italianate mean?",
+        a: "It describes a refined, Italian-influenced style — here, the elegant italics and scripts that trace back to Renaissance handwriting.",
+      },
+      {
+        q: "Good for menus or invitations?",
+        a: "For digital previews, yes. For print, hand the look to a designer for a true italic typeface.",
+      },
+    ],
+  },
+  {
+    slug: "types-of-bold",
+    keyword: "types of bold",
+    title: "Types of Bold Font Generator – Every Bold Text Style",
+    description:
+      "Compare every type of bold text — serif, sans, italic, gothic, spaced, and more. Free Unicode bold fonts to copy and paste.",
+    h1: "Types of Bold Generator",
+    intro:
+      "See your text in every kind of bold at once — serif, sans, italic, gothic, spaced, and outlined. Type once and copy whichever bold style fits.",
+    styles: ["bold-serif", "sans-bold", "bold-italic-serif", "sans-bold-italic", "bold-spaced", "gothic-bold", "double-struck", "outline-gothic", "bold-underline", "bold-strike", "fraktur-bold", "stacked-bold-strike"],
+    defaultText: "bold",
+    about: [
+      {
+        heading: "Not all bold is the same",
+        body: "Bold means different things in different families: a heavy serif feels formal, a bold sans feels modern, a bold italic feels energetic, and bold gothic feels dramatic. Comparing them side by side makes it easy to pick the right weight for the job.",
+      },
+    ],
+    faq: [
+      {
+        q: "How do these differ from regular bold?",
+        a: "Phone and app bold toggles aren't always available; these are dedicated bold Unicode characters, so the boldness survives copy-paste into places with no formatting.",
+      },
+      {
+        q: "Which bold works on Instagram?",
+        a: "Bold serif and bold sans paste cleanly into bios and captions. Test in username fields, which can be stricter.",
+      },
+    ],
+  },
+  {
+    slug: "1940s",
+    keyword: "1940s fonts",
+    title: "1940s Font Generator – Vintage Wartime-Era Text",
+    description:
+      "Generate vintage 1940s-style text with a wartime-era, classic feel. Free Unicode fonts to copy and paste into retro posts and graphics.",
+    h1: "1940s Font Generator",
+    intro:
+      "Classic, vintage lettering with that 1940s newspaper-and-poster feel. Type your text and copy a retro style for vintage posts, scrapbooks, and graphics.",
+    styles: ["newspaper-gothic", "monospace", "small-caps", "bold-serif", "manuscript-mono", "small-caps-spaced", "double-struck", "italic-serif"],
+    defaultText: "victory",
+    about: [
+      {
+        heading: "The look of the 1940s",
+        body: "Forties typography mixed sturdy newspaper gothics, typewriter monospace, and bold serif headlines. These styles capture that wartime-era, print-shop feel for vintage projects.",
+      },
+    ],
+    faq: [
+      {
+        q: "Are these authentic 1940s fonts?",
+        a: "They're Unicode styles that evoke the era's printing — not scans of period typefaces. They're great for capturing the vibe in copy-paste text.",
+      },
+      {
+        q: "Good for a vintage scrapbook caption?",
+        a: "Yes — the monospace and newspaper styles read as suitably old-fashioned and paste anywhere.",
+      },
+    ],
+  },
+  {
+    slug: "1920s",
+    keyword: "1920s fonts",
+    title: "1920s Font Generator – Art Deco & Gatsby-Era Text",
+    description:
+      "Make vintage 1920s, art-deco and Gatsby-era style text. Free Unicode fonts to copy and paste into retro and party graphics.",
+    h1: "1920s Font Generator",
+    intro:
+      "Glamorous, art-deco lettering with that roaring-twenties, Gatsby-party feel. Type your text and copy a vintage style for invitations, posts, and graphics.",
+    styles: ["small-caps-spaced", "outline-spaced", "bold-serif", "double-struck", "small-caps", "spaced", "italic-serif", "decorative-gothic"],
+    defaultText: "the roaring twenties",
+    about: [
+      {
+        heading: "Art deco glamour",
+        body: "The 1920s favored tall, elegant capitals with wide spacing and geometric flourish — the art-deco style of theater marquees and Gatsby-era invitations. Spaced caps capture that glamorous symmetry.",
+      },
+    ],
+    faq: [
+      {
+        q: "Best style for a Gatsby party invite?",
+        a: "Spaced small-caps and outlined caps read most deco. Pair them with gold-and-black graphics for the full effect.",
+      },
+      {
+        q: "Are these real deco fonts?",
+        a: "They're Unicode styles inspired by the era. For a polished print invite, hand the look to a designer.",
+      },
+    ],
+  },
+  {
+    slug: "2000s",
+    keyword: "2000s font",
+    title: "2000s Font Generator – Y2K & Early-Internet Text",
+    description:
+      "Generate nostalgic Y2K, 2000s-style text with an early-internet feel. Free Unicode fonts to copy and paste into retro posts.",
+    h1: "2000s Font Generator",
+    intro:
+      "Nostalgic Y2K lettering with that early-internet, MySpace-era energy. Type your text and copy a retro 2000s style straight into bios, captions, and edits.",
+    styles: ["fullwidth", "leet", "double-struck", "squared", "bubble", "zalgo-soft", "monospace", "sans-bold-italic"],
+    defaultText: "y2k",
+    about: [
+      {
+        heading: "Early-internet nostalgia",
+        body: "The 2000s web ran on fullwidth 'aesthetic' text, leetspeak handles, and glittery profile fonts. These styles bring back that MySpace-and-AIM energy for nostalgic posts.",
+      },
+    ],
+    faq: [
+      {
+        q: "What's the most Y2K style?",
+        a: "Fullwidth 'ａｅｓｔｈｅｔｉｃ' text and leetspeak are the most recognizable. Bubble and glitch styles add to the throwback feel.",
+      },
+      {
+        q: "Does it paste into bios?",
+        a: "Yes — it's plain Unicode and works in bios and captions everywhere.",
+      },
+    ],
+  },
+  {
+    slug: "new-romance",
+    keyword: "new romance font",
+    title: "New Romance Font Generator – Soft Modern Script Text",
+    description:
+      "Turn text into soft, modern romantic script styles. Free Unicode fonts to copy and paste into bios, captions, and graphics.",
+    h1: "New Romance Font Generator",
+    intro:
+      "Soft, modern, romantic lettering with a contemporary twist — flowing scripts and gentle italics for dreamy bios and captions. Type your text and copy a style you love.",
+    styles: ["script", "script-bold", "cursive-spaced", "italic-serif", "cursive-underline", "sans-italic", "love-parens", "bubble"],
+    defaultText: "sweet nothing",
+    about: [
+      {
+        heading: "Modern romance, softly styled",
+        body: "New romantic styles keep the warmth of classic script but feel cleaner and more contemporary — the look of modern wedding stationery and soft aesthetic profiles.",
+      },
+    ],
+    faq: [
+      {
+        q: "How is this different from the love generator?",
+        a: "It leans cleaner and more modern, with gentle italics alongside script. Try both and pick the mood that fits.",
+      },
+      {
+        q: "Good for wedding mockups?",
+        a: "For digital previews, yes. For printed stationery, hand the look to your designer for a real script font.",
+      },
+    ],
+  },
+  {
+    slug: "monopoly",
+    keyword: "monopoly font",
+    title: "Monopoly Font Generator – Bold Vintage Board-Game Text",
+    description:
+      "Make bold, vintage board-game style title text. Free Unicode fonts to copy and paste into game nights, posts, and graphics.",
+    h1: "Monopoly Font Generator",
+    intro:
+      "Bold, vintage, board-game title lettering with that classic deco-poster feel. Type your text and copy a retro style for game-night graphics and fun captions.",
+    styles: ["bold-serif", "small-caps-spaced", "outline-spaced", "double-struck", "bold-spaced", "decorative-gothic", "small-caps", "fullwidth"],
+    defaultText: "go directly",
+    about: [
+      {
+        heading: "Classic board-game branding",
+        body: "Vintage board-game titles use bold, deco-influenced caps with playful flourish. The bold serif and spaced-caps styles here capture that nostalgic game-box feel.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is this the official board-game font?",
+        a: "No — that's a custom licensed typeface. These are the closest bold, vintage Unicode styles for copy-paste.",
+      },
+      {
+        q: "Good for a game-night invite?",
+        a: "Yes for digital graphics. For print, hand the look to a designer for a true display font.",
+      },
+    ],
+  },
+  {
+    slug: "newborn",
+    keyword: "newborn font",
+    title: "Newborn Font Generator – Soft Baby Announcement Text",
+    description:
+      "Generate soft, gentle text for baby announcements, nursery decor, and cute captions. Free Unicode fonts to copy and paste.",
+    h1: "Newborn Font Generator",
+    intro:
+      "Soft, sweet, gentle lettering for baby announcements, nursery mockups, and tender captions. Type your text and copy a delicate style straight into any app.",
+    styles: ["script", "cursive-spaced", "bubble", "bubble-filled", "italic-serif", "cursive-underline", "tiny-spaced", "double-struck"],
+    defaultText: "welcome baby",
+    about: [
+      {
+        heading: "Gentle and sweet",
+        body: "Newborn announcements call for soft script and rounded shapes that feel tender and warm. Pair a flowing style with a heart or star for a gentle, celebratory touch.",
+      },
+    ],
+    faq: [
+      {
+        q: "Good for a birth announcement?",
+        a: "For digital cards and social posts, yes. For printed keepsakes, hand the look to a designer for a true font.",
+      },
+      {
+        q: "Which style is softest?",
+        a: "Flowing script and rounded bubble letters read as the gentlest. Avoid bold or gothic styles here.",
+      },
+    ],
+  },
+  {
+    slug: "thank-you",
+    keyword: "thank you in fonts",
+    title: "Thank You Font Generator – Stylish Thank-You Text",
+    description:
+      "Write 'thank you' in dozens of stylish fonts — script, bold, gothic, and more. Free Unicode fonts to copy and paste.",
+    h1: "Thank You Font Generator",
+    intro:
+      "See 'thank you' — or any message — in dozens of stylish fonts at once. Type your text and copy the perfect grateful style for cards, captions, and replies.",
+    styles: ["script", "script-bold", "cursive-spaced", "italic-serif", "bold-serif", "bubble", "fraktur", "small-caps-spaced", "cursive-underline", "double-struck"],
+    defaultText: "thank you",
+    about: [
+      {
+        heading: "Say it with style",
+        body: "A simple 'thank you' lands warmer in a flowing script or a bold, heartfelt style. Compare the variants and copy the one that matches the message — a thank-you card, a reply, or a caption.",
+      },
+    ],
+    faq: [
+      {
+        q: "Which style is best for a thank-you card?",
+        a: "A flowing script reads as warm and personal. For a bold statement of thanks, try the bold serif.",
+      },
+      {
+        q: "Does it work in messages?",
+        a: "Yes — it's plain Unicode and pastes into DMs, comments, and captions everywhere.",
+      },
+    ],
+  },
+  {
+    slug: "calligraphy-capital-letters",
+    keyword: "calligraphy capital letters",
+    title: "Calligraphy Capital Letters – Fancy A–Z Caps to Copy",
+    description:
+      "Browse and copy fancy calligraphy capital letters, A–Z. Free Unicode script capitals for monograms, initials, bios, and invitations.",
+    h1: "Calligraphy Capital Letters",
+    intro:
+      "Type a word for elegant calligraphy, or copy single ornate capitals straight from the A–Z chart below — perfect for monograms, initials, and fancy first letters.",
+    styles: ["script", "script-bold", "italic-serif", "bold-italic-serif", "cursive-spaced", "medieval-script", "royal-gothic", "decorative-gothic", "fraktur", "cursive-underline"],
+    defaultText: "Beautiful",
+    alphabet: "letters",
+    about: [
+      {
+        heading: "Ornate capitals, one at a time",
+        body: "Calligraphy shines in capital letters — the swooping initial that opens a name or monogram. The A–Z chart below maps each letter to an elegant script capital you can copy on its own, without retyping a whole word.",
+      },
+      {
+        heading: "Capitals vs. a real pen",
+        body: "These are Unicode characters that imitate calligraphic capitals, not ink on paper. They're ideal for digital monograms, bios, and previews. For a printed invitation or a drawn monogram, hand the look to a calligrapher or designer.",
+      },
+    ],
+    faq: [
+      {
+        q: "How do I copy a single capital letter?",
+        a: "Use the A–Z chart on this page — each uppercase tile is one calligraphy capital you can select and copy. For full words, type into the generator above.",
+      },
+      {
+        q: "Why do some capitals look unusual?",
+        a: "A few script capitals (especially I, J, S, and T) are highly stylized in the Unicode script alphabets, so they can look different from what you expect. Try another style if a letter reads poorly.",
+      },
+    ],
+  },
+  {
+    slug: "modern-calligraphy",
+    keyword: "modern calligraphy alphabet",
+    title: "Modern Calligraphy Generator – Clean Script Alphabet",
+    description:
+      "Turn text into modern calligraphy and browse the clean script alphabet A–Z. Free Unicode fonts to copy and paste.",
+    h1: "Modern Calligraphy Generator",
+    intro:
+      "Type a word for clean, contemporary calligraphy, or copy single letters from the A–Z alphabet below. Modern script — flowing but uncluttered — for bios, captions, and mockups.",
+    styles: ["script", "script-bold", "italic-serif", "cursive-spaced", "cursive-underline", "sans-italic", "bold-italic-serif", "cursive-bold-spaced"],
+    defaultText: "wander",
+    alphabet: "letters",
+    about: [
+      {
+        heading: "Calligraphy, minus the fuss",
+        body: "Modern calligraphy keeps the flow of traditional script but drops the heavy ornament for a cleaner, contemporary look — the style filling today's wedding signs, prints, and brand lettering. The A–Z chart lets you copy single letters for monograms and initials.",
+      },
+    ],
+    faq: [
+      {
+        q: "How is modern calligraphy different from classic?",
+        a: "Modern calligraphy is looser and less ornate — more relaxed handwriting than formal copperplate. The styles here lean clean and contemporary.",
+      },
+      {
+        q: "Can I copy just one letter?",
+        a: "Yes — use the A–Z chart on this page to copy a single script letter. For words, type into the generator above.",
+      },
+    ],
+  },
+  {
+    slug: "handwriting-styles",
+    keyword: "different kinds of handwriting",
+    title: "Handwriting Font Generator – Different Handwriting Styles",
+    description:
+      "See your text in different kinds of handwriting — cursive, script, italic, and more. Free Unicode fonts to copy and paste.",
+    h1: "Handwriting Styles Generator",
+    intro:
+      "Compare your text across different kinds of handwriting — flowing cursive, neat script, slanted italic, and more. Type once and copy the penmanship style that fits.",
+    styles: ["script", "script-bold", "cursive-spaced", "cursive-bold-spaced", "italic-serif", "sans-italic", "cursive-underline", "medieval-script", "italic-spaced", "bold-italic-serif"],
+    defaultText: "handwritten",
+    about: [
+      {
+        heading: "Many hands, one tool",
+        body: "Handwriting varies enormously — formal copperplate, casual cursive, sharp italic, looped print. These Unicode styles approximate that range so you can compare different kinds of penmanship and copy the one that suits your note, bio, or caption.",
+      },
+    ],
+    faq: [
+      {
+        q: "Are these real handwriting fonts?",
+        a: "They're Unicode script and italic alphabets that imitate handwriting, not scanned penmanship. That's what lets them copy-paste as plain text anywhere.",
+      },
+      {
+        q: "Which style looks most like real cursive?",
+        a: "The flowing script styles read closest to connected cursive. Italic styles feel more like neat, slanted print.",
+      },
+    ],
+  },
 ];
 
 export const PAGE_INDEX_DESCRIPTION =
