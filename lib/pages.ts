@@ -14,6 +14,9 @@ export type PageConfig = {
   faq: { q: string; a: string }[];
   whereToUse?: { app: string; note: string }[];
   examples?: string[];
+  // When set, renders a copyable per-character reference chart on the page
+  // using the page's first style. "letters" shows A–Z and a–z; "numbers" 0–9.
+  alphabet?: "letters" | "numbers";
 };
 
 const COMMON_PLATFORMS = [
@@ -1957,6 +1960,109 @@ export const PAGES: PageConfig[] = [
       {
         q: "Will ye olde English text work in usernames and bios?",
         a: "Bios and messages accept the full Unicode range. Username fields are stricter — if a heavily decorated variant won't save, pick one closer to standard letters.",
+      },
+    ],
+  },
+  {
+    slug: "old-english-letters",
+    keyword: "old english letters generator",
+    title: "Old English Letters Generator – A–Z Alphabet Copy & Paste",
+    description:
+      "Generate Old English letters and browse the full A–Z blackletter alphabet to copy and paste. Free Unicode Old English lettering for tattoos, bios, and usernames.",
+    h1: "Old English Letters Generator",
+    intro:
+      "Type any word to see it in Old English blackletter, or copy individual letters straight from the A–Z alphabet chart below. Every character is plain Unicode, so it pastes into bios, captions, usernames, and tattoo mockups.",
+    styles: ["gothic-classic", "fraktur", "gothic-bold", "blackletter", "fraktur-bold", "old-english-spaced", "german-gothic", "church-style", "medieval-script", "royal-gothic", "decorative-gothic", "tattoo-gothic"],
+    defaultText: "old english",
+    alphabet: "letters",
+    about: [
+      {
+        heading: "The Old English alphabet, A to Z",
+        body: "The chart below maps every English letter to its Old English blackletter form so you can copy a single letter — a monogram, an initial, or one ornate capital — without retyping a whole word. Uppercase and lowercase are shown separately because blackletter draws them quite differently.",
+      },
+      {
+        heading: "Old English letters vs. a real font",
+        body: "These are Unicode characters that look like blackletter, not an installed typeface — which is exactly why they survive copy-paste into apps with no font controls. For print or a tattoo stencil, hand the look to a designer who can set it in a true vector font for crisp linework.",
+      },
+    ],
+    faq: [
+      {
+        q: "How do I copy just one Old English letter?",
+        a: "Use the A–Z chart on this page — each tile is a single blackletter character you can select and copy on its own. For whole words, type into the generator at the top.",
+      },
+      {
+        q: "Why do a few letters look unusual?",
+        a: "Some blackletter capitals (especially I, J, and S) are highly stylized in the Unicode mathematical alphabets, so they can look different from what you expect. Try another style if a letter reads poorly.",
+      },
+      {
+        q: "Will Old English letters work in my Instagram or Discord name?",
+        a: "Bios and messages accept the full Unicode range. Username fields are stricter — if a decorated letter won't save, pick a style closer to standard letters.",
+      },
+    ],
+  },
+  {
+    slug: "old-english-numbers",
+    keyword: "old english number generator",
+    title: "Old English Numbers Generator – Fancy 0–9 Copy & Paste",
+    description:
+      "Generate Old English style numbers and browse fancy 0–9 digits to copy and paste. Free Unicode number styles for tattoos, jerseys, bios, and usernames.",
+    h1: "Old English Numbers Generator",
+    intro:
+      "Get stylized numbers to match Old English lettering. Type any figure or copy individual digits from the 0–9 chart below — handy for dates, jersey numbers, tattoo mockups, and profiles.",
+    styles: ["double-struck", "bold-serif", "sans-bold", "fullwidth", "squared", "bubble", "monospace", "superscript", "bold-spaced", "squared-spaced"],
+    defaultText: "1066",
+    alphabet: "numbers",
+    about: [
+      {
+        heading: "Why there's no true blackletter digit",
+        body: "Genuine Old English blackletter never included Arabic numerals — medieval scribes wrote numbers as Roman numerals or spelled them out. Unicode has no blackletter 0–9, so the closest match for a 'gothic number' look is one of the heavy, decorative digit styles shown here. For Roman numerals, see our Roman numeral converter.",
+      },
+      {
+        heading: "Picking a number style",
+        body: "Double-struck and bold digits read as solid and formal, fullwidth and squared feel bold and blocky, and circled (bubble) digits look playful. Pair them with Old English letters from the letters generator for a matched set on jerseys, dates, or tattoo mockups.",
+      },
+    ],
+    faq: [
+      {
+        q: "Can I get numbers in the same font as Old English letters?",
+        a: "Not exactly — Unicode has no blackletter digits. The styles here are the closest decorative match. Many people pair Old English letters with double-struck or bold numbers for a consistent heavy look.",
+      },
+      {
+        q: "How do I copy a single number?",
+        a: "Use the 0–9 chart on this page — each tile is one styled digit you can select and copy. For multi-digit figures, type them into the generator above.",
+      },
+    ],
+  },
+  {
+    slug: "old-english-word",
+    keyword: "old english word generator",
+    title: "Old English Word Generator – Convert Words to Old English Text",
+    description:
+      "Turn any word into Old English blackletter text to copy and paste. Free Unicode Old English word generator for names, tattoos, usernames, and titles.",
+    h1: "Old English Word Generator",
+    intro:
+      "Convert a single word — a name, a title, a brand — into Old English blackletter and gothic styles. Type it once, compare the variants, and copy the one that fits your tattoo mockup, logo, or profile.",
+    styles: ["gothic-classic", "fraktur", "blackletter", "gothic-bold", "fraktur-bold", "old-english-spaced", "german-gothic", "church-style", "medieval-script", "royal-gothic", "decorative-gothic", "tattoo-gothic"],
+    defaultText: "legend",
+    examples: ["legacy", "empire", "London", "Royal"],
+    about: [
+      {
+        heading: "Built for single words and names",
+        body: "Old English lettering looks its best on short, punchy text — a name across the shoulders, a one-word brand, a band logo. Type your word and the generator renders it across a dozen blackletter and gothic variants so you can compare them side by side before committing.",
+      },
+      {
+        heading: "From word to tattoo or logo",
+        body: "The output is Unicode, perfect for previewing and for digital profiles. For a printed logo or a tattoo stencil, screenshot the variant you like and give it to your designer or artist so they can recreate it in a proper vector font.",
+      },
+    ],
+    faq: [
+      {
+        q: "Does it work with names?",
+        a: "Yes — names are the most popular use. Type a first or last name and copy the blackletter version for a bio, username, or tattoo mockup.",
+      },
+      {
+        q: "Can I convert a whole sentence?",
+        a: "You can, but Old English blackletter gets hard to read in long passages. It works best on one word or a short phrase. For body text, use a lighter style from the cursive or italic generators.",
       },
     ],
   },

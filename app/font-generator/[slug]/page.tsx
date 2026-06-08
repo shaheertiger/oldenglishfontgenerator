@@ -48,6 +48,17 @@ export default async function Page({ params }: { params: Promise<Params> }) {
   const sampleStyles = page.styles.slice(0, 3).map((id) => ALL_STYLES[id]).filter(Boolean);
   const samplePhrases = page.examples ?? ["hello world", "good vibes only", "stay weird"];
 
+  const chartStyle = page.alphabet ? ALL_STYLES[page.styles[0]] : undefined;
+  const chartGroups =
+    page.alphabet === "letters"
+      ? [
+          { label: "Uppercase", chars: "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("") },
+          { label: "Lowercase", chars: "abcdefghijklmnopqrstuvwxyz".split("") },
+        ]
+      : page.alphabet === "numbers"
+      ? [{ label: "Digits", chars: "0123456789".split("") }]
+      : [];
+
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -159,6 +170,38 @@ export default async function Page({ params }: { params: Promise<Params> }) {
                   ))
                 )}
               </div>
+            </div>
+          </section>
+        )}
+
+        {chartStyle && chartGroups.length > 0 && (
+          <section className="section">
+            <div className="container">
+              <div className="eyebrow">Reference</div>
+              <h2>
+                {page.alphabet === "numbers"
+                  ? "Old English numbers 0–9"
+                  : "Old English alphabet A–Z"}
+              </h2>
+              <p>
+                Select any tile to copy that single character on its own. For
+                whole words, type into the generator at the top of the page.
+              </p>
+              {chartGroups.map((group) => (
+                <div key={group.label}>
+                  <div className="eyebrow" style={{ marginTop: 18 }}>
+                    {group.label}
+                  </div>
+                  <div className="examples">
+                    {group.chars.map((ch) => (
+                      <div className="ex" key={`${group.label}-${ch}`}>
+                        <small>{ch}</small>
+                        {chartStyle.transform(ch)}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </section>
         )}
