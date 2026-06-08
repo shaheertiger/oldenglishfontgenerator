@@ -3510,6 +3510,159 @@ export function getPage(slug: string): PageConfig | undefined {
   return PAGES.find((p) => p.slug === slug);
 }
 
+/* ------------------------------------------------------------------ */
+/* Topical categories — power contextual internal linking and the     */
+/* grouped index. Every generator slug belongs to exactly one group.  */
+/* ------------------------------------------------------------------ */
+
+export type Category = {
+  id: string;
+  title: string;
+  intro: string;
+  slugs: string[];
+};
+
+export const CATEGORIES: Category[] = [
+  {
+    id: "old-english",
+    title: "Old English & Gothic",
+    intro:
+      "Blackletter, fraktur, and medieval lettering — the dense, angular gothic styles this site is named for. Great for tattoos, logos, band names, and Old English words.",
+    slugs: [
+      "old-english", "gothic", "blackletter", "fraktur", "medieval",
+      "old-english-letters", "old-english-word", "old-english-numbers",
+      "old-english-tattoo", "old-english-copy-paste", "old-english-ig",
+      "blackletter-copy-paste", "gothic-letters", "gothic-printing",
+      "modern-gothic", "small-gothic", "old-cursive", "ye-old-english",
+      "tattoo", "gangster",
+    ],
+  },
+  {
+    id: "script",
+    title: "Script, Cursive & Calligraphy",
+    intro:
+      "Flowing, hand-lettered styles — cursive, calligraphy, italics, and signatures for bios, captions, invitations, and anything that wants an elegant, personal touch.",
+    slugs: [
+      "cursive", "calligraphy", "italic", "italianate", "signature",
+      "handwriting", "handwriting-styles", "fancy-writing",
+      "calligraphy-capital-letters", "modern-calligraphy", "new-romance",
+      "playlist",
+    ],
+  },
+  {
+    id: "cute",
+    title: "Cute & Aesthetic",
+    intro:
+      "Soft, playful, and aesthetic styles — bubble letters, vaporwave, and themed looks for cute bios, dreamy captions, and pretty profiles.",
+    slugs: [
+      "cute", "aesthetic", "vaporwave", "bubble", "princess", "love",
+      "angelic", "cloud", "cookie", "dog", "food", "newborn", "thank-you",
+    ],
+  },
+  {
+    id: "horror",
+    title: "Horror, Cursed & Glitch",
+    intro:
+      "Creepy, distorted, and unsettling styles — zalgo, glitch, and cursed text for horror posts, Halloween captions, and edgy usernames.",
+    slugs: [
+      "creepy", "cursed", "zalgo", "glitch", "weird", "distorted-text",
+      "satanic", "freaky", "slasher", "monster", "animalistic", "scratchy",
+    ],
+  },
+  {
+    id: "gaming",
+    title: "Gaming & Internet",
+    intro:
+      "Tags, handles, and themed styles for games and online culture — Fortnite, Minecraft, Roblox, leetspeak, and fan-favorite franchises.",
+    slugs: [
+      "gaming", "fortnite", "sweaty-fortnite", "minecraft", "roblox",
+      "leet", "graffiti", "cybernetic", "anime", "final-fantasy",
+      "squid-game", "hunger-games", "brat", "2000s",
+    ],
+  },
+  {
+    id: "social",
+    title: "Social Media Fonts",
+    intro:
+      "Styled text built for each platform — Instagram, TikTok, Discord, Facebook, Twitter/X, and LinkedIn bios, captions, and posts.",
+    slugs: [
+      "instagram", "ig-font", "tiktok", "discord", "discord-font",
+      "facebook", "facebook-bold-text", "twitter", "linkedin",
+      "linkedin-bold-text",
+    ],
+  },
+  {
+    id: "bold",
+    title: "Bold, Big & Emphasis",
+    intro:
+      "Heavy, attention-grabbing styles — bold, bold italic, underline, and big display text for headlines, signs, and anything that needs to stand out.",
+    slugs: [
+      "bold", "bold-text-generator", "bold-italic", "types-of-bold", "big",
+      "underline", "strikethrough", "sign", "varsity", "logotype",
+      "rock-and-roll",
+    ],
+  },
+  {
+    id: "tiny",
+    title: "Small & Tiny Text",
+    intro:
+      "Miniature styles — small caps, tiny superscript, and subscript characters for subtle bios, footnotes, and understated captions.",
+    slugs: ["small", "tiny-text", "small-caps", "superscript"],
+  },
+  {
+    id: "effects",
+    title: "Cool Effects & Transforms",
+    intro:
+      "Fun text transformers — upside down, mirrored, reversed, mocking case, and the all-purpose cool, fancy, and stylish font generators.",
+    slugs: [
+      "cool", "cool-text", "cool-letters", "fancy", "fancy-letters",
+      "stylish", "fun", "fonts-copy-and-paste", "font-changer",
+      "font-converter", "upside-down", "reverse", "mirror", "mocking-text",
+      "square", "typewriter", "ransom-note", "wavy", "hacked", "japanese",
+    ],
+  },
+  {
+    id: "themed",
+    title: "Vintage & Themed",
+    intro:
+      "Era and pop-culture looks — vintage decade styles plus title fonts inspired by film, games, and classic branding.",
+    slugs: ["1920s", "1940s", "mamma-mia", "pulp-fiction", "monopoly", "biology"],
+  },
+];
+
+// slug -> category lookup, built once from CATEGORIES.
+const CATEGORY_BY_SLUG: Record<string, Category> = {};
+for (const cat of CATEGORIES) {
+  for (const slug of cat.slugs) CATEGORY_BY_SLUG[slug] = cat;
+}
+
+export function getCategory(slug: string): Category | undefined {
+  return CATEGORY_BY_SLUG[slug];
+}
+
+// Pages topically related to `slug`: same-category siblings first (in
+// their listed order), then padded with other pages so we always return
+// up to `limit` valid, existing pages.
+export function relatedPages(slug: string, limit = 12): PageConfig[] {
+  const cat = CATEGORY_BY_SLUG[slug];
+  const seen = new Set<string>([slug]);
+  const out: PageConfig[] = [];
+  const push = (s: string) => {
+    if (seen.has(s)) return;
+    const p = getPage(s);
+    if (!p) return;
+    seen.add(s);
+    out.push(p);
+  };
+  if (cat) cat.slugs.forEach(push);
+  // Pad with pages from other categories if the cluster is small.
+  for (const p of PAGES) {
+    if (out.length >= limit) break;
+    push(p.slug);
+  }
+  return out.slice(0, limit);
+}
+
 export function platformsFor(page: PageConfig) {
   if (page.whereToUse) return page.whereToUse;
   return COMMON_PLATFORMS;
