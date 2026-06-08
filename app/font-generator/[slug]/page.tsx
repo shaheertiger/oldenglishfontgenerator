@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Generator from "@/components/Generator";
-import RichText from "@/components/RichText";
+import RichText, { stripMarkdownLinks } from "@/components/RichText";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import { PAGES, getPage, platformsFor, getCategory, relatedPages } from "@/lib/pages";
 import { ALL_STYLES } from "@/lib/fonts";
@@ -65,8 +65,8 @@ export default async function Page({ params }: { params: Promise<Params> }) {
     "@type": "FAQPage",
     mainEntity: page.faq.map((f) => ({
       "@type": "Question",
-      name: f.q,
-      acceptedAnswer: { "@type": "Answer", text: f.a },
+      name: stripMarkdownLinks(f.q),
+      acceptedAnswer: { "@type": "Answer", text: stripMarkdownLinks(f.a) },
     })),
   };
 

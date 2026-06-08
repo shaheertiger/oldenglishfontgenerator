@@ -69,7 +69,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "What counts as a cursive font?",
-        body: "Cursive typefaces are scripts where letters look flowing and connected, like handwriting with a fountain pen. The Unicode standard includes several blocks of script-style letters — what you see here are those characters, mapped one-to-one from your input.",
+        body: "Cursive typefaces are scripts where letters look flowing and connected, like [handwriting](/font-generator/handwriting) with a fountain pen. The Unicode standard includes several blocks of script-style letters — what you see here are those characters, mapped one-to-one from your input. For a more ornate take, see the [calligraphy generator](/font-generator/calligraphy).",
       },
       {
         heading: "Where can I use cursive Unicode text?",
@@ -108,7 +108,7 @@ export const PAGES: PageConfig[] = [
       },
       {
         heading: "Where calligraphy text works best",
-        body: "Calligraphy styles read as elegant and personal, so they suit Instagram bios and captions, wedding and event mockups, quote graphics, signatures, and profile names. Pair a script style with regular text so longer passages stay readable at a glance.",
+        body: "Calligraphy styles read as elegant and personal, so they suit Instagram bios and captions, wedding and event mockups, quote graphics, [signatures](/font-generator/signature), and profile names. Pair a [script](/font-generator/cursive) style with regular text so longer passages stay readable at a glance.",
       },
     ],
     faq: [
@@ -139,13 +139,13 @@ export const PAGES: PageConfig[] = [
       },
       {
         heading: "Gothic vs. blackletter vs. Old English",
-        body: "All three name the same broad family. Blackletter is the typographic term, gothic is the common word, and Old English is what most tattoo artists and sign shops call it. They're stylistic siblings, not different writing systems.",
+        body: "All three name the same broad family. [Blackletter](/font-generator/blackletter) is the typographic term, gothic is the common word, and [Old English](/font-generator/old-english) is what most tattoo artists and sign shops call it. They're stylistic siblings, not different writing systems.",
       },
     ],
     faq: [
       {
         q: "Will gothic text work in my Instagram or Discord name?",
-        a: "Bios and messages accept the full Unicode range. Username fields are stricter — if a heavily decorated variant won't save, pick one closer to standard letters like Small Caps or Bold.",
+        a: "Bios and messages accept the full Unicode range. Username fields are stricter — if a heavily decorated variant won't save, pick one closer to standard letters like [Small Caps](/font-generator/small-caps) or [Bold](/font-generator/bold).",
       },
       {
         q: "Can I use gothic text for a tattoo?",
@@ -170,7 +170,7 @@ export const PAGES: PageConfig[] = [
       },
       {
         heading: "Pairing cute text with symbols",
-        body: "Cute aesthetics often combine styled letters with decorative symbols — hearts, stars, sparkles. Generate your text here, then add a few glyphs from the symbols pages for a finished look.",
+        body: "Cute aesthetics often combine styled letters with decorative symbols — hearts, stars, sparkles. Generate your text here, then add a few glyphs from the [symbols pages](/symbols) for a finished look. The [bubble](/font-generator/bubble) and [aesthetic](/font-generator/aesthetic) generators pair especially well.",
       },
     ],
     faq: [
@@ -197,7 +197,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "How superscript text works",
-        body: "Superscript characters were designed for math and footnote notation (like xⁿ), but they render smaller and raised compared to regular letters and copy as plain text. We map each letter to its Unicode superscript form where one exists.",
+        body: "Superscript characters were designed for math and footnote notation (like xⁿ), but they render smaller and raised compared to regular letters and copy as plain text. We map each letter to its Unicode superscript form where one exists. For more miniature looks, see [tiny text](/font-generator/tiny-text) and [small caps](/font-generator/small-caps).",
       },
     ],
     faq: [
@@ -220,7 +220,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "What makes a font look 'aesthetic'?",
-        body: "Aesthetic styles lean on airy spacing, soft script, and fullwidth letters that take up more room — the look that defines vaporwave, soft-girl, and minimalist profiles. The effect comes from real Unicode characters, so it pastes anywhere as plain text.",
+        body: "Aesthetic styles lean on airy spacing, soft [script](/font-generator/cursive), and fullwidth letters that take up more room — the look that defines [vaporwave](/font-generator/vaporwave), soft-girl, and minimalist profiles. The effect comes from real Unicode characters, so it pastes anywhere as plain text.",
       },
     ],
     faq: [
@@ -238,12 +238,12 @@ export const PAGES: PageConfig[] = [
       "Generate Fortnite-style fonts for sweaty, tryhard usernames and display names. Gothic, bold, and decorative Unicode styles — copy and paste ready.",
     h1: "Fortnite Font Generator",
     intro:
-      "Build a sweaty Fortnite-style name. Pick a bold, gothic, or symbol-laden variant, copy it, and paste it into your Epic display name or clan tag.",
+      "Build a [sweaty](/font-generator/sweaty-fortnite) Fortnite-style name. Pick a bold, [gothic](/font-generator/gothic), or symbol-laden variant, copy it, and paste it into your Epic display name or clan tag.",
     styles: ["gothic-bold", "fraktur", "blackletter", "sans-bold", "monospace", "small-caps", "double-struck", "squared", "fullwidth", "tattoo-gothic", "outline-gothic", "fraktur-bold"],
     about: [
       {
         heading: "Where Fortnite-style fonts work",
-        body: "Epic Games display names accept a wide range of Unicode, which is why 'sweaty' players use styled letters and symbols to stand out. The same styles work in clan tags and on most gaming profiles like Steam, Xbox, and PSN.",
+        body: "Epic Games display names accept a wide range of Unicode, which is why 'sweaty' players use styled letters and symbols to stand out. The same styles work in clan tags and on most [gaming profiles](/font-generator/gaming) like Steam, Xbox, and PSN.",
       },
     ],
     faq: [
@@ -266,7 +266,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Where the vaporwave look comes from",
-        body: "Vaporwave text uses fullwidth forms (ＡＢＣ) originally designed to sit alongside East Asian characters on the same em-square. Pasted into a Latin context they render wide and evenly spaced — the aesthetic that became shorthand for the vaporwave and 80s-retro vibe.",
+        body: "Vaporwave text uses fullwidth forms (ＡＢＣ) originally designed to sit alongside East Asian characters on the same em-square. Pasted into a Latin context they render wide and evenly spaced — the [aesthetic](/font-generator/aesthetic) that became shorthand for the vaporwave and 80s-retro vibe.",
       },
     ],
     faq: [
@@ -289,7 +289,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "How 'hacked' text is built",
-        body: "The hacker look mixes a few tricks: leetspeak swaps letters for numbers and symbols (h4ck3d), monospace mimics a terminal, and combining diacritics add a glitched, corrupted overlay. All of it stays as copyable Unicode text.",
+        body: "The hacker look mixes a few tricks: [leetspeak](/font-generator/leet) swaps letters for numbers and symbols (h4ck3d), monospace mimics a terminal, and combining diacritics add a [glitched](/font-generator/glitch), corrupted overlay. All of it stays as copyable Unicode text.",
       },
     ],
     faq: [
@@ -312,7 +312,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Using this to plan a tattoo",
-        body: "Type your phrase and preview it instantly across blackletter, gothic, and script variants — far faster than installing downloaded fonts. Once you find the look you want, screenshot it or copy the text to show your artist.",
+        body: "Type your phrase and preview it instantly across [blackletter](/font-generator/blackletter), [gothic](/font-generator/gothic), and [script](/font-generator/cursive) variants — far faster than installing downloaded fonts. Once you find the look you want, screenshot it or copy the text to show your artist.",
       },
       {
         heading: "From mockup to real ink",
@@ -326,7 +326,7 @@ export const PAGES: PageConfig[] = [
       },
       {
         q: "Which style is most popular for tattoos?",
-        a: "Blackletter and Old English gothic are the classic tattoo scripts; flowing script suits names and quotes. Try a few and see what fits the placement.",
+        a: "Blackletter and [Old English](/font-generator/old-english) gothic are the classic tattoo scripts; flowing script suits names and quotes. Try a few and see what fits the placement.",
       },
     ],
   },
@@ -343,7 +343,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "What a signature font is here",
-        body: "True signatures are hand-drawn, but these Unicode script and italic styles mimic that flowing, personal look. Because the result is plain text, it pastes into email signatures, bios, and profiles that don't let you change fonts.",
+        body: "True signatures are hand-drawn, but these Unicode [script](/font-generator/cursive) and [italic](/font-generator/italic) styles mimic that flowing, personal look. Because the result is plain text, it pastes into email signatures, bios, and profiles that don't let you change fonts.",
       },
     ],
     faq: [
@@ -366,7 +366,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "How handwriting fonts work as text",
-        body: "These styles use Unicode script and cursive alphabets that resemble handwriting, mapped one-to-one from your input. They aren't real fonts installed on your device — they're characters, so they survive copy-paste into apps with no formatting controls.",
+        body: "These styles use Unicode script and [cursive](/font-generator/cursive) alphabets that resemble handwriting, mapped one-to-one from your input. They aren't real fonts installed on your device — they're characters, so they survive copy-paste into apps with no formatting controls. Closely related: the [signature](/font-generator/signature) and [fancy writing](/font-generator/fancy-writing) generators.",
       },
     ],
     faq: [
@@ -389,11 +389,11 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "What is an Old English font?",
-        body: "Old English is the everyday name for blackletter — the dense, angular scripts medieval scribes used and early printers cast as type. The styles here approximate the most recognizable blackletter forms using Unicode characters, so the result stays as plain, copyable text.",
+        body: "Old English is the everyday name for blackletter — the dense, angular scripts medieval scribes used and early printers cast as type. The styles here approximate the most recognizable blackletter forms using Unicode characters, so the result stays as plain, copyable text. Browse the full A–Z on the [Old English letters](/font-generator/old-english-letters) page, or convert a single word with the [Old English word generator](/font-generator/old-english-word).",
       },
       {
         heading: "Old English vs. gothic vs. blackletter",
-        body: "All three name the same family. Blackletter is the typographic term, gothic is the common word, and Old English is what most tattoo artists and sign shops call it — stylistic siblings, not different writing systems.",
+        body: "All three name the same family. [Blackletter](/font-generator/blackletter) is the typographic term, [gothic](/font-generator/gothic) is the common word, and Old English is what most tattoo artists and sign shops call it — stylistic siblings, not different writing systems.",
       },
     ],
     faq: [
@@ -403,7 +403,7 @@ export const PAGES: PageConfig[] = [
       },
       {
         q: "Can I use Old English text for a tattoo?",
-        a: "For mockups, yes — preview your phrase in every style. For the actual tattoo, your artist needs a real vector font so the linework stays sharp.",
+        a: "For mockups, yes — preview your phrase in every style, then see the [tattoo font generator](/font-generator/tattoo) and [Old English tattoo](/font-generator/old-english-tattoo) page. For the actual tattoo, your artist needs a real vector font so the linework stays sharp.",
       },
     ],
   },
@@ -420,11 +420,11 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Which fonts work in Instagram bios?",
-        body: "Nearly all of the styles below render correctly in Instagram bios and captions. Display names accept Unicode too, but Instagram's automatic moderation occasionally hides accounts whose names look like spam — stick to clean styles for your handle.",
+        body: "Nearly all of the styles below render correctly in Instagram bios and captions. Display names accept Unicode too, but Instagram's automatic moderation occasionally hides accounts whose names look like spam — stick to clean styles like [bold](/font-generator/bold) or [small caps](/font-generator/small-caps) for your handle.",
       },
       {
         heading: "Tips for IG-ready text",
-        body: "Mix one fancy style with regular letters so people can still read your bio at a glance. Combine with line breaks (use a blank character in the Notes app and paste it) for a cleaner layout.",
+        body: "Mix one [fancy](/font-generator/fancy) style with regular letters so people can still read your bio at a glance. Combine with line breaks (use a blank character from the [invisible text generator](/invisible-text-generator)) for a cleaner layout.",
       },
     ],
     faq: [
@@ -451,7 +451,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Why these all work as text",
-        body: "Every style here uses real Unicode characters, not images or custom fonts. That's why you can paste them into apps that don't let you change typefaces.",
+        body: "Every style here uses real Unicode characters, not images or custom fonts. That's why you can paste them into apps that don't let you change typefaces. For a specific look, jump to [cursive](/font-generator/cursive), [gothic](/font-generator/gothic), or [bold](/font-generator/bold).",
       },
     ],
     faq: [
@@ -474,13 +474,13 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Bold via Unicode vs. bold via formatting",
-        body: "Editors like Word and Google Docs make text bold by changing the font weight. Platforms without that option (Instagram, most chat apps) leave you out of luck — unless you use Unicode bold characters that already look heavier built-in.",
+        body: "Editors like Word and Google Docs make text bold by changing the font weight. Platforms without that option (Instagram, most chat apps) leave you out of luck — unless you use Unicode bold characters that already look heavier built-in. Want a slant too? See [bold italic](/font-generator/bold-italic); posting on a specific site? Try the [Facebook](/font-generator/facebook-bold-text) and [LinkedIn](/font-generator/linkedin-bold-text) bold generators.",
       },
     ],
     faq: [
       {
         q: "Does bold Unicode work in Discord?",
-        a: "Yes, but Discord also supports markdown — wrap text in **double asterisks** for native bold that screen readers handle properly.",
+        a: "Yes, but Discord also supports markdown — wrap text in **double asterisks** for native bold that screen readers handle properly. For names and status where markdown doesn't work, see the [Discord font generator](/font-generator/discord).",
       },
     ],
   },
@@ -497,7 +497,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "How strikethrough works in Unicode",
-        body: "Each character is followed by an invisible 'combining long stroke overlay' (U+0336) that the renderer draws on top. The text remains selectable and copyable as the original letters.",
+        body: "Each character is followed by an invisible 'combining long stroke overlay' (U+0336) that the renderer draws on top. The text remains selectable and copyable as the original letters. For a line under your text instead, use the [underline generator](/font-generator/underline).",
       },
     ],
     faq: [
@@ -520,7 +520,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Outlined vs. filled bubbles",
-        body: "Outlined bubbles (Ⓐ Ⓑ Ⓒ) read more cleanly at small sizes; filled bubbles (🅐 🅑 🅒) pop against light backgrounds. Mix with regular text for emphasis instead of using a whole sentence.",
+        body: "Outlined bubbles (Ⓐ Ⓑ Ⓒ) read more cleanly at small sizes; filled bubbles (🅐 🅑 🅒) pop against light backgrounds. Mix with regular text for emphasis instead of using a whole sentence. They pair nicely with the [cute](/font-generator/cute) and [cloud](/font-generator/cloud) styles.",
       },
     ],
     faq: [
@@ -543,7 +543,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Why copy-paste fonts exist",
-        body: "Apps like Instagram and TikTok don't expose font controls in their text fields. Unicode is the workaround: certain mathematical and decorative alphabets look like different fonts but are technically just characters, so they survive copy-paste.",
+        body: "Apps like [Instagram](/font-generator/instagram) and [TikTok](/font-generator/tiktok) don't expose font controls in their text fields. Unicode is the workaround: certain mathematical and decorative alphabets look like different fonts but are technically just characters, so they survive copy-paste.",
       },
     ],
     faq: [
@@ -566,7 +566,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "What makes text 'weird'?",
-        body: "Most of these styles draw from blocks of Unicode that weren't designed for normal writing — math symbols, phonetic alphabets, combining diacritics. Stacking them produces text that looks off in a fun way.",
+        body: "Most of these styles draw from blocks of Unicode that weren't designed for normal writing — math symbols, phonetic alphabets, combining diacritics. Stacking them produces text that looks off in a fun way. For heavier chaos, try [zalgo](/font-generator/zalgo) or [glitch](/font-generator/glitch); to flip it, see [upside down](/font-generator/upside-down).",
       },
     ],
     faq: [
@@ -589,7 +589,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "How 'small' fonts actually work",
-        body: "Superscript characters are designed for math notation (xⁿ), but they render smaller than regular letters and copy as plain text. Small caps use phonetic alphabet characters that look like miniature uppercase letters.",
+        body: "[Superscript](/font-generator/superscript) characters are designed for math notation (xⁿ), but they render smaller than regular letters and copy as plain text. [Small caps](/font-generator/small-caps) use phonetic alphabet characters that look like miniature uppercase letters. See also the [tiny text generator](/font-generator/tiny-text).",
       },
     ],
     faq: [
@@ -612,7 +612,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Markdown vs. Unicode in Discord",
-        body: "Discord supports markdown inside messages: **bold**, *italic*, ~~strike~~, `code`. For usernames, status messages, and channel names — where markdown doesn't apply — Unicode fonts are the only way to add style.",
+        body: "Discord supports markdown inside messages: **bold**, *italic*, ~~strike~~, `code`. For usernames, status messages, and channel names — where markdown doesn't apply — Unicode fonts are the only way to add style. Popular picks: [bold](/font-generator/bold), [small caps](/font-generator/small-caps), and [cursive](/font-generator/cursive).",
       },
     ],
     faq: [
@@ -635,7 +635,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Where these fonts show up",
-        body: "Usernames, server nicknames, custom status, channel topics, and message bodies. They render the same on desktop, web, and mobile clients.",
+        body: "Usernames, server nicknames, custom status, channel topics, and message bodies. They render the same on desktop, web, and mobile clients. See the main [Discord font generator](/font-generator/discord) for markdown tips.",
       },
     ],
     faq: [
@@ -658,7 +658,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "How glitch text is built",
-        body: "Combining diacritical marks (Unicode block U+0300–036F) stack on top of any base character. Pile enough of them up and the renderer starts overlapping glyphs — that's the glitch effect.",
+        body: "Combining diacritical marks (Unicode block U+0300–036F) stack on top of any base character. Pile enough of them up and the renderer starts overlapping glyphs — that's the glitch effect. Push it further with [zalgo](/font-generator/zalgo) and [cursed text](/font-generator/cursed).",
       },
     ],
     faq: [
@@ -681,7 +681,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Facebook's text rendering quirks",
-        body: "Facebook respects Unicode in posts and comments. Page names and profile names go through review and sometimes reject heavily stylized text.",
+        body: "Facebook respects Unicode in posts and comments. Page names and profile names go through review and sometimes reject heavily stylized text. To bold a key line, use the [Facebook bold text generator](/font-generator/facebook-bold-text).",
       },
     ],
     faq: [
@@ -704,7 +704,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Italic Unicode vs. italic styling",
-        body: "Real italics need a font with an italic cut. Unicode 'italic' characters are math symbols designed to look slanted — close enough for cosmetic use but not for typesetting.",
+        body: "Real italics need a font with an italic cut. Unicode 'italic' characters are math symbols designed to look slanted — close enough for cosmetic use but not for typesetting. For a heavier slant, see [bold italic](/font-generator/bold-italic); for a flowing hand, try [cursive](/font-generator/cursive).",
       },
     ],
     faq: [
@@ -727,7 +727,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Why flipped text works",
-        body: "Unicode contains rotated forms of many Latin letters (ɐ for a, qfor d, ǝ for e). Combine them in reverse order and you get readable upside-down text.",
+        body: "Unicode contains rotated forms of many Latin letters (ɐ for a, qfor d, ǝ for e). Combine them in reverse order and you get readable upside-down text. Related flips: [reverse text](/font-generator/reverse) and [mirror text](/font-generator/mirror).",
       },
     ],
     faq: [
@@ -750,7 +750,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Picking the right fancy style",
-        body: "Script and italic styles read as warm and personal. Fraktur and outline styles feel formal or ceremonial. Choose based on the mood of what you're posting.",
+        body: "[Script](/font-generator/cursive) and [italic](/font-generator/italic) styles read as warm and personal. [Fraktur](/font-generator/fraktur) and outline styles feel formal or ceremonial. Choose based on the mood of what you're posting — or copy single letters from the [fancy letters](/font-generator/fancy-letters) chart.",
       },
     ],
     faq: [
@@ -773,7 +773,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "How 'cursed' text became a meme",
-        body: "The technique started on a 4chan board in the late 2000s as 'zalgo' text and spread as a way to mimic horror imagery in plain text. Today it's used for memes, ARGs, and aesthetic posts.",
+        body: "The technique started on a 4chan board in the late 2000s as '[zalgo](/font-generator/zalgo)' text and spread as a way to mimic horror imagery in plain text. Today it's used for memes, ARGs, and [creepy](/font-generator/creepy) posts.",
       },
     ],
     faq: [
@@ -796,7 +796,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Creepy ≠ unreadable",
-        body: "The trick is to keep your text legible while suggesting something is wrong with it. Light zalgo or blackletter usually lands better than maxed-out chaos.",
+        body: "The trick is to keep your text legible while suggesting something is wrong with it. Light [zalgo](/font-generator/zalgo) or [blackletter](/font-generator/blackletter) usually lands better than maxed-out chaos.",
       },
     ],
     faq: [
@@ -819,7 +819,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Twitter's character limit and Unicode",
-        body: "Twitter counts most styled letters as a single character, but some (like outlined or bubble letters) take two units. Watch your character count if you're near the limit.",
+        body: "Twitter counts most styled letters as a single character, but some (like outlined or [bubble](/font-generator/bubble) letters) take two units. Watch your character count if you're near the limit. Popular tweet styles include [bold](/font-generator/bold) and [italics](/font-generator/italic).",
       },
     ],
     faq: [
@@ -842,7 +842,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Where 'big' Unicode comes from",
-        body: "Full-width forms (ＡＢＣ) were originally designed for use alongside East Asian scripts, where they take up the same em-square as a CJK character. Pasted into a Latin-only context, they look comically large.",
+        body: "Full-width forms (ＡＢＣ) were originally designed for use alongside East Asian scripts, where they take up the same em-square as a CJK character. Pasted into a Latin-only context, they look comically large. The same fullwidth letters power the [vaporwave](/font-generator/vaporwave) and [aesthetic](/font-generator/aesthetic) looks.",
       },
     ],
     faq: [
@@ -865,7 +865,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Bold serif vs. bold sans",
-        body: "Serif bold reads as traditional and editorial. Sans-serif bold reads as modern and direct. Pick based on the tone you want — most social platforms render both well.",
+        body: "Serif bold reads as traditional and editorial. Sans-serif bold reads as modern and direct. Pick based on the tone you want — most social platforms render both well. Need a slant or a platform-specific version? See [bold italic](/font-generator/bold-italic), [Facebook bold](/font-generator/facebook-bold-text), and [LinkedIn bold](/font-generator/linkedin-bold-text).",
       },
     ],
     faq: [
@@ -888,7 +888,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Why small caps look 'designy'",
-        body: "Real small caps are a font feature where lowercase letters are designed to match the weight and proportions of capitals. Unicode small caps reuse phonetic alphabet characters that approximate the same effect.",
+        body: "Real small caps are a font feature where lowercase letters are designed to match the weight and proportions of capitals. Unicode small caps reuse phonetic alphabet characters that approximate the same effect. For raised mini text, see [superscript](/font-generator/superscript) and [tiny text](/font-generator/tiny-text).",
       },
     ],
     faq: [
@@ -911,7 +911,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Where zalgo came from",
-        body: "Zalgo started as a creepypasta character in the late 2000s. The visual style — chaotic stacked diacritics — became shorthand for 'something is wrong here' across image macros, ARGs, and horror writing.",
+        body: "Zalgo started as a creepypasta character in the late 2000s. The visual style — chaotic stacked diacritics — became shorthand for 'something is wrong here' across image macros, ARGs, and horror writing. Softer variants live on the [glitch](/font-generator/glitch) and [cursed text](/font-generator/cursed) pages.",
       },
     ],
     faq: [
@@ -934,7 +934,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Which fonts render best on TikTok?",
-        body: "Cursive script and small-caps usually look the cleanest on the For You feed because they stay readable at small caption sizes. Heavily decorated styles can clip on shorter videos — preview before posting.",
+        body: "[Cursive](/font-generator/cursive) script and [small-caps](/font-generator/small-caps) usually look the cleanest on the For You feed because they stay readable at small caption sizes. Heavily decorated styles can clip on shorter videos — preview before posting.",
       },
       {
         heading: "Username vs. caption restrictions",
@@ -965,7 +965,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Where styled fonts fit on Instagram",
-        body: "Bios are the safest place — Instagram displays the full Unicode range, and styled bios catch the eye on profile previews. Captions work too; usernames are stricter and filter unusual characters.",
+        body: "Bios are the safest place — Instagram displays the full Unicode range, and styled bios catch the eye on profile previews. Captions work too; usernames are stricter and filter unusual characters. See the full [Instagram fonts generator](/font-generator/instagram) for more tips.",
       },
     ],
     faq: [
@@ -992,7 +992,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "How underline works without formatting",
-        body: "Most apps don't let you underline text directly. The trick is the 'combining low line' character (U+0332), which the renderer draws underneath the previous letter. Stack two of them for a double underline.",
+        body: "Most apps don't let you underline text directly. The trick is the 'combining low line' character (U+0332), which the renderer draws underneath the previous letter. Stack two of them for a double underline. For a line through your text instead, see the [strikethrough generator](/font-generator/strikethrough).",
       },
       {
         heading: "When to use it",
@@ -1023,7 +1023,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Picking a style that fits the vibe",
-        body: "Script and italic styles read as warm. Bold and double-struck read as confident. Fraktur reads as formal or vintage. Bubble and squared read as playful. Match the style to the message, not just to what looks the coolest.",
+        body: "[Script](/font-generator/cursive) and italic styles read as warm. [Bold](/font-generator/bold) and double-struck read as confident. [Fraktur](/font-generator/fraktur) reads as formal or vintage. [Bubble](/font-generator/bubble) and squared read as playful. Match the style to the message, not just to what looks the coolest.",
       },
     ],
     faq: [
@@ -1046,7 +1046,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Reverse vs. upside-down vs. mirrored",
-        body: "Reverse simply flips the character order (so 'hello' becomes 'olleh'). Upside-down also rotates each letter 180° using Unicode counterparts. A true mirror image (left-right flip) isn't possible in plain text — most letters don't have a horizontally-flipped Unicode equivalent.",
+        body: "Reverse simply flips the character order (so 'hello' becomes 'olleh'). [Upside-down](/font-generator/upside-down) also rotates each letter 180° using Unicode counterparts. A true [mirror](/font-generator/mirror) image (left-right flip) isn't possible in plain text — most letters don't have a horizontally-flipped Unicode equivalent.",
       },
       {
         heading: "Where the backwards B came from",
@@ -1073,7 +1073,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "How this works without actual Japanese characters",
-        body: "The output isn't Japanese — it's fullwidth Latin text using the Unicode Halfwidth and Fullwidth Forms block (U+FF01–U+FF60). Each character takes the same horizontal space as a CJK glyph, giving the wide, spaced aesthetic associated with East Asian typography.",
+        body: "The output isn't Japanese — it's fullwidth Latin text using the Unicode Halfwidth and Fullwidth Forms block (U+FF01–U+FF60). Each character takes the same horizontal space as a CJK glyph, giving the wide, spaced aesthetic associated with East Asian typography. It's the same fullwidth trick behind the [vaporwave](/font-generator/vaporwave) and [aesthetic](/font-generator/aesthetic) styles.",
       },
       {
         heading: "Where it works",
@@ -1104,7 +1104,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "What 'mirrored' actually means in Unicode",
-        body: "A true mirror image would require horizontally-flipped glyphs, which Unicode doesn't provide for most letters. Instead, mirrored text uses look-alike characters — letters from Cyrillic, IPA, and other blocks that visually resemble flipped Latin forms.",
+        body: "A true mirror image would require horizontally-flipped glyphs, which Unicode doesn't provide for most letters. Instead, mirrored text uses look-alike characters — letters from Cyrillic, IPA, and other blocks that visually resemble flipped Latin forms. Related transforms: [reverse text](/font-generator/reverse) and [upside down](/font-generator/upside-down).",
       },
     ],
     faq: [
@@ -1132,7 +1132,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Where the mocking format came from",
-        body: "The alternating-caps style took off in 2017 when a SpongeBob screenshot — the one where Patrick is held like a baby, mockingly repeating words — went viral as a reaction image format. The alternating case became the visual shorthand for sarcastic mimicry.",
+        body: "The alternating-caps style took off in 2017 when a SpongeBob screenshot — the one where Patrick is held like a baby, mockingly repeating words — went viral as a reaction image format. The alternating case became the visual shorthand for sarcastic mimicry. For more text transforms, try [upside down](/font-generator/upside-down) or [reverse](/font-generator/reverse).",
       },
     ],
     faq: [
@@ -1165,7 +1165,7 @@ export const PAGES: PageConfig[] = [
       },
       {
         q: "What's the difference between squared and bubble?",
-        a: "Squared encloses letters in angular boxes. Bubble rounds them into circles. Both use Unicode enclosed-alphanumeric characters.",
+        a: "Squared encloses letters in angular boxes. The [bubble generator](/font-generator/bubble) rounds them into circles. Both use Unicode enclosed-alphanumeric characters.",
       },
     ],
   },
@@ -1182,7 +1182,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Why monospace looks like a typewriter",
-        body: "Typewriters couldn't vary character spacing, so every letter took the same horizontal slot. The Unicode Mathematical Monospace block replicates that look using fixed-width letterforms mapped one-to-one from your input.",
+        body: "Typewriters couldn't vary character spacing, so every letter took the same horizontal slot. The Unicode Mathematical Monospace block replicates that look using fixed-width letterforms mapped one-to-one from your input. The same monospace feel appears in the [1940s](/font-generator/1940s) and [biology](/font-generator/biology) styles.",
       },
     ],
     faq: [
@@ -1209,7 +1209,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "What is leet speak?",
-        body: "Leet (from 'elite') is an informal writing system that substitutes numbers and symbols for letters — A becomes 4, E becomes 3, and so on. It originated in early online communities and BBS boards in the 1980s as a way to slip past keyword filters, then became a marker of internet identity through the 1990s gaming scene.",
+        body: "Leet (from 'elite') is an informal writing system that substitutes numbers and symbols for letters — A becomes 4, E becomes 3, and so on. It originated in early online communities and BBS boards in the 1980s as a way to slip past keyword filters, then became a marker of internet identity through the 1990s gaming scene. It pairs naturally with the [hacked](/font-generator/hacked) and [gaming](/font-generator/gaming) styles.",
       },
     ],
     faq: [
@@ -1236,7 +1236,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "How the corrupted text effect works",
-        body: "The glitchy, overflowing look comes from Unicode combining diacritics — accent marks and modifiers that stack above and below a base character. Zalgo stacks dozens of these on each letter, which most renderers draw outside the normal line bounds, creating the distorted overflow effect.",
+        body: "The glitchy, overflowing look comes from Unicode combining diacritics — accent marks and modifiers that stack above and below a base character. [Zalgo](/font-generator/zalgo) stacks dozens of these on each letter, which most renderers draw outside the normal line bounds, creating the distorted overflow effect. See also the [cursed](/font-generator/cursed) and [creepy](/font-generator/creepy) generators.",
       },
     ],
     faq: [
@@ -1265,7 +1265,7 @@ export const PAGES: PageConfig[] = [
     faq: [
       {
         q: "What's the difference between freaky and zalgo?",
-        a: "Zalgo is specifically the combining-diacritic overflow effect. Freaky is broader — it includes zalgo but also weird Unicode substitutions, gothic glitch, and other styles that read as distorted or off.",
+        a: "[Zalgo](/font-generator/zalgo) is specifically the combining-diacritic overflow effect. Freaky is broader — it includes zalgo but also [weird](/font-generator/weird) Unicode substitutions, [gothic glitch](/font-generator/glitch), and other styles that read as distorted or off.",
       },
     ],
   },
@@ -1286,13 +1286,13 @@ export const PAGES: PageConfig[] = [
       },
       {
         heading: "Blackletter vs. gothic vs. Old English",
-        body: "All three name the same family. Blackletter is the typographer's term, gothic is the everyday word, and Old English is what most tattoo artists and sign shops call it — stylistic siblings, not different writing systems.",
+        body: "All three name the same family. Blackletter is the typographer's term, [gothic](/font-generator/gothic) is the everyday word, and [Old English](/font-generator/old-english) is what most tattoo artists and sign shops call it — stylistic siblings, not different writing systems.",
       },
     ],
     faq: [
       {
         q: "Will blackletter text work in my Instagram or Discord name?",
-        a: "Bios and messages accept the full Unicode range. Username fields are stricter — if a heavily decorated variant won't save, pick one closer to standard letters like Bold or Small Caps.",
+        a: "Bios and messages accept the full Unicode range. Username fields are stricter — if a heavily decorated variant won't save, pick one closer to standard letters like [Bold](/font-generator/bold) or [Small Caps](/font-generator/small-caps).",
       },
       {
         q: "Can I use blackletter text for a tattoo?",
@@ -1317,7 +1317,7 @@ export const PAGES: PageConfig[] = [
       },
       {
         heading: "Fraktur vs. other blackletter",
-        body: "Fraktur is one branch of the broader blackletter family, alongside textura, rotunda, and schwabacher. They differ in how strokes break and curve. The styles here approximate those subgenres so you can copy the exact look you want.",
+        body: "Fraktur is one branch of the broader [blackletter](/font-generator/blackletter) family, alongside textura, rotunda, and schwabacher. They differ in how strokes break and curve. The styles here approximate those subgenres so you can copy the exact look you want — see also the [Old English](/font-generator/old-english) and [gothic](/font-generator/gothic) generators.",
       },
     ],
     faq: [
@@ -1348,7 +1348,7 @@ export const PAGES: PageConfig[] = [
       },
       {
         heading: "Great for fantasy and games",
-        body: "Medieval lettering suits RPG names, guild tags, fantasy usernames, D&D character sheets, and wedding or event invitations. Copy a style and drop it wherever plain text is accepted.",
+        body: "Medieval lettering suits RPG names, guild tags, fantasy usernames, D&D character sheets, and wedding or event invitations. Copy a style and drop it wherever plain text is accepted — or pair it with the [medieval translator](/medieval-translator) for ye-olde wording.",
       },
     ],
     faq: [
@@ -1358,7 +1358,7 @@ export const PAGES: PageConfig[] = [
       },
       {
         q: "Is this the same as Old English?",
-        a: "Effectively, yes. Medieval, gothic, blackletter, and Old English all describe the same broad family of scripts.",
+        a: "Effectively, yes. Medieval, [gothic](/font-generator/gothic), [blackletter](/font-generator/blackletter), and [Old English](/font-generator/old-english) all describe the same broad family of scripts.",
       },
     ],
   },
@@ -1375,7 +1375,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Planning an Old English tattoo",
-        body: "Old English blackletter is the classic tattoo script — used for names, memorial dates, and quotes. Type your phrase and preview it instantly across blackletter and gothic variants, far faster than installing downloaded fonts. Screenshot the look you want to show your artist.",
+        body: "Old English blackletter is the classic tattoo script — used for names, memorial dates, and quotes. Type your phrase and preview it instantly across [blackletter](/font-generator/blackletter) and [gothic](/font-generator/gothic) variants, far faster than installing downloaded fonts. Screenshot the look you want to show your artist, or browse the general [tattoo font generator](/font-generator/tattoo).",
       },
       {
         heading: "From mockup to real ink",
@@ -1410,7 +1410,7 @@ export const PAGES: PageConfig[] = [
       },
       {
         heading: "Single letters or whole words",
-        body: "Use the generator for a full phrase, or copy just one gothic capital for a monogram, initial, or logo mark. The styles cover the most recognizable blackletter and fraktur forms.",
+        body: "Use the generator for a full phrase, or copy just one gothic capital for a monogram, initial, or logo mark. The styles cover the most recognizable [blackletter](/font-generator/blackletter) and [fraktur](/font-generator/fraktur) forms. For the Old English A–Z, see [Old English letters](/font-generator/old-english-letters).",
       },
     ],
     faq: [
@@ -1437,7 +1437,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "How copy and paste works here",
-        body: "The generator swaps each letter for an Old English Unicode character, so the result is plain text — not an installed font. That's why you can copy it from this page and paste it into almost any app, even ones that don't let you change fonts.",
+        body: "The generator swaps each letter for an [Old English](/font-generator/old-english) Unicode character, so the result is plain text — not an installed font. That's why you can copy it from this page and paste it into almost any app, even ones that don't let you change fonts. Browse the full alphabet on the [Old English letters](/font-generator/old-english-letters) page.",
       },
       {
         heading: "Where the pasted text works",
@@ -1468,7 +1468,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Copy blackletter text in one tap",
-        body: "Each blackletter character is a Unicode codepoint that looks like a styled letter, so the output is plain text. Tap a row to copy it and paste it into nearly any app — no font file or sign-up needed.",
+        body: "Each [blackletter](/font-generator/blackletter) character is a Unicode codepoint that looks like a styled letter, so the output is plain text. Tap a row to copy it and paste it into nearly any app — no font file or sign-up needed.",
       },
       {
         heading: "Where pasted blackletter works",
@@ -1482,7 +1482,7 @@ export const PAGES: PageConfig[] = [
       },
       {
         q: "Can I use copied blackletter for a tattoo mockup?",
-        a: "Yes — copy your phrase to preview the style and share it with your artist. For the real tattoo, the artist will set it in a proper vector font.",
+        a: "Yes — copy your phrase to preview the style and share it with your artist. See the [tattoo font generator](/font-generator/tattoo) for more lettering. For the real tattoo, the artist will set it in a proper vector font.",
       },
     ],
   },
@@ -1499,7 +1499,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "What makes a Fortnite name look 'sweaty'?",
-        body: "Sweaty (or tryhard) names lean on styled Unicode letters, symbols, and tight spacing to read as competitive and intimidating. Bold gothic and fullwidth styles are the most popular because they stay legible while still looking different from a default name.",
+        body: "Sweaty (or tryhard) names lean on styled Unicode letters, symbols, and tight spacing to read as competitive and intimidating. Bold [gothic](/font-generator/gothic) and fullwidth styles are the most popular because they stay legible while still looking different from a default name. See the main [Fortnite font generator](/font-generator/fortnite) for more.",
       },
       {
         heading: "Where these names work",
@@ -1530,7 +1530,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "What is small gothic text?",
-        body: "Small gothic combines two ideas: the angular, blackletter-inspired gothic look and the compact, shrunken feel of small-caps and tiny Unicode letters. The result is gothic styling that stays subtle instead of dominating a bio or name.",
+        body: "Small gothic combines two ideas: the angular, blackletter-inspired [gothic](/font-generator/gothic) look and the compact, shrunken feel of [small caps](/font-generator/small-caps) and tiny Unicode letters. The result is gothic styling that stays subtle instead of dominating a bio or name.",
       },
       {
         heading: "Where small gothic fits best",
@@ -1561,7 +1561,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "How to use Old English text on Instagram",
-        body: "Instagram has no font picker, so the trick is Unicode: type your text here, tap a gothic style to copy it, then paste it into your IG bio, caption, or display name. Because it's plain text, it renders the same on iOS, Android, and the web.",
+        body: "[Instagram](/font-generator/instagram) has no font picker, so the trick is Unicode: type your text here, tap a [gothic](/font-generator/gothic) style to copy it, then paste it into your IG bio, caption, or display name. Because it's plain text, it renders the same on iOS, Android, and the web.",
       },
       {
         heading: "Which IG fields accept it",
@@ -1593,7 +1593,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "How an online font changer works",
-        body: "This isn't changing the font installed on your device — it swaps each letter for a Unicode character that already looks styled. Because the output is plain text, the new look travels with it when you copy and paste, even into apps with no font settings of their own.",
+        body: "This isn't changing the font installed on your device — it swaps each letter for a Unicode character that already looks styled. Because the output is plain text, the new look travels with it when you copy and paste, even into apps with no font settings of their own. It works just like our [font converter](/font-generator/font-converter) and [fonts copy and paste](/font-generator/fonts-copy-and-paste) tools.",
       },
       {
         heading: "Where the changed text works",
@@ -1625,7 +1625,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "What the converter actually does",
-        body: "It converts each letter you type into a matching Unicode character that looks bold, italic, cursive, gothic, or otherwise styled. The conversion produces plain text, so the styled result can be pasted into apps that don't let you change fonts.",
+        body: "It converts each letter you type into a matching Unicode character that looks [bold](/font-generator/bold), [italic](/font-generator/italic), [cursive](/font-generator/cursive), [gothic](/font-generator/gothic), or otherwise styled. The conversion produces plain text, so the styled result can be pasted into apps that don't let you change fonts — it's the sibling of our [font changer](/font-generator/font-changer).",
       },
       {
         heading: "Converting for different apps",
@@ -1656,11 +1656,11 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Graffiti style with Unicode",
-        body: "True spray-can graffiti is a hand-drawn art form, so no plain-text tool can reproduce it exactly. What this generator does is gather the boldest, chunkiest, and most decorative Unicode styles — bubble letters, heavy gothic, squared, and outline forms — that capture a similar street-style energy and still copy-paste anywhere.",
+        body: "True spray-can graffiti is a hand-drawn art form, so no plain-text tool can reproduce it exactly. What this generator does is gather the boldest, chunkiest, and most decorative Unicode styles — [bubble](/font-generator/bubble) letters, heavy [gothic](/font-generator/gothic), squared, and outline forms — that capture a similar street-style energy and still copy-paste anywhere.",
       },
       {
         heading: "Where graffiti-style text fits",
-        body: "It's popular for usernames, gaming tags, comment sections, and bios where you want letters that shout. For an actual graffiti piece or logo, use a dedicated graffiti font file; use this to mock up the vibe quickly.",
+        body: "It's popular for usernames, [gaming tags](/font-generator/gaming), comment sections, and bios where you want letters that shout. For an actual graffiti piece or logo, use a dedicated graffiti font file; use this to mock up the vibe quickly.",
       },
     ],
     faq: [
@@ -1691,7 +1691,7 @@ export const PAGES: PageConfig[] = [
       },
       {
         heading: "Names, signs, and server text",
-        body: "Use styled text for display names, server titles, MOTDs, and signs to stand out from default text. Keep critical commands and coordinates in normal letters so they stay readable and typable by other players.",
+        body: "Use styled text for display names, server titles, MOTDs, and signs to stand out from default text. Keep critical commands and coordinates in normal letters so they stay readable and typable by other players. See more [gaming](/font-generator/gaming) and [Fortnite](/font-generator/fortnite) styles too.",
       },
     ],
     faq: [
@@ -1718,7 +1718,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Styled text in Roblox",
-        body: "Roblox display names, group names, and chat accept a range of Unicode characters, which is how players get stylish names that stand out in lobbies and leaderboards. Roblox's text filter is strict, so cleaner styles like bold and small caps pass more reliably than heavily decorated ones.",
+        body: "Roblox display names, group names, and chat accept a range of Unicode characters, which is how players get stylish names that stand out in lobbies and leaderboards. Roblox's text filter is strict, so cleaner styles like [bold](/font-generator/bold) and [small caps](/font-generator/small-caps) pass more reliably than heavily decorated ones.",
       },
       {
         heading: "Display names vs. usernames",
@@ -1749,7 +1749,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Why bold text stands out on LinkedIn",
-        body: "LinkedIn posts and profiles use one default font with no bold or italic controls. Unicode bold and italic characters let you emphasize a hook, a headline, or a key phrase so your post stops the scroll in a busy feed — a tactic many creators use to lift engagement.",
+        body: "LinkedIn posts and profiles use one default font with no bold or italic controls. Unicode [bold](/font-generator/bold) and [italic](/font-generator/italic) characters let you emphasize a hook, a headline, or a key phrase so your post stops the scroll in a busy feed — a tactic many creators use to lift engagement. For a focused tool, see the [LinkedIn bold text generator](/font-generator/linkedin-bold-text).",
       },
       {
         heading: "Where to use it on LinkedIn",
@@ -1781,7 +1781,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "What makes text look 'cool'?",
-        body: "Cool text is just normal letters swapped for styled Unicode characters — bold, gothic, cursive, bubble, glitch, and more. Because the result is plain text, it keeps its look when you copy and paste it, even into apps with no font settings.",
+        body: "Cool text is just normal letters swapped for styled Unicode characters — bold, [gothic](/font-generator/gothic), [cursive](/font-generator/cursive), bubble, [glitch](/font-generator/glitch), and more. Because the result is plain text, it keeps its look when you copy and paste it, even into apps with no font settings.",
       },
       {
         heading: "Where cool text works",
@@ -1813,7 +1813,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Cool letters, one character at a time",
-        body: "Each cool letter is a Unicode character that looks like a styled A–Z. You can copy a whole word or just a single decorative letter for a monogram or initial — they're all real, copyable characters, not images.",
+        body: "Each cool letter is a Unicode character that looks like a styled A–Z. You can copy a whole word or just a single decorative letter for a monogram or initial — they're all real, copyable characters, not images. For an A–Z chart, see [fancy letters](/font-generator/fancy-letters).",
       },
       {
         heading: "Copy and paste anywhere",
@@ -1845,7 +1845,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "What makes a font fun?",
-        body: "Fun fonts trade formality for personality — rounded bubble letters, blocky squared characters, wide vaporwave-style text, and quirky flipped or weird variants. They're built from Unicode, so the playful look copies and pastes anywhere.",
+        body: "Fun fonts trade formality for personality — rounded [bubble](/font-generator/bubble) letters, blocky squared characters, wide [vaporwave](/font-generator/vaporwave)-style text, and quirky flipped or [weird](/font-generator/weird) variants. They're built from Unicode, so the playful look copies and pastes anywhere.",
       },
       {
         heading: "Where fun fonts fit best",
@@ -1891,7 +1891,7 @@ export const PAGES: PageConfig[] = [
       },
       {
         q: "What's the difference between distorted, glitch, and zalgo text?",
-        a: "They overlap. Zalgo is specifically the stacked combining-mark overflow; glitch is a broader corrupted look; distorted is broadest of all — it includes those effects plus flipped, mixed, and widened characters.",
+        a: "They overlap. [Zalgo](/font-generator/zalgo) is specifically the stacked combining-mark overflow; [glitch](/font-generator/glitch) is a broader corrupted look; distorted is broadest of all — it includes those effects plus flipped, mixed, and widened characters.",
       },
     ],
   },
@@ -1913,7 +1913,7 @@ export const PAGES: PageConfig[] = [
       },
       {
         heading: "Old cursive vs. modern cursive vs. blackletter",
-        body: "Modern cursive (see our cursive generator) is the clean script you'd type today. Old cursive leans antique — heavier slant, ornate flourishes, a hand-penned feel. Blackletter / Old English is the dense, angular gothic lettering, which is related but not cursive at all. If you want the spiky gothic look instead, try the Old English generator.",
+        body: "Modern cursive (see our [cursive generator](/font-generator/cursive)) is the clean script you'd type today. Old cursive leans antique — heavier slant, ornate flourishes, a hand-penned feel. [Blackletter](/font-generator/blackletter) / Old English is the dense, angular gothic lettering, which is related but not cursive at all. If you want the spiky gothic look instead, try the [Old English generator](/font-generator/old-english).",
       },
     ],
     faq: [
@@ -1949,7 +1949,7 @@ export const PAGES: PageConfig[] = [
       },
       {
         heading: "The ye-olde look in Unicode",
-        body: "The styles here recreate that antique feel with blackletter, fraktur, and medieval Unicode alphabets — the same lettering used on old tavern signs, pub names, and storybook titles. Because the output is plain characters, it copies and pastes into apps that don't let you change fonts.",
+        body: "The styles here recreate that antique feel with [blackletter](/font-generator/blackletter), [fraktur](/font-generator/fraktur), and [medieval](/font-generator/medieval) Unicode alphabets — the same lettering used on old tavern signs, pub names, and storybook titles. Because the output is plain characters, it copies and pastes into apps that don't let you change fonts.",
       },
     ],
     faq: [
@@ -1982,7 +1982,7 @@ export const PAGES: PageConfig[] = [
       },
       {
         heading: "Old English letters vs. a real font",
-        body: "These are Unicode characters that look like blackletter, not an installed typeface — which is exactly why they survive copy-paste into apps with no font controls. For print or a tattoo stencil, hand the look to a designer who can set it in a true vector font for crisp linework.",
+        body: "These are Unicode characters that look like [blackletter](/font-generator/blackletter), not an installed typeface — which is exactly why they survive copy-paste into apps with no font controls. For print or a [tattoo](/font-generator/old-english-tattoo) stencil, hand the look to a designer who can set it in a true vector font for crisp linework.",
       },
     ],
     faq: [
@@ -2015,7 +2015,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Why there's no true blackletter digit",
-        body: "Genuine Old English blackletter never included Arabic numerals — medieval scribes wrote numbers as Roman numerals or spelled them out. Unicode has no blackletter 0–9, so the closest match for a 'gothic number' look is one of the heavy, decorative digit styles shown here. For Roman numerals, see our Roman numeral converter.",
+        body: "Genuine Old English blackletter never included Arabic numerals — medieval scribes wrote numbers as Roman numerals or spelled them out. Unicode has no blackletter 0–9, so the closest match for a 'gothic number' look is one of the heavy, decorative digit styles shown here. For Roman numerals, see our [Roman numeral converter](/roman-numeral-converter).",
       },
       {
         heading: "Picking a number style",
@@ -2048,7 +2048,7 @@ export const PAGES: PageConfig[] = [
     about: [
       {
         heading: "Built for single words and names",
-        body: "Old English lettering looks its best on short, punchy text — a name across the shoulders, a one-word brand, a band logo. Type your word and the generator renders it across a dozen blackletter and gothic variants so you can compare them side by side before committing.",
+        body: "Old English lettering looks its best on short, punchy text — a name across the shoulders, a one-word brand, a band logo. Type your word and the generator renders it across a dozen [blackletter](/font-generator/blackletter) and [gothic](/font-generator/gothic) variants so you can compare them side by side before committing.",
       },
       {
         heading: "From word to tattoo or logo",
@@ -2058,7 +2058,7 @@ export const PAGES: PageConfig[] = [
     faq: [
       {
         q: "Does it work with names?",
-        a: "Yes — names are the most popular use. Type a first or last name and copy the blackletter version for a bio, username, or tattoo mockup.",
+        a: "Yes — names are the most popular use. Type a first or last name and copy the blackletter version for a bio, username, or [tattoo mockup](/font-generator/old-english-tattoo).",
       },
       {
         q: "Can I convert a whole sentence?",

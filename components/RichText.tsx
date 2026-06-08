@@ -8,6 +8,12 @@ import { Fragment } from "react";
 // internal links without embedding JSX.
 const LINK_RE = /\[([^\]]+)\]\(([^)]+)\)/g;
 
+// Strips markdown link syntax to its label only — for places that need
+// plain text (e.g. JSON-LD structured data, meta descriptions).
+export function stripMarkdownLinks(text: string): string {
+  return text.replace(LINK_RE, "$1");
+}
+
 export default function RichText({ text }: { text: string }) {
   const nodes: React.ReactNode[] = [];
   let last = 0;
