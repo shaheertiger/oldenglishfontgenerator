@@ -1892,6 +1892,74 @@ export const PAGES: PageConfig[] = [
       },
     ],
   },
+  {
+    slug: "old-cursive",
+    keyword: "old cursive font copy and paste",
+    title: "Old Cursive Font Generator – Vintage Cursive Copy & Paste",
+    description:
+      "Convert text into old-fashioned cursive — vintage script, copperplate, and old English cursive styles. Free Unicode old cursive fonts to copy and paste anywhere.",
+    h1: "Old Cursive Font Generator",
+    intro:
+      "Turn anything you type into old-fashioned, vintage cursive — flowing script, slanted copperplate, and medieval old English cursive. Copy the variant you like and paste it into your bio, captions, signatures, or messages.",
+    styles: ["medieval-script", "medieval-bold-script", "script", "script-bold", "cursive-spaced", "cursive-underline", "cursive-bold-spaced", "cursive-strike", "italic-serif", "bold-italic-serif", "ye-olde", "manuscript-mono"],
+    defaultText: "old cursive",
+    about: [
+      {
+        heading: "What is an old cursive font?",
+        body: "\"Old cursive\" usually means one of two looks: the elegant, slanted handwriting of 18th- and 19th-century copperplate and Spencerian penmanship, or the old English cursive that grew out of medieval manuscript hands. The styles here approximate both using Unicode script and medieval characters, so the vintage result stays as plain, copyable text.",
+      },
+      {
+        heading: "Old cursive vs. modern cursive vs. blackletter",
+        body: "Modern cursive (see our cursive generator) is the clean script you'd type today. Old cursive leans antique — heavier slant, ornate flourishes, a hand-penned feel. Blackletter / Old English is the dense, angular gothic lettering, which is related but not cursive at all. If you want the spiky gothic look instead, try the Old English generator.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is this real antique handwriting?",
+        a: "No — your device's font isn't changing. We swap each letter for a similar-looking Unicode character, so the result is still plain text that pastes anywhere. It mimics vintage cursive rather than reproducing a specific historical hand.",
+      },
+      {
+        q: "Where can I use old cursive text?",
+        a: "Anywhere plain text is accepted: Instagram bios and captions, signatures, invitations and mockups, Discord, and most messaging apps. Some username fields filter unusual characters — if a variant won't save, pick one closer to standard letters.",
+      },
+      {
+        q: "Why do some old cursive letters show as boxes?",
+        a: "The viewer's device is missing a font that covers those script characters. Pick a different variant and the recipient should see it correctly.",
+      },
+    ],
+  },
+  {
+    slug: "ye-old-english",
+    keyword: "ye old english generator",
+    title: "Ye Olde English Generator – Old-Timey Text Copy & Paste",
+    description:
+      "Generate ye olde English text — old-timey medieval and blackletter styles you can copy and paste. Free Unicode ye-olde fonts for signs, taverns, and themed projects.",
+    h1: "Ye Olde English Generator",
+    intro:
+      "Give your text that old-timey, ye-olde-tavern look — medieval blackletter, fraktur, and ornate gothic lettering. Copy the variant you like and paste it into signs, menus, profiles, or themed projects.",
+    styles: ["ye-olde", "fraktur", "fraktur-bold", "old-english-spaced", "german-gothic", "church-style", "medieval-script", "royal-gothic", "gothic-classic", "blackletter", "decorative-gothic", "manuscript-mono"],
+    defaultText: "ye olde shoppe",
+    about: [
+      {
+        heading: "Where \"ye olde\" comes from",
+        body: "The \"ye\" in \"Ye Olde Shoppe\" was never pronounced with a Y — it's a printer's shorthand for \"the.\" Early English used the letter thorn (þ) for the \"th\" sound, and when printers lacked a thorn type they substituted a Y, since the two looked similar in blackletter. The phrase stuck as visual shorthand for anything old-fashioned and quaint.",
+      },
+      {
+        heading: "The ye-olde look in Unicode",
+        body: "The styles here recreate that antique feel with blackletter, fraktur, and medieval Unicode alphabets — the same lettering used on old tavern signs, pub names, and storybook titles. Because the output is plain characters, it copies and pastes into apps that don't let you change fonts.",
+      },
+    ],
+    faq: [
+      {
+        q: "Is \"ye olde\" grammatically correct?",
+        a: "The \"ye\" is really \"the\" — so \"Ye Olde Shoppe\" reads as \"The Old Shop.\" It's mock-archaic styling rather than authentic Middle English, which is exactly why it works for themed, decorative text.",
+      },
+      {
+        q: "Will ye olde English text work in usernames and bios?",
+        a: "Bios and messages accept the full Unicode range. Username fields are stricter — if a heavily decorated variant won't save, pick one closer to standard letters.",
+      },
+    ],
+  },
 ];
 
 export const PAGE_INDEX_DESCRIPTION =

@@ -2,8 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import TextTransformClient from "@/components/TextTransformClient";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
+import { toCuneiform } from "@/lib/texttools";
 
 const SITE_URL = "https://www.oldenglishfontgenerator.com";
+
+const ALPHABET = "abcdefghijklmnopqrstuvwxyz".split("");
 
 export const metadata: Metadata = {
   title: "Cuneiform Translator – English to Cuneiform Copy & Paste",
@@ -12,7 +15,11 @@ export const metadata: Metadata = {
   keywords: [
     "cuneiform translator",
     "english to cuneiform",
+    "english to cuneiform translator",
+    "cuneiform converter",
     "cuneiform generator",
+    "cuneiform letters copy and paste",
+    "sumerian cuneiform copy paste",
     "sumerian translator",
     "cuneiform copy and paste",
   ],
@@ -41,6 +48,25 @@ export default function CuneiformPage() {
             <TextTransformClient kind="cuneiform" />
           </section>
         </div>
+
+        <section className="section">
+          <div className="container">
+            <h2>Cuneiform alphabet: letters to copy and paste</h2>
+            <p>
+              Each English letter is mapped to a distinct cuneiform sign below.
+              Use this chart as a quick reference, or select a sign to copy it on
+              its own — for whole words, type into the translator above.
+            </p>
+            <div className="examples" style={{ marginTop: 16 }}>
+              {ALPHABET.map((letter) => (
+                <div className="ex" key={letter}>
+                  <small>{letter.toUpperCase()}</small>
+                  {toCuneiform(letter)}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         <section className="section">
           <div className="container">
