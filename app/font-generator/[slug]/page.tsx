@@ -79,6 +79,24 @@ export default async function Page({ params }: { params: Promise<Params> }) {
     ],
   };
 
+  // Per-page tool entity so AI-search / answer engines can identify each
+  // generator as a distinct free, browser-based tool (2026 LLM SEO).
+  const pageUrl = `https://www.oldenglishfontgenerator.com/font-generator/${page.slug}`;
+  const appJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "@id": `${pageUrl}#app`,
+    name: page.h1,
+    url: pageUrl,
+    applicationCategory: "DesignApplication",
+    operatingSystem: "Web",
+    browserRequirements: "Requires JavaScript.",
+    description: page.description,
+    inLanguage: "en",
+    isAccessibleForFree: true,
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  };
+
   return (
     <>
       <SiteHeader />
@@ -247,6 +265,10 @@ export default async function Page({ params }: { params: Promise<Params> }) {
         </section>
       </main>
       <SiteFooter />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(appJsonLd) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
