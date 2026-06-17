@@ -197,6 +197,18 @@ export function SiteHeader() {
           <Link href="/sitemap" onClick={close} className="mn-top">
             Sitemap
           </Link>
+          <Link href="/about" onClick={close} className="mn-top">
+            About
+          </Link>
+          <Link href="/contact" onClick={close} className="mn-top">
+            Contact
+          </Link>
+          <Link href="/privacy" onClick={close} className="mn-top">
+            Privacy Policy
+          </Link>
+          <Link href="/terms" onClick={close} className="mn-top">
+            Terms of Service
+          </Link>
         </div>
       )}
     </header>
@@ -266,9 +278,12 @@ export function SiteFooter() {
             </ul>
           </div>
           <div className="footer-col">
-            <h4>Connect</h4>
+            <h4>Site</h4>
             <ul>
-              <li><a href="mailto:hello@oldenglishfontgenerator.com"><Icon d={ICONS.mail} /> Contact</a></li>
+              <li><Link href="/about"><Icon d={ICONS.book} /> About</Link></li>
+              <li><Link href="/contact"><Icon d={ICONS.mail} /> Contact</Link></li>
+              <li><Link href="/privacy"><Icon d={ICONS.book} /> Privacy Policy</Link></li>
+              <li><Link href="/terms"><Icon d={ICONS.book} /> Terms of Service</Link></li>
             </ul>
           </div>
         </div>
