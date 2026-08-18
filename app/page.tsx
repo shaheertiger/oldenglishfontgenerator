@@ -184,11 +184,11 @@ const faqJsonLd = {
 
 const appJsonLd = {
   "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
+  "@type": "WebApplication",
   "@id": `${SITE_URL}/#app`,
   name: "Old English Font Generator",
   url: `${SITE_URL}/`,
-  applicationCategory: "DesignApplication",
+  applicationCategory: "UtilitiesApplication",
   operatingSystem: "Web",
   browserRequirements: "Requires JavaScript.",
   description:
