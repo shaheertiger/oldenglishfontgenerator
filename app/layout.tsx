@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const SITE_URL = "https://www.oldenglishfontgenerator.com";
+const GA_MEASUREMENT_ID = "G-6QVJF7N2H3";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -93,6 +94,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${GA_MEASUREMENT_ID}');`,
+          }}
+        />
         <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2963693328827195"
