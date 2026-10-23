@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import { POSTS, getPost, type BlogBlock } from "@/lib/blog";
+import RichText from "@/components/RichText";
 
 const SITE_URL = "https://www.oldenglishfontgenerator.com";
 
@@ -41,10 +42,10 @@ function renderBlock(b: BlogBlock, i: number) {
   switch (b.type) {
     case "h2": return <h2 key={i}>{b.text}</h2>;
     case "h3": return <h3 key={i}>{b.text}</h3>;
-    case "p": return <p key={i}>{b.text}</p>;
-    case "ul": return <ul key={i}>{b.items.map((it, j) => <li key={j}>{it}</li>)}</ul>;
-    case "ol": return <ol key={i}>{b.items.map((it, j) => <li key={j}>{it}</li>)}</ol>;
-    case "quote": return <blockquote key={i}>{b.text}</blockquote>;
+    case "p": return <p key={i}><RichText text={b.text} /></p>;
+    case "ul": return <ul key={i}>{b.items.map((it, j) => <li key={j}><RichText text={it} /></li>)}</ul>;
+    case "ol": return <ol key={i}>{b.items.map((it, j) => <li key={j}><RichText text={it} /></li>)}</ol>;
+    case "quote": return <blockquote key={i}><RichText text={b.text} /></blockquote>;
     case "cta": return (
       <p key={i} className="blog-cta">
         {b.text}{" "}
