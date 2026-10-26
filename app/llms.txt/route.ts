@@ -47,6 +47,13 @@ ${posts}
 
 ## Sitemap
 - ${BASE}/sitemap.xml
+
+## Markdown versions
+Every page has a clean markdown version at the same URL plus \`.md\`
+(the homepage is ${BASE}/index.md). Requests sent with
+\`Accept: text/markdown\` get the markdown version automatically.
+- [Homepage (markdown)](${BASE}/index.md)
+- [Every page (markdown sitemap)](${BASE}/sitemap.md)
 `;
 
   return new Response(body, {

@@ -4,19 +4,13 @@ import Link from "next/link";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbLd } from "@/lib/seo";
-import { ALL_STYLES, OLD_ENGLISH_FAMILY } from "@/lib/fonts";
+import {
+  ALL_STYLES,
+  LETTER_SHOWCASE_IDS as SHOWCASE_IDS,
+  LETTER_SLUGS as SUPPORTED,
+} from "@/lib/fonts";
 
 const SITE_URL = "https://www.oldenglishfontgenerator.com";
-
-const SHOWCASE_IDS = [
-  ...OLD_ENGLISH_FAMILY,
-  "bold-serif", "italic-serif", "bold-italic-serif", "sans-bold",
-  "double-struck", "monospace", "bubble", "bubble-filled", "squared",
-  "fullwidth", "small-caps", "superscript", "love-parens", "leet",
-  "japanese-style", "mirrored", "morse", "bent", "weird",
-];
-
-const SUPPORTED = "abcdefghijklmnopqrstuvwxyz0123456789".split("");
 
 type Params = { letter: string };
 
