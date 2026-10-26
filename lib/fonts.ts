@@ -537,3 +537,15 @@ export const OLD_ENGLISH_FAMILY = [
   "fraktur-flipped",
   "ye-olde",
 ];
+
+// Styles and characters shown on the /different-fonts/[letter] pages.
+// Shared with the markdown twins in lib/markdown.ts.
+export const LETTER_SHOWCASE_IDS = [
+  ...OLD_ENGLISH_FAMILY,
+  "bold-serif", "italic-serif", "bold-italic-serif", "sans-bold",
+  "double-struck", "monospace", "bubble", "bubble-filled", "squared",
+  "fullwidth", "small-caps", "superscript", "love-parens", "leet",
+  "japanese-style", "mirrored", "morse", "bent", "weird",
+];
+
+export const LETTER_SLUGS = "abcdefghijklmnopqrstuvwxyz0123456789".split("");
