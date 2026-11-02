@@ -1,6 +1,6 @@
 import { estimateTokens, AEO_SPEC_VERSION } from "@dualmark/core";
 import { renderMarkdown } from "@/lib/markdown";
-import { SITE_URL } from "@/lib/seo";
+import { SITE_URL } from "@/lib/site";
 
 // Markdown twins (Dualmark / AEO spec v1.0). proxy.ts rewrites
 // /about.md, /index.md, and AI-agent requests here as /md/about, /md/index.
@@ -40,7 +40,7 @@ export async function GET(
   const body = await renderMarkdown(segments.length ? segments : ["index"]);
   if (body === null) {
     return markdown(
-      `# Not found\n\nThere is no markdown version of this page. See ${SITE_URL}/sitemap.md for every page.\n`,
+      `# Not found\n\nThere is no markdown version of this page. See ${SITE_URL}/llms.txt for every page.\n`,
       404
     );
   }
