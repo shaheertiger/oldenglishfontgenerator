@@ -7,12 +7,12 @@ const CONTACT_EMAIL = "hello@oldenglishfontgenerator.com";
 const LAST_UPDATED = "June 17, 2026";
 
 export const metadata: Metadata = {
-  title: "Terms of Service – Old English Font Generator",
+  title: { absolute: "Terms of Service | Old English Font Generator" },
   description:
-    "The terms that govern your use of Old English Font Generator: acceptable use, intellectual property, disclaimers, and limitations of liability for our free text tools.",
+    "Terms for using Old English Font Generator: acceptable use, intellectual property, disclaimers and limits of liability for our free tools.",
   alternates: { canonical: `${SITE_URL}/terms` },
   openGraph: {
-    title: "Terms of Service – Old English Font Generator",
+    title: "Terms of Service | Old English Font Generator",
     description:
       "The terms governing your use of our free, browser-based text tools.",
     url: `${SITE_URL}/terms`,
