@@ -21,7 +21,7 @@ export async function generateMetadata(
   if (!post) return {};
   const url = `${SITE_URL}/blog/${post.slug}`;
   return {
-    title: post.title,
+    title: { absolute: post.title },
     description: post.description,
     alternates: { canonical: url },
     openGraph: {
@@ -103,13 +103,13 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
       <SiteHeader />
       <main>
         <div className="container">
-          <div className="breadcrumb">
+          <nav className="breadcrumb" aria-label="Breadcrumb">
             <Link href="/">Home</Link>
-            <span className="sep">/</span>
+            <span className="sep" aria-hidden="true">›</span>
             <Link href="/blog">Blog</Link>
-            <span className="sep">/</span>
-            <span className="current">{post.title}</span>
-          </div>
+            <span className="sep" aria-hidden="true">›</span>
+            <span className="current" aria-current="page">{post.title}</span>
+          </nav>
 
           <article className="blog-post">
             <header className="blog-post-head">
@@ -130,19 +130,14 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
 
         <section className="section">
           <div className="container">
-            <div className="eyebrow">Keep reading</div>
-            <h2>More articles</h2>
-            <div className="features">
+                        <h2>More articles</h2>
+            <ul>
               {related.map((r) => (
-                <Link key={r.slug} href={`/blog/${r.slug}`} className="feature">
-                  <h3>{r.title}</h3>
-                  <p>{r.excerpt}</p>
-                </Link>
+                <li key={r.slug}>
+                  <Link href={`/blog/${r.slug}`}>{r.title}</Link>
+                </li>
               ))}
-            </div>
-            <p style={{ marginTop: 24 }}>
-              <Link href="/blog">All articles →</Link>
-            </p>
+            </ul>
           </div>
         </section>
       </main>
