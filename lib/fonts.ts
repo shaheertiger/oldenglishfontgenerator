@@ -1,551 +1,336 @@
-// Unicode style transforms. Each style returns a transformed copy of the input.
+// Old English / blackletter Unicode style engine.
+//
+// Every style on this site starts from one of the two blackletter alphabets
+// in Unicode's Mathematical Alphanumeric Symbols block:
+//   - Mathematical Fraktur       U+1D504–U+1D537
+//   - Mathematical Bold Fraktur  U+1D56C–U+1D59F
+// Five Fraktur capitals (C, H, I, R, Z) were encoded earlier in the
+// Letterlike Symbols block (U+2100–U+214F) as ℭ ℌ ℑ ℜ ℨ, so the Fraktur
+// block has holes where they would be. We map those letters to the
+// Letterlike versions.
+//
+// Accented letters are decomposed (NFD) first, so "é" becomes 𝔢 + U+0301 and
+// "ü" becomes 𝔲 + U+0308. That is how German umlauts survive conversion.
 
 type CharMap = Record<string, string>;
 
 const UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const LOWER = "abcdefghijklmnopqrstuvwxyz";
-const DIGITS = "0123456789";
-const LATIN = UPPER + LOWER;
 
-// Build a map by iterating codepoints of `target`. Surrogate pairs are handled.
-function buildMap(source: string, target: string): CharMap {
+function rangeMap(start: number, lowerStart: number, exceptions: Record<string, number> = {}): CharMap {
   const map: CharMap = {};
-  const srcChars = [...source];
-  const tgtChars = [...target];
-  for (let i = 0; i < srcChars.length && i < tgtChars.length; i++) {
-    map[srcChars[i]] = tgtChars[i];
-  }
+  [...UPPER].forEach((c, i) => {
+    map[c] = String.fromCodePoint(exceptions[c] ?? start + i);
+  });
+  [...LOWER].forEach((c, i) => {
+    map[c] = String.fromCodePoint(exceptions[c] ?? lowerStart + i);
+  });
   return map;
 }
 
-function applyMap(text: string, map: CharMap): string {
-  let out = "";
-  for (const ch of text) out += map[ch] ?? ch;
-  return out;
+const FRAKTUR = rangeMap(0x1d504, 0x1d51e, { C: 0x212d, H: 0x210c, I: 0x2111, R: 0x211c, Z: 0x2128 });
+const BOLD_FRAKTUR = rangeMap(0x1d56c, 0x1d586);
+const SCRIPT = rangeMap(0x1d49c, 0x1d4b6, {
+  B: 0x212c, E: 0x2130, F: 0x2131, H: 0x210b, I: 0x2110, L: 0x2112, M: 0x2133, R: 0x211b,
+  e: 0x212f, g: 0x210a, o: 0x2134,
+});
+const BOLD_SCRIPT = rangeMap(0x1d4d0, 0x1d4ea);
+
+const DIGITS = "0123456789";
+function digitMap(start: number): CharMap {
+  const m: CharMap = {};
+  [...DIGITS].forEach((d, i) => (m[d] = String.fromCodePoint(start + i)));
+  return m;
 }
+const BOLD_DIGITS = digitMap(0x1d7ce);
+const OUTLINE_DIGITS = digitMap(0x1d7d8);
 
-// ----- Blackletter / Fraktur -----
-const fraktur = buildMap(
-  LATIN,
-  "\u{1D504}\u{1D505}\u{212D}\u{1D507}\u{1D508}\u{1D509}\u{1D50A}\u{210C}\u{2111}\u{1D50D}\u{1D50E}\u{1D50F}\u{1D510}\u{1D511}\u{1D512}\u{1D513}\u{1D514}\u{211C}\u{1D516}\u{1D517}\u{1D518}\u{1D519}\u{1D51A}\u{1D51B}\u{1D51C}\u{2128}" +
-  "\u{1D51E}\u{1D51F}\u{1D520}\u{1D521}\u{1D522}\u{1D523}\u{1D524}\u{1D525}\u{1D526}\u{1D527}\u{1D528}\u{1D529}\u{1D52A}\u{1D52B}\u{1D52C}\u{1D52D}\u{1D52E}\u{1D52F}\u{1D530}\u{1D531}\u{1D532}\u{1D533}\u{1D534}\u{1D535}\u{1D536}\u{1D537}"
-);
-
-const frakturBold = buildMap(
-  LATIN,
-  "\u{1D56C}\u{1D56D}\u{1D56E}\u{1D56F}\u{1D570}\u{1D571}\u{1D572}\u{1D573}\u{1D574}\u{1D575}\u{1D576}\u{1D577}\u{1D578}\u{1D579}\u{1D57A}\u{1D57B}\u{1D57C}\u{1D57D}\u{1D57E}\u{1D57F}\u{1D580}\u{1D581}\u{1D582}\u{1D583}\u{1D584}\u{1D585}" +
-  "\u{1D586}\u{1D587}\u{1D588}\u{1D589}\u{1D58A}\u{1D58B}\u{1D58C}\u{1D58D}\u{1D58E}\u{1D58F}\u{1D590}\u{1D591}\u{1D592}\u{1D593}\u{1D594}\u{1D595}\u{1D596}\u{1D597}\u{1D598}\u{1D599}\u{1D59A}\u{1D59B}\u{1D59C}\u{1D59D}\u{1D59E}\u{1D59F}"
-);
-
-// ----- Cursive / Script -----
-const script = buildMap(
-  LATIN,
-  "\u{1D49C}\u{212C}\u{1D49E}\u{1D49F}\u{2130}\u{2131}\u{1D4A2}\u{210B}\u{2110}\u{1D4A5}\u{1D4A6}\u{2112}\u{2133}\u{1D4A9}\u{1D4AA}\u{1D4AB}\u{1D4AC}\u{211B}\u{1D4AE}\u{1D4AF}\u{1D4B0}\u{1D4B1}\u{1D4B2}\u{1D4B3}\u{1D4B4}\u{1D4B5}" +
-  "\u{1D4B6}\u{1D4B7}\u{1D4B8}\u{1D4B9}\u{212F}\u{1D4BB}\u{210A}\u{1D4BD}\u{1D4BE}\u{1D4BF}\u{1D4C0}\u{1D4C1}\u{1D4C2}\u{1D4C3}\u{2134}\u{1D4C5}\u{1D4C6}\u{1D4C7}\u{1D4C8}\u{1D4C9}\u{1D4CA}\u{1D4CB}\u{1D4CC}\u{1D4CD}\u{1D4CE}\u{1D4CF}"
-);
-
-const scriptBold = buildMap(
-  LATIN,
-  "\u{1D4D0}\u{1D4D1}\u{1D4D2}\u{1D4D3}\u{1D4D4}\u{1D4D5}\u{1D4D6}\u{1D4D7}\u{1D4D8}\u{1D4D9}\u{1D4DA}\u{1D4DB}\u{1D4DC}\u{1D4DD}\u{1D4DE}\u{1D4DF}\u{1D4E0}\u{1D4E1}\u{1D4E2}\u{1D4E3}\u{1D4E4}\u{1D4E5}\u{1D4E6}\u{1D4E7}\u{1D4E8}\u{1D4E9}" +
-  "\u{1D4EA}\u{1D4EB}\u{1D4EC}\u{1D4ED}\u{1D4EE}\u{1D4EF}\u{1D4F0}\u{1D4F1}\u{1D4F2}\u{1D4F3}\u{1D4F4}\u{1D4F5}\u{1D4F6}\u{1D4F7}\u{1D4F8}\u{1D4F9}\u{1D4FA}\u{1D4FB}\u{1D4FC}\u{1D4FD}\u{1D4FE}\u{1D4FF}\u{1D500}\u{1D501}\u{1D502}\u{1D503}"
-);
-
-// ----- Bold / Italic serif -----
-const boldSerif = buildMap(
-  LATIN + DIGITS,
-  "\u{1D400}\u{1D401}\u{1D402}\u{1D403}\u{1D404}\u{1D405}\u{1D406}\u{1D407}\u{1D408}\u{1D409}\u{1D40A}\u{1D40B}\u{1D40C}\u{1D40D}\u{1D40E}\u{1D40F}\u{1D410}\u{1D411}\u{1D412}\u{1D413}\u{1D414}\u{1D415}\u{1D416}\u{1D417}\u{1D418}\u{1D419}" +
-  "\u{1D41A}\u{1D41B}\u{1D41C}\u{1D41D}\u{1D41E}\u{1D41F}\u{1D420}\u{1D421}\u{1D422}\u{1D423}\u{1D424}\u{1D425}\u{1D426}\u{1D427}\u{1D428}\u{1D429}\u{1D42A}\u{1D42B}\u{1D42C}\u{1D42D}\u{1D42E}\u{1D42F}\u{1D430}\u{1D431}\u{1D432}\u{1D433}" +
-  "\u{1D7CE}\u{1D7CF}\u{1D7D0}\u{1D7D1}\u{1D7D2}\u{1D7D3}\u{1D7D4}\u{1D7D5}\u{1D7D6}\u{1D7D7}"
-);
-
-const italicSerif = buildMap(
-  LATIN,
-  "\u{1D434}\u{1D435}\u{1D436}\u{1D437}\u{1D438}\u{1D439}\u{1D43A}\u{1D43B}\u{1D43C}\u{1D43D}\u{1D43E}\u{1D43F}\u{1D440}\u{1D441}\u{1D442}\u{1D443}\u{1D444}\u{1D445}\u{1D446}\u{1D447}\u{1D448}\u{1D449}\u{1D44A}\u{1D44B}\u{1D44C}\u{1D44D}" +
-  "\u{1D44E}\u{1D44F}\u{1D450}\u{210E}\u{1D452}\u{1D453}\u{1D454}\u{1D455}\u{1D456}\u{1D457}\u{1D458}\u{1D459}\u{1D45A}\u{1D45B}\u{1D45C}\u{1D45D}\u{1D45E}\u{1D45F}\u{1D460}\u{1D461}\u{1D462}\u{1D463}\u{1D464}\u{1D465}\u{1D466}\u{1D467}"
-);
-
-const boldItalicSerif = buildMap(
-  LATIN,
-  "\u{1D468}\u{1D469}\u{1D46A}\u{1D46B}\u{1D46C}\u{1D46D}\u{1D46E}\u{1D46F}\u{1D470}\u{1D471}\u{1D472}\u{1D473}\u{1D474}\u{1D475}\u{1D476}\u{1D477}\u{1D478}\u{1D479}\u{1D47A}\u{1D47B}\u{1D47C}\u{1D47D}\u{1D47E}\u{1D47F}\u{1D480}\u{1D481}" +
-  "\u{1D482}\u{1D483}\u{1D484}\u{1D485}\u{1D486}\u{1D487}\u{1D488}\u{1D489}\u{1D48A}\u{1D48B}\u{1D48C}\u{1D48D}\u{1D48E}\u{1D48F}\u{1D490}\u{1D491}\u{1D492}\u{1D493}\u{1D494}\u{1D495}\u{1D496}\u{1D497}\u{1D498}\u{1D499}\u{1D49A}\u{1D49B}"
-);
-
-// ----- Sans-serif variants -----
-const sansBold = buildMap(
-  LATIN + DIGITS,
-  "\u{1D5D4}\u{1D5D5}\u{1D5D6}\u{1D5D7}\u{1D5D8}\u{1D5D9}\u{1D5DA}\u{1D5DB}\u{1D5DC}\u{1D5DD}\u{1D5DE}\u{1D5DF}\u{1D5E0}\u{1D5E1}\u{1D5E2}\u{1D5E3}\u{1D5E4}\u{1D5E5}\u{1D5E6}\u{1D5E7}\u{1D5E8}\u{1D5E9}\u{1D5EA}\u{1D5EB}\u{1D5EC}\u{1D5ED}" +
-  "\u{1D5EE}\u{1D5EF}\u{1D5F0}\u{1D5F1}\u{1D5F2}\u{1D5F3}\u{1D5F4}\u{1D5F5}\u{1D5F6}\u{1D5F7}\u{1D5F8}\u{1D5F9}\u{1D5FA}\u{1D5FB}\u{1D5FC}\u{1D5FD}\u{1D5FE}\u{1D5FF}\u{1D600}\u{1D601}\u{1D602}\u{1D603}\u{1D604}\u{1D605}\u{1D606}\u{1D607}" +
-  "\u{1D7EC}\u{1D7ED}\u{1D7EE}\u{1D7EF}\u{1D7F0}\u{1D7F1}\u{1D7F2}\u{1D7F3}\u{1D7F4}\u{1D7F5}"
-);
-
-const sansItalic = buildMap(
-  LATIN,
-  "\u{1D608}\u{1D609}\u{1D60A}\u{1D60B}\u{1D60C}\u{1D60D}\u{1D60E}\u{1D60F}\u{1D610}\u{1D611}\u{1D612}\u{1D613}\u{1D614}\u{1D615}\u{1D616}\u{1D617}\u{1D618}\u{1D619}\u{1D61A}\u{1D61B}\u{1D61C}\u{1D61D}\u{1D61E}\u{1D61F}\u{1D620}\u{1D621}" +
-  "\u{1D622}\u{1D623}\u{1D624}\u{1D625}\u{1D626}\u{1D627}\u{1D628}\u{1D629}\u{1D62A}\u{1D62B}\u{1D62C}\u{1D62D}\u{1D62E}\u{1D62F}\u{1D630}\u{1D631}\u{1D632}\u{1D633}\u{1D634}\u{1D635}\u{1D636}\u{1D637}\u{1D638}\u{1D639}\u{1D63A}\u{1D63B}"
-);
-
-const sansBoldItalic = buildMap(
-  LATIN,
-  "\u{1D63C}\u{1D63D}\u{1D63E}\u{1D63F}\u{1D640}\u{1D641}\u{1D642}\u{1D643}\u{1D644}\u{1D645}\u{1D646}\u{1D647}\u{1D648}\u{1D649}\u{1D64A}\u{1D64B}\u{1D64C}\u{1D64D}\u{1D64E}\u{1D64F}\u{1D650}\u{1D651}\u{1D652}\u{1D653}\u{1D654}\u{1D655}" +
-  "\u{1D656}\u{1D657}\u{1D658}\u{1D659}\u{1D65A}\u{1D65B}\u{1D65C}\u{1D65D}\u{1D65E}\u{1D65F}\u{1D660}\u{1D661}\u{1D662}\u{1D663}\u{1D664}\u{1D665}\u{1D666}\u{1D667}\u{1D668}\u{1D669}\u{1D66A}\u{1D66B}\u{1D66C}\u{1D66D}\u{1D66E}\u{1D66F}"
-);
-
-// ----- Outline / double-struck -----
-const doubleStruck = buildMap(
-  LATIN + DIGITS,
-  "\u{1D538}\u{1D539}\u{2102}\u{1D53B}\u{1D53C}\u{1D53D}\u{1D53E}\u{210D}\u{1D540}\u{1D541}\u{1D542}\u{1D543}\u{1D544}\u{2115}\u{1D546}\u{2119}\u{211A}\u{211D}\u{1D54A}\u{1D54B}\u{1D54C}\u{1D54D}\u{1D54E}\u{1D54F}\u{1D550}\u{2124}" +
-  "\u{1D552}\u{1D553}\u{1D554}\u{1D555}\u{1D556}\u{1D557}\u{1D558}\u{1D559}\u{1D55A}\u{1D55B}\u{1D55C}\u{1D55D}\u{1D55E}\u{1D55F}\u{1D560}\u{1D561}\u{1D562}\u{1D563}\u{1D564}\u{1D565}\u{1D566}\u{1D567}\u{1D568}\u{1D569}\u{1D56A}\u{1D56B}" +
-  "\u{1D7D8}\u{1D7D9}\u{1D7DA}\u{1D7DB}\u{1D7DC}\u{1D7DD}\u{1D7DE}\u{1D7DF}\u{1D7E0}\u{1D7E1}"
-);
-
-// ----- Monospace -----
-const monospace = buildMap(
-  LATIN + DIGITS,
-  "\u{1D670}\u{1D671}\u{1D672}\u{1D673}\u{1D674}\u{1D675}\u{1D676}\u{1D677}\u{1D678}\u{1D679}\u{1D67A}\u{1D67B}\u{1D67C}\u{1D67D}\u{1D67E}\u{1D67F}\u{1D680}\u{1D681}\u{1D682}\u{1D683}\u{1D684}\u{1D685}\u{1D686}\u{1D687}\u{1D688}\u{1D689}" +
-  "\u{1D68A}\u{1D68B}\u{1D68C}\u{1D68D}\u{1D68E}\u{1D68F}\u{1D690}\u{1D691}\u{1D692}\u{1D693}\u{1D694}\u{1D695}\u{1D696}\u{1D697}\u{1D698}\u{1D699}\u{1D69A}\u{1D69B}\u{1D69C}\u{1D69D}\u{1D69E}\u{1D69F}\u{1D6A0}\u{1D6A1}\u{1D6A2}\u{1D6A3}" +
-  "\u{1D7F6}\u{1D7F7}\u{1D7F8}\u{1D7F9}\u{1D7FA}\u{1D7FB}\u{1D7FC}\u{1D7FD}\u{1D7FE}\u{1D7FF}"
-);
-
-// ----- Bubble (circled) -----
-const bubble = buildMap(
-  UPPER + LOWER + DIGITS,
-  "\u{24B6}\u{24B7}\u{24B8}\u{24B9}\u{24BA}\u{24BB}\u{24BC}\u{24BD}\u{24BE}\u{24BF}\u{24C0}\u{24C1}\u{24C2}\u{24C3}\u{24C4}\u{24C5}\u{24C6}\u{24C7}\u{24C8}\u{24C9}\u{24CA}\u{24CB}\u{24CC}\u{24CD}\u{24CE}\u{24CF}" +
-  "\u{24D0}\u{24D1}\u{24D2}\u{24D3}\u{24D4}\u{24D5}\u{24D6}\u{24D7}\u{24D8}\u{24D9}\u{24DA}\u{24DB}\u{24DC}\u{24DD}\u{24DE}\u{24DF}\u{24E0}\u{24E1}\u{24E2}\u{24E3}\u{24E4}\u{24E5}\u{24E6}\u{24E7}\u{24E8}\u{24E9}" +
-  "\u{24EA}\u{2460}\u{2461}\u{2462}\u{2463}\u{2464}\u{2465}\u{2466}\u{2467}\u{2468}"
-);
-
-const bubbleFilled = buildMap(
-  UPPER + LOWER + DIGITS,
-  "\u{1F150}\u{1F151}\u{1F152}\u{1F153}\u{1F154}\u{1F155}\u{1F156}\u{1F157}\u{1F158}\u{1F159}\u{1F15A}\u{1F15B}\u{1F15C}\u{1F15D}\u{1F15E}\u{1F15F}\u{1F160}\u{1F161}\u{1F162}\u{1F163}\u{1F164}\u{1F165}\u{1F166}\u{1F167}\u{1F168}\u{1F169}" +
-  "\u{1F150}\u{1F151}\u{1F152}\u{1F153}\u{1F154}\u{1F155}\u{1F156}\u{1F157}\u{1F158}\u{1F159}\u{1F15A}\u{1F15B}\u{1F15C}\u{1F15D}\u{1F15E}\u{1F15F}\u{1F160}\u{1F161}\u{1F162}\u{1F163}\u{1F164}\u{1F165}\u{1F166}\u{1F167}\u{1F168}\u{1F169}" +
-  "\u{24FF}\u{2776}\u{2777}\u{2778}\u{2779}\u{277A}\u{277B}\u{277C}\u{277D}\u{277E}"
-);
-
-// ----- Square (boxed) -----
-const squared = buildMap(
-  UPPER + LOWER,
-  "\u{1F130}\u{1F131}\u{1F132}\u{1F133}\u{1F134}\u{1F135}\u{1F136}\u{1F137}\u{1F138}\u{1F139}\u{1F13A}\u{1F13B}\u{1F13C}\u{1F13D}\u{1F13E}\u{1F13F}\u{1F140}\u{1F141}\u{1F142}\u{1F143}\u{1F144}\u{1F145}\u{1F146}\u{1F147}\u{1F148}\u{1F149}" +
-  "\u{1F130}\u{1F131}\u{1F132}\u{1F133}\u{1F134}\u{1F135}\u{1F136}\u{1F137}\u{1F138}\u{1F139}\u{1F13A}\u{1F13B}\u{1F13C}\u{1F13D}\u{1F13E}\u{1F13F}\u{1F140}\u{1F141}\u{1F142}\u{1F143}\u{1F144}\u{1F145}\u{1F146}\u{1F147}\u{1F148}\u{1F149}"
-);
-
-// ----- Full-width (Big) -----
-const fullwidth = buildMap(
-  UPPER + LOWER + DIGITS,
-  "\u{FF21}\u{FF22}\u{FF23}\u{FF24}\u{FF25}\u{FF26}\u{FF27}\u{FF28}\u{FF29}\u{FF2A}\u{FF2B}\u{FF2C}\u{FF2D}\u{FF2E}\u{FF2F}\u{FF30}\u{FF31}\u{FF32}\u{FF33}\u{FF34}\u{FF35}\u{FF36}\u{FF37}\u{FF38}\u{FF39}\u{FF3A}" +
-  "\u{FF41}\u{FF42}\u{FF43}\u{FF44}\u{FF45}\u{FF46}\u{FF47}\u{FF48}\u{FF49}\u{FF4A}\u{FF4B}\u{FF4C}\u{FF4D}\u{FF4E}\u{FF4F}\u{FF50}\u{FF51}\u{FF52}\u{FF53}\u{FF54}\u{FF55}\u{FF56}\u{FF57}\u{FF58}\u{FF59}\u{FF5A}" +
-  "\u{FF10}\u{FF11}\u{FF12}\u{FF13}\u{FF14}\u{FF15}\u{FF16}\u{FF17}\u{FF18}\u{FF19}"
-);
-
-// ----- Small caps -----
-const smallCapsMap: CharMap = {
-  a: "ᴀ", b: "ʙ", c: "ᴄ", d: "ᴅ", e: "ᴇ", f: "ꜰ", g: "ɢ", h: "ʜ", i: "ɪ",
-  j: "ᴊ", k: "ᴋ", l: "ʟ", m: "ᴍ", n: "ɴ", o: "ᴏ", p: "ᴘ", q: "ǫ", r: "ʀ",
-  s: "s", t: "ᴛ", u: "ᴜ", v: "ᴠ", w: "ᴡ", x: "x", y: "ʏ", z: "ᴢ",
+const SMALL_CAPS: CharMap = {
+  a: "ᴀ", b: "ʙ", c: "ᴄ", d: "ᴅ", e: "ᴇ", f: "ꜰ", g: "ɢ", h: "ʜ", i: "ɪ", j: "ᴊ",
+  k: "ᴋ", l: "ʟ", m: "ᴍ", n: "ɴ", o: "ᴏ", p: "ᴘ", q: "ǫ", r: "ʀ", s: "ꜱ", t: "ᴛ",
+  u: "ᴜ", v: "ᴠ", w: "ᴡ", x: "x", y: "ʏ", z: "ᴢ",
 };
-function smallCaps(text: string): string {
-  let out = "";
-  for (const ch of text) {
-    const lo = ch.toLowerCase();
-    out += smallCapsMap[lo] ?? ch;
-  }
-  return out;
-}
 
-// ----- Tiny (superscript / subscript-ish) -----
-const superscriptMap: CharMap = {
-  a: "ᵃ", b: "ᵇ", c: "ᶜ", d: "ᵈ", e: "ᵉ", f: "ᶠ", g: "ᵍ", h: "ʰ", i: "ⁱ",
-  j: "ʲ", k: "ᵏ", l: "ˡ", m: "ᵐ", n: "ⁿ", o: "ᵒ", p: "ᵖ", q: "۹", r: "ʳ",
-  s: "ˢ", t: "ᵗ", u: "ᵘ", v: "ᵛ", w: "ʷ", x: "ˣ", y: "ʸ", z: "ᶻ",
-  "0": "⁰", "1": "¹", "2": "²", "3": "³", "4": "⁴", "5": "⁵", "6": "⁶",
-  "7": "⁷", "8": "⁸", "9": "⁹",
+const UPSIDE: CharMap = {
+  a: "ɐ", b: "q", c: "ɔ", d: "p", e: "ǝ", f: "ɟ", g: "ƃ", h: "ɥ", i: "ı", j: "ɾ",
+  k: "ʞ", l: "l", m: "ɯ", n: "u", o: "o", p: "d", q: "b", r: "ɹ", s: "s", t: "ʇ",
+  u: "n", v: "ʌ", w: "ʍ", x: "x", y: "ʎ", z: "z",
+  ".": "˙", ",": "'", "?": "¿", "!": "¡", "'": ",", "(": ")", ")": "(", "&": "⅋",
 };
-function superscript(text: string): string {
+
+// ---------- primitives ----------
+
+const prep = (s: string) => s.normalize("NFD");
+
+function mapWith(map: CharMap) {
+  return (s: string) => {
+    let out = "";
+    for (const ch of prep(s)) out += map[ch] ?? ch;
+    return out;
+  };
+}
+
+export const toFraktur = mapWith(FRAKTUR);
+export const toBoldFraktur = mapWith(BOLD_FRAKTUR);
+
+/** Capitals from one alphabet, lowercase from another. */
+function hybrid(capMap: CharMap, lowerMap: CharMap | ((ch: string) => string)) {
+  return (s: string) => {
+    let out = "";
+    for (const ch of prep(s)) {
+      if (ch >= "A" && ch <= "Z") out += capMap[ch];
+      else if (ch >= "a" && ch <= "z")
+        out += typeof lowerMap === "function" ? lowerMap(ch) : lowerMap[ch] ?? ch;
+      else out += ch;
+    }
+    return out;
+  };
+}
+
+/** Bold Fraktur for the first letter of every word, regular Fraktur after. */
+function initials(first: CharMap, rest: CharMap) {
+  return (s: string) => {
+    let out = "";
+    let atStart = true;
+    for (const ch of prep(s)) {
+      const isLetter = /[A-Za-z]/.test(ch);
+      if (isLetter) {
+        out += atStart ? first[ch.toUpperCase()] : rest[ch] ?? ch;
+        atStart = false;
+      } else {
+        out += ch;
+        if (/\s/.test(ch)) atStart = true;
+      }
+    }
+    return out;
+  };
+}
+
+function digits(map: CharMap) {
+  return (s: string) => [...s].map((c) => map[c] ?? c).join("");
+}
+
+/** Add a combining mark after every visible character. */
+function mark(combiner: string) {
+  return (s: string) => {
+    let out = "";
+    for (const ch of s) {
+      out += ch;
+      if (!/\s/.test(ch) && !/\p{M}/u.test(ch)) out += combiner;
+    }
+    return out;
+  };
+}
+
+function between(sep: string) {
+  return (s: string) =>
+    s
+      .split(/(\s+)/)
+      .map((part) => (/\s/.test(part) ? part : (part.match(/\P{M}\p{M}*/gu) ?? []).join(sep)))
+      .join("");
+}
+
+function spaced(s: string) {
+  return (s.match(/\P{M}\p{M}*/gu) ?? []).join(" ");
+}
+
+function wrap(left: string, right = left) {
+  return (s: string) => `${left} ${s} ${right}`;
+}
+function tight(left: string, right: string) {
+  return (s: string) => `${left}${s}${right}`;
+}
+
+const compose =
+  (...fns: Array<(s: string) => string>) =>
+  (s: string) =>
+    fns.reduce((acc, fn) => fn(acc), s);
+
+const upper = (s: string) => s.toUpperCase();
+const lower = (s: string) => s.toLowerCase();
+
+/** Medieval spelling: "th" → þ (thorn), "ae" → æ, non-final s → ſ (long s). */
+function thorn(s: string) {
+  return s.replace(/Th/g, "Þ").replace(/TH/g, "Þ").replace(/th/g, "þ").replace(/Ae/g, "Æ").replace(/ae/g, "æ");
+}
+function longS(s: string) {
+  return s.replace(/s(?=[a-z])/g, "ſ");
+}
+
+/** Deterministic, light "distressed" marks — a worn print, not full Zalgo. */
+const WEAR = ["̴", "̷", "̣", "̰", "͙", "͇"];
+function distress(intensity: number) {
+  return (s: string) => {
+    let out = "";
+    let i = 0;
+    for (const ch of s) {
+      out += ch;
+      if (/\s/.test(ch) || /\p{M}/u.test(ch)) continue;
+      i++;
+      for (let k = 0; k < intensity; k++) out += WEAR[(i * 7 + k * 3) % WEAR.length];
+    }
+    return out;
+  };
+}
+
+function upsideDown(s: string) {
+  const flipped = [...s.toLowerCase()].map((c) => UPSIDE[c] ?? c).reverse().join("");
+  // Letters that stay Latin after flipping (q, d, p, u, o, s, x, z, l) get Fraktur.
+  return [...flipped].map((c) => FRAKTUR[c] ?? c).join("");
+}
+
+function vertical(s: string) {
+  return (s.replace(/\s+/g, "").match(/\P{M}\p{M}*/gu) ?? []).join("\n");
+}
+
+function monogram(map: CharMap, sep: string) {
+  return (s: string) => {
+    const letters = s
+      .split(/\s+/)
+      .map((w) => w.replace(/[^A-Za-z]/g, "")[0])
+      .filter(Boolean)
+      .map((c) => map[c.toUpperCase()]);
+    return letters.length ? letters.join(sep) : s;
+  };
+}
+
+function toRoman(n: number): string {
+  const table: [number, string][] = [
+    [1000, "M"], [900, "CM"], [500, "D"], [400, "CD"], [100, "C"], [90, "XC"],
+    [50, "L"], [40, "XL"], [10, "X"], [9, "IX"], [5, "V"], [4, "IV"], [1, "I"],
+  ];
   let out = "";
-  for (const ch of text) out += superscriptMap[ch.toLowerCase()] ?? ch;
+  for (const [v, r] of table) while (n >= v) { out += r; n -= v; }
   return out;
 }
-
-// ----- Upside down -----
-const upsideDownMap: CharMap = {
-  a: "ɐ", b: "q", c: "ɔ", d: "p", e: "ǝ", f: "ɟ", g: "ƃ", h: "ɥ", i: "ı",
-  j: "ɾ", k: "ʞ", l: "l", m: "ɯ", n: "u", o: "o", p: "d", q: "b", r: "ɹ",
-  s: "s", t: "ʇ", u: "n", v: "ʌ", w: "ʍ", x: "x", y: "ʎ", z: "z",
-  A: "∀", B: "B", C: "Ɔ", D: "D", E: "Ǝ", F: "Ⅎ", G: "פ", H: "H", I: "I",
-  J: "ſ", K: "K", L: "˥", M: "W", N: "N", O: "O", P: "Ԁ", Q: "Q", R: "R",
-  S: "S", T: "⊥", U: "∩", V: "Λ", W: "M", X: "X", Y: "⅄", Z: "Z",
-  "0": "0", "1": "Ɩ", "2": "ᄅ", "3": "Ɛ", "4": "ㄣ", "5": "ϛ", "6": "9",
-  "7": "ㄥ", "8": "8", "9": "6",
-  ".": "˙", ",": "'", "?": "¿", "!": "¡", "'": ",", '"': ",,", "(": ")",
-  ")": "(", "[": "]", "]": "[", "{": "}", "}": "{", "<": ">", ">": "<",
-  "&": "⅋", "_": "‾",
-};
-function upsideDown(text: string): string {
-  const out: string[] = [];
-  for (const ch of text) out.push(upsideDownMap[ch] ?? ch);
-  return out.reverse().join("");
+/** Digit runs 1–3999 become Roman numerals (dates like 08.14.1998 work per part). */
+function romanize(s: string) {
+  return s.replace(/\d+/g, (m) => {
+    const n = parseInt(m, 10);
+    return n > 0 && n < 4000 ? toRoman(n) : m;
+  });
 }
 
-// ----- Strikethrough / underline / slash / tilde -----
-function combine(text: string, combiner: string): string {
-  let out = "";
-  for (const ch of text) {
-    out += ch;
-    if (ch !== " " && ch !== "\n") out += combiner;
-  }
-  return out;
-}
-const strikethrough = (t: string) => combine(t, "̶");
-const underline = (t: string) => combine(t, "̲");
-const doubleUnderline = (t: string) => combine(t, "̳");
-const slashThrough = (t: string) => combine(t, "̷");
+// Unicode has no Fraktur digits; bold serif digits are the closest match.
+const fr = (s: string) => digits(BOLD_DIGITS)(toFraktur(s));
+const bfr = (s: string) => digits(BOLD_DIGITS)(toBoldFraktur(s));
 
-// ----- Zalgo / glitch / cursed -----
-const ZALGO_UP = [
-  "̍","̎","̄","̅","̿","̑","̆","̐","͒",
-  "͗","͑","̇","̈","̊","͂","̓","̈́","͊",
-  "͋","͌","̃","̂","̌","͐","̀","́","̋",
-  "̏","̒","̓","̔","̽","̉","ͣ","ͤ","ͥ",
-  "ͦ","ͧ","ͨ","ͩ","ͪ","ͫ","ͬ","ͭ","ͮ",
-  "ͯ","̾","͛","͆","̚",
-];
-const ZALGO_MID = [
-  "̕","̛","̀","́","͘","̡","̢","̧","̨",
-  "̴","̵","̶","͏","͜","͝","͞","͟","͠",
-  "͢","̸","̷","͡","҉",
-];
-const ZALGO_DOWN = [
-  "̖","̗","̘","̙","̜","̝","̞","̟","̠",
-  "̤","̥","̦","̩","̪","̫","̬","̭","̮",
-  "̯","̰","̱","̲","̳","̹","̺","̻","̼",
-  "ͅ","͇","͈","͉","͍","͎","͓","͔","͕",
-  "͖","͙","͚","̣",
-];
-function zalgo(text: string, intensity: number): string {
-  // intensity: 0..1
-  // deterministic per-char so re-renders don't flicker too much
-  let out = "";
-  let seed = 17;
-  function rand() {
-    seed = (seed * 9301 + 49297) % 233280;
-    return seed / 233280;
-  }
-  for (const ch of text) {
-    out += ch;
-    if (ch === " " || ch === "\n") continue;
-    const n = Math.max(1, Math.floor(intensity * 8));
-    for (let i = 0; i < n; i++) out += ZALGO_UP[Math.floor(rand() * ZALGO_UP.length)];
-    for (let i = 0; i < Math.floor(intensity * 3); i++) out += ZALGO_MID[Math.floor(rand() * ZALGO_MID.length)];
-    for (let i = 0; i < n; i++) out += ZALGO_DOWN[Math.floor(rand() * ZALGO_DOWN.length)];
-  }
-  return out;
-}
+// ---------- style registry ----------
 
-// ----- Spaced / wide -----
-function spaced(text: string): string {
-  return [...text].join(" ");
-}
-
-// ----- Mirror / reverse -----
-function reverse(text: string): string {
-  return [...text].reverse().join("");
-}
-
-// ----- Weird mix (random) -----
-function weirdMix(text: string): string {
-  const pools = [fraktur, script, doubleStruck, bubble, squared, fullwidth];
-  let seed = 42;
-  function rand() { seed = (seed * 9301 + 49297) % 233280; return seed / 233280; }
-  let out = "";
-  for (const ch of text) {
-    const pool = pools[Math.floor(rand() * pools.length)];
-    out += pool[ch] ?? ch;
-  }
-  return out;
-}
-
-// ----- Style registry -----
 export type FontStyle = {
   id: string;
   name: string;
   transform: (s: string) => string;
 };
 
-export const ALL_STYLES: Record<string, FontStyle> = {
-  fraktur: { id: "fraktur", name: "Old English", transform: (s) => applyMap(s, fraktur) },
-  "fraktur-bold": { id: "fraktur-bold", name: "Old English Bold", transform: (s) => applyMap(s, frakturBold) },
-  script: { id: "script", name: "Cursive Script", transform: (s) => applyMap(s, script) },
-  "script-bold": { id: "script-bold", name: "Cursive Bold", transform: (s) => applyMap(s, scriptBold) },
-  "bold-serif": { id: "bold-serif", name: "Bold Serif", transform: (s) => applyMap(s, boldSerif) },
-  "italic-serif": { id: "italic-serif", name: "Italic Serif", transform: (s) => applyMap(s, italicSerif) },
-  "bold-italic-serif": { id: "bold-italic-serif", name: "Bold Italic Serif", transform: (s) => applyMap(s, boldItalicSerif) },
-  "sans-bold": { id: "sans-bold", name: "Sans Bold", transform: (s) => applyMap(s, sansBold) },
-  "sans-italic": { id: "sans-italic", name: "Sans Italic", transform: (s) => applyMap(s, sansItalic) },
-  "sans-bold-italic": { id: "sans-bold-italic", name: "Sans Bold Italic", transform: (s) => applyMap(s, sansBoldItalic) },
-  "double-struck": { id: "double-struck", name: "Outline", transform: (s) => applyMap(s, doubleStruck) },
-  monospace: { id: "monospace", name: "Monospace", transform: (s) => applyMap(s, monospace) },
-  bubble: { id: "bubble", name: "Bubble", transform: (s) => applyMap(s, bubble) },
-  "bubble-filled": { id: "bubble-filled", name: "Bubble Filled", transform: (s) => applyMap(s, bubbleFilled) },
-  squared: { id: "squared", name: "Squared", transform: (s) => applyMap(s, squared) },
-  fullwidth: { id: "fullwidth", name: "Big (Full Width)", transform: (s) => applyMap(s, fullwidth) },
-  "small-caps": { id: "small-caps", name: "Small Caps", transform: smallCaps },
-  superscript: { id: "superscript", name: "Tiny", transform: superscript },
-  "upside-down": { id: "upside-down", name: "Upside Down", transform: upsideDown },
-  strikethrough: { id: "strikethrough", name: "Strikethrough", transform: strikethrough },
-  underline: { id: "underline", name: "Underline", transform: underline },
-  "double-underline": { id: "double-underline", name: "Double Underline", transform: doubleUnderline },
-  "slash-through": { id: "slash-through", name: "Slashed", transform: slashThrough },
-  "zalgo-soft": { id: "zalgo-soft", name: "Glitch (soft)", transform: (s) => zalgo(s, 0.4) },
-  zalgo: { id: "zalgo", name: "Zalgo", transform: (s) => zalgo(s, 1) },
-  "zalgo-extreme": { id: "zalgo-extreme", name: "Cursed", transform: (s) => zalgo(s, 1.6) },
-  spaced: { id: "spaced", name: "Spaced", transform: spaced },
-  reverse: { id: "reverse", name: "Reverse", transform: reverse },
-  weird: { id: "weird", name: "Weird Mix", transform: weirdMix },
-};
+const LIST: FontStyle[] = [
+  // Core alphabets
+  { id: "fraktur", name: "Fraktur", transform: fr },
+  { id: "bold-fraktur", name: "Bold Fraktur", transform: bfr },
+  { id: "fraktur-small-caps", name: "Fraktur + Small Caps", transform: hybrid(FRAKTUR, SMALL_CAPS) },
+  { id: "tattoo", name: "Old English Tattoo", transform: compose(bfr, spaced, wrap("꧁", "꧂")) },
+  { id: "oe-cursive", name: "Old English Cursive", transform: hybrid(FRAKTUR, SCRIPT) },
+  { id: "gothic-framed", name: "Gothic Framed", transform: compose(bfr, tight("【", "】")) },
+  { id: "chicano", name: "Chicano / Lowrider", transform: compose(hybrid(BOLD_FRAKTUR, BOLD_SCRIPT), wrap("✞")) },
+  { id: "fraktur-underline", name: "Old English Underline", transform: compose(fr, mark("̲")) },
+  { id: "fraktur-strike", name: "Old English Strikethrough", transform: compose(fr, mark("̶")) },
+  { id: "distressed", name: "Distressed Gothic", transform: compose(bfr, distress(1)) },
+  { id: "cursed", name: "Cursed Gothic", transform: compose(fr, distress(3)) },
+
+  // Hybrids
+  { id: "bold-fraktur-small-caps", name: "Bold Fraktur + Small Caps", transform: hybrid(BOLD_FRAKTUR, SMALL_CAPS) },
+  { id: "bold-cursive", name: "Bold Old English Cursive", transform: hybrid(BOLD_FRAKTUR, BOLD_SCRIPT) },
+  { id: "fraktur-plain-lower", name: "Fraktur Capitals, Plain Lowercase", transform: hybrid(FRAKTUR, (c) => c) },
+  { id: "illuminated", name: "Illuminated Initials", transform: initials(BOLD_FRAKTUR, FRAKTUR) },
+  { id: "drop-cap", name: "Framed Drop Cap", transform: (s) => {
+      const src = s.trimStart();
+      const chars = [...fr(src)];
+      const first = src[0];
+      if (!first || !/[A-Za-z]/.test(first)) return chars.join("");
+      return `【${BOLD_FRAKTUR[first.toUpperCase()]}】${chars.slice(1).join("")}`;
+    } },
+  { id: "alternating", name: "Alternating Light & Bold", transform: (s) => {
+      let i = 0;
+      let out = "";
+      for (const ch of prep(s)) {
+        if (/[A-Za-z]/.test(ch)) out += (i++ % 2 ? BOLD_FRAKTUR : FRAKTUR)[ch];
+        else out += ch;
+      }
+      return out;
+    } },
+  { id: "fraktur-caps", name: "Fraktur All Capitals", transform: compose(upper, fr) },
+  { id: "bold-fraktur-caps", name: "Bold Fraktur All Capitals", transform: compose(upper, bfr) },
+  { id: "fraktur-lower", name: "Fraktur All Lowercase", transform: compose(lower, fr) },
+
+  // Medieval spelling
+  { id: "thorn", name: "Ye Olde (Thorn þ & Æ)", transform: compose(thorn, fr) },
+  { id: "long-s", name: "Long S Manuscript (ſ)", transform: compose(longS, fr) },
+  { id: "interpunct", name: "Manuscript Interpunct", transform: compose(fr, between("·")) },
+  { id: "word-dots", name: "Word Divider ⁘", transform: (s) => fr(s).split(/\s+/).join(" ⁘ ") },
+
+  // Lines & marks
+  { id: "bold-underline", name: "Bold Fraktur Underline", transform: compose(bfr, mark("̲")) },
+  { id: "bold-strike", name: "Bold Fraktur Strikethrough", transform: compose(bfr, mark("̶")) },
+  { id: "double-underline", name: "Fraktur Double Underline", transform: compose(fr, mark("̳")) },
+  { id: "overline", name: "Fraktur Overline", transform: compose(fr, mark("̅")) },
+  { id: "slashed", name: "Slashed Gothic", transform: compose(bfr, mark("̸")) },
+  { id: "wavy", name: "Wavy Accent Gothic", transform: compose(fr, mark("̰")) },
+  { id: "dotted", name: "Dotted Underline Gothic", transform: compose(fr, mark("̤")) },
+  { id: "circled", name: "Bubble Gothic", transform: compose(fr, mark("⃝")) },
+  { id: "boxed", name: "Boxed Gothic", transform: compose(bfr, mark("⃞")) },
+
+  // Spacing & direction
+  { id: "wide", name: "Wide Gothic", transform: compose(fr, spaced) },
+  { id: "wide-bold", name: "Wide Bold Fraktur", transform: compose(bfr, spaced) },
+  { id: "upside-down", name: "Upside-down Gothic", transform: upsideDown },
+  { id: "reversed", name: "Reversed Gothic", transform: (s) => [...fr(s)].reverse().join("") },
+  { id: "vertical", name: "Vertical Spine Stack", transform: compose(bfr, vertical) },
+
+  // Frames
+  { id: "frame-white", name: "White Bracket Frame", transform: compose(fr, tight("⟦", "⟧")) },
+  { id: "frame-lenticular", name: "Lenticular Frame", transform: compose(fr, tight("〖", "〗")) },
+  { id: "frame-corner", name: "Corner Bracket Frame", transform: compose(bfr, tight("『", "』")) },
+  { id: "frame-banner", name: "Banner Rule", transform: compose(bfr, wrap("━━", "━━")) },
+  { id: "frame-block", name: "Block Frame", transform: compose(bfr, wrap("▌", "▐")) },
+  { id: "frame-chevron", name: "Guillemet Frame", transform: compose(fr, wrap("«", "»")) },
+  { id: "frame-tibetan", name: "Ornate Tibetan Frame", transform: compose(bfr, wrap("༺", "༻")) },
+
+  // Gothic decorations
+  { id: "deco-pentagram", name: "Pentagram Gothic ⛧", transform: compose(bfr, wrap("⛧")) },
+  { id: "deco-maltese", name: "Maltese Cross ✠", transform: compose(fr, wrap("✠")) },
+  { id: "deco-cross", name: "Cross of Jerusalem ☩", transform: compose(bfr, wrap("☩")) },
+  { id: "deco-dagger", name: "Dagger Gothic †", transform: compose(fr, wrap("†")) },
+  { id: "deco-skull", name: "Skull Gothic ☠", transform: compose(bfr, wrap("☠")) },
+  { id: "deco-swords", name: "Crossed Swords ⚔", transform: compose(bfr, wrap("⚔")) },
+  { id: "deco-fleur", name: "Fleur-de-lis ⚜", transform: compose(fr, wrap("⚜")) },
+  { id: "deco-crown", name: "Crowned Gothic ♛", transform: compose(bfr, wrap("♛")) },
+  { id: "deco-fleuron", name: "Manuscript Fleuron ☙ ❧", transform: compose(fr, wrap("☙", "❧")) },
+  { id: "deco-hedera", name: "Hedera Leaf ❦", transform: compose(fr, wrap("❦")) },
+  { id: "deco-rose", name: "Dark Rose 🥀", transform: compose(bfr, wrap("🥀")) },
+  { id: "deco-bat", name: "Bat Wing 🦇", transform: compose(bfr, wrap("🦇")) },
+  { id: "deco-candle", name: "Candlelit 🕯", transform: compose(fr, wrap("🕯")) },
+  { id: "deco-stars", name: "Starlit Gothic ✧", transform: compose(fr, wrap("✧･ﾟ", "ﾟ･✧")) },
+  { id: "deco-heart", name: "Gothic Heart ♡", transform: compose(bfr, wrap("♡")) },
+
+  // Numbers-focused
+  { id: "roman-date", name: "Roman Numeral Date", transform: compose(romanize, bfr) },
+  { id: "roman-date-light", name: "Roman Numerals (Light Fraktur)", transform: compose(romanize, fr) },
+  { id: "fraktur-outline-digits", name: "Fraktur + Outline Numbers", transform: compose(toFraktur, digits(OUTLINE_DIGITS)) },
+
+  // Initials
+  { id: "monogram", name: "Monogram Initials", transform: monogram(BOLD_FRAKTUR, " · ") },
+  { id: "monogram-framed", name: "Framed Monogram", transform: (s) => `【${monogram(BOLD_FRAKTUR, "")(s)}】` },
+  { id: "monogram-ampersand", name: "Couple Monogram", transform: monogram(FRAKTUR, " & ") },
+];
+
+export const ALL_STYLES: Record<string, FontStyle> = Object.fromEntries(LIST.map((s) => [s.id, s]));
+
+/** The homepage order. Every other page re-orders a subset of these. */
+export const HOME_STYLES = LIST.map((s) => s.id);
 
 export function pickStyles(ids: string[]): FontStyle[] {
   return ids.map((id) => ALL_STYLES[id]).filter(Boolean);
 }
 
-// ----- Composed / labeled Old English variants -----
-// These combine existing transforms with a different display name so the
-// homepage can offer 20+ themed Old English / Gothic / Blackletter options.
-
-const compose = (...fns: Array<(s: string) => string>) =>
-  (s: string) => fns.reduce((acc, fn) => fn(acc), s);
-
-const ofr = (s: string) => applyMap(s, fraktur);
-const ofrb = (s: string) => applyMap(s, frakturBold);
-const oscr = (s: string) => applyMap(s, script);
-const oscrb = (s: string) => applyMap(s, scriptBold);
-
-const COMPOSED: FontStyle[] = [
-  { id: "gothic-classic", name: "Gothic Classic", transform: ofr },
-  { id: "gothic-bold", name: "Gothic Bold", transform: ofrb },
-  { id: "blackletter", name: "Blackletter", transform: ofr },
-  { id: "blackletter-bold", name: "Blackletter Bold", transform: ofrb },
-  { id: "medieval-script", name: "Medieval Script", transform: oscr },
-  { id: "medieval-bold-script", name: "Medieval Bold Script", transform: oscrb },
-  { id: "old-english-spaced", name: "Old English Spaced", transform: compose(ofr, spaced) },
-  { id: "gothic-spaced", name: "Gothic Spaced", transform: compose(ofrb, spaced) },
-  { id: "tattoo-gothic", name: "Tattoo Gothic", transform: ofrb },
-  { id: "royal-gothic", name: "Royal Gothic", transform: compose(ofrb, underline) },
-  { id: "dark-gothic", name: "Dark Gothic", transform: compose(ofrb, strikethrough) },
-  { id: "diploma-style", name: "Diploma Style", transform: ofr },
-  { id: "church-style", name: "Church Style", transform: compose(ofr, underline) },
-  { id: "newspaper-gothic", name: "Newspaper Gothic", transform: ofrb },
-  { id: "band-logo", name: "Band Logo Style", transform: compose(ofrb, underline) },
-  { id: "german-gothic", name: "German Gothic", transform: ofr },
-  { id: "decorative-gothic", name: "Decorative Gothic", transform: compose(ofr, (s) => zalgo(s, 0.2)) },
-  { id: "cursed-gothic", name: "Cursed Gothic", transform: compose(ofr, (s) => zalgo(s, 0.6)) },
-  { id: "outline-gothic", name: "Outline Gothic", transform: (s) => applyMap(s, doubleStruck) },
-  { id: "manuscript-mono", name: "Manuscript Mono", transform: (s) => applyMap(s, monospace) },
-  { id: "small-gothic", name: "Small Gothic", transform: smallCaps },
-  { id: "gothic-glitch", name: "Gothic Glitch", transform: compose(ofr, (s) => zalgo(s, 0.4)) },
-  { id: "fraktur-reversed", name: "Fraktur Reversed", transform: compose(ofr, reverse) },
-  { id: "fraktur-flipped", name: "Fraktur Upside Down", transform: compose(ofr, upsideDown) },
-  { id: "ye-olde", name: "Ye Olde", transform: compose(ofr, spaced, underline) },
-];
-
-for (const s of COMPOSED) {
-  if (!ALL_STYLES[s.id]) ALL_STYLES[s.id] = s;
-}
-
-// ----- More composed variants for deeper category pages -----
-const EXTRA: FontStyle[] = [
-  { id: "cursive-underline", name: "Cursive Underlined", transform: compose(oscr, underline) },
-  { id: "cursive-strike", name: "Cursive Strikethrough", transform: compose(oscr, strikethrough) },
-  { id: "cursive-spaced", name: "Cursive Spaced", transform: compose(oscr, spaced) },
-  { id: "cursive-bold-spaced", name: "Cursive Bold Spaced", transform: compose(oscrb, spaced) },
-  { id: "bold-spaced", name: "Bold Spaced", transform: compose((s) => applyMap(s, boldSerif), spaced) },
-  { id: "bold-underline", name: "Bold Underlined", transform: compose((s) => applyMap(s, boldSerif), underline) },
-  { id: "bold-strike", name: "Bold Strikethrough", transform: compose((s) => applyMap(s, boldSerif), strikethrough) },
-  { id: "sans-bold-spaced", name: "Sans Bold Spaced", transform: compose((s) => applyMap(s, sansBold), spaced) },
-  { id: "italic-underline", name: "Italic Underlined", transform: compose((s) => applyMap(s, italicSerif), underline) },
-  { id: "italic-strike", name: "Italic Strikethrough", transform: compose((s) => applyMap(s, italicSerif), strikethrough) },
-  { id: "italic-spaced", name: "Italic Spaced", transform: compose((s) => applyMap(s, italicSerif), spaced) },
-  { id: "small-caps-spaced", name: "Small Caps Spaced", transform: compose(smallCaps, spaced) },
-  { id: "small-caps-underline", name: "Small Caps Underlined", transform: compose(smallCaps, underline) },
-  { id: "outline-spaced", name: "Outline Spaced", transform: compose((s) => applyMap(s, doubleStruck), spaced) },
-  { id: "outline-underline", name: "Outline Underlined", transform: compose((s) => applyMap(s, doubleStruck), underline) },
-  { id: "mono-spaced", name: "Monospace Spaced", transform: compose((s) => applyMap(s, monospace), spaced) },
-  { id: "bubble-underline", name: "Bubble Underlined", transform: compose((s) => applyMap(s, bubble), underline) },
-  { id: "squared-spaced", name: "Squared Spaced", transform: compose((s) => applyMap(s, squared), spaced) },
-  { id: "fullwidth-underline", name: "Big Underlined", transform: compose((s) => applyMap(s, fullwidth), underline) },
-  { id: "fraktur-strike", name: "Fraktur Strikethrough", transform: compose(ofr, strikethrough) },
-  { id: "fraktur-double-underline", name: "Fraktur Double Underline", transform: compose(ofr, doubleUnderline) },
-  { id: "fraktur-bold-spaced", name: "Fraktur Bold Spaced", transform: compose(ofrb, spaced) },
-  { id: "script-zalgo", name: "Glitch Script", transform: compose(oscr, (s) => zalgo(s, 0.5)) },
-  { id: "sans-zalgo", name: "Glitch Sans", transform: compose((s) => applyMap(s, sansBold), (s) => zalgo(s, 0.6)) },
-  { id: "alternating", name: "Alt Bold/Italic", transform: (s) => {
-      let out = ""; let i = 0;
-      for (const ch of s) {
-        out += (i++ % 2 === 0)
-          ? (boldSerif[ch] ?? ch)
-          : (italicSerif[ch] ?? ch);
-      }
-      return out;
-    },
-  },
-  { id: "stacked-bold-strike", name: "Bold Slash", transform: compose((s) => applyMap(s, boldSerif), slashThrough) },
-  { id: "tiny-spaced", name: "Tiny Spaced", transform: compose(superscript, spaced) },
-];
-for (const s of EXTRA) {
-  if (!ALL_STYLES[s.id]) ALL_STYLES[s.id] = s;
-}
-
-// ----- Novelty styles -----
-
-// Love Parenthesis: wraps each non-space char in parens
-function loveParens(text: string): string {
-  let out = "";
-  for (const ch of text) {
-    if (ch === " " || ch === "\n") out += ch;
-    else out += `(${ch})`;
-  }
-  return out;
-}
-
-// Leet Speak: classic 1337 substitutions
-const LEET_MAP: CharMap = {
-  a: "4", b: "8", e: "3", g: "9", i: "1", l: "1", o: "0",
-  s: "5", t: "7", z: "2",
-  A: "4", B: "8", E: "3", G: "9", I: "1", L: "1", O: "0",
-  S: "5", T: "7", Z: "2",
-};
-function leetSpeak(text: string): string {
-  let out = "";
-  for (const ch of text) out += LEET_MAP[ch] ?? ch;
-  return out;
-}
-
-// Japanese-style: Latin → katakana/halfwidth-katakana lookalikes
-const JAPANESE_MAP: CharMap = {
-  A: "ﾑ", B: "乃", C: "ᄃ", D: "り", E: "乇", F: "ｷ", G: "Ꮆ", H: "卄",
-  I: "丨", J: "ﾌ", K: "Ҝ", L: "ㄥ", M: "爪", N: "几", O: "ㄖ", P: "卩",
-  Q: "Ҩ", R: "尺", S: "丂", T: "ㄒ", U: "ㄩ", V: "ᐯ", W: "山", X: "乂",
-  Y: "ㄚ", Z: "乙",
-};
-function japaneseStyle(text: string): string {
-  let out = "";
-  for (const ch of text) {
-    const up = ch.toUpperCase();
-    out += JAPANESE_MAP[up] ?? ch;
-  }
-  return out;
-}
-
-// Bent: alternating between superscript and subscript-like characters
-const SUB_MAP: CharMap = {
-  a: "ₐ", e: "ₑ", h: "ₕ", i: "ᵢ", j: "ⱼ", k: "ₖ", l: "ₗ", m: "ₘ",
-  n: "ₙ", o: "ₒ", p: "ₚ", r: "ᵣ", s: "ₛ", t: "ₜ", u: "ᵤ", v: "ᵥ", x: "ₓ",
-  "0": "₀", "1": "₁", "2": "₂", "3": "₃", "4": "₄", "5": "₅",
-  "6": "₆", "7": "₇", "8": "₈", "9": "₉",
-};
-function bent(text: string): string {
-  let out = "";
-  let i = 0;
-  for (const ch of text) {
-    if (ch === " " || ch === "\n") { out += ch; continue; }
-    const lo = ch.toLowerCase();
-    const up = (i++ % 2 === 0)
-      ? (superscriptMap[lo] ?? ch)
-      : (SUB_MAP[lo] ?? ch);
-    out += up;
-  }
-  return out;
-}
-
-// Mirrored: horizontal mirror — uses Unicode reversed-form lookalikes
-const MIRROR_MAP: CharMap = {
-  a: "ɒ", b: "d", c: "ɔ", d: "b", e: "ɘ", f: "ʇ", g: "ǫ", h: "ʜ",
-  i: "i", j: "ꞁ", k: "ʞ", l: "l", m: "m", n: "n", o: "o", p: "q",
-  q: "p", r: "ɿ", s: "ƨ", t: "ƚ", u: "u", v: "v", w: "w", x: "x",
-  y: "y", z: "z",
-  A: "A", B: "ᙠ", C: "Ↄ", D: "ᗡ", E: "Ǝ", F: "ꟻ", G: "Ꭾ", H: "H",
-  I: "I", J: "Ⴑ", K: "ꓘ", L: "⅃", M: "M", N: "И", O: "O", P: "ꟼ",
-  Q: "Ϙ", R: "ᴙ", S: "Ƨ", T: "T", U: "U", V: "V", W: "W", X: "X",
-  Y: "Y", Z: "Ƹ",
-  "?": "⸮", "!": "¡", "&": "⅋", ",": "ʼ",
-};
-function mirrored(text: string): string {
-  const out: string[] = [];
-  for (const ch of text) out.push(MIRROR_MAP[ch] ?? ch);
-  return out.reverse().join("");
-}
-
-// Morse code
-const MORSE_MAP: Record<string, string> = {
-  a: ".-", b: "-...", c: "-.-.", d: "-..", e: ".", f: "..-.",
-  g: "--.", h: "....", i: "..", j: ".---", k: "-.-", l: ".-..",
-  m: "--", n: "-.", o: "---", p: ".--.", q: "--.-", r: ".-.",
-  s: "...", t: "-", u: "..-", v: "...-", w: ".--", x: "-..-",
-  y: "-.--", z: "--..",
-  "0": "-----", "1": ".----", "2": "..---", "3": "...--", "4": "....-",
-  "5": ".....", "6": "-....", "7": "--...", "8": "---..", "9": "----.",
-  ".": ".-.-.-", ",": "--..--", "?": "..--..", "!": "-.-.--",
-  "'": ".----.", "/": "-..-.", "(": "-.--.", ")": "-.--.-",
-  "&": ".-...", ":": "---...", ";": "-.-.-.", "=": "-...-",
-  "+": ".-.-.", "-": "-....-", "_": "..--.-", '"': ".-..-.",
-  "@": ".--.-.",
-};
-function morse(text: string): string {
-  const out: string[] = [];
-  for (const ch of text) {
-    if (ch === " ") out.push("/");
-    else if (ch === "\n") out.push("\n");
-    else out.push(MORSE_MAP[ch.toLowerCase()] ?? ch);
-  }
-  return out.join(" ");
-}
-
-const NOVELTY: FontStyle[] = [
-  { id: "love-parens", name: "Love Parenthesis", transform: loveParens },
-  { id: "leet", name: "Leet Speak", transform: leetSpeak },
-  { id: "japanese-style", name: "Japanese Style", transform: japaneseStyle },
-  { id: "bent", name: "Bent", transform: bent },
-  { id: "mirrored", name: "Mirrored", transform: mirrored },
-  { id: "morse", name: "Morse Code", transform: morse },
-];
-for (const s of NOVELTY) {
-  if (!ALL_STYLES[s.id]) ALL_STYLES[s.id] = s;
-}
-
-export const OLD_ENGLISH_FAMILY = [
-  "gothic-classic",
-  "gothic-bold",
-  "blackletter",
-  "blackletter-bold",
-  "medieval-script",
-  "medieval-bold-script",
-  "old-english-spaced",
-  "gothic-spaced",
-  "tattoo-gothic",
-  "royal-gothic",
-  "dark-gothic",
-  "diploma-style",
-  "church-style",
-  "newspaper-gothic",
-  "band-logo",
-  "german-gothic",
-  "decorative-gothic",
-  "cursed-gothic",
-  "outline-gothic",
-  "manuscript-mono",
-  "small-gothic",
-  "gothic-glitch",
-  "fraktur-reversed",
-  "fraktur-flipped",
-  "ye-olde",
-];
-
-// Styles and characters shown on the /different-fonts/[letter] pages.
-// Shared with the markdown twins in lib/markdown.ts.
-export const LETTER_SHOWCASE_IDS = [
-  ...OLD_ENGLISH_FAMILY,
-  "bold-serif", "italic-serif", "bold-italic-serif", "sans-bold",
-  "double-struck", "monospace", "bubble", "bubble-filled", "squared",
-  "fullwidth", "small-caps", "superscript", "love-parens", "leet",
-  "japanese-style", "mirrored", "morse", "bent", "weird",
-];
-
-export const LETTER_SLUGS = "abcdefghijklmnopqrstuvwxyz0123456789".split("");
+export const ALPHABET_UPPER = [...UPPER];
+export const ALPHABET_LOWER = [...LOWER];

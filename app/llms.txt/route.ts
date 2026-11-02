@@ -1,59 +1,41 @@
-import { PAGES } from "@/lib/pages";
+import { CLUSTERS } from "@/content/pages";
 import { POSTS } from "@/lib/blog";
+import { SITE_URL } from "@/lib/site";
 
 export const dynamic = "force-static";
 
-const BASE = "https://www.oldenglishfontgenerator.com";
-
-// /llms.txt — a concise, AI-crawler-friendly map of the site (2026 standard).
-// Generated from live page data so it never drifts from the sitemap.
+// /llms.txt: a concise map of the site for AI crawlers, built from page data.
 export async function GET() {
-  const tools = PAGES.map(
-    (p) => `- [${p.h1}](${BASE}/font-generator/${p.slug}): ${p.description}`
-  ).join("\n");
-
-  const posts = POSTS.map(
-    (p) => `- [${p.title}](${BASE}/blog/${p.slug}): ${p.description}`
-  ).join("\n");
+  const tools = CLUSTERS.map((p) => `- [${p.h1}](${SITE_URL}/${p.slug}): ${p.description}`).join("\n");
+  const posts = POSTS.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.description}`).join("\n");
 
   const body = `# Old English Font Generator
 
-> Free online tool that converts plain text into 60+ Old English, blackletter,
-> gothic, fraktur, and medieval Unicode styles you can copy and paste anywhere —
-> Instagram, TikTok, Discord, YouTube, X, and more. No sign-up, no watermark,
-> no usage limits; everything runs in the browser.
+> Free browser tool that converts text into Old English, blackletter, gothic and
+> Fraktur Unicode styles to copy and paste, plus a tattoo preview and PNG/SVG
+> export using open-licence blackletter fonts. No sign-up.
 
 ## Key facts
-- "Old English", "gothic", and "blackletter" name the same typographic family.
-- Output is plain Unicode (not an installed font), so it survives copy/paste
-  into apps that don't let you change fonts.
-- Most styles come from the Mathematical Alphanumeric Symbols block
-  (U+1D400–U+1D7FF); decorative variants use Enclosed Alphanumerics,
-  Fullwidth Forms, and Combining Diacritical Marks.
+- "Old English", "gothic" and "blackletter" are everyday names for the same letter shapes; Unicode's version is Fraktur.
+- Output is Unicode text from Mathematical Fraktur (U+1D504–U+1D537) and Bold Fraktur (U+1D56C–U+1D59F); C, H, I, R, Z come from Letterlike Symbols.
+- Unicode has no Fraktur digits; the site substitutes bold serif digits or Roman numerals.
+- This is not a translator for the Old English language.
 
-## Main pages
-- [Old English Font Generator (home)](${BASE}/): main generator with 60+ styles.
-- [All font generators](${BASE}/font-generator): index of every generator.
-- [Symbols & emoji](${BASE}/symbols): copy-paste symbol library.
-- [Name generators](${BASE}/name-generator): fantasy and username name tools.
-- [Blog](${BASE}/blog): guides on blackletter, gothic, and platform usage.
-- [Spanish edition](${BASE}/es): generador de fuentes en español.
+## Main page
+- [Old English Font Generator](${SITE_URL}/): every style in one list.
 
-## Font & text generators
+## Tools
 ${tools}
 
-## Blog articles
+## Articles
 ${posts}
 
 ## Sitemap
-- ${BASE}/sitemap.xml
+- ${SITE_URL}/sitemap.xml
 
 ## Markdown versions
-Every page has a clean markdown version at the same URL plus \`.md\`
-(the homepage is ${BASE}/index.md). Requests sent with
-\`Accept: text/markdown\` get the markdown version automatically.
-- [Homepage (markdown)](${BASE}/index.md)
-- [Every page (markdown sitemap)](${BASE}/sitemap.md)
+Every page has a markdown version at the same URL plus \`.md\` (the homepage is ${SITE_URL}/index.md).
+- [Markdown sitemap](${SITE_URL}/sitemap.md)
 `;
 
   return new Response(body, {

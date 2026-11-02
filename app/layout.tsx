@@ -1,56 +1,26 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { Analytics } from "@vercel/analytics/next";
+import { SITE_URL, SITE_NAME } from "@/lib/site";
 import "./globals.css";
 
-const SITE_URL = "https://www.oldenglishfontgenerator.com";
 const GA_MEASUREMENT_ID = "G-6QVJF7N2H3";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Old English Font Generator – Blackletter & Gothic Text Styles",
-    template: "%s | Old English Font Generator",
+    default: "Old English Font Generator — Copy & Paste Blackletter Text",
+    template: "%s",
   },
-  description:
-    "Convert plain text into Old English, blackletter, and gothic Unicode fonts you can copy and paste anywhere — Instagram, TikTok, Discord, Twitter and more.",
-  applicationName: "Old English Font Generator",
-  authors: [{ name: "Old English Font Generator" }],
-  keywords: [
-    "old english font",
-    "blackletter font",
-    "gothic font generator",
-    "old english text generator",
-    "copy paste fonts",
-    "cursive font generator",
-    "font generator",
-  ],
+  applicationName: SITE_NAME,
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
   },
-  openGraph: {
-    siteName: "Old English Font Generator",
-    type: "website",
-    locale: "en_US",
-    url: SITE_URL,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Old English Font Generator",
-    description:
-      "Free Unicode font generator: Old English, blackletter, cursive, bold, bubble, glitch and more.",
-  },
-  formatDetection: {
-    telephone: false,
-    email: false,
-    address: false,
-  },
+  openGraph: { siteName: SITE_NAME, type: "website", locale: "en_US" },
+  twitter: { card: "summary_large_image" },
+  formatDetection: { telephone: false, email: false, address: false },
 };
 
 export const viewport: Viewport = {
@@ -60,65 +30,19 @@ export const viewport: Viewport = {
   colorScheme: "light",
 };
 
-const siteJsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": `${SITE_URL}/#website`,
-      url: SITE_URL,
-      name: "Old English Font Generator",
-      description:
-        "Free Unicode font generator for blackletter, gothic, cursive and other copy-paste text styles.",
-      potentialAction: {
-        "@type": "SearchAction",
-        target: `${SITE_URL}/font-generator?q={search_term_string}`,
-        "query-input": "required name=search_term_string",
-      },
-    },
-    {
-      "@type": "Organization",
-      "@id": `${SITE_URL}/#org`,
-      name: "Old English Font Generator",
-      url: SITE_URL,
-      logo: `${SITE_URL}/icon.svg`,
-    },
-  ],
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', '${GA_MEASUREMENT_ID}');`,
-          }}
-        />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2963693328827195"
-          crossOrigin="anonymous"
-        />
-      </head>
       <body>
         {children}
         <Analytics />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
         />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_MEASUREMENT_ID}');`}
+        </Script>
       </body>
     </html>
   );

@@ -42,7 +42,7 @@ export default function OgImage() {
             textAlign: "center",
           }}
         >
-          Blackletter, gothic & cursive text — copy &amp; paste
+          Blackletter, gothic &amp; Fraktur text — copy and paste
         </div>
       </div>
     ),

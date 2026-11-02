@@ -1,20 +1,23 @@
 "use client";
 
-import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { pickStyles } from "@/lib/fonts";
 
-type Pill = { label: string; href: string };
-
 type Props = {
+  /** Style ids in display order. */
   styles: string[];
-  defaultText?: string;
-  pills?: Pill[];
+  /** Phrase rendered server-side before the visitor types anything. */
+  sample: string;
+  placeholder?: string;
+  /** One-tap example inputs (names, dates, bio lines). */
+  presets?: string[];
+  /** Rows rendered before "Show all styles". */
   initialVisible?: number;
-  resultsTitle?: string;
+  /** Optional character budget, e.g. a 32-character Discord display name. */
+  limit?: { label: string; max: number };
+  /** Read ?text= from the URL (homepage only, powers the WebSite SearchAction). */
+  readQuery?: boolean;
 };
-
-const FAV_KEY = "oef-favorites";
 
 function CopyIcon() {
   return (
@@ -25,170 +28,115 @@ function CopyIcon() {
   );
 }
 
-function CheckIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-      <polyline points="20 6 9 17 4 12" />
-    </svg>
-  );
-}
-
-function BoltIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M13 2 4.5 14h6L9 22l9-13h-6L13 2z" />
-    </svg>
-  );
+/** Count what platforms are likely to count: UTF-16 code units (the stricter number). */
+function units(s: string) {
+  return s.length;
 }
 
 export default function Generator({
   styles,
-  defaultText = "Type or paste your text here…",
-  pills,
-  initialVisible = 8,
-  resultsTitle,
+  sample,
+  placeholder = "Type your name or phrase…",
+  presets,
+  initialVisible = 12,
+  limit,
+  readQuery = false,
 }: Props) {
   const [text, setText] = useState("");
-  const [copiedId, setCopiedId] = useState<string | null>(null);
   const [showAll, setShowAll] = useState(false);
-  const [favs, setFavs] = useState<string[]>([]);
-  const [mounted, setMounted] = useState(false);
+  const [toast, setToast] = useState<string | null>(null);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
-    setMounted(true);
-    try {
-      const raw = localStorage.getItem(FAV_KEY);
-      if (raw) setFavs(JSON.parse(raw));
-    } catch {}
-  }, []);
+    if (!readQuery) return;
+    const q = new URLSearchParams(window.location.search).get("text");
+    if (q) setText(q.slice(0, 200));
+  }, [readQuery]);
 
-  function toggleFav(id: string) {
-    setFavs((prev) => {
-      const next = prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id];
-      try { localStorage.setItem(FAV_KEY, JSON.stringify(next)); } catch {}
-      return next;
-    });
-  }
-
-  const source = text.length === 0 ? "Type or paste your text" : text;
-
+  const source = text.trim().length === 0 ? sample : text;
   const styleObjs = useMemo(() => pickStyles(styles), [styles]);
-  const allResults = useMemo(
-    () => styleObjs.map((s) => ({ ...s, output: s.transform(source) })),
-    [styleObjs, source]
-  );
+  const visible = showAll ? styleObjs : styleObjs.slice(0, initialVisible);
 
-  const favResults = mounted
-    ? allResults.filter((r) => favs.includes(r.id))
-    : [];
-  const nonFavResults = mounted
-    ? allResults.filter((r) => !favs.includes(r.id))
-    : allResults;
-  const visibleNonFav = showAll ? nonFavResults : nonFavResults.slice(0, initialVisible);
-  const hasMore = nonFavResults.length > initialVisible && !showAll;
-
-  async function copy(id: string, value: string) {
+  const copy = useCallback(async (name: string, value: string) => {
     try {
       await navigator.clipboard.writeText(value);
-      setCopiedId(id);
-      setTimeout(() => setCopiedId((c) => (c === id ? null : c)), 1400);
-    } catch {}
-  }
-
-  function renderCard(r: { id: string; name: string; output: string }) {
-    const isFav = favs.includes(r.id);
-    return (
-      <div
-        key={r.id}
-        className="style-card"
-        onClick={() => copy(r.id, r.output)}
-        role="button"
-        tabIndex={0}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            copy(r.id, r.output);
-          }
-        }}
-      >
-        <div className="left">
-          <div className="name">{r.name}</div>
-          <div className="preview">{r.output}</div>
-        </div>
-        <div className="actions">
-          <button
-            className={`fav-btn ${isFav ? "active" : ""}`}
-            onClick={(e) => { e.stopPropagation(); toggleFav(r.id); }}
-            aria-label={isFav ? `Remove ${r.name} from favorites` : `Save ${r.name} to favorites`}
-            title={isFav ? "Remove from favorites" : "Save to favorites"}
-          >
-            {isFav ? "★" : "☆"}
-          </button>
-          <button
-            className={`icon-btn ${copiedId === r.id ? "copied" : ""}`}
-            onClick={(e) => { e.stopPropagation(); copy(r.id, r.output); }}
-            aria-label={`Copy ${r.name}`}
-          >
-            {copiedId === r.id ? <CheckIcon /> : <CopyIcon />}
-          </button>
-        </div>
-      </div>
-    );
-  }
+      setToast(`Copied ${name}`);
+    } catch {
+      setToast("Copy failed — long-press the text to copy it");
+    }
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = setTimeout(() => setToast(null), 1600);
+  }, []);
 
   return (
-    <>
+    <div className="gen">
       <div className="input-row">
         <textarea
           value={text}
           onChange={(e) => setText(e.target.value)}
-          placeholder={defaultText}
-          aria-label="Text to convert"
+          placeholder={placeholder}
+          aria-label="Text to convert into Old English letters"
           rows={1}
+          maxLength={500}
         />
-        <button
-          className="go-btn"
-          onClick={() => {
-            const first = allResults[0];
-            if (first) copy(first.id, first.output);
-          }}
-          aria-label="Copy first style"
-        >
-          <BoltIcon />
-        </button>
       </div>
 
-      {pills && pills.length > 0 && (
-        <div className="pill-row-wrap">
-          <div className="pill-row" role="list">
-            {pills.map((p) => (
-              <Link key={p.href} href={p.href} className="pill" role="listitem">
-                {p.label}
-              </Link>
-            ))}
-          </div>
+      {presets && presets.length > 0 && (
+        <div className="presets" aria-label="Example text">
+          {presets.map((p) => (
+            <button key={p} type="button" className="preset" onClick={() => setText(p)}>
+              {p}
+            </button>
+          ))}
         </div>
       )}
 
-      {resultsTitle && <div className="results-title">{resultsTitle}</div>}
+      <p className="sr-only" aria-live="polite">
+        Plain-text version: {source}
+      </p>
 
-      {mounted && favResults.length > 0 && (
-        <>
-          <div className="fav-label">★ Favorites</div>
-          <div className="results">{favResults.map(renderCard)}</div>
-          <hr className="fav-divider" />
-        </>
-      )}
+      <ul className="results">
+        {visible.map((s) => {
+          const out = s.transform(source);
+          const n = units(out);
+          return (
+            <li key={s.id} className="style-card">
+              <div className="left">
+                <div className="name">
+                  {s.name}
+                  {limit && (
+                    <span className={`count ${n > limit.max ? "over" : ""}`}>
+                      {n}/{limit.max}
+                    </span>
+                  )}
+                </div>
+                <div className="preview" aria-hidden="true">{out}</div>
+              </div>
+              <button
+                type="button"
+                className="icon-btn"
+                onClick={() => copy(s.name, out)}
+                aria-label={`Copy "${source}" in ${s.name} style`}
+              >
+                <CopyIcon />
+                <span className="copy-label">Copy</span>
+              </button>
+            </li>
+          );
+        })}
+      </ul>
 
-      <div className="results">{visibleNonFav.map(renderCard)}</div>
-
-      {hasMore && (
+      {!showAll && styleObjs.length > initialVisible && (
         <div className="load-more-wrap">
-          <button className="load-more" onClick={() => setShowAll(true)}>
-            Load More Styles
+          <button type="button" className="load-more" onClick={() => setShowAll(true)}>
+            Show all {styleObjs.length} styles
           </button>
         </div>
       )}
-    </>
+
+      <div className={`toast ${toast ? "show" : ""}`} role="status" aria-live="polite">
+        {toast}
+      </div>
+    </div>
   );
 }

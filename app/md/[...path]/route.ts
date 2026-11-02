@@ -1,6 +1,6 @@
 import { estimateTokens, AEO_SPEC_VERSION } from "@dualmark/core";
 import { renderMarkdown } from "@/lib/markdown";
-import { SITE_URL } from "@/lib/seo";
+import { SITE_URL } from "@/lib/site";
 
 // Markdown twins (Dualmark / AEO spec v1.0). proxy.ts rewrites
 // /about.md, /index.md, and AI-agent requests here as /md/about, /md/index.
@@ -44,6 +44,8 @@ export async function GET(
       404
     );
   }
-  const htmlPath = segments.join("/") === "index" ? "/" : `/${segments.join("/")}`;
+  const joined = segments.join("/");
+  // The markdown sitemap has no HTML page, so it gets no canonical link.
+  const htmlPath = joined === "index" ? "/" : joined === "sitemap" ? undefined : `/${joined}`;
   return markdown(body, 200, htmlPath);
 }

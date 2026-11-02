@@ -1,89 +1,21 @@
 import type { MetadataRoute } from "next";
-import { PAGES } from "@/lib/pages";
+import { CLUSTERS, home, sourceFile } from "@/content/pages";
 import { POSTS } from "@/lib/blog";
-import { SYMBOL_CATEGORIES } from "@/lib/symbols";
-import { NAME_CATEGORIES } from "@/lib/names";
-import { EMOTICON_CATEGORIES } from "@/lib/emoticons";
-
-const BASE = "https://www.oldenglishfontgenerator.com";
+import { lastModified } from "@/lib/lastmod";
+import { STATIC_SOURCES } from "@/lib/sitemap-files";
+import { SITE_URL } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date();
-  const staticUrls = [
-    { url: `${BASE}/`, priority: 1, changeFrequency: "weekly" as const },
-    { url: `${BASE}/es`, priority: 0.9, changeFrequency: "weekly" as const },
-    { url: `${BASE}/blog`, priority: 0.8, changeFrequency: "weekly" as const },
-    { url: `${BASE}/preppy`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/coquette`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/different-fonts`, priority: 0.7, changeFrequency: "monthly" as const },
-    { url: `${BASE}/symbols`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/es/font-generator`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/es/cool-symbols/hearts`, priority: 0.6, changeFrequency: "monthly" as const },
-    { url: `${BASE}/name-generator`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/emoticons`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/font-generator`, priority: 0.9, changeFrequency: "weekly" as const },
-    { url: `${BASE}/tools`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/about`, priority: 0.5, changeFrequency: "yearly" as const },
-    { url: `${BASE}/contact`, priority: 0.5, changeFrequency: "yearly" as const },
-    { url: `${BASE}/privacy`, priority: 0.4, changeFrequency: "yearly" as const },
-    { url: `${BASE}/terms`, priority: 0.4, changeFrequency: "yearly" as const },
-    { url: `${BASE}/auto-font-styler`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/font-mixer`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/username-generator`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/headcanon-generator`, priority: 0.7, changeFrequency: "monthly" as const },
-    { url: `${BASE}/story-generator`, priority: 0.7, changeFrequency: "monthly" as const },
-    { url: `${BASE}/uuid-generator`, priority: 0.6, changeFrequency: "monthly" as const },
-    { url: `${BASE}/ascii-generator`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/image-to-ascii`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/pig-latin-translator`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/case-converter`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/subscript-generator`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/binary-code-translator`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/stacked-text-generator`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/invisible-text-generator`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/morse-code-translator`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/medieval-translator`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/runic-translator`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/hieroglyphics-translator`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/cuneiform-translator`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/pirate-translator`, priority: 0.8, changeFrequency: "monthly" as const },
-    { url: `${BASE}/roman-numeral-converter`, priority: 0.8, changeFrequency: "monthly" as const },
+  const entry = (path: string, file: string, priority: number): MetadataRoute.Sitemap[number] => {
+    const lm = lastModified(file);
+    return { url: path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`, priority, ...(lm ? { lastModified: lm } : {}) };
+  };
+  const latestPost = [...POSTS].sort((a, b) => b.date.localeCompare(a.date))[0]?.date;
+  return [
+    entry("/", sourceFile(home), 1),
+    ...CLUSTERS.map((c) => entry(`/${c.slug}`, sourceFile(c), 0.8)),
+    { url: `${SITE_URL}/blog`, priority: 0.5, ...(latestPost ? { lastModified: latestPost } : {}) },
+    ...POSTS.map((p) => ({ url: `${SITE_URL}/blog/${p.slug}`, priority: 0.5, lastModified: p.date })),
+    ...STATIC_SOURCES.map((s) => entry(s.path, s.file, 0.3)),
   ];
-  const slugUrls = PAGES.map((p) => ({
-    url: `${BASE}/font-generator/${p.slug}`,
-    priority: 0.8,
-    changeFrequency: "monthly" as const,
-  }));
-  const blogUrls = POSTS.map((p) => ({
-    url: `${BASE}/blog/${p.slug}`,
-    priority: 0.7,
-    changeFrequency: "monthly" as const,
-    lastModified: new Date(p.date),
-  }));
-  const letterUrls = "abcdefghijklmnopqrstuvwxyz0123456789".split("").map((c) => ({
-    url: `${BASE}/different-fonts/${c}`,
-    priority: 0.6,
-    changeFrequency: "monthly" as const,
-  }));
-  const symbolUrls = SYMBOL_CATEGORIES.map((c) => ({
-    url: `${BASE}/symbols/${c.slug}`,
-    priority: 0.7,
-    changeFrequency: "monthly" as const,
-  }));
-  const nameUrls = NAME_CATEGORIES.map((c) => ({
-    url: `${BASE}/name-generator/${c.slug}`,
-    priority: 0.7,
-    changeFrequency: "monthly" as const,
-  }));
-  const esSlugUrls = ["cursive", "fancy", "bold", "instagram", "old-english"].map((s) => ({
-    url: `${BASE}/es/font-generator/${s}`,
-    priority: 0.7,
-    changeFrequency: "monthly" as const,
-  }));
-  const emoticonUrls = EMOTICON_CATEGORIES.map((c) => ({
-    url: `${BASE}/emoticons/${c.slug}`,
-    priority: 0.7,
-    changeFrequency: "monthly" as const,
-  }));
-  return [...staticUrls, ...slugUrls, ...blogUrls, ...letterUrls, ...symbolUrls, ...nameUrls, ...esSlugUrls, ...emoticonUrls].map((u) => ({ lastModified: now, ...u }));
 }

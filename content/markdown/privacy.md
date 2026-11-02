@@ -1,6 +1,6 @@
 # Privacy Policy
 
-> How Old English Font Generator handles your data: what we collect, how cookies and third-party advertising (including Google AdSense) work, analytics, and your privacy choices.
+> How Old English Font Generator handles your data: what we collect, how cookies and analytics work and your privacy choices.
 
 - **URL**: https://www.oldenglishfontgenerator.com/privacy
 
@@ -12,23 +12,23 @@ Last updated: June 17, 2026
 
 ## The short version
 
-The text you type into our tools is processed in your browser to generate styled output. We do not require an account, and we do not store the content you type on our servers. The site is free and supported by advertising, which means third-party partners such as Google may use cookies to show relevant ads, as described below.
+The text you type into our tools is processed in your browser to generate styled output. We do not require an account, and we do not store the content you type on our servers. The site is free and does not currently show advertising. If we add ads in future, the advertising section below applies.
 
 ## Information we collect
 
-- **Text you generate** — the words you type into a generator are converted within your browser. This content is not transmitted to us for storage and is not saved to your account (there are no accounts). Some tools may save preferences, such as favorites, locally in your browser.
+- **Text you generate** — the words you type into a generator are converted within your browser. This content is not transmitted to us for storage and is not saved to your account (there are no accounts).
 - **Usage and analytics data** — like most websites, we collect anonymous, aggregated usage information (such as which pages are visited and general device or browser type) to understand how the site is used and to improve it.
 - **Information you send us** — if you email us, we receive your email address and the contents of your message so we can reply.
 
 ## Cookies and local storage
 
-Cookies are small files stored on your device. We and our partners use cookies and similar technologies (including your browser's local storage) for a few purposes: to remember preferences like saved favorites, to measure traffic with analytics, and — through advertising partners — to help display relevant ads.
+Cookies are small files stored on your device. We and our partners use cookies and similar technologies (including your browser's local storage) for a few purposes: to measure traffic with analytics.
 
-You can control or delete cookies through your browser settings, and you can clear local storage at any time. Disabling cookies will not stop the core generators from working, but some conveniences (such as remembering favorites) may no longer persist.
+You can control or delete cookies through your browser settings, and you can clear local storage at any time. Disabling cookies will not stop the core generators from working, but some third-party features may behave differently.
 
 ## Advertising and Google AdSense
 
-This site uses third-party advertising to remain free, including Google AdSense. Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this and other websites.
+We do not show ads at the moment. If we enable third-party advertising such as Google AdSense, the following applies. Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this and other websites.
 
 - Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to this site and/or other sites on the internet.
 - You may opt out of personalized advertising by visiting [Google Ads Settings](https://www.google.com/settings/ads).

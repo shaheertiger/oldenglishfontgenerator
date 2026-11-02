@@ -7,12 +7,12 @@ const CONTACT_EMAIL = "hello@oldenglishfontgenerator.com";
 const LAST_UPDATED = "June 17, 2026";
 
 export const metadata: Metadata = {
-  title: "Terms of Service – Old English Font Generator",
+  title: { absolute: "Terms of Service | Old English Font Generator" },
   description:
-    "The terms that govern your use of Old English Font Generator: acceptable use, intellectual property, disclaimers, and limitations of liability for our free text tools.",
+    "Terms for using Old English Font Generator: acceptable use, intellectual property, disclaimers and limits of liability for our free tools.",
   alternates: { canonical: `${SITE_URL}/terms` },
   openGraph: {
-    title: "Terms of Service – Old English Font Generator",
+    title: "Terms of Service | Old English Font Generator",
     description:
       "The terms governing your use of our free, browser-based text tools.",
     url: `${SITE_URL}/terms`,
@@ -118,8 +118,8 @@ export default function TermsPage() {
           <div className="container">
             <h2>Advertising</h2>
             <p>
-              The site is free and supported by advertising, including Google
-              AdSense. Ads and any links within them are the responsibility of the
+              The site is free and does not currently show ads. If advertising
+              (such as Google AdSense) is added later, ads and any links within them will be the responsibility of the
               respective advertisers. For details on how advertising and cookies
               work, please review our <Link href="/privacy">Privacy Policy</Link>.
             </p>

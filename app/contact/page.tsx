@@ -6,12 +6,12 @@ const SITE_URL = "https://www.oldenglishfontgenerator.com";
 const CONTACT_EMAIL = "hello@oldenglishfontgenerator.com";
 
 export const metadata: Metadata = {
-  title: "Contact – Old English Font Generator",
+  title: { absolute: "Contact Us | Old English Font Generator" },
   description:
     "Get in touch with the Old English Font Generator team. Send feedback, report a bug, request a new tool, or ask about advertising and partnerships.",
   alternates: { canonical: `${SITE_URL}/contact` },
   openGraph: {
-    title: "Contact – Old English Font Generator",
+    title: "Contact Us | Old English Font Generator",
     description:
       "Send feedback, report a bug, request a new tool, or ask a question.",
     url: `${SITE_URL}/contact`,
@@ -122,8 +122,8 @@ export default function ContactPage() {
                 <Link href="/about">About page</Link>.
               </li>
               <li>
-                <strong>All tools</strong> — browse the full list on the{" "}
-                <Link href="/tools">Tools page</Link>.
+                <strong>The generator itself</strong> — start from the{" "}
+                <Link href="/">Old English font generator</Link>.
               </li>
               <li>
                 <strong>Guides &amp; tips</strong> — read the{" "}
