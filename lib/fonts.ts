@@ -211,8 +211,9 @@ function romanize(s: string) {
   });
 }
 
-const fr = toFraktur;
-const bfr = toBoldFraktur;
+// Unicode has no Fraktur digits; bold serif digits are the closest match.
+const fr = (s: string) => digits(BOLD_DIGITS)(toFraktur(s));
+const bfr = (s: string) => digits(BOLD_DIGITS)(toBoldFraktur(s));
 
 // ---------- style registry ----------
 
@@ -224,8 +225,8 @@ export type FontStyle = {
 
 const LIST: FontStyle[] = [
   // Core alphabets
-  { id: "fraktur", name: "Fraktur", transform: compose(fr, digits(BOLD_DIGITS)) },
-  { id: "bold-fraktur", name: "Bold Fraktur", transform: compose(bfr, digits(BOLD_DIGITS)) },
+  { id: "fraktur", name: "Fraktur", transform: fr },
+  { id: "bold-fraktur", name: "Bold Fraktur", transform: bfr },
   { id: "fraktur-small-caps", name: "Fraktur + Small Caps", transform: hybrid(FRAKTUR, SMALL_CAPS) },
   { id: "tattoo", name: "Old English Tattoo", transform: compose(bfr, spaced, wrap("꧁", "꧂")) },
   { id: "oe-cursive", name: "Old English Cursive", transform: hybrid(FRAKTUR, SCRIPT) },
@@ -314,7 +315,7 @@ const LIST: FontStyle[] = [
   // Numbers-focused
   { id: "roman-date", name: "Roman Numeral Date", transform: compose(romanize, bfr) },
   { id: "roman-date-light", name: "Roman Numerals (Light Fraktur)", transform: compose(romanize, fr) },
-  { id: "fraktur-outline-digits", name: "Fraktur + Outline Numbers", transform: compose(fr, digits(OUTLINE_DIGITS)) },
+  { id: "fraktur-outline-digits", name: "Fraktur + Outline Numbers", transform: compose(toFraktur, digits(OUTLINE_DIGITS)) },
 
   // Initials
   { id: "monogram", name: "Monogram Initials", transform: monogram(BOLD_FRAKTUR, " · ") },

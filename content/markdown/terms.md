@@ -1,6 +1,6 @@
 # Terms of Service
 
-> The terms that govern your use of Old English Font Generator: acceptable use, intellectual property, disclaimers, and limitations of liability for our free text tools.
+> Terms for using Old English Font Generator: acceptable use, intellectual property, disclaimers and limits of liability for our free tools.
 
 - **URL**: https://www.oldenglishfontgenerator.com/terms
 

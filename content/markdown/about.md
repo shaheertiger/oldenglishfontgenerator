@@ -1,51 +1,32 @@
 # About Old English Font Generator
 
-> Learn who builds Old English Font Generator, why the site exists, how our Unicode font tools work, and the principles behind keeping everything free, private, and browser-based.
+> Who runs Old English Font Generator, why it focuses only on blackletter, and how the Unicode mapping behind every style actually works.
 
 - **URL**: https://www.oldenglishfontgenerator.com/about
 
 ---
 
-Old English Font Generator is a free collection of browser-based text tools that turn ordinary keyboard text into blackletter, gothic, cursive, and dozens of other Unicode styles you can copy and paste anywhere — no app, no account, and no files to download.
+One independent developer builds and maintains this site. It does a single job: turning ordinary text into Old English, blackletter and gothic lettering you can paste anywhere, and explaining honestly what that text can and can't do.
 
-## Why we built this site
+## Why a site about only one style
 
-The project started with a simple frustration: there was no quick, clean way to make a name or caption look like old manuscript lettering without installing a font, opening a design app, or signing up for yet another service. Most "font generator" sites were buried in pop-ups and redirects, and many produced text that broke the moment you pasted it into Instagram or Discord.
+Most text generators throw dozens of unrelated styles onto one page. People looking for blackletter usually have a specific goal: a name for a tattoo consultation, a bio that fits Instagram's limit, a Discord display name, a heading for a certificate. Focusing on one family lets each page answer those questions properly, from the 32-character Discord limit to why Unicode has no blackletter digits.
 
-We set out to fix that. Every tool here runs entirely in your browser, produces standard Unicode characters, and is designed to be fast, readable, and genuinely useful — whether you are styling a social media bio, mocking up a tattoo, or just having fun with text.
+## How the Unicode mapping works
 
-## How our font tools actually work
+Nothing here installs a font. Unicode includes two complete blackletter alphabets meant for mathematics: Mathematical Fraktur (U+1D504–U+1D537) and Mathematical Bold Fraktur (U+1D56C–U+1D59F). When you type an A, the generator swaps it for U+1D504, 𝔄. Five regular capitals, ℭ ℌ ℑ ℜ ℨ, were encoded earlier in the Letterlike Symbols block, so the generator uses those.
 
-The styles you generate here are **not** real font files and they do not change the font on your device. Instead, the Unicode standard — the system that defines every character your computer can display — includes thousands of letter-like symbols: mathematical alphabets, blackletter (fraktur) letters, circled characters, full-width forms, and more.
+Accented letters are split into a base letter and a separate accent mark before conversion, which is how umlauts survive. Frames, crosses and underlines are extra symbols or combining marks placed around the converted letters. Because the result is ordinary text, it pastes into any app that accepts typing, but its exact look depends on the fonts installed on the reader's device.
 
-When you type a word, our tools map each ordinary letter to a similar-looking Unicode character. The result is still plain text, so it copies and pastes into almost any app that accepts typing — Instagram, TikTok, Discord, X (Twitter), YouTube, WhatsApp, messaging apps, and beyond. Because it is real text rather than an image, it stays selectable and searchable wherever you paste it.
+The image export on the [text to image](https://www.oldenglishfontgenerator.com/old-english-text-to-image) page and the [tattoo preview](https://www.oldenglishfontgenerator.com/old-english-tattoo-font) draw real blackletter typefaces, UnifrakturCook and UnifrakturMaguntia, published under the SIL Open Font License and hosted on this site.
 
-## What you will find here
+## How the site is run
 
-Beyond the core [font generators](https://www.oldenglishfontgenerator.com/font-generator), the site has grown into a broad set of text utilities, including:
+- Conversion happens in your browser. Text you type is not sent to our server.
+- The site is free and supported by advertising. There are no accounts or paid tiers.
+- We use analytics to see which pages are useful. See the [privacy policy](https://www.oldenglishfontgenerator.com/privacy) for details.
+- We don't publish ratings or reviews we haven't collected, and we correct mistakes when they're pointed out.
 
-- **Font & style generators** — Old English, gothic, blackletter, cursive, bold, italic, bubble, and many more.
-- **Text converters** — case converter, binary and Morse code translators, subscript and superscript, and invisible text.
-- **Creative & fantasy tools** — runic, hieroglyphic, cuneiform, medieval, and pirate translators, plus name and username generators.
-- **ASCII art** — turn text or images into ASCII.
-- **Reference & reading** — a growing [blog](https://www.oldenglishfontgenerator.com/blog) covering typography, Unicode, and how to use styled text well.
+## Contact
 
-You can browse everything from the [all tools](https://www.oldenglishfontgenerator.com/tools) page.
-
-## Our principles
-
-### Free and open
-
-Every tool is free to use with no sign-up. We support the site with unobtrusive advertising rather than paywalls.
-
-### Private by design
-
-Text you type is processed in your browser. We do not store the content you generate or require an account to use it.
-
-### Genuinely useful
-
-We write our own guides, keep the output compatible across apps, and improve tools based on how people actually use them.
-
-## Get in touch
-
-Questions, feedback, bug reports, or ideas for new tools are always welcome. Visit our [contact page](https://www.oldenglishfontgenerator.com/contact) or email us directly at [hello@oldenglishfontgenerator.com](mailto:hello@oldenglishfontgenerator.com). You can also read our [Privacy Policy](https://www.oldenglishfontgenerator.com/privacy) and [Terms of Service](https://www.oldenglishfontgenerator.com/terms) to learn how the site operates.
+Email [hello@oldenglishfontgenerator.com](mailto:hello@oldenglishfontgenerator.com) or use the [contact page](https://www.oldenglishfontgenerator.com/contact).

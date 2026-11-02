@@ -25,5 +25,5 @@ Send any message to [**hello@oldenglishfontgenerator.com**](mailto:hello@oldengl
 You might find a quick answer in one of these places before reaching out:
 
 - **How the tools work** — see our [About page](https://www.oldenglishfontgenerator.com/about).
-- **All tools** — browse the full list on the [Tools page](https://www.oldenglishfontgenerator.com/tools).
+- **The generator itself** — start from the [Old English font generator](https://www.oldenglishfontgenerator.com/).
 - **Guides & tips** — read the [blog](https://www.oldenglishfontgenerator.com/blog).
