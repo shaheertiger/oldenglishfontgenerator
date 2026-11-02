@@ -44,7 +44,7 @@ for (const url of urls) {
     links: links.length,
     schema: types.join("+"),
     frakturChars: frak,
-    canonicalOk: canonical === url.replace(BASE, SITE) || (canonical === `${SITE}/` && url === `${BASE}/`),
+    canonicalOk: canonical === url.replace(BASE, SITE) || ((canonical === `${SITE}/` || canonical === SITE) && url === `${BASE}/`),
     title,
     desc,
   });

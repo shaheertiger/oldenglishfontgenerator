@@ -118,8 +118,8 @@ export default function TermsPage() {
           <div className="container">
             <h2>Advertising</h2>
             <p>
-              The site is free and supported by advertising, including Google
-              AdSense. Ads and any links within them are the responsibility of the
+              The site is free and does not currently show ads. If advertising
+              (such as Google AdSense) is added later, ads and any links within them will be the responsibility of the
               respective advertisers. For details on how advertising and cookies
               work, please review our <Link href="/privacy">Privacy Policy</Link>.
             </p>

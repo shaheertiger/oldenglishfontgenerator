@@ -5,6 +5,8 @@ import { REDIRECTS } from "./lib/redirects.mjs";
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // Inline the (small) global stylesheet so first paint needs no extra request.
+  experimental: { inlineCss: true },
   // No trailing slashes: /page/ -> /page (Next.js default, kept explicit).
   trailingSlash: false,
   outputFileTracingIncludes: {

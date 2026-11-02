@@ -33,13 +33,6 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2963693328827195"
-          crossOrigin="anonymous"
-        />
-      </head>
       <body>
         {children}
         <Analytics />

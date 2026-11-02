@@ -9,7 +9,7 @@ const LAST_UPDATED = "June 17, 2026";
 export const metadata: Metadata = {
   title: { absolute: "Privacy Policy | Old English Font Generator" },
   description:
-    "How Old English Font Generator handles your data: what we collect, how cookies, analytics and Google AdSense work, and your privacy choices.",
+    "How Old English Font Generator handles your data: what we collect, how cookies and analytics work, and your privacy choices.",
   alternates: { canonical: `${SITE_URL}/privacy` },
   openGraph: {
     title: "Privacy Policy | Old English Font Generator",
@@ -59,9 +59,8 @@ export default function PrivacyPage() {
             <p>
               The text you type into our tools is processed in your browser to
               generate styled output. We do not require an account, and we do not
-              store the content you type on our servers. The site is free and
-              supported by advertising, which means third-party partners such as
-              Google may use cookies to show relevant ads, as described below.
+              store the content you type on our servers. The site is free and does not currently show
+              advertising. If we add ads in future, the advertising section below applies.
             </p>
           </div>
         </section>
@@ -97,8 +96,7 @@ export default function PrivacyPage() {
             <p>
               Cookies are small files stored on your device. We and our partners
               use cookies and similar technologies (including your browser&apos;s
-              local storage) for a few purposes: to measure traffic with analytics, and — through
-              advertising partners — to help display relevant ads.
+              local storage) for a few purposes: to measure traffic with analytics.
             </p>
             <p>
               You can control or delete cookies through your browser settings, and
@@ -113,8 +111,8 @@ export default function PrivacyPage() {
           <div className="container">
             <h2>Advertising and Google AdSense</h2>
             <p>
-              This site uses third-party advertising to remain free, including
-              Google AdSense. Third-party vendors, including Google, use cookies
+              We do not show ads at the moment. If we enable third-party
+              advertising such as Google AdSense, the following applies. Third-party vendors, including Google, use cookies
               to serve ads based on a user&apos;s prior visits to this and other
               websites.
             </p>

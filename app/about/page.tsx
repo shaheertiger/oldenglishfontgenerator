@@ -87,7 +87,7 @@ export default function AboutPage() {
             <h2>How the site is run</h2>
             <ul>
               <li>Conversion happens in your browser. Text you type is not sent to our server.</li>
-              <li>The site is free and supported by advertising. There are no accounts or paid tiers.</li>
+              <li>The site is free. There are no accounts, paid tiers or ads.</li>
               <li>We use analytics to see which pages are useful. See the <Link href="/privacy">privacy policy</Link> for details.</li>
               <li>We don&apos;t publish ratings or reviews we haven&apos;t collected, and we correct mistakes when they&apos;re pointed out.</li>
             </ul>

@@ -30,7 +30,7 @@ The Unicode characters our tools output are part of the public Unicode standard 
 
 ## Advertising
 
-The site is free and supported by advertising, including Google AdSense. Ads and any links within them are the responsibility of the respective advertisers. For details on how advertising and cookies work, please review our [Privacy Policy](https://www.oldenglishfontgenerator.com/privacy).
+The site is free and does not currently show ads. If advertising (such as Google AdSense) is added later, ads and any links within them will be the responsibility of the respective advertisers. For details on how advertising and cookies work, please review our [Privacy Policy](https://www.oldenglishfontgenerator.com/privacy).
 
 ## Disclaimer of warranties
 

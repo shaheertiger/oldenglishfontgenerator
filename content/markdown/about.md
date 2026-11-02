@@ -23,7 +23,7 @@ The image export on the [text to image](https://www.oldenglishfontgenerator.com/
 ## How the site is run
 
 - Conversion happens in your browser. Text you type is not sent to our server.
-- The site is free and supported by advertising. There are no accounts or paid tiers.
+- The site is free. There are no accounts, paid tiers or ads.
 - We use analytics to see which pages are useful. See the [privacy policy](https://www.oldenglishfontgenerator.com/privacy) for details.
 - We don't publish ratings or reviews we haven't collected, and we correct mistakes when they're pointed out.
 
