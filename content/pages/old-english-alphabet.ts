@@ -30,6 +30,13 @@ const page: PageContent = {
       blocks: [{ widget: "alphabet-full" }],
     },
     {
+      h2: "A page for every letter",
+      blocks: [
+        { p: "Each letter has its own page showing it in eight copy-paste styles and six real blackletter fonts, with notes on how it is built and which letters it gets confused with." },
+        { widget: "letter-index" },
+      ],
+    },
+    {
       h2: "Letters that trip people up",
       blocks: [
         { p: "Blackletter capitals were designed for scribes, not for modern readers, and a few of them are easy to confuse:" },

@@ -15,7 +15,9 @@ export type Widget =
   | "letters"
   | "numbers"
   | "tattoo-preview"
-  | "image-export";
+  | "image-export"
+  | "symbols"
+  | "letter-index";
 
 export type Section = { h2: string; blocks: Block[] };
 

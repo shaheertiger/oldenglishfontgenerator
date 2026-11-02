@@ -10,6 +10,8 @@ import type { Block, PageContent, Widget } from "@/content/pages/types";
 import { ALL_STYLES, ALPHABET_LOWER, ALPHABET_UPPER } from "@/lib/fonts";
 import { appLd, breadcrumbLd, faqLd, orgLd, websiteLd, abs } from "@/lib/seo";
 import { toolLinks } from "@/lib/site";
+import { LETTERS } from "@/lib/letters";
+import { SYMBOL_GROUPS } from "@/lib/symbols";
 
 export function pagePath(p: PageContent) {
   return p.slug ? `/${p.slug}` : "/";
@@ -91,10 +93,31 @@ function renderWidget(w: Widget, p: PageContent) {
       return <ImageExport mode="tattoo" defaultText={p.tool.sample} />;
     case "image-export":
       return <ImageExport mode="plain" defaultText={p.tool.sample} />;
+    case "symbols":
+      return (
+        <CharGrid
+          groups={SYMBOL_GROUPS.map((g) => ({
+            label: g.label,
+            cells: g.items.map(([glyph, name]) => ({ glyph, hint: name })),
+          }))}
+        />
+      );
+    case "letter-index":
+      return (
+        <ul className="letter-nav">
+          {LETTERS.map((x) => (
+            <li key={x.l}>
+              <Link href={`/old-english-alphabet/${x.l}`} aria-label={`Old English letter ${x.l.toUpperCase()}`}>
+                {x.l.toUpperCase()}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      );
   }
 }
 
-function renderBlock(b: Block, i: number, p: PageContent) {
+export function renderBlock(b: Block, i: number, p?: PageContent) {
   if ("p" in b) return <p key={i}><RichText text={b.p} /></p>;
   if ("ul" in b)
     return (
@@ -134,7 +157,7 @@ function renderBlock(b: Block, i: number, p: PageContent) {
         ))}
       </div>
     );
-  return <div key={i}>{renderWidget(b.widget, p)}</div>;
+  return p ? <div key={i}>{renderWidget(b.widget, p)}</div> : null;
 }
 
 export default function PageView({ page, home = false }: { page: PageContent; home?: boolean }) {

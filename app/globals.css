@@ -313,3 +313,19 @@ table.compare { border-collapse: collapse; width: 100%; font-size: 15px; }
   .letter-grid button { border-color: #999; }
 }
 .tool-h { font-size: 13px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--muted); margin: 22px 0 0; font-weight: 700; }
+
+/* Font directory */
+.font-cards { list-style: none; padding: 0; margin: 14px 0 0; display: grid; gap: 12px; }
+.font-cards.compact { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.font-card { border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 16px; }
+.font-preview { font-size: 34px; line-height: 1.25; height: 2.6em; overflow: hidden; word-break: break-word; }
+.font-cards.compact .font-preview { font-size: 40px; height: 1.4em; text-align: center; }
+.font-cards.compact .font-meta { text-align: center; font-size: 12px; }
+.font-meta { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; margin-top: 6px; font-size: 14px; }
+.font-meta span { color: var(--muted); font-size: 13px; }
+.font-blurb { margin: 6px 0; font-size: 15px; }
+.font-dl { font-size: 14px; font-weight: 600; }
+.letter-nav { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; }
+.letter-nav a { display: inline-block; min-width: 36px; text-align: center; padding: 6px 8px; border: 1px solid var(--border); border-radius: 8px; text-decoration: none; font-weight: 600; }
+.letter-nav a[aria-current="page"] { background: var(--text); color: #fff; border-color: var(--text); }
+.prevnext { display: flex; justify-content: space-between; gap: 12px; margin-top: 18px; }
