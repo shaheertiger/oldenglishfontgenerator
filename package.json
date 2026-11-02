@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "indexnow": "node scripts/indexnow.mjs"
+    "indexnow": "node scripts/indexnow.mjs",
+    "lastmod": "node scripts/lastmod.mjs",
+    "audit": "node scripts/audit.mjs"
   },
   "dependencies": {
     "@dualmark/converters": "^0.11.0",
@@ -22,6 +24,7 @@
     "@types/node": "^22",
     "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
+    "schema-dts": "^1.1.5",
     "typescript": "^5"
   }
 }

@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
-import { PAGES } from "@/lib/pages";
 
 export const metadata = {
   title: "Page not found",
@@ -13,30 +12,12 @@ export default function NotFound() {
       <SiteHeader />
       <main>
         <section className="hero container">
-          <h1>404 — Page not found</h1>
+          <h1>Page not found</h1>
           <p>
-            That URL doesn&rsquo;t exist (anymore). Try one of the font
-            generators below, or head back to the{" "}
-            <Link href="/">homepage</Link>.
+            That page doesn&rsquo;t exist. The{" "}
+            <Link href="/">Old English font generator</Link> has every blackletter
+            style in one place, and the tools are listed at the bottom of this page.
           </p>
-        </section>
-        <section className="section">
-          <div className="container">
-            <h2>Popular generators</h2>
-            <div className="features">
-              {PAGES.slice(0, 9).map((p) => (
-                <Link
-                  key={p.slug}
-                  href={`/font-generator/${p.slug}`}
-                  className="feature"
-                  style={{ textDecoration: "none" }}
-                >
-                  <h3>{p.h1}</h3>
-                  <p>{p.description}</p>
-                </Link>
-              ))}
-            </div>
-          </div>
         </section>
       </main>
       <SiteFooter />
