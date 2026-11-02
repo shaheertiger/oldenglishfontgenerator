@@ -35,6 +35,7 @@ ${posts}
 
 ## Markdown versions
 Every page has a markdown version at the same URL plus \`.md\` (the homepage is ${SITE_URL}/index.md).
+- [Markdown sitemap](${SITE_URL}/sitemap.md)
 `;
 
   return new Response(body, {

@@ -40,10 +40,12 @@ export async function GET(
   const body = await renderMarkdown(segments.length ? segments : ["index"]);
   if (body === null) {
     return markdown(
-      `# Not found\n\nThere is no markdown version of this page. See ${SITE_URL}/llms.txt for every page.\n`,
+      `# Not found\n\nThere is no markdown version of this page. See ${SITE_URL}/sitemap.md for every page.\n`,
       404
     );
   }
-  const htmlPath = segments.join("/") === "index" ? "/" : `/${segments.join("/")}`;
+  const joined = segments.join("/");
+  // The markdown sitemap has no HTML page, so it gets no canonical link.
+  const htmlPath = joined === "index" ? "/" : joined === "sitemap" ? undefined : `/${joined}`;
   return markdown(body, 200, htmlPath);
 }

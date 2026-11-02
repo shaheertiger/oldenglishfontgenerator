@@ -153,6 +153,25 @@ async function readStatic(segments: string[]): Promise<string | null> {
  * (["index"] for the homepage, ["old-english-alphabet"], ["blog", "slug"], ...).
  * Returns null when the page has no twin.
  */
+function sitemapMd(): string {
+  return join(
+    header("Sitemap", "Every page on Old English Font Generator, with links to its markdown version.", "/sitemap.md"),
+    `## Tools\n\n${[home, ...CLUSTERS]
+      .map((p) => {
+        const path = p.slug ? `/${p.slug}` : "/";
+        const md = p.slug ? `/${p.slug}.md` : "/index.md";
+        return `- [${p.h1}](${SITE_URL}${path}) ([markdown](${SITE_URL}${md})): ${p.description}`;
+      })
+      .join("\n")}\n`,
+    `## Articles\n\n- [Blog](${SITE_URL}/blog) ([markdown](${SITE_URL}/blog.md))\n${POSTS.map(
+      (p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}) ([markdown](${SITE_URL}/blog/${p.slug}.md))`
+    ).join("\n")}\n`,
+    `## About this site\n\n${["about", "contact", "privacy", "terms"]
+      .map((s) => `- [${s[0].toUpperCase() + s.slice(1)}](${SITE_URL}/${s}) ([markdown](${SITE_URL}/${s}.md))`)
+      .join("\n")}\n`
+  );
+}
+
 export async function renderMarkdown(segments: string[]): Promise<string | null> {
   const [first, second, ...rest] = segments;
   if (rest.length === 0) {
@@ -161,6 +180,7 @@ export async function renderMarkdown(segments: string[]): Promise<string | null>
     } else {
       if (first === "index") return toolPage(home);
       if (first === "blog") return blogIndex();
+      if (first === "sitemap") return sitemapMd();
       const c = getCluster(first);
       if (c) return toolPage(c);
     }
