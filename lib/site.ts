@@ -21,6 +21,9 @@ export const TOOL_LINKS: ToolLink[] = [
   { href: "/medieval-font-generator", label: "Medieval Font Generator", blurb: "Manuscript-style text with thorns, long s and fleurons." },
   { href: "/old-english-font-instagram", label: "Old English Font for Instagram", blurb: "Bio templates that fit the 150-character limit." },
   { href: "/old-english-font-discord", label: "Old English Discord Names", blurb: "Display names and nicknames that fit 32 characters." },
+  { href: "/fonts/old-english", label: "Old English Fonts (Free)", blurb: "Ten free, open-licence blackletter fonts to download, with live preview." },
+  { href: "/gothic-symbols", label: "Gothic Symbols", blurb: "Crosses, daggers, skulls and manuscript ornaments to copy." },
+  { href: "/how-to-write-old-english", label: "How to Write Old English", blurb: "A beginner's guide to blackletter by hand." },
   { href: "/old-english-text-to-image", label: "Old English Text to Image", blurb: "Export real blackletter type as PNG or SVG." },
 ];
 

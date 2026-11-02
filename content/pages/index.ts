@@ -14,12 +14,14 @@ import medieval from "./medieval-font-generator";
 import instagram from "./old-english-font-instagram";
 import discord from "./old-english-font-discord";
 import image from "./old-english-text-to-image";
+import symbols from "./gothic-symbols";
+import howto from "./how-to-write-old-english";
 
 export { home };
 
 export const CLUSTERS: PageContent[] = [
   tattoo, alphabet, letters, numbers, cursive, gothic, blackletter, fraktur,
-  chicano, names, medieval, instagram, discord, image,
+  chicano, names, medieval, instagram, discord, image, symbols, howto,
 ];
 
 export function getCluster(slug: string): PageContent | undefined {

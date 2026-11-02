@@ -7,6 +7,8 @@ import { readdirSync, writeFileSync } from "node:fs";
 
 const files = [
   ...readdirSync("content/pages").filter((f) => f.endsWith(".ts") && !["types.ts", "index.ts"].includes(f)).map((f) => `content/pages/${f}`),
+  "lib/letters.ts",
+  "lib/fontpages.ts",
   "app/about/page.tsx",
   "app/contact/page.tsx",
   "app/privacy/page.tsx",
