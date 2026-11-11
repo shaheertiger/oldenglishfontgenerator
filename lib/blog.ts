@@ -1,3 +1,5 @@
+import { BLOG_FILES } from "@/content/blog";
+
 export type BlogBlock =
   | { type: "p"; text: string }
   | { type: "h2"; text: string }
@@ -6,7 +8,9 @@ export type BlogBlock =
   | { type: "ol"; items: string[] }
   | { type: "quote"; text: string }
   | { type: "cta"; text: string; href: string; label: string }
-  | { type: "links"; heading?: string; items: { label: string; href: string }[] };
+  | { type: "links"; heading?: string; items: { label: string; href: string }[] }
+  | { type: "table"; head: string[]; rows: string[][] }
+  | { type: "faq"; items: { q: string; a: string }[] };
 
 export type BlogPost = {
   slug: string;
@@ -16,9 +20,11 @@ export type BlogPost = {
   readingTime: string;
   excerpt: string;
   body: BlogBlock[];
+  /** Slugs of the most related posts (falls back to the newest others). */
+  related?: string[];
 };
 
-export const POSTS: BlogPost[] = [
+const CORE_POSTS: BlogPost[] = [
   {
     slug: "blackletter-gothic-fraktur-difference",
     title: "Blackletter, Gothic, or Fraktur — What's the Difference?",
@@ -191,6 +197,14 @@ export const POSTS: BlogPost[] = [
     ],
   },
 ];
+
+export const POSTS: BlogPost[] = [...CORE_POSTS, ...BLOG_FILES];
+
+export function relatedPosts(post: BlogPost, n = 3): BlogPost[] {
+  const picked = (post.related ?? []).map((s) => POSTS.find((p) => p.slug === s)).filter((p): p is BlogPost => Boolean(p));
+  const rest = [...POSTS].filter((p) => p.slug !== post.slug && !picked.includes(p)).sort((a, b) => b.date.localeCompare(a.date));
+  return [...picked, ...rest].slice(0, n);
+}
 
 export function getPost(slug: string): BlogPost | undefined {
   return POSTS.find((p) => p.slug === slug);

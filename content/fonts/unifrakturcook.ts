@@ -4,7 +4,7 @@ const page: FontPage = {
   style: "unifrakturcook",
   title: "UnifrakturCook Font — Free Bold Fraktur, 271 Glyphs, Long s",
   description:
-    "UnifrakturCook font: a free, heavy Fraktur under the SIL Open Font License, with 271 glyphs, the long s and umlauts. Preview your text and compare 5 similar fonts.",
+    "UnifrakturCook font: a free, heavy Fraktur under the SIL Open Font License, with 271 glyphs, the long s and umlauts. Preview it beside 5 similar fonts.",
   h1: "UnifrakturCook Font",
   crumb: "UnifrakturCook",
   intro:

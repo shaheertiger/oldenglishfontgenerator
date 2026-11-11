@@ -10,7 +10,7 @@
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import { POSTS, getPost, type BlogBlock } from "@/lib/blog";
+import { POSTS, getPost, relatedPosts, type BlogBlock } from "@/lib/blog";
 import { ALL_STYLES, ALPHABET_LOWER, ALPHABET_UPPER } from "@/lib/fonts";
 import { SITE_URL } from "@/lib/site";
 import { toolLinks } from "@/lib/site";
@@ -126,6 +126,8 @@ function blogBlock(b: BlogBlock): string {
     case "ol": return `${b.items.map((i, n) => `${n + 1}. ${abs(i)}`).join("\n")}\n`;
     case "quote": return `> ${abs(b.text)}\n`;
     case "cta": return `${b.text} [${b.label} →](${b.href.startsWith("/") ? SITE_URL + b.href : b.href})\n`;
+    case "table": return block({ table: { head: b.head, rows: b.rows } });
+    case "faq": return `## Frequently Asked Questions\n\n${b.items.map((f) => `### ${f.q}\n\n${abs(f.a)}`).join("\n\n")}\n`;
     case "links":
       return `${b.heading ? `### ${b.heading}\n\n` : ""}${b.items
         .map((i) => `- [${i.label}](${i.href.startsWith("/") ? SITE_URL + i.href : i.href})`)
@@ -136,7 +138,7 @@ function blogBlock(b: BlogBlock): string {
 function blogPost(slug: string): string | null {
   const post = getPost(slug);
   if (!post) return null;
-  const related = POSTS.filter((p) => p.slug !== post.slug).slice(0, 3);
+  const related = relatedPosts(post);
   return join(
     header(post.title, post.description, `/blog/${post.slug}`),
     `- **Published**: ${post.date}\n- **Reading time**: ${post.readingTime}\n`,

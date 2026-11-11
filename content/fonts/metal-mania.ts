@@ -8,7 +8,7 @@ const page: FontPage = {
   h1: "Metal Mania Font",
   crumb: "Metal Mania",
   intro:
-    "Metal Mania is a free display font by Open Window, on Google Fonts since July 2012, with spiked terminals in the style of heavy metal band logos. It has one weight, and our measurement of the file counts 268 glyphs, covering Western European accents and ß but not the long s or Central European letters. It's under the SIL Open Font License, so you can print it on merch you sell.",
+    "Metal Mania is a free display font by Open Window, on Google Fonts since July 2012, with spiked terminals in the style of heavy metal band logos. It has one weight, and our measurement of the file counts 268 glyphs, covering Western European accents and ß but not the long s or Czech and Hungarian letters such as č, ě and ő. It's under the SIL Open Font License, so you can print it on merch you sell.",
   sample: "Iron Requiem",
   fonts: ["Metal Mania", "New Rocker", "UnifrakturCook", "Manufacturing Consent", "Pirata One", "Germania One"],
   notes: {
@@ -46,7 +46,7 @@ const page: FontPage = {
     { q: "Is Metal Mania free for band merch?", a: "Yes. The SIL Open Font License allows commercial use, so shirts, posters and album covers are fine. You can't sell the font file itself." },
     { q: "What font is the Metallica logo?", a: "None you can install. It's a custom drawn logo and a trademark. Metal Mania gives a general heavy metal feel without copying it." },
     { q: "Does Metal Mania have lowercase letters?", a: "Yes, it includes a full lowercase, but it looks most like a band logo in capitals or with a capital first letter." },
-    { q: "Does Metal Mania support accented letters?", a: "Western European accents, umlauts and ß, yes. Our check found no long s and no Central European letters such as ł or ř." },
+    { q: "Does Metal Mania support accented letters?", a: "Western European accents, umlauts and ß, yes. Our check found no long s, and it lacks letters such as č, ě, ň and ő, though it does draw ł, ř, š and ž." },
   ],
 };
 

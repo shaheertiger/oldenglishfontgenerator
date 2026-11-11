@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
-import { POSTS, getPost, type BlogBlock } from "@/lib/blog";
+import { POSTS, getPost, relatedPosts, type BlogBlock } from "@/lib/blog";
+import { faqLd } from "@/lib/seo";
 import RichText from "@/components/RichText";
 
 const SITE_URL = "https://www.oldenglishfontgenerator.com";
@@ -52,6 +53,28 @@ function renderBlock(b: BlogBlock, i: number) {
         <Link href={b.href}>{b.label} →</Link>
       </p>
     );
+    case "table": return (
+      <div className="table-wrap" key={i}>
+        <table className="compare">
+          <thead><tr>{b.head.map((h) => <th key={h} scope="col">{h}</th>)}</tr></thead>
+          <tbody>
+            {b.rows.map((r, j) => (
+              <tr key={j}>{r.map((c, k) => <td key={k}><RichText text={c} /></td>)}</tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
+    case "faq": return (
+      <div key={i} className="faq">
+        {b.items.map((f) => (
+          <div className="faq-item" key={f.q}>
+            <h3>{f.q}</h3>
+            <p><RichText text={f.a} /></p>
+          </div>
+        ))}
+      </div>
+    );
     case "links": return (
       <div key={i} className="blog-links">
         {b.heading && <h3>{b.heading}</h3>}
@@ -70,7 +93,8 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
   const post = getPost(slug);
   if (!post) notFound();
 
-  const related = POSTS.filter((p) => p.slug !== post.slug).slice(0, 3);
+  const related = relatedPosts(post);
+  const faqItems = post.body.flatMap((b) => (b.type === "faq" ? b.items : []));
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -80,7 +104,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
     datePublished: post.date,
     dateModified: post.date,
     mainEntityOfPage: `${SITE_URL}/blog/${post.slug}`,
-    author: { "@type": "Organization", name: "Old English Font Generator" },
+    author: { "@type": "Organization", name: "Old English Font Generator", url: `${SITE_URL}/about` },
     publisher: {
       "@type": "Organization",
       name: "Old English Font Generator",
@@ -130,7 +154,7 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
 
         <section className="section">
           <div className="container">
-                        <h2>More articles</h2>
+            <h2>More articles</h2>
             <ul>
               {related.map((r) => (
                 <li key={r.slug}>
@@ -150,6 +174,9 @@ export default async function BlogPostPage({ params }: { params: Promise<Params>
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      {faqItems.length > 0 && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd(faqItems)) }} />
+      )}
     </>
   );
 }

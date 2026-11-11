@@ -2,9 +2,9 @@ import type { FontPage } from "@/lib/fontpages";
 
 const page: FontPage = {
   style: "old-london",
-  title: "Old London Font — Freeware Blackletter + 5 Open-Licence Matches",
+  title: "Old London Font — Freeware Blackletter + 5 Free Matches",
   description:
-    "Old London font explained: the freeware blackletter by Dieter Steffmann, what its licence means for commercial use, and 5 open-licence fonts that look similar.",
+    "Old London font explained: the freeware blackletter by Dieter Steffmann, what its licence means for commercial use, and 5 similar open-licence fonts.",
   h1: "Old London Font",
   crumb: "Old London",
   intro:

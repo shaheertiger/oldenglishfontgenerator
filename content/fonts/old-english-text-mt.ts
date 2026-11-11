@@ -2,9 +2,9 @@ import type { FontPage } from "@/lib/fontpages";
 
 const page: FontPage = {
   style: "old-english-text-mt",
-  title: "Old English Text MT Font — Where to Get It + 6 Free Lookalikes",
+  title: "Old English Text MT Font — How to Get It + 6 Free Matches",
   description:
-    "Old English Text MT font: who makes it, how to get it legally with Microsoft Office, what its licence allows, and 6 free open-licence lookalikes to preview.",
+    "Old English Text MT font: who makes it, how to get it legally with Microsoft Office, what its licence allows, and 6 free open-licence lookalikes.",
   h1: "Old English Text MT Font",
   crumb: "Old English Text MT",
   intro:

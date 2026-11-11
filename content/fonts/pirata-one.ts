@@ -4,7 +4,7 @@ const page: FontPage = {
   style: "pirata-one",
   title: "Pirata One Font — Free Readable Blackletter, 386 Glyphs",
   description:
-    "Pirata One font: a free modern blackletter that stays readable in full sentences, with 386 glyphs and Central European letters. Preview it and 5 similar fonts.",
+    "Pirata One font: a free modern blackletter that stays readable in full sentences, with 386 glyphs and Central European letters. Compare 5 similar fonts.",
   h1: "Pirata One Font",
   crumb: "Pirata One",
   intro:

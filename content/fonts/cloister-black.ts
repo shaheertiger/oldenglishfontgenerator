@@ -4,7 +4,7 @@ const page: FontPage = {
   style: "cloister-black",
   title: "Cloister Black Font — 1904 ATF Blackletter & 5 Free Matches",
   description:
-    "Cloister Black font: the 1904 American Type Founders blackletter, how it differs from Cloister Old Style, and a preview of your text in 5 free lookalike fonts.",
+    "Cloister Black font: the 1904 American Type Founders blackletter, how it differs from Cloister Old Style, and your text in 5 free lookalike fonts.",
   h1: "Cloister Black Font",
   crumb: "Cloister Black",
   intro:
