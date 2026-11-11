@@ -5,7 +5,7 @@ Saved Semrush exports and the map of which keywords each page targets, so new pa
 | File | What it is |
 |---|---|
 | `semrush/*.csv` | Raw Semrush keyword exports (Keyword, Intent, Volume, Keyword Difficulty, CPC, SERP Features). Add new exports here; name them with the date so newer files win. |
-| `targeted.json` | Page → regexes of the keywords it already targets. First match wins, so specific pages sit above broad ones. |
+| `targeted.json` | `pages`: page → regexes of the keywords it already targets (first match wins, so specific pages sit above broad ones). `skip`: regexes never to suggest again. |
 | `backlog.csv` | Generated. Every on-topic keyword with its cluster, status (`targeted` / `backlog`) and page. Open it in a spreadsheet. |
 | `daily/<date>.md` | Generated with `--save`. That day's picks. |
 
@@ -22,6 +22,12 @@ npm run keywords -- --save
 
 ```bash
 npm run keywords -- --use /new-page "keyword one" "keyword (two|2)"
+```
+
+5. Hide picks that don't fit (branded commercial fonts, off-topic meanings) so they never come back:
+
+```bash
+npm run keywords -- --skip "sign painter" "christian dior"
 ```
 
 Options: `--limit 25`, `--min-volume 100`, `--max-kd 20`.

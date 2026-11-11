@@ -39,6 +39,10 @@ export const TOOL_LINKS: ToolLink[] = [
   { group: "theme", href: "/illuminated-letters", label: "Illuminated Letters", blurb: "Medieval drop caps and decorated initials to copy or export." },
   { group: "theme", href: "/bold-fraktur", label: "Bold Fraktur Alphabet", blurb: "All 52 Bold Fraktur letters with code points, ready to copy." },
   { group: "theme", href: "/old-english-font-tiktok", label: "Old English Font for TikTok", blurb: "Names and bios that fit TikTok's 30- and 80-character limits." },
+  { group: "theme", href: "/old-english-font-snapchat", label: "Old English Font for Snapchat", blurb: "Gothic display names and captions, and why your @username can't use them." },
+  { group: "theme", href: "/old-english-font-youtube", label: "Old English Font for YouTube", blurb: "Blackletter channel names, video titles and comments that paste cleanly." },
+  { group: "theme", href: "/old-english-font-roblox", label: "Old English Font for Roblox", blurb: "Where gothic text works on Roblox, where the filter blocks it, and what to use instead." },
+  { group: "theme", href: "/viking-font-generator", label: "Viking Font Generator", blurb: "Elder Futhark, Viking-age and Anglo-Saxon runes, plus Norse-style blackletter." },
   { group: "theme", href: "/old-english-font-facebook", label: "Old English Font for Facebook", blurb: "Gothic text for posts, comments and your intro, and where Facebook blocks it." },
 ];
 

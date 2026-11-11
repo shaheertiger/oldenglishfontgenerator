@@ -327,6 +327,43 @@ const LIST: FontStyle[] = [
   { id: "monogram-ampersand", name: "Couple Monogram", transform: monogram(FRAKTUR, " & ") },
 ];
 
+// ---------- runes (Viking / Anglo-Saxon pages) ----------
+// Letter-by-letter transliteration into Unicode Runic (U+16A0–U+16FF). Real
+// runic spelling followed sounds, not English spelling, so this is an
+// approximation; digraphs (th, ng, ...) are handled first.
+type RuneRow = { digraphs: [string, string][]; map: Record<string, string> };
+const ELDER: RuneRow = {
+  digraphs: [["th", "ᚦ"], ["ng", "ᛜ"]],
+  map: { a: "ᚨ", b: "ᛒ", c: "ᚲ", d: "ᛞ", e: "ᛖ", f: "ᚠ", g: "ᚷ", h: "ᚺ", i: "ᛁ", j: "ᛃ", k: "ᚲ", l: "ᛚ", m: "ᛗ", n: "ᚾ", o: "ᛟ", p: "ᛈ", q: "ᚲ", r: "ᚱ", s: "ᛊ", t: "ᛏ", u: "ᚢ", v: "ᚹ", w: "ᚹ", x: "ᚲᛊ", y: "ᛃ", z: "ᛉ" },
+};
+const YOUNGER: RuneRow = {
+  digraphs: [["th", "ᚦ"]],
+  map: { a: "ᛅ", b: "ᛒ", c: "ᚴ", d: "ᛏ", e: "ᛁ", f: "ᚠ", g: "ᚴ", h: "ᚼ", i: "ᛁ", j: "ᛁ", k: "ᚴ", l: "ᛚ", m: "ᛘ", n: "ᚾ", o: "ᚬ", p: "ᛒ", q: "ᚴ", r: "ᚱ", s: "ᛋ", t: "ᛏ", u: "ᚢ", v: "ᚢ", w: "ᚢ", x: "ᚴᛋ", y: "ᚢ", z: "ᛋ" },
+};
+const FUTHORC: RuneRow = {
+  digraphs: [["th", "ᚦ"], ["ng", "ᛝ"], ["ea", "ᛠ"], ["ae", "ᚫ"], ["oe", "ᛟ"]],
+  map: { a: "ᚪ", b: "ᛒ", c: "ᚳ", d: "ᛞ", e: "ᛖ", f: "ᚠ", g: "ᚷ", h: "ᚻ", i: "ᛁ", j: "ᛄ", k: "ᚳ", l: "ᛚ", m: "ᛗ", n: "ᚾ", o: "ᚩ", p: "ᛈ", q: "ᚳ", r: "ᚱ", s: "ᛋ", t: "ᛏ", u: "ᚢ", v: "ᚠ", w: "ᚹ", x: "ᛉ", y: "ᚣ", z: "ᛋ", "æ": "ᚫ", "þ": "ᚦ", "ð": "ᚦ" },
+};
+function runes(row: RuneRow, sep: string) {
+  return (s: string) =>
+    s
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/\p{M}/gu, "")
+      .trim()
+      .split(/\s+/)
+      .map((w) => {
+        let out = "";
+        for (let i = 0; i < w.length; i++) {
+          const dg = row.digraphs.find(([d]) => w.startsWith(d, i));
+          if (dg) { out += dg[1]; i += dg[0].length - 1; continue; }
+          out += row.map[w[i]] ?? w[i];
+        }
+        return out;
+      })
+      .join(sep);
+}
+
 // Companion styles for theme pages (tattoo, gangster, diploma, newspaper,
 // Latin, clothing). They pair with blackletter but aren't blackletter, so
 // they are kept off the homepage list.
@@ -340,6 +377,12 @@ const EXTRA: FontStyle[] = [
   { id: "typewriter", name: "Typewriter", transform: compose(mapWith(MONO), digits(MONO_DIGITS)) },
   { id: "varsity-outline", name: "Varsity Outline", transform: compose(mapWith(DOUBLE_STRUCK), digits(OUTLINE_DIGITS)) },
   { id: "bold-serif", name: "Bold Serif", transform: compose(mapWith(BOLD_SERIF), digits(BOLD_DIGITS)) },
+  { id: "runes-elder", name: "Elder Futhark Runes", transform: runes(ELDER, "᛫") },
+  { id: "runes-younger", name: "Younger Futhark (Viking Age)", transform: runes(YOUNGER, "᛫") },
+  { id: "runes-futhorc", name: "Anglo-Saxon Futhorc", transform: runes(FUTHORC, "᛫") },
+  { id: "runes-elder-spaced", name: "Elder Futhark, Word Spaces", transform: runes(ELDER, " ") },
+  // Framed with the runic cross ᛭ (U+16ED), not othala ᛟ, which extremist groups have adopted.
+  { id: "runes-framed", name: "Rune Stone Frame ᛭", transform: (s) => `᛭ ${runes(ELDER, "᛫")(s)} ᛭` },
   { id: "roman-inscription", name: "Roman Inscription · Capitals", transform: (s) => mapWith(BOLD_SERIF)(romanize(s).toUpperCase().replace(/U/g, "V").replace(/J/g, "I").trim().split(/\s+/).join("·")) },
 ];
 
