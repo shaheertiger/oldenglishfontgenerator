@@ -4,12 +4,12 @@ import { notFound } from "next/navigation";
 import Faq from "@/components/Faq";
 import FontDirectory from "@/components/FontDirectory";
 import JsonLd from "@/components/JsonLd";
-import { renderBlock } from "@/components/PageView";
+import { StatsTable, renderBlock } from "@/components/PageView";
 import RichText from "@/components/RichText";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import Updated from "@/components/Updated";
 import { APP_GUIDES, FONT_PAGES, FONT_PAGE_BY_STYLE, fontPageSource, isSingleFont } from "@/lib/fontpages";
-import { COMPARE_HEAD, STATS_VERIFIED, compareRow, factRows } from "@/lib/fontstats";
+import { COMPARE_HEAD, FONT_STATS, STATS_VERIFIED, compareRow, factRows } from "@/lib/fontstats";
 import { FONT_BY_FAMILY, fontsByName, specimenUrl } from "@/lib/realfonts";
 import { abs, breadcrumbLd, faqLd } from "@/lib/seo";
 import { toolLinks } from "@/lib/site";
@@ -48,9 +48,17 @@ export default async function FontsPage({ params }: { params: Promise<Params> })
     numberOfItems: fonts.length,
     itemListElement: fonts.map((f, i) => ({ "@type": "ListItem", position: i + 1, name: f.family, url: specimenUrl(f) })),
   };
-  const others = FONT_PAGES.filter((o) => o.style !== p.style);
-  const collections = others.filter((o) => !isSingleFont(o));
-  const singles = others.filter(isSingleFont);
+  // True siblings: the other font pages sharing the most fonts with this one.
+  const siblings = FONT_PAGES.filter((o) => o.style !== p.style)
+    .map((o) => ({ o, shared: o.fonts.filter((f) => p.fonts.includes(f)).length + (o.focus && p.fonts.includes(o.focus) ? 2 : 0) }))
+    .filter((x) => x.shared > 0)
+    .sort((a, b) => b.shared - a.shared)
+    .slice(0, 4)
+    .map((x) => x.o);
+  const single = isSingleFont(p);
+  const longS = fonts.filter((f) => FONT_STATS[f.family]?.longS);
+  const biggest = [...fonts].sort((a, b) => (FONT_STATS[b.family]?.glyphs ?? 0) - (FONT_STATS[a.family]?.glyphs ?? 0))[0];
+  const german = fonts.filter((f) => FONT_STATS[f.family]?.german).length;
 
   return (
     <>
@@ -76,10 +84,8 @@ export default async function FontsPage({ params }: { params: Promise<Params> })
           <section className="section">
             <div className="container">
               <h2>What is in the {focus.family} font file?</h2>
-              {renderBlock({ table: { head: ["Detail", focus.family], rows: factRows(focus) } }, 0)}
-              <p className="note">
-                Glyph counts and character support are our own measurements of the file Google Fonts serves, checked {STATS_VERIFIED}.
-              </p>
+              <StatsTable head={["Detail", focus.family]} rows={factRows(focus)} />
+              <p className="note">Our measurement, {STATS_VERIFIED}.</p>
             </div>
           </section>
         )}
@@ -102,26 +108,26 @@ export default async function FontsPage({ params }: { params: Promise<Params> })
           </section>
         ))}
 
-        <section className="section">
-          <div className="container">
-            <h2>How do these {fonts.length} fonts compare?</h2>
-            <p>
-              Measured from each font file: how many glyphs it contains, whether it has the long s (ſ) used in old
-              German and English printing, German ß and umlauts, and accented Central European letters. All{" "}
-              {fonts.length} are under the SIL Open Font License.
-            </p>
-            {renderBlock({ table: { head: COMPARE_HEAD, rows: fonts.map(compareRow) } }, 0)}
-          </div>
-        </section>
+        {!single && (
+          <section className="section">
+            <div className="container">
+              <h2>How do these {fonts.length} fonts compare?</h2>
+              <p>
+                {biggest.family} is the largest file here ({FONT_STATS[biggest.family]?.glyphs} glyphs).{" "}
+                {longS.length
+                  ? `${longS.length} of ${fonts.length} draw the long s (ſ): ${longS.map((f) => f.family).join(", ")}.`
+                  : `None of the ${fonts.length} draws the long s (ſ).`}{" "}
+                {german} cover German ß and umlauts. Counts are our measurements of each file.
+              </p>
+              <StatsTable head={COMPARE_HEAD} rows={fonts.map(compareRow)} />
+            </div>
+          </section>
+        )}
 
         {tools.length > 0 && (
           <section className="section">
             <div className="container">
               <h2>Need copy-and-paste text instead of a font file?</h2>
-              <p>
-                Font files only work in apps that let you pick a font. For bios, captions and usernames, use a Unicode
-                generator; the text pastes anywhere.
-              </p>
               <ul className="tool-links">
                 {tools.map((t) => (
                   <li key={t.href}>
@@ -158,26 +164,13 @@ export default async function FontsPage({ params }: { params: Promise<Params> })
 
         <section className="section">
           <div className="container">
-            <h2>More font collections</h2>
+            <h2>Related font pages</h2>
             <ul>
-              {collections.map((o) => (
-                <li key={o.style}><Link href={`/fonts/${o.style}`}>{o.h1}</Link></li>
+              {siblings.map((o) => (
+                <li key={o.style}><Link href={`/fonts/${o.style}`}>{isSingleFont(o) ? o.crumb : o.h1}</Link></li>
               ))}
+              <li><Link href="/fonts">All {FONT_PAGES.length} font pages and every font compared</Link></li>
             </ul>
-            {singles.length > 0 && (
-              <>
-                <h3>Individual fonts</h3>
-                <ul>
-                  {singles.map((o) => (
-                    <li key={o.style}><Link href={`/fonts/${o.style}`}>{o.crumb}</Link></li>
-                  ))}
-                </ul>
-              </>
-            )}
-            <p>
-              Every font on one page: <Link href="/fonts">all fonts compared</Link>. Or go back to the{" "}
-              <Link href="/">Old English font generator</Link>.
-            </p>
           </div>
         </section>
       </main>

@@ -121,6 +121,26 @@ function renderWidget(w: Widget, p: PageContent) {
   }
 }
 
+/** Computed data table (font measurements). Marked "stats" so the overlap audit treats it like tool output. */
+export function StatsTable({ head, rows }: { head: string[]; rows: string[][] }) {
+  return (
+    <div className="table-wrap stats">
+      <table className="compare">
+        <thead>
+          <tr>{head.map((h) => <th key={h} scope="col">{h}</th>)}</tr>
+        </thead>
+        <tbody>
+          {rows.map((r) => (
+            <tr key={r[0]}>
+              {r.map((c, j) => <td key={j}><RichText text={c} /></td>)}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 export function renderBlock(b: Block, i: number, p?: PageContent) {
   if ("p" in b) return <p key={i}><RichText text={b.p} /></p>;
   if ("ul" in b)

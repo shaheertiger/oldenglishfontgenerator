@@ -103,7 +103,7 @@ export default async function AppGuidePage({ params }: { params: Promise<Params>
           <div className="container">
             <h2>Using a different app?</h2>
             <ul>
-              {APP_GUIDES.filter((o) => o.app !== a.app).map((o) => (
+              {[1, 2, 3].map((k) => APP_GUIDES[(APP_GUIDES.indexOf(a) + k) % APP_GUIDES.length]).map((o) => (
                 <li key={o.app}><Link href={`/fonts/old-english/${o.app}`}>Old English font in {o.name}</Link></li>
               ))}
             </ul>

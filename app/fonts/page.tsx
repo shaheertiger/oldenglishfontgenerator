@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
-import { renderBlock } from "@/components/PageView";
+import { StatsTable } from "@/components/PageView";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import { APP_GUIDES, FONT_PAGES, isSingleFont } from "@/lib/fontpages";
 import { FONT_STATS, STATS_VERIFIED } from "@/lib/fontstats";
@@ -117,11 +117,9 @@ export default function FontsHub() {
           <div className="container">
             <h2>All {fontCount} fonts compared</h2>
             <p className="note">Glyph counts and character support measured from each font file on {STATS_VERIFIED}.</p>
-            {renderBlock(
-              {
-                table: {
-                  head: ["Font", "Style", "Designer", "Glyphs", "Long s", "ß/umlauts", "Collections"],
-                  rows: REAL_FONTS.map((f) => {
+            <StatsTable
+                  head={["Font", "Style", "Designer", "Glyphs", "Long s", "ß/umlauts", "Collections"]}
+                  rows={REAL_FONTS.map((f) => {
                     const s = FONT_STATS[f.family];
                     return [
                       `[${f.family}](${specimenUrl(f)})`,
@@ -132,11 +130,8 @@ export default function FontsHub() {
                       s?.german ? "Yes" : "No",
                       pagesFor(f.family).map((p) => `[${p.crumb}](/fonts/${p.style})`).join(", ") || "—",
                     ];
-                  }),
-                },
-              },
-              0
-            )}
+                  })}
+            />
           </div>
         </section>
 
