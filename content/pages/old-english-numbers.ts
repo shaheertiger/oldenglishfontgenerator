@@ -62,7 +62,7 @@ const page: PageContent = {
     "Bold digits come from Mathematical Bold Digits (U+1D7CE–U+1D7D7) and outline digits from the Double-Struck digits (U+1D7D8–U+1D7E1). The Roman numeral styles first convert numbers to the letters I, V, X, L, C, D and M, then map those letters into Fraktur or Bold Fraktur. The single numeral tiles use the Number Forms block (U+2160 onwards).",
   related: {
     heading: "Other Old English tools",
-    hrefs: ["/old-english-tattoo-font", "/old-english-alphabet", "/old-english-name-generator", "/old-english-letters", "/old-english-text-to-image", "/blackletter-generator"],
+    hrefs: ["/old-english-tattoo-font", "/old-english-alphabet", "/old-english-name-generator", "/old-english-letters", "/old-english-text-to-image", "/blackletter-generator", "/latin-tattoo-font"],
   },
   faq: [
     { q: "Are there real Old English numbers I can copy?", a: "No. Unicode includes Fraktur letters but no Fraktur digits. Any site offering them is substituting other characters, such as bold serif digits." },

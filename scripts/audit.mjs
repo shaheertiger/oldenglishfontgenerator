@@ -29,7 +29,10 @@ for (const url of urls) {
     .replace(/<ul class="results">[\s\S]*?<\/ul>/g, " ")
     .replace(/<ul class="letter-grid">[\s\S]*?<\/ul>/g, " ")
     .replace(/<div class="presets"[\s\S]*?<\/div>/g, " ")
-    .replace(/<p class="sr-only"[\s\S]*?<\/p>/g, " ");
+    .replace(/<p class="sr-only"[\s\S]*?<\/p>/g, " ")
+    .replace(/<p class="updated"[\s\S]*?<\/p>/g, " ")
+    // Computed measurement tables (same font = same row on every page).
+    .replace(/<div class="table-wrap stats">[\s\S]*?<\/table>/g, " ");
   const copy = strip(copyHtml);
   const words = copy.split(/\s+/).filter((w) => /[A-Za-z]/.test(w));
   const links = [...html.matchAll(/<a [^>]*href="([^"]+)"/g)].map((m) => m[1]).filter((h) => h.startsWith("/") || h.startsWith(SITE));

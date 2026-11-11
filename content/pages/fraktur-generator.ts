@@ -50,7 +50,7 @@ const page: PageContent = {
     "Input is normalised to decomposed form (Unicode NFD), then each base letter is mapped to Mathematical Fraktur U+1D504–U+1D537 with the Letterlike Symbols capitals ℭ ℌ ℑ ℜ ℨ filling the gaps. Umlaut dots are the combining diaeresis U+0308. The long s is U+017F.",
   related: {
     heading: "More blackletter generators",
-    hrefs: ["/blackletter-generator", "/old-english-alphabet", "/medieval-font-generator", "/gothic-font-generator", "/old-english-text-to-image", "/old-english-letters"],
+    hrefs: ["/blackletter-generator", "/old-english-alphabet", "/medieval-font-generator", "/gothic-font-generator", "/old-english-text-to-image", "/old-english-letters", "/bold-fraktur"],
   },
   faq: [
     { q: "What does Fraktur mean?", a: "It comes from the Latin fractus, broken, describing how the round strokes are broken into angled segments." },

@@ -59,7 +59,7 @@ const page: PageContent = {
     "Crosses and occult signs come from the Miscellaneous Symbols block (U+2600–U+26FF) and Dingbats (U+2700–U+27BF). Daggers live in General Punctuation, the turned dagger in Supplemental Punctuation, and the brackets come from CJK punctuation, Javanese and Tibetan blocks. The framed name styles use Mathematical Fraktur or Bold Fraktur for the letters.",
   related: {
     heading: "Pair symbols with blackletter text",
-    hrefs: ["/gothic-font-generator", "/old-english-font-discord", "/old-english-name-generator", "/medieval-font-generator", "/fonts/gothic", "/old-english-tattoo-font"],
+    hrefs: ["/gothic-font-generator", "/old-english-font-discord", "/old-english-name-generator", "/medieval-font-generator", "/fonts/gothic", "/old-english-tattoo-font", "/horror-font-generator"],
   },
   faq: [
     { q: "How do I type gothic symbols on a keyboard?", a: "Most aren't on a keyboard. Copying them from this page is the quickest way; on Windows you can also use the Character Map, and on a Mac the Character Viewer (Control + Command + Space)." },

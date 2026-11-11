@@ -60,7 +60,7 @@ const page: PageContent = {
     "Capitals come from Mathematical Fraktur or Bold Fraktur. The lowercase letters come from the Mathematical Script block (U+1D4B6–U+1D4CF) or Bold Script (U+1D4EA–U+1D503). Script e, g and o live in Letterlike Symbols as ℯ, ℊ and ℴ, which is why they sometimes look slightly different.",
   related: {
     heading: "More Old English styles",
-    hrefs: ["/chicano-font-generator", "/old-english-name-generator", "/old-english-tattoo-font", "/old-english-font-instagram", "/medieval-font-generator", "/old-english-letters"],
+    hrefs: ["/chicano-font-generator", "/old-english-name-generator", "/old-english-tattoo-font", "/old-english-font-instagram", "/medieval-font-generator", "/old-english-letters", "/gangster-font-generator"],
   },
   faq: [
     { q: "Is there a true Old English cursive font?", a: "Historical cursive blackletter hands existed, such as bastarda and cursiva, and there are real typefaces based on them. Unicode has no dedicated characters for them, so copy-paste versions combine Fraktur capitals with script letters." },

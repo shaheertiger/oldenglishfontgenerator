@@ -55,7 +55,7 @@ const page: PageContent = {
     "This page combines two techniques. The style list uses Unicode Mathematical Fraktur characters for pasting. The image editor ignores Unicode and draws with the UnifrakturCook and UnifrakturMaguntia font files on an HTML canvas; the SVG export embeds the chosen font as base64 so the file is self-contained.",
   related: {
     heading: "Use your image with these tools",
-    hrefs: ["/old-english-tattoo-font", "/blackletter-generator", "/old-english-letters", "/old-english-name-generator", "/fraktur-generator", "/chicano-font-generator"],
+    hrefs: ["/old-english-tattoo-font", "/blackletter-generator", "/old-english-letters", "/old-english-name-generator", "/fraktur-generator", "/chicano-font-generator", "/diploma-font"],
   },
   faq: [
     { q: "Can I use the exported images commercially?", a: "Yes. Both typefaces are released under the SIL Open Font License, which allows commercial use of images and documents made with them." },

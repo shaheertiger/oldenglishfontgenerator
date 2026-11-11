@@ -61,7 +61,7 @@ const page: PageContent = {
     "Base letters come from Mathematical Fraktur and Bold Fraktur. Thorn (U+00FE, U+00DE), ash (U+00E6, U+00C6) and long s (U+017F) are ordinary Latin characters that stay unconverted, since Unicode has no Fraktur versions of them. Fleurons are U+2619 and U+2767, and the hedera is U+2766 from the Dingbats block.",
   related: {
     heading: "More medieval and blackletter tools",
-    hrefs: ["/blackletter-generator", "/fraktur-generator", "/gothic-font-generator", "/old-english-letters", "/old-english-alphabet", "/old-english-text-to-image"],
+    hrefs: ["/blackletter-generator", "/fraktur-generator", "/gothic-font-generator", "/old-english-letters", "/old-english-alphabet", "/old-english-text-to-image", "/illuminated-letters"],
   },
   faq: [
     { q: "Does this translate modern English into medieval English?", a: "No. It changes the appearance of letters and can swap th for þ, but the words stay as you typed them." },

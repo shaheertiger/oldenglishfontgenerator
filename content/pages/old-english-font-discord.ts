@@ -59,7 +59,7 @@ const page: PageContent = {
     "Display-name styles use Mathematical Fraktur and Bold Fraktur. Symbol frames add characters such as ⚔ (U+2694) and ♛ (U+265B), and the worn style adds combining marks, which count toward the limit even though they take up no space. The counter shows UTF-16 code units, the stricter of the two common ways to count, so if it fits here it should fit in Discord.",
   related: {
     heading: "More name and profile tools",
-    hrefs: ["/gothic-font-generator", "/old-english-name-generator", "/old-english-font-instagram", "/medieval-font-generator", "/old-english-letters", "/fraktur-generator"],
+    hrefs: ["/gothic-font-generator", "/old-english-name-generator", "/old-english-font-instagram", "/medieval-font-generator", "/old-english-letters", "/fraktur-generator", "/old-english-font-tiktok"],
   },
   faq: [
     { q: "Can my Discord username be in Old English?", a: "No. Usernames only allow lowercase letters, numbers, periods and underscores. Use a display name or server nickname for the styled version." },

@@ -258,9 +258,10 @@ table.compare { border-collapse: collapse; width: 100%; font-size: 15px; }
 .grid-label { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin-top: 14px; font-weight: 700; }
 
 /* FAQ */
-.faq details { border-bottom: 1px solid var(--border); padding: 14px 0; }
-.faq summary { cursor: pointer; font-weight: 650; font-size: 16px; }
-.faq details p { margin: 10px 0 0; }
+.faq-item { border-bottom: 1px solid var(--border); padding: 14px 0; }
+.faq-item h3 { font-weight: 650; font-size: 16px; margin: 0; }
+.faq-item p { margin: 8px 0 0; }
+.updated { font-size: 13px; color: var(--muted); margin: 6px 0 0; }
 
 /* Image export */
 .export { border: 1px solid var(--border); border-radius: var(--radius); padding: 16px; background: var(--bg-soft); }
@@ -291,7 +292,7 @@ table.compare { border-collapse: collapse; width: 100%; font-size: 15px; }
 
 /* ===== Footer ===== */
 .site-footer { border-top: 1px solid var(--border); background: var(--bg-soft); padding: 36px 0 24px; margin-top: 30px; font-size: 14px; }
-.footer-grid { display: grid; grid-template-columns: 1.2fr 2fr 0.8fr; gap: 28px; }
+.footer-grid { display: grid; grid-template-columns: 1fr 1.6fr 1.6fr 0.7fr; gap: 28px; }
 .footer-brand { font-weight: 800; display: block; margin-bottom: 8px; }
 .footer-h { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); margin: 0 0 10px; }
 .footer-col ul { list-style: none; margin: 0; padding: 0; }

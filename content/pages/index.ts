@@ -16,12 +16,28 @@ import discord from "./old-english-font-discord";
 import image from "./old-english-text-to-image";
 import symbols from "./gothic-symbols";
 import howto from "./how-to-write-old-english";
+import tattooGen from "./tattoo-font-generator";
+import gangster from "./gangster-font-generator";
+import horror from "./horror-font-generator";
+import metal from "./metal-font-generator";
+import deathNote from "./death-note-font";
+import bible from "./bible-verse-font";
+import diploma from "./diploma-font";
+import boldFraktur from "./bold-fraktur";
+import biker from "./biker-font-generator";
+import latin from "./latin-tattoo-font";
+import masthead from "./newspaper-masthead-font";
+import illuminated from "./illuminated-letters";
+import tiktok from "./old-english-font-tiktok";
+import facebook from "./old-english-font-facebook";
 
 export { home };
 
 export const CLUSTERS: PageContent[] = [
   tattoo, alphabet, letters, numbers, cursive, gothic, blackletter, fraktur,
   chicano, names, medieval, instagram, discord, image, symbols, howto,
+  // Lettering by theme (Nov 2026)
+  tattooGen, gangster, horror, metal, deathNote, bible, diploma, boldFraktur, biker, latin, masthead, illuminated, tiktok, facebook,
 ];
 
 export function getCluster(slug: string): PageContent | undefined {

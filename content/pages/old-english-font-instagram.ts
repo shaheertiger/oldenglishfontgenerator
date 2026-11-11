@@ -66,7 +66,7 @@ const page: PageContent = {
     "Bio styles use Mathematical Fraktur and Bold Fraktur. The counter measures UTF-16 code units, the unit many apps use internally, in which every Fraktur letter outside the Letterlike Symbols block counts as two. Instagram does not publish exactly how it counts, so treat the number as a cautious estimate.",
   related: {
     heading: "More Old English tools for your profile",
-    hrefs: ["/old-english-name-generator", "/old-english-cursive", "/old-english-font-discord", "/old-english-letters", "/gothic-font-generator", "/old-english-alphabet"],
+    hrefs: ["/old-english-name-generator", "/old-english-cursive", "/old-english-font-discord", "/old-english-letters", "/gothic-font-generator", "/old-english-alphabet", "/old-english-font-tiktok", "/old-english-font-facebook"],
   },
   faq: [
     { q: "Can I change my Instagram font to Old English?", a: "Instagram doesn't let you change fonts, but you can paste Old English Unicode characters into your bio, Name field, captions and comments." },

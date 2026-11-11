@@ -57,7 +57,7 @@ const page: PageContent = {
     "Monograms and initials use Bold Fraktur capitals from U+1D56C–U+1D585. The bubble and boxed variations add the combining enclosing circle (U+20DD) or enclosing square (U+20DE) after each letter, so their appearance depends heavily on your device's fonts.",
   related: {
     heading: "More ways to use Old English letters",
-    hrefs: ["/old-english-alphabet", "/old-english-name-generator", "/old-english-tattoo-font", "/medieval-font-generator", "/old-english-text-to-image", "/old-english-font-instagram"],
+    hrefs: ["/old-english-alphabet", "/old-english-name-generator", "/old-english-tattoo-font", "/medieval-font-generator", "/old-english-text-to-image", "/old-english-font-instagram", "/illuminated-letters"],
   },
   faq: [
     { q: "How do I get just my initials in Old English?", a: "Type your full name. The first three styles in the list take the first letter of each word and convert only those letters." },

@@ -1,12 +1,15 @@
 import { CLUSTERS } from "@/content/pages";
 import { POSTS } from "@/lib/blog";
 import { SITE_URL } from "@/lib/site";
+import { APP_GUIDES, FONT_PAGES } from "@/lib/fontpages";
 
 export const dynamic = "force-static";
 
 // /llms.txt: a concise map of the site for AI crawlers, built from page data.
 export async function GET() {
   const tools = CLUSTERS.map((p) => `- [${p.h1}](${SITE_URL}/${p.slug}): ${p.description}`).join("\n");
+  const fonts = FONT_PAGES.map((p) => `- [${p.h1}](${SITE_URL}/fonts/${p.style}): ${p.description}`).join("\n");
+  const apps = APP_GUIDES.map((a) => `- [Old English font in ${a.name}](${SITE_URL}/fonts/old-english/${a.app}): ${a.description}`).join("\n");
   const posts = POSTS.map((p) => `- [${p.title}](${SITE_URL}/blog/${p.slug}): ${p.description}`).join("\n");
 
   const body = `# Old English Font Generator
@@ -26,6 +29,13 @@ export async function GET() {
 
 ## Tools
 ${tools}
+
+## Free fonts (downloadable, open licence)
+- [All free fonts compared](${SITE_URL}/fonts): every font with measured glyph counts and character support.
+${fonts}
+
+## App guides
+${apps}
 
 ## Articles
 ${posts}

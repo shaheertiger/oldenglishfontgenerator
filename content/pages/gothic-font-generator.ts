@@ -67,7 +67,7 @@ const page: PageContent = {
     "Letters use Fraktur or Bold Fraktur from the Mathematical Alphanumeric Symbols block. Worn and cursed effects stack combining marks such as U+0334 (tilde overlay) and U+0323 (dot below) on each letter, using a fixed pattern so the result stays the same every time you copy it. Skulls, crosses and daggers come from the Miscellaneous Symbols and General Punctuation blocks; the rose and bat are emoji.",
   related: {
     heading: "Related blackletter tools",
-    hrefs: ["/blackletter-generator", "/medieval-font-generator", "/old-english-font-discord", "/fraktur-generator", "/chicano-font-generator", "/old-english-tattoo-font"],
+    hrefs: ["/blackletter-generator", "/medieval-font-generator", "/old-english-font-discord", "/fraktur-generator", "/chicano-font-generator", "/old-english-tattoo-font", "/horror-font-generator", "/metal-font-generator"],
   },
   faq: [
     { q: "What's the difference between gothic and Old English fonts?", a: "They describe the same letter shapes. Gothic is the everyday word and is often used for a darker mood; Old English is the name tattoo and sign shops use. This page focuses on the darker, decorated versions." },

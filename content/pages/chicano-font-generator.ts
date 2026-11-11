@@ -54,7 +54,7 @@ const page: PageContent = {
     "The signature style uses Bold Fraktur capitals (U+1D56C–U+1D585) followed by Mathematical Bold Script lowercase (U+1D4EA–U+1D503), framed by the Latin cross ✞ (U+271E). Dates use the same Roman numeral conversion as the numbers page, mapped into Bold Fraktur.",
   related: {
     heading: "Related lettering tools",
-    hrefs: ["/old-english-tattoo-font", "/old-english-cursive", "/old-english-numbers", "/gothic-font-generator", "/old-english-name-generator", "/old-english-text-to-image"],
+    hrefs: ["/old-english-tattoo-font", "/old-english-cursive", "/old-english-numbers", "/gothic-font-generator", "/old-english-name-generator", "/old-english-text-to-image", "/gangster-font-generator", "/biker-font-generator"],
   },
   faq: [
     { q: "What is Chicano font?", a: "A lettering style from Mexican-American culture, built on Old English blackletter with taller capitals, extra flourishes and a mix of script. It is traditionally hand-drawn rather than a single typeface." },

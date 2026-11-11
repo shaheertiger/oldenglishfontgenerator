@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Generator from "@/components/Generator";
 import CharGrid from "@/components/CharGrid";
 import FontDirectory from "@/components/FontDirectory";
+import Faq from "@/components/Faq";
 import JsonLd from "@/components/JsonLd";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import { ALL_STYLES } from "@/lib/fonts";
@@ -29,8 +30,10 @@ function content(l: string) {
   const cp = codepoints(l);
   const fr = ALL_STYLES["fraktur"].transform;
   const bfr = ALL_STYLES["bold-fraktur"].transform;
-  const title = `Old English Letter ${U} — Copy ${U} in Blackletter`;
-  const description = `Old English letter ${U}: copy the capital and lowercase ${U} in Fraktur and Bold Fraktur, see how it is built and which letters it is confused with.`;
+  // 8 Unicode styles in the grid + 6 real fonts in the preview = 14 forms.
+  const count = GRID_STYLES.length + PREVIEW_FONTS.length;
+  const title = `Letter ${U} in Old English Fonts — ${U} in ${count} Blackletter Styles`;
+  const description = `The letter ${U} in Old English fonts: copy capital and lowercase ${U} in 8 Fraktur styles, see it in 6 free blackletter fonts and how the shape is built.`;
   const faq = [
     { q: `Which letter is the Old English ${U} confused with?`, a: info.confused },
     ...(cp.letterlike
@@ -40,7 +43,7 @@ function content(l: string) {
         }]
       : []),
   ];
-  return { info, U, cp, fr, bfr, title, description, faq };
+  return { info, U, cp, fr, bfr, title, description, faq, count };
 }
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {
@@ -59,7 +62,7 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 export default async function LetterPage({ params }: { params: Promise<Params> }) {
   const { slug, letter } = await params;
   if (slug !== HUB || !LETTER_BY_L[letter]) notFound();
-  const { info, U, cp, fr, bfr, faq } = content(letter);
+  const { info, U, cp, fr, bfr, faq, count } = content(letter);
   const i = LETTERS.findIndex((x) => x.l === letter);
   const prev = LETTERS[(i + 25) % 26].l;
   const next = LETTERS[(i + 1) % 26].l;
@@ -82,9 +85,9 @@ export default async function LetterPage({ params }: { params: Promise<Params> }
             <span className="current" aria-current="page">{U}</span>
           </nav>
           <section className="hero">
-            <h1>Old English Letter {U}</h1>
+            <h1>Letter {U} in Old English Fonts</h1>
             <p className="lead">
-              {fr(U)} {bfr(U)} {fr(letter)} {bfr(letter)} — {info.use}
+              {fr(U)} {bfr(U)} {fr(letter)} {bfr(letter)} — the Old English {U} in {count} forms below. {info.use}
             </p>
             <CharGrid groups={grid} />
             <h2 className="tool-h">Words starting with {U}</h2>
@@ -130,17 +133,7 @@ export default async function LetterPage({ params }: { params: Promise<Params> }
           </div>
         </section>
 
-        <section className="section faq">
-          <div className="container">
-            <h2>Frequently Asked Questions</h2>
-            {faq.map((f) => (
-              <details key={f.q}>
-                <summary>{f.q}</summary>
-                <p>{f.a}</p>
-              </details>
-            ))}
-          </div>
-        </section>
+        <Faq items={faq} />
 
         <section className="section">
           <div className="container">
