@@ -2,6 +2,8 @@
 // how-to pages. Copy is written per page.
 
 import type { Block } from "@/content/pages/types";
+import { FONT_PAGE_FILES } from "@/content/fonts";
+import { APP_GUIDE_FILES } from "@/content/apps";
 
 export type FontPage = {
   style: string;
@@ -16,9 +18,15 @@ export type FontPage = {
   notes?: Record<string, string>;
   sections: { h2: string; blocks: Block[] }[];
   faq: { q: string; a: string }[];
+  /** Single-font page about a Google Fonts family: renders its measured facts. */
+  focus?: string;
+  /** Single-font page about a font we can't host (commercial or freeware). */
+  about?: { name: string; facts: [string, string][] };
+  /** Copy-paste generator pages to link to (hrefs from TOOL_LINKS). */
+  tools?: string[];
 };
 
-export const FONT_PAGES: FontPage[] = [
+const CORE_FONT_PAGES: FontPage[] = [
   {
     style: "old-english",
     title: "Old English Fonts — 10 Free Blackletter Fonts to Download",
@@ -179,7 +187,7 @@ export type AppGuide = {
   faq: { q: string; a: string }[];
 };
 
-export const APP_GUIDES: AppGuide[] = [
+const CORE_APP_GUIDES: AppGuide[] = [
   {
     app: "google-docs", name: "Google Docs",
     title: "Old English Font in Google Docs — How to Add It",
@@ -324,6 +332,19 @@ export const APP_GUIDES: AppGuide[] = [
     ],
   },
 ];
+
+export const FONT_PAGES: FontPage[] = [...CORE_FONT_PAGES, ...FONT_PAGE_FILES.map((x) => x.page)];
+export const APP_GUIDES: AppGuide[] = [...CORE_APP_GUIDES, ...APP_GUIDE_FILES.map((x) => x.guide)];
+
+/** Source file holding a font page's copy (for its sitemap lastmod). */
+export function fontPageSource(style: string): string {
+  return FONT_PAGE_FILES.find((x) => x.page.style === style)?.file ?? "lib/fontpages.ts";
+}
+export function appGuideSource(app: string): string {
+  return APP_GUIDE_FILES.find((x) => x.guide.app === app)?.file ?? "lib/fontpages.ts";
+}
+
+export const isSingleFont = (p: FontPage) => Boolean(p.focus || p.about);
 
 export const FONT_PAGE_BY_STYLE = Object.fromEntries(FONT_PAGES.map((p) => [p.style, p])) as Record<string, FontPage>;
 export const APP_BY_SLUG = Object.fromEntries(APP_GUIDES.map((a) => [a.app, a])) as Record<string, AppGuide>;

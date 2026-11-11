@@ -59,7 +59,7 @@ const page: PageContent = {
     {
       h2: "Show your artist, don't hand them a stencil",
       blocks: [
-        { p: "Copy-and-paste letters are a planning tool. Their exact shapes come from the font installed on whichever phone opens them, so the artist's screen may show something slightly different from yours. A professional will redraw the lettering to fit the placement, curve of the body and line weight they use. Bring the PNG, tell them which style you picked and why, and let them adapt it." },
+        { p: "Copy-and-paste letters are a planning tool. Their exact shapes come from the font installed on whichever phone opens them, so the artist's screen may show something slightly different from yours. A professional will redraw the lettering to fit the placement, curve of the body and line weight they use. Bring the PNG, tell them which style you picked and why, and let them adapt it. Still deciding between blackletter, script and typewriter lettering? Compare them in the [tattoo font generator](/tattoo-font-generator), or browse [free tattoo fonts](/fonts/tattoo) you can install." },
       ],
     },
   ],
@@ -67,7 +67,7 @@ const page: PageContent = {
     "The tattoo styles in the list use Mathematical Bold Fraktur (U+1D56C–U+1D59F) for most layouts, with ꧁ ꧂ ornaments borrowed from the Javanese block for the framed version. The mockup and PNG download do not use Unicode at all: they render real OFL-licensed blackletter fonts on a canvas in your browser.",
   related: {
     heading: "More tools for tattoo planning",
-    hrefs: ["/old-english-numbers", "/old-english-name-generator", "/chicano-font-generator", "/old-english-cursive", "/old-english-letters", "/old-english-text-to-image", "/gothic-font-generator"],
+    hrefs: ["/old-english-numbers", "/old-english-name-generator", "/chicano-font-generator", "/old-english-cursive", "/old-english-letters", "/old-english-text-to-image", "/gothic-font-generator", "/tattoo-font-generator", "/latin-tattoo-font", "/bible-verse-font"],
   },
   faq: [
     { q: "Which Old English style is most popular for tattoos?", a: "Heavy Bold Fraktur is the one most people picture: thick strokes, sharp points and decorative capitals. It holds up well over time because the strokes are wide." },

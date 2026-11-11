@@ -35,6 +35,9 @@ const SCRIPT = rangeMap(0x1d49c, 0x1d4b6, {
   e: 0x212f, g: 0x210a, o: 0x2134,
 });
 const BOLD_SCRIPT = rangeMap(0x1d4d0, 0x1d4ea);
+const MONO = rangeMap(0x1d670, 0x1d68a);
+const BOLD_SERIF = rangeMap(0x1d400, 0x1d41a);
+const DOUBLE_STRUCK = rangeMap(0x1d538, 0x1d552, { C: 0x2102, H: 0x210d, N: 0x2115, P: 0x2119, Q: 0x211a, R: 0x211d, Z: 0x2124 });
 
 const DIGITS = "0123456789";
 function digitMap(start: number): CharMap {
@@ -44,6 +47,7 @@ function digitMap(start: number): CharMap {
 }
 const BOLD_DIGITS = digitMap(0x1d7ce);
 const OUTLINE_DIGITS = digitMap(0x1d7d8);
+const MONO_DIGITS = digitMap(0x1d7f6);
 
 const SMALL_CAPS: CharMap = {
   a: "ᴀ", b: "ʙ", c: "ᴄ", d: "ᴅ", e: "ᴇ", f: "ꜰ", g: "ɢ", h: "ʜ", i: "ɪ", j: "ᴊ",
@@ -323,7 +327,23 @@ const LIST: FontStyle[] = [
   { id: "monogram-ampersand", name: "Couple Monogram", transform: monogram(FRAKTUR, " & ") },
 ];
 
-export const ALL_STYLES: Record<string, FontStyle> = Object.fromEntries(LIST.map((s) => [s.id, s]));
+// Companion styles for theme pages (tattoo, gangster, diploma, newspaper,
+// Latin, clothing). They pair with blackletter but aren't blackletter, so
+// they are kept off the homepage list.
+const toScript = mapWith(SCRIPT);
+const toBoldScript = mapWith(BOLD_SCRIPT);
+const EXTRA: FontStyle[] = [
+  { id: "script", name: "Tattoo Script", transform: toScript },
+  { id: "bold-script", name: "Bold Tattoo Script", transform: toBoldScript },
+  { id: "script-spaced", name: "Fine Line Spaced Script", transform: compose(toScript, spaced) },
+  { id: "gangster-initials", name: "Old English Initial + Script", transform: initials(BOLD_FRAKTUR, BOLD_SCRIPT) },
+  { id: "typewriter", name: "Typewriter", transform: compose(mapWith(MONO), digits(MONO_DIGITS)) },
+  { id: "varsity-outline", name: "Varsity Outline", transform: compose(mapWith(DOUBLE_STRUCK), digits(OUTLINE_DIGITS)) },
+  { id: "bold-serif", name: "Bold Serif", transform: compose(mapWith(BOLD_SERIF), digits(BOLD_DIGITS)) },
+  { id: "roman-inscription", name: "Roman Inscription · Capitals", transform: (s) => mapWith(BOLD_SERIF)(romanize(s).toUpperCase().replace(/U/g, "V").replace(/J/g, "I").trim().split(/\s+/).join("·")) },
+];
+
+export const ALL_STYLES: Record<string, FontStyle> = Object.fromEntries([...LIST, ...EXTRA].map((s) => [s.id, s]));
 
 /** The homepage order. Every other page re-orders a subset of these. */
 export const HOME_STYLES = LIST.map((s) => s.id);

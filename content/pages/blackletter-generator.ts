@@ -59,7 +59,7 @@ const page: PageContent = {
     "These styles use Mathematical Fraktur (U+1D504–U+1D537) and Mathematical Bold Fraktur (U+1D56C–U+1D59F). Rules are combining characters: U+0305 for the overline and U+0333 for the double underline. The long s is U+017F from Latin Extended-A, and the word divider is U+2058.",
   related: {
     heading: "Explore more blackletter",
-    hrefs: ["/fraktur-generator", "/medieval-font-generator", "/gothic-font-generator", "/old-english-alphabet", "/old-english-text-to-image", "/old-english-cursive"],
+    hrefs: ["/fraktur-generator", "/medieval-font-generator", "/gothic-font-generator", "/old-english-alphabet", "/old-english-text-to-image", "/old-english-cursive", "/bible-verse-font", "/newspaper-masthead-font"],
   },
   faq: [
     { q: "What is a blackletter font?", a: "A typeface based on the broad-pen book hands of medieval and early modern Europe. The name comes from how dark a page of it looks, because the strokes are thick and closely spaced." },

@@ -56,9 +56,30 @@ const home: PageContent = {
             { h: "Discord", p: "Display names and server nicknames accept these letters. Your unique @username does not." },
             { h: "Gaming names", p: "Clan tags and lobby names look sharper with a framed gothic style. Check each game's own character rules first." },
             { h: "Logos and merch mockups", p: "Sketch a band name or shop sign quickly. For print, switch to a real blackletter typeface." },
-            { h: "Weddings and certificates", p: "Draft headings for invitations, awards or diplomas, then hand the wording to whoever sets the final type." },
+            { h: "Weddings and certificates", p: "Draft headings for invitations, awards or diplomas, then hand the wording to whoever sets the final type. The [diploma font](/diploma-font) page explains what printers actually use." },
           ],
         },
+      ],
+    },
+    {
+      h2: "Which Old English style fits your project?",
+      blocks: [
+        { p: "Blackletter means different things to a tattoo artist, a metal band and a newspaper. These pages each start from one use and pick the styles, presets and free fonts that suit it." },
+        {
+          table: {
+            head: ["Project", "Start here", "Free fonts to install"],
+            rows: [
+              ["Script or blackletter tattoo", "[Tattoo font generator](/tattoo-font-generator), [Latin phrases](/latin-tattoo-font), [Bible verses](/bible-verse-font)", "[Tattoo fonts](/fonts/tattoo)"],
+              ["West Coast and lowrider lettering", "[Gangster font generator](/gangster-font-generator), [biker patches](/biker-font-generator)", "[Chicano fonts](/fonts/chicano)"],
+              ["Band names and dark titles", "[Metal font generator](/metal-font-generator), [horror text](/horror-font-generator)", "[Halloween fonts](/fonts/halloween), [Metal Mania](/fonts/metal-mania)"],
+              ["Diplomas, mastheads and documents", "[Diploma font](/diploma-font), [newspaper mastheads](/newspaper-masthead-font)", "[Old English Text MT and free lookalikes](/fonts/old-english-text-mt)"],
+              ["Manuscripts and fantasy", "[Illuminated letters](/illuminated-letters), [medieval generator](/medieval-font-generator)", "[Fantasy fonts](/fonts/fantasy), [calligraphy fonts](/fonts/calligraphy)"],
+              ["Shirts, hoodies and brands", "[Text to image export](/old-english-text-to-image)", "[Clothing brand fonts](/fonts/clothing-brand)"],
+              ["TikTok and Facebook", "[TikTok names and bios](/old-english-font-tiktok), [Facebook posts](/old-english-font-facebook)", "Not needed: copy-paste text works in the app"],
+            ],
+          },
+        },
+        { p: "Every free font on the site, with our glyph and character-support measurements, is in [one comparison table](/fonts)." },
       ],
     },
     {

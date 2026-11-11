@@ -55,7 +55,7 @@ const page: PageContent = {
     "Names are converted with Mathematical Bold Fraktur and Fraktur. The monogram style looks only at the first letter of each word, and the year conversion turns digit groups between 1 and 3999 into Roman numerals before applying Bold Fraktur.",
   related: {
     heading: "Other Old English tools for names",
-    hrefs: ["/old-english-letters", "/old-english-font-instagram", "/old-english-font-discord", "/old-english-tattoo-font", "/old-english-cursive", "/old-english-numbers"],
+    hrefs: ["/old-english-letters", "/old-english-font-instagram", "/old-english-font-discord", "/old-english-tattoo-font", "/old-english-cursive", "/old-english-numbers", "/old-english-font-tiktok"],
   },
   faq: [
     { q: "Can it translate my name into Old English?", a: "No. It changes how the letters look, not the language. Names that existed in Anglo-Saxon England, like Ælfred for Alfred, are a matter of history rather than font style." },

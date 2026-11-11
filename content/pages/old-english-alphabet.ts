@@ -66,7 +66,7 @@ const page: PageContent = {
     "Lowercase letters and 21 capitals come straight from the Mathematical Fraktur block (U+1D51E–U+1D537 for a–z). The capitals C, H, I, R and Z are the older Letterlike Symbols characters U+212D, U+210C, U+2111, U+211C and U+2128. The bold set is complete in its own range, U+1D56C–U+1D59F, with no exceptions.",
   related: {
     heading: "Related Old English pages",
-    hrefs: ["/old-english-letters", "/old-english-numbers", "/fraktur-generator", "/blackletter-generator", "/old-english-text-to-image", "/old-english-tattoo-font"],
+    hrefs: ["/old-english-letters", "/old-english-numbers", "/fraktur-generator", "/blackletter-generator", "/old-english-text-to-image", "/old-english-tattoo-font", "/bold-fraktur"],
   },
   faq: [
     { q: "How many letters are in the Old English alphabet here?", a: "Twenty-six capitals and twenty-six lowercase letters in each weight, matching the modern English alphabet. Historical scripts had extra letters such as thorn (þ) and the long s (ſ), which you can try in the medieval font generator." },

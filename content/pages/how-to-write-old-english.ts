@@ -60,7 +60,7 @@ const page: PageContent = {
     "The practice reference uses Mathematical Fraktur letters (U+1D504–U+1D537). They're a digital approximation of Fraktur, so treat them as a guide to letter structure rather than as an exact model of any historical hand.",
   related: {
     heading: "More resources for lettering",
-    hrefs: ["/old-english-alphabet", "/blackletter-generator", "/fonts/blackletter", "/old-english-tattoo-font", "/medieval-font-generator", "/old-english-text-to-image"],
+    hrefs: ["/old-english-alphabet", "/blackletter-generator", "/fonts/blackletter", "/old-english-tattoo-font", "/medieval-font-generator", "/old-english-text-to-image", "/illuminated-letters"],
   },
   faq: [
     { q: "What pen is best for writing Old English letters?", a: "Any broad-edge tool: a chisel-tip calligraphy marker is cheapest for beginners, while a parallel pen gives sharper strokes. Pointed pens and ballpoints won't give the thick and thin contrast." },

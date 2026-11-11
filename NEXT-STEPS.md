@@ -41,7 +41,28 @@ Do a few each week rather than all at once. Aim for relevant links, not volume.
 - [ ] **Brand signals.** Create consistent profiles (Pinterest is a good fit for alphabet charts and tattoo previews; X/Bluesky optional) using the same name and linking to the homepage.
 - [ ] **Unlinked mentions.** Every couple of months, search for the site name and ask for a link where it's mentioned without one.
 
-## 5. What not to do
+## 5. November 2026 expansion (30 pages + /fonts hub)
+
+Picked from the Semrush US "font" export (16,445 keywords) by one rule: on-topic for blackletter/Old English, real search volume, and not competing with an existing page.
+
+- **14 generator pages** (`content/pages/`): tattoo-font-generator, gangster-font-generator, horror-font-generator, metal-font-generator, death-note-font, bible-verse-font, diploma-font, bold-fraktur, biker-font-generator, latin-tattoo-font, newspaper-masthead-font, illuminated-letters, old-english-font-tiktok, old-english-font-facebook.
+- **13 font pages** (`content/fonts/`): old-english-text-mt, old-london, cloister-black, unifrakturcook, uncial-antiqua, pirata-one, metal-mania, chicano, tattoo, halloween, fantasy, clothing-brand, calligraphy.
+- **3 app guides** (`content/apps/`): powerpoint, photoshop, inkscape.
+- **`/fonts` hub**: every font with our measured data; linked from the header.
+
+After deploy: resubmit `sitemap.xml`, then request indexing for `/fonts`, `/tattoo-font-generator`, `/fonts/old-english-text-mt`, `/fonts/chicano`, `/fonts/halloween`, `/death-note-font` (the largest keyword groups).
+
+Prune rule (from the playbook): after 90 days, any of these pages with zero GSC impressions gets merged into its closest parent and 301-redirected via `lib/redirects.mjs`.
+
+### Font data
+
+`lib/fontstats.json` holds glyph counts and character support measured from each font file (designer, licence and date from Google Fonts metadata). Re-run when adding a font to `lib/realfonts.ts`, then bump `STATS_VERIFIED` in `lib/fontstats.ts`:
+
+```
+python3 -m venv .venv && .venv/bin/pip install fonttools && .venv/bin/python scripts/fontstats.py
+```
+
+## 6. What not to do
 
 - Don't re-add unrelated tools "for traffic". Topic focus is the point of this rebuild.
 - Don't bulk-bump dates in the sitemap.

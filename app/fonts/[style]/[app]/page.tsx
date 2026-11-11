@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import Faq from "@/components/Faq";
 import FontDirectory from "@/components/FontDirectory";
+import RichText from "@/components/RichText";
+import Updated from "@/components/Updated";
 import JsonLd from "@/components/JsonLd";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
-import { APP_BY_SLUG, APP_GUIDES } from "@/lib/fontpages";
+import { APP_BY_SLUG, APP_GUIDES, appGuideSource } from "@/lib/fontpages";
 import { fontsByName } from "@/lib/realfonts";
 import { abs, breadcrumbLd, faqLd } from "@/lib/seo";
 import type { HowTo, WithContext } from "schema-dts";
@@ -51,13 +54,16 @@ export default async function AppGuidePage({ params }: { params: Promise<Params>
           <nav className="breadcrumb" aria-label="Breadcrumb">
             <Link href="/">Home</Link>
             <span className="sep" aria-hidden="true">›</span>
+            <Link href="/fonts">Fonts</Link>
+            <span className="sep" aria-hidden="true">›</span>
             <Link href="/fonts/old-english">Old English Fonts</Link>
             <span className="sep" aria-hidden="true">›</span>
             <span className="current" aria-current="page">{a.name}</span>
           </nav>
           <section className="hero">
             <h1>Old English Font in {a.name}</h1>
-            <p className="lead">{a.intro}</p>
+            <p className="lead"><RichText text={a.intro} /></p>
+            <Updated file={appGuideSource(a.app)} />
           </section>
         </div>
 
@@ -68,7 +74,7 @@ export default async function AppGuidePage({ params }: { params: Promise<Params>
               {a.steps.map(([t, d]) => (
                 <li className="step" key={t}>
                   <strong>{t}</strong>
-                  <p>{d}</p>
+                  <p><RichText text={d} /></p>
                 </li>
               ))}
             </ol>
@@ -79,7 +85,7 @@ export default async function AppGuidePage({ params }: { params: Promise<Params>
           <div className="container">
             <h2>Good to know</h2>
             <ul>
-              {a.notes.map((n) => <li key={n}>{n}</li>)}
+              {a.notes.map((n) => <li key={n}><RichText text={n} /></li>)}
             </ul>
           </div>
         </section>
@@ -91,15 +97,16 @@ export default async function AppGuidePage({ params }: { params: Promise<Params>
           </div>
         </section>
 
-        <section className="section faq">
+        <Faq items={a.faq} />
+
+        <section className="section">
           <div className="container">
-            <h2>Frequently Asked Questions</h2>
-            {a.faq.map((f) => (
-              <details key={f.q}>
-                <summary>{f.q}</summary>
-                <p>{f.a}</p>
-              </details>
-            ))}
+            <h2>Using a different app?</h2>
+            <ul>
+              {APP_GUIDES.filter((o) => o.app !== a.app).map((o) => (
+                <li key={o.app}><Link href={`/fonts/old-english/${o.app}`}>Old English font in {o.name}</Link></li>
+              ))}
+            </ul>
           </div>
         </section>
 
@@ -109,6 +116,7 @@ export default async function AppGuidePage({ params }: { params: Promise<Params>
         data={[
           breadcrumbLd([
             { name: "Home", path: "/" },
+            { name: "Fonts", path: "/fonts" },
             { name: "Old English Fonts", path: "/fonts/old-english" },
             { name: a.name, path },
           ]),

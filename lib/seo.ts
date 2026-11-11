@@ -17,8 +17,9 @@ export const abs = (path: string) => `${SITE_URL}${path === "/" ? "/" : path}`;
 export const stripLinks = (s: string) =>
   s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, "$1").replace(/\*\*([^*]+)\*\*/g, "$1");
 
-export function appLd(name: string, path: string, description: string): WithContext<SoftwareApplication> {
+export function appLd(name: string, path: string, description: string, dateModified?: string): WithContext<SoftwareApplication> {
   return {
+    ...(dateModified ? { dateModified } : {}),
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "@id": `${abs(path)}#app`,

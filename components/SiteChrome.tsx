@@ -7,6 +7,7 @@ const NAV = [
   { href: "/old-english-alphabet", label: "Alphabet" },
   { href: "/gothic-font-generator", label: "Gothic" },
   { href: "/fraktur-generator", label: "Fraktur" },
+  { href: "/fonts", label: "Fonts" },
   { href: "/blog", label: "Blog" },
 ];
 
@@ -42,9 +43,18 @@ export function SiteFooter() {
           <div className="footer-col footer-tools">
             <h2 className="footer-h">Old English tools</h2>
             <ul>
-              {TOOL_LINKS.map((t) => (
+              {TOOL_LINKS.filter((t) => !t.group).map((t) => (
                 <li key={t.href}><Link href={t.href}>{t.label}</Link></li>
               ))}
+            </ul>
+          </div>
+          <div className="footer-col footer-tools">
+            <h2 className="footer-h">Lettering by theme</h2>
+            <ul>
+              {TOOL_LINKS.filter((t) => t.group === "theme").map((t) => (
+                <li key={t.href}><Link href={t.href}>{t.label}</Link></li>
+              ))}
+              <li><Link href="/fonts">All free fonts</Link></li>
             </ul>
           </div>
           <div className="footer-col">

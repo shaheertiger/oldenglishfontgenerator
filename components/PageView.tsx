@@ -2,7 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Generator from "@/components/Generator";
 import CharGrid, { type CharGroup } from "@/components/CharGrid";
+import Faq from "@/components/Faq";
 import ImageExport from "@/components/ImageExport";
+import Updated from "@/components/Updated";
 import JsonLd from "@/components/JsonLd";
 import RichText from "@/components/RichText";
 import { SiteHeader, SiteFooter, Breadcrumb } from "@/components/SiteChrome";
@@ -10,6 +12,8 @@ import type { Block, PageContent, Widget } from "@/content/pages/types";
 import { ALL_STYLES, ALPHABET_LOWER, ALPHABET_UPPER } from "@/lib/fonts";
 import { appLd, breadcrumbLd, faqLd, orgLd, websiteLd, abs } from "@/lib/seo";
 import { toolLinks } from "@/lib/site";
+import { sourceFile } from "@/content/pages";
+import { lastModified } from "@/lib/lastmod";
 import { LETTERS } from "@/lib/letters";
 import { SYMBOL_GROUPS } from "@/lib/symbols";
 
@@ -164,7 +168,7 @@ export default function PageView({ page, home = false }: { page: PageContent; ho
   const path = pagePath(page);
   const related = toolLinks(page.related.hrefs);
   const ld: object[] = [
-    appLd(page.h1, path, page.description),
+    appLd(page.h1, path, page.description, lastModified(sourceFile(page))),
     faqLd(page.faq),
     breadcrumbLd(home ? [{ name: "Home", path: "/" }] : [{ name: "Home", path: "/" }, { name: page.crumb, path }]),
   ];
@@ -179,6 +183,7 @@ export default function PageView({ page, home = false }: { page: PageContent; ho
           <section className="hero" aria-labelledby="h1">
             <h1 id="h1">{page.h1}</h1>
             <p className="lead"><RichText text={page.intro} /></p>
+            <Updated file={sourceFile(page)} />
             <h2 className="tool-h">{page.stylesHeading}</h2>
             <Generator
               styles={page.tool.styles}
@@ -245,17 +250,7 @@ export default function PageView({ page, home = false }: { page: PageContent; ho
           </div>
         </section>
 
-        <section className="section faq">
-          <div className="container">
-            <h2>Frequently Asked Questions</h2>
-            {page.faq.map((f) => (
-              <details key={f.q}>
-                <summary>{f.q}</summary>
-                <p><RichText text={f.a} /></p>
-              </details>
-            ))}
-          </div>
-        </section>
+        <Faq items={page.faq} />
       </main>
       <SiteFooter />
       <JsonLd data={ld} />

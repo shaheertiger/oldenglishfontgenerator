@@ -19,7 +19,9 @@ import type { Block, PageContent } from "@/content/pages/types";
 import { LETTERS, LETTER_BY_L, codepoints, hex } from "@/lib/letters";
 import { SYMBOL_GROUPS } from "@/lib/symbols";
 import { APP_BY_SLUG, APP_GUIDES, FONT_PAGES, FONT_PAGE_BY_STYLE } from "@/lib/fontpages";
-import { fontsByName, specimenUrl, GROUP_LABEL } from "@/lib/realfonts";
+import { FONT_BY_FAMILY, REAL_FONTS, fontsByName, specimenUrl, GROUP_LABEL } from "@/lib/realfonts";
+import { COMPARE_HEAD, FONT_STATS, STATS_VERIFIED, compareRow, factRows } from "@/lib/fontstats";
+import { isSingleFont } from "@/lib/fontpages";
 
 const STATIC_DIR = path.join(process.cwd(), "content", "markdown");
 
@@ -169,7 +171,7 @@ function letterPage(l: string): string | null {
   const fr = ALL_STYLES["fraktur"].transform;
   const bfr = ALL_STYLES["bold-fraktur"].transform;
   return join(
-    header(`Old English Letter ${U}`, `The Old English (Fraktur) letter ${U}: copyable forms, how it is built and what it is confused with.`, `/old-english-alphabet/${l}`),
+    header(`Letter ${U} in Old English Fonts`, `The Old English (Fraktur) letter ${U}: copyable forms, how it is built and what it is confused with.`, `/old-english-alphabet/${l}`),
     `| Form | Character | Code point |\n| --- | --- | --- |\n| Fraktur capital | ${fr(U)} | ${hex(cp.upper)}${cp.letterlike ? " (Letterlike Symbols)" : ""} |\n| Fraktur lowercase | ${fr(l)} | ${hex(cp.lower)} |\n| Bold Fraktur capital | ${bfr(U)} | ${hex(cp.boldUpper)} |\n| Bold Fraktur lowercase | ${bfr(l)} | ${hex(cp.boldLower)} |\n`,
     `## How the Old English ${U} is built\n\n${info.shape}\n`,
     `## Easily confused with\n\n${info.confused}\n`,
@@ -179,15 +181,41 @@ function letterPage(l: string): string | null {
   );
 }
 
+function mdTable(head: string[], rows: string[][]): string {
+  return block({ table: { head, rows } });
+}
+
 function fontsPage(style: string): string | null {
   const p = FONT_PAGE_BY_STYLE[style];
   if (!p) return null;
+  const fonts = fontsByName(p.fonts);
+  const focus = p.focus ? FONT_BY_FAMILY[p.focus] : undefined;
   return join(
     header(p.h1, p.description, `/fonts/${p.style}`),
     `${abs(p.intro)}\n`,
-    `## Fonts\n\n${fontsByName(p.fonts).map((f) => `- **[${f.family}](${specimenUrl(f)})** (${GROUP_LABEL[f.group]}; ${f.designers}; SIL Open Font License): ${p.notes?.[f.family] ?? f.blurb}`).join("\n")}\n`,
+    `## Fonts\n\n${fonts.map((f) => `- **[${f.family}](${specimenUrl(f)})** (${GROUP_LABEL[f.group]}; ${f.designers}; SIL Open Font License): ${p.notes?.[f.family] ?? f.blurb}`).join("\n")}\n`,
+    focus && `## What is in the ${focus.family} font file?\n\n${mdTable(["Detail", focus.family], factRows(focus))}\nMeasured ${STATS_VERIFIED}.\n`,
+    p.about && `## ${p.about.name} at a glance\n\n${mdTable(["Detail", p.about.name], p.about.facts)}`,
     ...p.sections.map((s) => `## ${s.h2}\n\n${s.blocks.map(block).join("\n")}`),
+    `## How do these ${fonts.length} fonts compare?\n\n${mdTable(COMPARE_HEAD, fonts.map(compareRow))}`,
+    (p.tools?.length ?? 0) > 0 && `## Copy-and-paste generators\n\n${links(toolLinks(p.tools ?? []).map((t) => ({ title: t.label, href: t.href, description: t.blurb })))}\n`,
     `## Frequently Asked Questions\n\n${p.faq.map((f) => `### ${f.q}\n\n${abs(f.a)}`).join("\n\n")}\n`
+  );
+}
+
+function fontsHub(): string {
+  return join(
+    header("Free Blackletter & Old English Fonts", `All ${REAL_FONTS.length} free fonts on this site compared, with collections and font guides.`, "/fonts"),
+    `## Collections\n\n${links(FONT_PAGES.filter((p) => !isSingleFont(p)).map((p) => ({ title: p.h1, href: `/fonts/${p.style}`, description: p.description })))}\n`,
+    `## Individual fonts\n\n${links(FONT_PAGES.filter(isSingleFont).map((p) => ({ title: p.crumb, href: `/fonts/${p.style}`, description: p.description })))}\n`,
+    `## All fonts compared\n\nMeasured ${STATS_VERIFIED}.\n\n${mdTable(
+      ["Font", "Style", "Designer", "Glyphs", "Long s", "ß/umlauts"],
+      REAL_FONTS.map((f) => {
+        const s = FONT_STATS[f.family];
+        return [`[${f.family}](${specimenUrl(f)})`, GROUP_LABEL[f.group], f.designers, s ? String(s.glyphs) : "—", s?.longS ? "Yes" : "No", s?.german ? "Yes" : "No"];
+      })
+    )}`,
+    `## App guides\n\n${links(APP_GUIDES.map((a) => ({ title: `Old English font in ${a.name}`, href: `/fonts/old-english/${a.app}` })))}\n`
   );
 }
 
@@ -196,10 +224,10 @@ function appPage(app: string): string | null {
   if (!a) return null;
   return join(
     header(`Old English Font in ${a.name}`, a.description, `/fonts/old-english/${a.app}`),
-    `${a.intro}\n`,
-    `## Step by step\n\n${a.steps.map(([t, d], i) => `${i + 1}. **${t}**: ${d}`).join("\n")}\n`,
-    `## Good to know\n\n${a.notes.map((n) => `- ${n}`).join("\n")}\n`,
-    `## Frequently Asked Questions\n\n${a.faq.map((f) => `### ${f.q}\n\n${f.a}`).join("\n\n")}\n`
+    `${abs(a.intro)}\n`,
+    `## Step by step\n\n${a.steps.map(([t, d], i) => `${i + 1}. **${t}**: ${abs(d)}`).join("\n")}\n`,
+    `## Good to know\n\n${a.notes.map((n) => `- ${abs(n)}`).join("\n")}\n`,
+    `## Frequently Asked Questions\n\n${a.faq.map((f) => `### ${f.q}\n\n${abs(f.a)}`).join("\n\n")}\n`
   );
 }
 
@@ -215,6 +243,7 @@ function sitemapMd(): string {
       .join("\n")}\n`,
     `## Old English letters\n\n${LETTERS.map((x) => `- [Letter ${x.l.toUpperCase()}](${SITE_URL}/old-english-alphabet/${x.l}) ([markdown](${SITE_URL}/old-english-alphabet/${x.l}.md))`).join("\n")}\n`,
     `## Font collections and app guides\n\n${[
+      { t: "All free fonts", u: "/fonts" },
       ...FONT_PAGES.map((p) => ({ t: p.h1, u: `/fonts/${p.style}` })),
       ...APP_GUIDES.map((a) => ({ t: `Old English font in ${a.name}`, u: `/fonts/old-english/${a.app}` })),
     ].map((x) => `- [${x.t}](${SITE_URL}${x.u}) ([markdown](${SITE_URL}${x.u}.md))`).join("\n")}\n`,
@@ -238,6 +267,7 @@ export async function renderMarkdown(segments: string[]): Promise<string | null>
     } else {
       if (first === "index") return toolPage(home);
       if (first === "blog") return blogIndex();
+      if (first === "fonts") return fontsHub();
       if (first === "sitemap") return sitemapMd();
       const c = getCluster(first);
       if (c) return toolPage(c);
