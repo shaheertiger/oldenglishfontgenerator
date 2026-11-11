@@ -1,6 +1,25 @@
 {
   "_about": "Which keywords each page already targets. Patterns are case-insensitive regexes matched against every keyword in research/semrush/*.csv; the first page whose pattern matches claims the keyword. `npm run keywords` skips claimed keywords and suggests the rest. Add a page here when you publish it (or run: npm run keywords -- --use /page \"pattern\").",
   "pages": {
+    "/blog/old-english-youtube-thumbnail-fonts": [
+      "youtube thumbnail",
+      "font for youtube thumbnail"
+    ],
+    "/old-english-font-youtube": [
+      "youtube"
+    ],
+    "/viking-font-generator": [
+      "viking",
+      "\\brunes?\\b",
+      "runic",
+      "elvish"
+    ],
+    "/old-english-font-roblox": [
+      "roblox"
+    ],
+    "/old-english-font-snapchat": [
+      "snapchat"
+    ],
     "/death-note-font": [
       "death ?note"
     ],
@@ -269,5 +288,19 @@
       "old english font",
       "copy (and )?paste old english"
     ]
-  }
+  },
+  "skip": [
+    "sign painter",
+    "desirable calligraphy",
+    "wide latin",
+    "maple leaf",
+    "cute (fonts on )?google slides|google slides fonts",
+    "extensis",
+    "christian dior",
+    "old 2008",
+    "wedding font bundle",
+    "japanese calligraphy",
+    "warning sign",
+    "fancy sign"
+  ]
 }

@@ -7,6 +7,8 @@
 //   npm run keywords -- --save             also write research/daily/<date>.md
 //   npm run keywords -- --use /page "regex" ["regex" ...]
 //                                          mark keywords as targeted by a page
+//   npm run keywords -- --skip "regex" ["regex" ...]
+//                                          never suggest these again (off-topic/branded)
 //
 // Inputs:  research/semrush/*.csv  (any Semrush keyword export; newer files win)
 //          research/targeted.json  (page -> regexes of keywords it already targets)
@@ -108,6 +110,15 @@ if (flag("use")) {
   console.log(`Marked ${patterns.length} pattern(s) as targeted by ${page}.`);
 }
 
+if (flag("skip")) {
+  const i = args.indexOf("--skip");
+  const patterns = args.slice(i + 1).filter((a) => !a.startsWith("--"));
+  targeted.skip = [...new Set([...(targeted.skip ?? []), ...patterns])];
+  writeFileSync(targetedPath, JSON.stringify(targeted, null, 2) + "\n");
+  console.log(`Added ${patterns.length} skip pattern(s).`);
+}
+const skipRe = targeted.skip?.length ? new RegExp(targeted.skip.join("|"), "i") : null;
+
 const claims = Object.entries(targeted.pages).map(([page, pats]) => ({ page, re: new RegExp(pats.join("|"), "i") }));
 const claimOf = (k) => claims.find((c) => c.re.test(k))?.page ?? "";
 
@@ -120,12 +131,13 @@ const onTopic = [...kws.values()].filter((k) => TOPIC.test(k.keyword) && !DENY.t
 for (const k of onTopic) {
   k.cluster = clusterKey(k.keyword);
   k.page = claimOf(k.keyword);
+  k.skipped = !k.page && Boolean(skipRe?.test(k.keyword));
 }
 
 const minVol = +opt("min-volume", 50);
 const maxKd = +opt("max-kd", 100);
 const clusters = new Map();
-for (const k of onTopic.filter((k) => !k.page && k.volume >= minVol && k.kd <= maxKd)) {
+for (const k of onTopic.filter((k) => !k.page && !k.skipped && k.volume >= minVol && k.kd <= maxKd)) {
   const c = clusters.get(k.cluster) ?? { key: k.cluster, volume: 0, kws: [] };
   c.volume += k.volume;
   c.kws.push(k);
@@ -139,11 +151,12 @@ const ranked = [...clusters.values()]
 const csvCell = (v) => (/[",\n]/.test(String(v)) ? `"${String(v).replace(/"/g, '""')}"` : String(v));
 const backlog = [["keyword", "volume", "kd", "cpc", "intent", "cluster", "status", "page", "source"].join(",")];
 for (const k of onTopic.sort((a, b) => b.volume - a.volume))
-  backlog.push([k.keyword, k.volume, k.kd, k.cpc, k.intent, k.cluster, k.page ? "targeted" : "backlog", k.page, k.source].map(csvCell).join(","));
+  backlog.push([k.keyword, k.volume, k.kd, k.cpc, k.intent, k.cluster, k.page ? "targeted" : k.skipped ? "skipped" : "backlog", k.page, k.source].map(csvCell).join(","));
 writeFileSync(path.join(DIR, "backlog.csv"), backlog.join("\n") + "\n");
 
 const claimedVol = onTopic.filter((k) => k.page).reduce((s, k) => s + k.volume, 0);
-const backlogVol = onTopic.filter((k) => !k.page).reduce((s, k) => s + k.volume, 0);
+const skippedCount = onTopic.filter((k) => k.skipped).length;
+const backlogVol = onTopic.filter((k) => !k.page && !k.skipped).reduce((s, k) => s + k.volume, 0);
 const limit = +opt("limit", 10);
 const today = new Date().toISOString().slice(0, 10);
 
@@ -151,7 +164,7 @@ const lines = [
   `# Keyword picks — ${today}`,
   "",
   `Sources: ${files.join(", ")}. ${kws.size} keywords loaded, ${onTopic.length} on-topic.`,
-  `Already targeted: ${onTopic.filter((k) => k.page).length} keywords (${claimedVol.toLocaleString("en-US")} searches/mo). Backlog: ${onTopic.filter((k) => !k.page).length} (${backlogVol.toLocaleString("en-US")}/mo).`,
+  `Already targeted: ${onTopic.filter((k) => k.page).length} keywords (${claimedVol.toLocaleString("en-US")} searches/mo). Backlog: ${onTopic.filter((k) => !k.page && !k.skipped).length} (${backlogVol.toLocaleString("en-US")}/mo). Skipped: ${skippedCount}.`,
   `Filters: volume ≥ ${minVol}, KD ≤ ${maxKd}.`,
   "",
   "| # | Cluster | Total vol | Min KD | Top keywords |",
@@ -162,6 +175,7 @@ const lines = [
   "",
   "Next step for each pick: check it fits the site (blackletter / Old English and its uses), check no existing page answers it,",
   'then build the page or add an FAQ/section, and claim it: npm run keywords -- --use /page "regex".',
+  'Not a fit? Hide it for good: npm run keywords -- --skip "regex".',
 ];
 console.log(lines.join("\n"));
 
