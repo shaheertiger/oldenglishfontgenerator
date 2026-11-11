@@ -54,6 +54,10 @@ After deploy: resubmit `sitemap.xml`, then request indexing for `/fonts`, `/tatt
 
 Prune rule (from the playbook): after 90 days, any of these pages with zero GSC impressions gets merged into its closest parent and 301-redirected via `lib/redirects.mjs`.
 
+### Keyword research
+
+The Semrush export and the keyword → page map live in `research/` (see `research/README.md`). Run `npm run keywords -- --save` each day for the next unclaimed on-topic keyword clusters; claim them with `--use` when you publish.
+
 ### Font data
 
 `lib/fontstats.json` holds glyph counts and character support measured from each font file (designer, licence and date from Google Fonts metadata). Re-run when adding a font to `lib/realfonts.ts`, then bump `STATS_VERIFIED` in `lib/fontstats.ts`:

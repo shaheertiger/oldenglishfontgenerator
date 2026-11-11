@@ -5,7 +5,8 @@ import { lastModified } from "@/lib/lastmod";
 export default function Updated({ file, note }: { file: string; note?: string }) {
   const iso = lastModified(file);
   if (!iso) return null;
-  const date = new Date(iso).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
+  // Format the calendar date as committed (ignore the time-zone offset).
+  const date = new Date(`${iso.slice(0, 10)}T12:00:00Z`).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
   return (
     <p className="updated">
       Updated <time dateTime={iso.slice(0, 10)}>{date}</time> · by <Link href="/about">Old English Font Generator</Link>

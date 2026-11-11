@@ -1,0 +1,273 @@
+{
+  "_about": "Which keywords each page already targets. Patterns are case-insensitive regexes matched against every keyword in research/semrush/*.csv; the first page whose pattern matches claims the keyword. `npm run keywords` skips claimed keywords and suggests the rest. Add a page here when you publish it (or run: npm run keywords -- --use /page \"pattern\").",
+  "pages": {
+    "/death-note-font": [
+      "death ?note"
+    ],
+    "/fonts/old-english-text-mt": [
+      "old english text mt",
+      "monotype old english",
+      "collins old english",
+      "engravers old english",
+      "olde english font",
+      "download olde",
+      "g old english font",
+      "444 old english"
+    ],
+    "/fonts/old-london": [
+      "old london",
+      "font called london"
+    ],
+    "/fonts/cloister-black": [
+      "cloister"
+    ],
+    "/fonts/unifrakturcook": [
+      "unifraktur"
+    ],
+    "/fonts/uncial-antiqua": [
+      "uncial",
+      "celtic (knot|knotwork|hand) font"
+    ],
+    "/fonts/pirata-one": [
+      "pirata one"
+    ],
+    "/fonts/metal-mania": [
+      "metal mania",
+      "metal lord"
+    ],
+    "/chicano-font-generator": [
+      "chicano.*generator",
+      "cholo font generator"
+    ],
+    "/fonts/chicano": [
+      "chicano",
+      "cholo"
+    ],
+    "/gangster-font-generator": [
+      "gangster",
+      "gangsta"
+    ],
+    "/old-english-tattoo-font": [
+      "old english.*tattoo",
+      "tattoo.*old english",
+      "blackletter font tattoo"
+    ],
+    "/latin-tattoo-font": [
+      "latin.*tattoo",
+      "tattoo.*latin",
+      "memento mori"
+    ],
+    "/bible-verse-font": [
+      "bible verse",
+      "biblical tattoo",
+      "christian font",
+      "catholic fonts?$",
+      "bible text font"
+    ],
+    "/blog/what-font-is-the-bible-in": [
+      "what font is the bible",
+      "bible font size"
+    ],
+    "/tattoo-font-generator": [
+      "tattoo.*generator",
+      "tattoo font free",
+      "tattoo font style"
+    ],
+    "/fonts/tattoo": [
+      "tattoo"
+    ],
+    "/horror-font-generator": [
+      "scary",
+      "horror",
+      "vampire",
+      "creepy",
+      "spider web font"
+    ],
+    "/fonts/halloween": [
+      "halloween",
+      "spooky"
+    ],
+    "/metal-font-generator": [
+      "metallica",
+      "metalica",
+      "metal font",
+      "font gothic metal",
+      "gothic metal"
+    ],
+    "/diploma-font": [
+      "diploma",
+      "diplomas"
+    ],
+    "/bold-fraktur": [
+      "bold fraktur",
+      "fraktur bold"
+    ],
+    "/fraktur-generator": [
+      "fraktur"
+    ],
+    "/biker-font-generator": [
+      "biker",
+      "harley davidson font generator"
+    ],
+    "/newspaper-masthead-font": [
+      "masthead",
+      "new york times logo"
+    ],
+    "/illuminated-letters": [
+      "drop cap",
+      "illumination font",
+      "illuminated"
+    ],
+    "/old-english-font-tiktok": [
+      "tiktok"
+    ],
+    "/old-english-font-facebook": [
+      "font generator for facebook",
+      "fonts for facebook",
+      "facebook post",
+      "fonts facebook"
+    ],
+    "/old-english-font-discord": [
+      "discord"
+    ],
+    "/old-english-font-instagram": [
+      "instagram",
+      "\\big\\b"
+    ],
+    "/fonts/fantasy": [
+      "fantasy",
+      "tolkienesque",
+      "wizard font",
+      "knight font",
+      "dnd font",
+      "ancient fonts",
+      "ancient looking"
+    ],
+    "/fonts/clothing-brand": [
+      "clothing",
+      "streetwear",
+      "hoodie"
+    ],
+    "/fonts/calligraphy": [
+      "old english calligraphy",
+      "great calligraphy fonts",
+      "vintage calligraphy",
+      "antique calligraphy",
+      "retro calligraphy",
+      "beginner easy calligraphy"
+    ],
+    "/fonts/old-english/powerpoint": [
+      "powerpoint"
+    ],
+    "/fonts/old-english/photoshop": [
+      "photoshop"
+    ],
+    "/fonts/old-english/inkscape": [
+      "inkscape"
+    ],
+    "/fonts/old-english/cricut": [
+      "cricut"
+    ],
+    "/fonts/old-english/procreate": [
+      "procreate"
+    ],
+    "/fonts/old-english/canva": [
+      "canva"
+    ],
+    "/fonts/old-english/google-docs": [
+      "google docs"
+    ],
+    "/fonts/old-english/word": [
+      "fonts? in word",
+      "embed fonts? in word",
+      "microsoft word"
+    ],
+    "/blog/best-font-big-bold-letters-album-cover": [
+      "album cover"
+    ],
+    "/blog/best-fonts-for-signs-blackletter": [
+      "fonts? for (a )?sign",
+      "font for signage",
+      "what font for sign",
+      "signage"
+    ],
+    "/blog/best-fonts-for-embroidery-blackletter": [
+      "embroider"
+    ],
+    "/blog/best-engraving-fonts": [
+      "engraving",
+      "engraver fonts",
+      "font engravers"
+    ],
+    "/blog/blackletter-font-pairings": [
+      "font pairing",
+      "serif fonts for body"
+    ],
+    "/blog/best-monogram-fonts-blackletter": [
+      "monogram",
+      "fonts? for initials"
+    ],
+    "/blog/old-english-wedding-invitations": [
+      "wedding invitation",
+      "invitations in microsoft word"
+    ],
+    "/blog/block-vs-script-font": [
+      "block vs script"
+    ],
+    "/blog/identify-blackletter-font-from-image": [
+      "font from image",
+      "what font is this"
+    ],
+    "/blog/old-english-font-size-guide": [
+      "font readability"
+    ],
+    "/blog/blackletter-history-1941-ban": [
+      "nazi font",
+      "fraktur ban"
+    ],
+    "/gothic-font-generator": [
+      "gothic font (copy|generator)",
+      "gothic fonts copy",
+      "gothic font ig",
+      "modern gothic fonts"
+    ],
+    "/fonts/gothic": [
+      "gothic fonts?$",
+      "dark fonts?$"
+    ],
+    "/gothic-symbols": [
+      "gothic symbols?"
+    ],
+    "/blackletter-generator": [
+      "blackletter"
+    ],
+    "/medieval-font-generator": [
+      "medieval",
+      "ye olde",
+      "olden times"
+    ],
+    "/old-english-cursive": [
+      "old english cursive",
+      "old cursive"
+    ],
+    "/old-english-numbers": [
+      "old english.*number",
+      "fraktur font generator numbers"
+    ],
+    "/old-english-alphabet": [
+      "old english alphabet",
+      "letters? [a-z] fonts?$",
+      "^fonts? for (the )?letter",
+      "letter [a-z] in (different )?fonts",
+      "^[a-z] letter fonts?$",
+      "different fonts (of|for) (the )?letter",
+      "^fonts? (style )?letter [a-z]$",
+      "^letter [a-z] (font|fonts|font styles)$",
+      "^fonts? for [a-z]$"
+    ],
+    "/": [
+      "old english font",
+      "copy (and )?paste old english"
+    ]
+  }
+}
