@@ -30,6 +30,10 @@ import masthead from "./newspaper-masthead-font";
 import illuminated from "./illuminated-letters";
 import tiktok from "./old-english-font-tiktok";
 import facebook from "./old-english-font-facebook";
+import snapchat from "./old-english-font-snapchat";
+import youtube from "./old-english-font-youtube";
+import roblox from "./old-english-font-roblox";
+import viking from "./viking-font-generator";
 
 export { home };
 
@@ -38,6 +42,8 @@ export const CLUSTERS: PageContent[] = [
   chicano, names, medieval, instagram, discord, image, symbols, howto,
   // Lettering by theme (Nov 2026)
   tattooGen, gangster, horror, metal, deathNote, bible, diploma, boldFraktur, biker, latin, masthead, illuminated, tiktok, facebook,
+  // Daily picks 2026-11-11
+  snapchat, youtube, roblox, viking,
 ];
 
 export function getCluster(slug: string): PageContent | undefined {

@@ -381,7 +381,8 @@ const EXTRA: FontStyle[] = [
   { id: "runes-younger", name: "Younger Futhark (Viking Age)", transform: runes(YOUNGER, "᛫") },
   { id: "runes-futhorc", name: "Anglo-Saxon Futhorc", transform: runes(FUTHORC, "᛫") },
   { id: "runes-elder-spaced", name: "Elder Futhark, Word Spaces", transform: runes(ELDER, " ") },
-  { id: "runes-framed", name: "Rune Stone Frame ᛟ", transform: (s) => `ᛟ ${runes(ELDER, "᛫")(s)} ᛟ` },
+  // Framed with the runic cross ᛭ (U+16ED), not othala ᛟ, which extremist groups have adopted.
+  { id: "runes-framed", name: "Rune Stone Frame ᛭", transform: (s) => `᛭ ${runes(ELDER, "᛫")(s)} ᛭` },
   { id: "roman-inscription", name: "Roman Inscription · Capitals", transform: (s) => mapWith(BOLD_SERIF)(romanize(s).toUpperCase().replace(/U/g, "V").replace(/J/g, "I").trim().split(/\s+/).join("·")) },
 ];
 
