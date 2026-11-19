@@ -1,6 +1,41 @@
 {
   "_about": "Which keywords each page already targets. Patterns are case-insensitive regexes matched against every keyword in research/semrush/*.csv; the first page whose pattern matches claims the keyword. `npm run keywords` skips claimed keywords and suggests the rest. Add a page here when you publish it (or run: npm run keywords -- --use /page \"pattern\").",
   "pages": {
+    "/gothic-letters": [
+      "gothic (letters?|alphabet)",
+      "goth letters",
+      "gothic (small|capital|lowercase) letters?",
+      "old english gothic alphabet"
+    ],
+    "/ancient-font-generator": [
+      "ancient (font generator|letters?|alphabet|script)",
+      "hieroglyph",
+      "cuneiform",
+      "phoenician",
+      "ogham",
+      "oldest alphabet",
+      "sumerian"
+    ],
+    "/renaissance-font-generator": [
+      "renaissance"
+    ],
+    "/old-english-font-twitch": [
+      "twitch"
+    ],
+    "/blog/best-fonts-for-t-shirts": [
+      "t[- ]?shirts?",
+      "tshirts?",
+      "fonts? for shirts",
+      "shirt font design",
+      "fonts for shirt design",
+      "(best|good|great) fonts? for shirts"
+    ],
+    "/old-english-letters": [
+      "old english letters?( to)? cop",
+      "old english letters?$",
+      "old english letters? font",
+      "old english lettering"
+    ],
     "/blog/old-english-youtube-thumbnail-fonts": [
       "youtube thumbnail",
       "font for youtube thumbnail"
@@ -282,7 +317,11 @@
       "different fonts (of|for) (the )?letter",
       "^fonts? (style )?letter [a-z]$",
       "^letter [a-z] (font|fonts|font styles)$",
-      "^fonts? for [a-z]$"
+      "^fonts? for [a-z]$",
+      "different fonts letter [a-z]$",
+      "^letter [a-z] different fonts$",
+      "^letter [a-z] in different font styles$",
+      "^letter [a-z] (fancy )?font( style)?$"
     ],
     "/": [
       "old english font",
@@ -301,6 +340,10 @@
     "wedding font bundle",
     "japanese calligraphy",
     "warning sign",
-    "fancy sign"
+    "fancy sign",
+    "charlie kirk",
+    "i (love|heart) n(y|ew york)",
+    "seaside shirt",
+    "harlem renaissance"
   ]
 }

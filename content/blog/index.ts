@@ -16,6 +16,7 @@ import pLongSExplained from "./long-s-explained";
 import pFrakturLettersShowingAsBoxes from "./fraktur-letters-showing-as-boxes";
 import pBlackletterHistory1941Ban from "./blackletter-history-1941-ban";
 import pOldEnglishYoutubeThumbnailFonts from "./old-english-youtube-thumbnail-fonts";
+import pBestFontsForTShirts from "./best-fonts-for-t-shirts";
 
 export const BLOG_FILES: BlogPost[] = [
   pBestFontBigBoldLettersAlbumCover,
@@ -34,4 +35,5 @@ export const BLOG_FILES: BlogPost[] = [
   pFrakturLettersShowingAsBoxes,
   pBlackletterHistory1941Ban,
   pOldEnglishYoutubeThumbnailFonts,
+  pBestFontsForTShirts,
 ];

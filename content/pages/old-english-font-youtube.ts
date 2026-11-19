@@ -75,7 +75,7 @@ const page: PageContent = {
     "Styles use Mathematical Fraktur and Bold Fraktur from Unicode's Mathematical Alphanumeric Symbols block, with frames and symbols such as ⚔ and ♛ from older symbol blocks. The counter measures UTF-16 code units, which is how most web forms count.",
   related: {
     heading: "Old English for other apps",
-    hrefs: ["/old-english-font-tiktok", "/old-english-font-discord", "/old-english-font-roblox", "/old-english-text-to-image", "/gothic-font-generator", "/metal-font-generator"],
+    hrefs: ["/old-english-font-twitch", "/old-english-font-tiktok", "/old-english-font-discord", "/old-english-font-roblox", "/old-english-text-to-image", "/gothic-font-generator", "/metal-font-generator"],
   },
   faq: [
     { q: "What font does YouTube use?", a: "YouTube's logo and brand lettering use YouTube Sans, a typeface introduced with its 2017 rebrand, while the website's interface text has mainly used Roboto. Neither is blackletter; the styles here are Unicode characters you paste in." },

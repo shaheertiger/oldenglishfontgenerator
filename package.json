@@ -10,7 +10,8 @@
     "indexnow": "node scripts/indexnow.mjs",
     "lastmod": "node scripts/lastmod.mjs",
     "audit": "node scripts/audit.mjs",
-    "keywords": "node scripts/keywords.mjs"
+    "keywords": "node scripts/keywords.mjs",
+    "gsc": "node scripts/gsc.mjs"
   },
   "dependencies": {
     "@dualmark/converters": "^0.11.0",

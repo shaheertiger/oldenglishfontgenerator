@@ -85,7 +85,7 @@ const page: PageContent = {
     "The rune styles replace each Latin letter (after handling th, ng, ea, ae and oe) with a character from the Unicode Runic block, joined by ᛫ (U+16EB). The Norse lettering styles use Mathematical Bold Fraktur with symbols such as ⚔ and ♛.",
   related: {
     heading: "More ancient and dark lettering",
-    hrefs: ["/medieval-font-generator", "/illuminated-letters", "/metal-font-generator", "/gothic-symbols", "/old-english-tattoo-font", "/fonts/old-english"],
+    hrefs: ["/medieval-font-generator", "/illuminated-letters", "/metal-font-generator", "/gothic-symbols", "/old-english-tattoo-font", "/fonts/old-english", "/ancient-font-generator", "/gothic-letters"],
   },
   faq: [
     { q: "Is this a real rune translator?", a: "No. It swaps each letter for a rune, which is close enough for names and decoration. A proper transcription spells by sound and follows the conventions of one period, so a runologist would write some names differently." },

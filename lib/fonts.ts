@@ -37,6 +37,8 @@ const SCRIPT = rangeMap(0x1d49c, 0x1d4b6, {
 const BOLD_SCRIPT = rangeMap(0x1d4d0, 0x1d4ea);
 const MONO = rangeMap(0x1d670, 0x1d68a);
 const BOLD_SERIF = rangeMap(0x1d400, 0x1d41a);
+const ITALIC_SERIF = rangeMap(0x1d434, 0x1d44e, { h: 0x210e });
+const BOLD_ITALIC_SERIF = rangeMap(0x1d468, 0x1d482);
 const DOUBLE_STRUCK = rangeMap(0x1d538, 0x1d552, { C: 0x2102, H: 0x210d, N: 0x2115, P: 0x2119, Q: 0x211a, R: 0x211d, Z: 0x2124 });
 
 const DIGITS = "0123456789";
@@ -364,6 +366,32 @@ function runes(row: RuneRow, sep: string) {
       .join(sep);
 }
 
+// ---------- other ancient scripts (ancient font / gothic letters pages) ----------
+// Same letter-by-letter approach as the runes. Wulfila's Gothic alphabet and
+// Ogham have real Latin correspondences; the hieroglyph row is the familiar
+// "uniliteral sign" alphabet (one sign per sound), which Egyptian scribes
+// never used as a spelling system for whole words.
+const WULFILA: RuneRow = {
+  digraphs: [["th", "𐌸"], ["hw", "𐍈"], ["wh", "𐍈"]],
+  map: { a: "𐌰", b: "𐌱", c: "𐌺", d: "𐌳", e: "𐌴", f: "𐍆", g: "𐌲", h: "𐌷", i: "𐌹", j: "𐌾", k: "𐌺", l: "𐌻", m: "𐌼", n: "𐌽", o: "𐍉", p: "𐍀", q: "𐌵", r: "𐍂", s: "𐍃", t: "𐍄", u: "𐌿", v: "𐍅", w: "𐍅", x: "𐍇", y: "𐍅", z: "𐌶", "þ": "𐌸" },
+};
+const OGHAM: RuneRow = {
+  digraphs: [["ng", "ᚍ"]],
+  map: { a: "ᚐ", b: "ᚁ", c: "ᚉ", d: "ᚇ", e: "ᚓ", f: "ᚃ", g: "ᚌ", h: "ᚆ", i: "ᚔ", j: "ᚔ", k: "ᚉ", l: "ᚂ", m: "ᚋ", n: "ᚅ", o: "ᚑ", p: "ᚚ", q: "ᚊ", r: "ᚏ", s: "ᚄ", t: "ᚈ", u: "ᚒ", v: "ᚃ", w: "ᚃ", x: "ᚉᚄ", y: "ᚔ", z: "ᚎ" },
+};
+const HIEROGLYPHS: RuneRow = {
+  digraphs: [["sh", "𓈙"], ["ch", "𓍿"], ["kh", "𓐍"]],
+  map: { a: "𓄿", b: "𓃀", c: "𓎡", d: "𓂧", e: "𓇋", f: "𓆑", g: "𓎼", h: "𓉔", i: "𓇋", j: "𓆓", k: "𓎡", l: "𓃭", m: "𓅓", n: "𓈖", o: "𓅱", p: "𓊪", q: "𓈎", r: "𓂋", s: "𓋴", t: "𓏏", u: "𓅱", v: "𓆑", w: "𓅱", x: "𓎡𓋴", y: "𓇌", z: "𓊃" },
+};
+
+// Phoenician (about 1050 BC): each Latin letter maps to the Phoenician letter it
+// descends from via Greek (F, U, V, W, Y all come from wau). The characters are
+// right-to-left, so apps display the word reversed, as Phoenician was written.
+const PHOENICIAN: RuneRow = {
+  digraphs: [["sh", "𐤔"]],
+  map: { a: "𐤀", b: "𐤁", c: "𐤂", d: "𐤃", e: "𐤄", f: "𐤅", g: "𐤂", h: "𐤇", i: "𐤉", j: "𐤉", k: "𐤊", l: "𐤋", m: "𐤌", n: "𐤍", o: "𐤏", p: "𐤐", q: "𐤒", r: "𐤓", s: "𐤔", t: "𐤕", u: "𐤅", v: "𐤅", w: "𐤅", x: "𐤎", y: "𐤅", z: "𐤆" },
+};
+
 // Companion styles for theme pages (tattoo, gangster, diploma, newspaper,
 // Latin, clothing). They pair with blackletter but aren't blackletter, so
 // they are kept off the homepage list.
@@ -383,6 +411,13 @@ const EXTRA: FontStyle[] = [
   { id: "runes-elder-spaced", name: "Elder Futhark, Word Spaces", transform: runes(ELDER, " ") },
   // Framed with the runic cross ᛭ (U+16ED), not othala ᛟ, which extremist groups have adopted.
   { id: "runes-framed", name: "Rune Stone Frame ᛭", transform: (s) => `᛭ ${runes(ELDER, "᛫")(s)} ᛭` },
+  { id: "gothic-wulfila", name: "Gothic Alphabet (Wulfila, 4th c.)", transform: runes(WULFILA, " ") },
+  { id: "ogham", name: "Ogham ᚛ ᚜", transform: (s) => `᚛${runes(OGHAM, "\u1680")(s)}᚜` },
+  { id: "hieroglyphs", name: "Egyptian Hieroglyph Alphabet", transform: runes(HIEROGLYPHS, " ") },
+  { id: "phoenician", name: "Phoenician (Oldest Alphabet)", transform: runes(PHOENICIAN, "\u{1091F}") },
+  { id: "italic-serif", name: "Renaissance Italic", transform: mapWith(ITALIC_SERIF) },
+  { id: "bold-italic-serif", name: "Bold Renaissance Italic", transform: mapWith(BOLD_ITALIC_SERIF) },
+  { id: "roman-initial-italic", name: "Roman Capital + Italic", transform: initials(BOLD_SERIF, ITALIC_SERIF) },
   { id: "roman-inscription", name: "Roman Inscription · Capitals", transform: (s) => mapWith(BOLD_SERIF)(romanize(s).toUpperCase().replace(/U/g, "V").replace(/J/g, "I").trim().split(/\s+/).join("·")) },
 ];
 

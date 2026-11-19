@@ -34,6 +34,10 @@ import snapchat from "./old-english-font-snapchat";
 import youtube from "./old-english-font-youtube";
 import roblox from "./old-english-font-roblox";
 import viking from "./viking-font-generator";
+import gothicLetters from "./gothic-letters";
+import ancient from "./ancient-font-generator";
+import renaissance from "./renaissance-font-generator";
+import twitch from "./old-english-font-twitch";
 
 export { home };
 
@@ -44,6 +48,8 @@ export const CLUSTERS: PageContent[] = [
   tattooGen, gangster, horror, metal, deathNote, bible, diploma, boldFraktur, biker, latin, masthead, illuminated, tiktok, facebook,
   // Daily picks 2026-11-11
   snapchat, youtube, roblox, viking,
+  // Daily picks 2026-11-19 (from Search Console queries)
+  gothicLetters, ancient, renaissance, twitch,
 ];
 
 export function getCluster(slug: string): PageContent | undefined {

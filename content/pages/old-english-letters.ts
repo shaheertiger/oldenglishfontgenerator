@@ -2,13 +2,13 @@ import type { PageContent } from "./types";
 
 const page: PageContent = {
   slug: "old-english-letters",
-  title: "Old English Letters — Copy & Paste Initials & Monograms",
+  title: "Old English Letters — Copy & Paste A–Z and Monograms",
   description:
-    "Old English letters to copy and paste: single blackletter initials, framed capitals and couple monograms for profiles, gifts and logos. Free.",
+    "Old English letters to copy and paste: every A–Z capital and small letter in one tap, plus framed initials and couple monograms for profiles and gifts.",
   h1: "Old English Letters",
   crumb: "Old English Letters",
   intro:
-    "Sometimes you only need one or two Old English letters: an initial for a profile picture caption, the first letters of a couple's names for a wedding sign, or a single framed capital to start a post. Type a full name below and the monogram styles at the top reduce it to initials automatically.",
+    "Every Old English letter is below, capital and small, ready to copy with one tap: 𝔄 to ℨ and 𝔞 to 𝔷. Need just one or two? Type a full name into the box and the monogram styles reduce it to initials automatically, for a profile caption, a couple's wedding sign or a single framed capital to start a post.",
   tool: {
     styles: ["monogram", "monogram-framed", "monogram-ampersand", "drop-cap", "illuminated", "gothic-framed", "frame-white", "circled", "boxed", "bold-fraktur", "fraktur", "frame-corner", "deco-fleur"],
     sample: "Amelia Rose",
@@ -25,6 +25,13 @@ const page: PageContent = {
     ],
   },
   sections: [
+    {
+      h2: "All Old English letters, A to Z",
+      blocks: [
+        { p: "Tap any letter to copy it. Capitals sit on the top rows and small letters below; five capitals (ℭ ℌ ℑ ℜ ℨ) come from an older Unicode block, so some fonts draw them a little differently. For bold, framed and outlined versions of one letter, open its page in the [alphabet index](/old-english-alphabet), and for the separate 4th-century Gothic script, see [gothic letters](/gothic-letters)." },
+        { widget: "alphabet-full" },
+      ],
+    },
     {
       h2: "Framed single letters",
       blocks: [
