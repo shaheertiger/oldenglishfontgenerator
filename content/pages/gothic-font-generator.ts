@@ -71,6 +71,7 @@ const page: PageContent = {
   },
   faq: [
     { q: "What's the difference between gothic and Old English fonts?", a: "They describe the same letter shapes. Gothic is the everyday word and is often used for a darker mood; Old English is the name tattoo and sign shops use. This page focuses on the darker, decorated versions." },
+    { q: "Why is Century Gothic not a gothic font?", a: "In American and Japanese type naming, gothic also means sans-serif, so Century Gothic, Franklin Gothic and MS Gothic are plain fonts. Our article on [why sans-serif fonts are called gothic](/blog/why-sans-serif-fonts-are-called-gothic) explains the history." },
     { q: "Why does the cursed text look messy in some apps?", a: "Combining marks stack above and below letters. Apps with tight line spacing can clip them or overlap neighbouring lines. The lighter Distressed Gothic style is safer for bios." },
     { q: "Do these symbols have religious meaning?", a: "Several do. Crosses and pentagrams carry meaning for many people, so think about your audience before using them in a public name." },
     { q: "Can I use gothic text in a game name?", a: "Many games restrict names to basic characters, and some reject unusual symbols silently. Test it, and keep a plain backup name ready." },

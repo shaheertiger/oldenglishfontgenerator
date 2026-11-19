@@ -17,6 +17,7 @@ import pFrakturLettersShowingAsBoxes from "./fraktur-letters-showing-as-boxes";
 import pBlackletterHistory1941Ban from "./blackletter-history-1941-ban";
 import pOldEnglishYoutubeThumbnailFonts from "./old-english-youtube-thumbnail-fonts";
 import pBestFontsForTShirts from "./best-fonts-for-t-shirts";
+import pWhySansSerifFontsAreCalledGothic from "./why-sans-serif-fonts-are-called-gothic";
 
 export const BLOG_FILES: BlogPost[] = [
   pBestFontBigBoldLettersAlbumCover,
@@ -36,4 +37,5 @@ export const BLOG_FILES: BlogPost[] = [
   pBlackletterHistory1941Ban,
   pOldEnglishYoutubeThumbnailFonts,
   pBestFontsForTShirts,
+  pWhySansSerifFontsAreCalledGothic,
 ];

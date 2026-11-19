@@ -38,6 +38,9 @@ import gothicLetters from "./gothic-letters";
 import ancient from "./ancient-font-generator";
 import renaissance from "./renaissance-font-generator";
 import twitch from "./old-english-font-twitch";
+import victorian from "./victorian-font-generator";
+import birthday from "./happy-birthday-font";
+import pinterest from "./old-english-font-pinterest";
 
 export { home };
 
@@ -50,6 +53,7 @@ export const CLUSTERS: PageContent[] = [
   snapchat, youtube, roblox, viking,
   // Daily picks 2026-11-19 (from Search Console queries)
   gothicLetters, ancient, renaissance, twitch,
+  victorian, birthday, pinterest,
 ];
 
 export function getCluster(slug: string): PageContent | undefined {

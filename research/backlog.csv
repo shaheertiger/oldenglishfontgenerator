@@ -73,7 +73,7 @@ script fonts for tattoos,390,14,0.67,Informational,script tattoo,targeted,/fonts
 the letter s in different fonts,390,14,0,Informational, different letter,targeted,/old-english-alphabet,font_all-keywords_us_2026-11-11.csv
 uncial antiqua font,390,13,0,Informational,antiqua uncial,targeted,/fonts/uncial-antiqua,font_all-keywords_us_2026-11-11.csv
 vampire fonts,390,14,0,Informational,vampire,targeted,/horror-font-generator,font_all-keywords_us_2026-11-11.csv
-what font does facebook use,390,14,0,,doe facebook use,backlog,,font_all-keywords_us_2026-11-11.csv
+what font does facebook use,390,14,0,,doe facebook use,targeted,/old-english-font-facebook,font_all-keywords_us_2026-11-11.csv
 youtube thumbnail fonts,390,13,1.64,Informational,thumbnail youtube,targeted,/blog/old-english-youtube-thumbnail-fonts,font_all-keywords_us_2026-11-11.csv
 adding fonts to canva,320,13,0.01,Informational,adding canva,targeted,/fonts/old-english/canva,font_all-keywords_us_2026-11-11.csv
 catholic font,320,11,0,Informational,catholic,targeted,/bible-verse-font,font_all-keywords_us_2026-11-11.csv
@@ -153,10 +153,10 @@ b letter font,210,6,0,Informational,b letter,targeted,/old-english-alphabet,font
 best font for signs,210,7,0.7,Commercial,sign,targeted,/blog/best-fonts-for-signs-blackletter,font_all-keywords_us_2026-11-11.csv
 best fonts for embroidery,210,5,0.48,Commercial,embroidery,targeted,/blog/best-fonts-for-embroidery-blackletter,font_all-keywords_us_2026-11-11.csv
 bible verse font,210,14,0,Informational,bible verse,targeted,/bible-verse-font,font_all-keywords_us_2026-11-11.csv
-block gothic rr bold extracond font,210,1,0,Informational,block bold extracond gothic rr,backlog,,font_all-keywords_us_2026-11-11.csv
+block gothic rr bold extracond font,210,1,0,Informational,block bold extracond gothic rr,targeted,/blog/why-sans-serif-fonts-are-called-gothic,font_all-keywords_us_2026-11-11.csv
 capital letter a fonts,210,14,0,Informational,capital letter,targeted,/old-english-alphabet,font_all-keywords_us_2026-11-11.csv
 century old style font,210,12,0,Informational,century old,backlog,,font_all-keywords_us_2026-11-11.csv
-champion gothic font,210,8,0,Informational,champion gothic,targeted,/fonts/gothic,font_all-keywords_us_2026-11-11.csv
+champion gothic font,210,8,0,Informational,champion gothic,targeted,/blog/why-sans-serif-fonts-are-called-gothic,font_all-keywords_us_2026-11-11.csv
 clothing brand fonts,210,14,1.88,Informational,brand clothing,targeted,/fonts/clothing-brand,font_all-keywords_us_2026-11-11.csv
 clothing fonts,210,14,1.72,Informational,clothing,targeted,/fonts/clothing-brand,font_all-keywords_us_2026-11-11.csv
 cursive fonts tattoo,210,14,0.78,Informational,cursive tattoo,targeted,/fonts/tattoo,font_all-keywords_us_2026-11-11.csv
@@ -247,13 +247,13 @@ font for monogram,170,11,0.46,Informational,monogram,targeted,/blog/best-monogra
 font letter e,170,7,0,Informational,e letter,targeted,/old-english-alphabet,font_all-keywords_us_2026-11-11.csv
 font letter i,170,11,0,Informational,i letter,targeted,/old-english-alphabet,font_all-keywords_us_2026-11-11.csv
 font on diplomas,170,7,0,Informational,diploma,targeted,/diploma-font,font_all-keywords_us_2026-11-11.csv
-font sackers gothic,170,11,0,Commercial,gothic sacker,backlog,,font_all-keywords_us_2026-11-11.csv
+font sackers gothic,170,11,0,Commercial,gothic sacker,targeted,/blog/why-sans-serif-fonts-are-called-gothic,font_all-keywords_us_2026-11-11.csv
 fonts like frakturata regular,170,11,0,Informational,frakturata like regular,targeted,/fraktur-generator,font_all-keywords_us_2026-11-11.csv
 fs ostro font word,170,7,0,Informational,f ostro word,backlog,,font_all-keywords_us_2026-11-11.csv
 gangsta fonts generator,170,14,0,Informational,gangsta,targeted,/gangster-font-generator,font_all-keywords_us_2026-11-11.csv
 gothic war font,170,8,0,Informational,gothic war,backlog,,font_all-keywords_us_2026-11-11.csv
 goudy old style bold font free download,170,11,0,Informational,bold goudy old,backlog,,font_all-keywords_us_2026-11-11.csv
-happy birthday calligraphy fonts,170,14,0,Informational,birthday calligraphy happy,backlog,,font_all-keywords_us_2026-11-11.csv
+happy birthday calligraphy fonts,170,14,0,Informational,birthday calligraphy happy,targeted,/happy-birthday-font,font_all-keywords_us_2026-11-11.csv
 how do i import a font into photoshop,170,14,0,Informational,do how i import into photoshop,targeted,/fonts/old-english/photoshop,font_all-keywords_us_2026-11-11.csv
 how to add a font to cricut,170,13,0.08,Informational,add cricut how,targeted,/fonts/old-english/cricut,font_all-keywords_us_2026-11-11.csv
 immortal gothic font,170,9,0,Informational,gothic immortal,targeted,/fonts/gothic,font_all-keywords_us_2026-11-11.csv
@@ -309,7 +309,7 @@ embroidery script font,140,8,0.36,Informational,embroidery script,targeted,/blog
 endless alphabet font,140,5,0,Informational,alphabet endles,backlog,,font_all-keywords_us_2026-11-11.csv
 fishtail embroidery font,140,0,0.31,Informational,embroidery fishtail,targeted,/blog/best-fonts-for-embroidery-blackletter,font_all-keywords_us_2026-11-11.csv
 font clothing,140,14,0,Informational,clothing,targeted,/fonts/clothing-brand,font_all-keywords_us_2026-11-11.csv
-font deutsch gothic,140,11,0,Informational,deutsch gothic,backlog,,font_all-keywords_us_2026-11-11.csv
+font deutsch gothic,140,11,0,Informational,deutsch gothic,targeted,/fonts/germania-one,font_all-keywords_us_2026-11-11.csv
 font for clothing brand,140,13,1.51,Informational,brand clothing,targeted,/fonts/clothing-brand,font_all-keywords_us_2026-11-11.csv
 font letter o,140,8,0,Informational,letter o,targeted,/old-english-alphabet,font_all-keywords_us_2026-11-11.csv
 font letter p,140,8,0,Informational,letter p,targeted,/old-english-alphabet,font_all-keywords_us_2026-11-11.csv
@@ -321,7 +321,7 @@ fonts letter e,140,7,0,Informational,e letter,targeted,/old-english-alphabet,fon
 fonts letter k,140,13,0,Informational,k letter,targeted,/old-english-alphabet,font_all-keywords_us_2026-11-11.csv
 g letter font,140,8,0,Informational,g letter,targeted,/old-english-alphabet,font_all-keywords_us_2026-11-11.csv
 gangster tattoo fonts generator,140,13,0.93,Informational,gangster tattoo,targeted,/gangster-font-generator,font_all-keywords_us_2026-11-11.csv
-germania one font,140,14,0,Informational,germania one,backlog,,font_all-keywords_us_2026-11-11.csv
+germania one font,140,14,0,Informational,germania one,targeted,/fonts/germania-one,font_all-keywords_us_2026-11-11.csv
 gothic fonts copy paste,140,10,0.57,Commercial,gothic,targeted,/gothic-font-generator,font_all-keywords_us_2026-11-11.csv
 h letter font,140,7,0,Informational,h letter,targeted,/old-english-alphabet,font_all-keywords_us_2026-11-11.csv
 how to add fonts to cricut on ipad,140,13,0,Informational,add cricut how ipad,targeted,/fonts/old-english/cricut,font_all-keywords_us_2026-11-11.csv
@@ -351,7 +351,7 @@ tattoo font free,140,3,0.92,"Informational, Commercial",tattoo,targeted,/tattoo-
 teacher canva fonts,140,2,0,Informational,canva teacher,targeted,/fonts/old-english/canva,font_all-keywords_us_2026-11-11.csv
 twitch fonts,140,13,0,Informational,twitch,targeted,/old-english-font-twitch,font_all-keywords_us_2026-11-11.csv
 vampiress font,140,5,0,Informational,vampires,targeted,/horror-font-generator,font_all-keywords_us_2026-11-11.csv
-victorian cursive font,140,13,0,Informational,cursive victorian,backlog,,font_all-keywords_us_2026-11-11.csv
+victorian cursive font,140,13,0,Informational,cursive victorian,targeted,/victorian-font-generator,font_all-keywords_us_2026-11-11.csv
 viking font generator,140,10,0,Informational,viking,targeted,/viking-font-generator,font_all-keywords_us_2026-11-11.csv
 wizard fonts,140,14,0,Informational,wizard,targeted,/fonts/fantasy,font_all-keywords_us_2026-11-11.csv
 3d puff embroidery fonts,110,11,0.43,Informational,3d embroidery puff,targeted,/blog/best-fonts-for-embroidery-blackletter,font_all-keywords_us_2026-11-11.csv
@@ -383,7 +383,7 @@ embed fonts in powerpoint mac,110,11,0,Informational,embed mac powerpoint,target
 embed fonts powerpoint,110,8,0,Informational,embed powerpoint,targeted,/fonts/old-english/powerpoint,font_all-keywords_us_2026-11-11.csv
 embedded fonts in powerpoint,110,6,0,Informational,embedded powerpoint,targeted,/fonts/old-english/powerpoint,font_all-keywords_us_2026-11-11.csv
 engraver fonts,110,11,1.19,Informational,engraver,targeted,/blog/best-engraving-fonts,font_all-keywords_us_2026-11-11.csv
-facebook logo font,110,12,0,Informational,facebook logo,backlog,,font_all-keywords_us_2026-11-11.csv
+facebook logo font,110,12,0,Informational,facebook logo,targeted,/old-english-font-facebook,font_all-keywords_us_2026-11-11.csv
 font changer for tiktok,110,11,0,Informational,changer tiktok,targeted,/old-english-font-tiktok,font_all-keywords_us_2026-11-11.csv
 fonts chicano,110,14,1.06,"Informational, Commercial",chicano,targeted,/fonts/chicano,font_all-keywords_us_2026-11-11.csv
 fonts for house signs,110,11,0,Informational,house sign,backlog,,font_all-keywords_us_2026-11-11.csv
@@ -460,12 +460,12 @@ uploading fonts to cricut,110,14,0,Informational,cricut uploading,targeted,/font
 vampire diaries font,110,13,0,Informational,diarie vampire,targeted,/horror-font-generator,font_all-keywords_us_2026-11-11.csv
 vampire font generator,110,10,0,Informational,vampire,targeted,/horror-font-generator,font_all-keywords_us_2026-11-11.csv
 vampire wars font,110,3,0,Informational,vampire war,targeted,/horror-font-generator,font_all-keywords_us_2026-11-11.csv
-victorian cursive handwriting font,110,12,0,Informational,cursive handwriting victorian,backlog,,font_all-keywords_us_2026-11-11.csv
+victorian cursive handwriting font,110,12,0,Informational,cursive handwriting victorian,targeted,/victorian-font-generator,font_all-keywords_us_2026-11-11.csv
 vintage calligraphy font,110,13,1.1,Informational,calligraphy vintage,targeted,/fonts/calligraphy,font_all-keywords_us_2026-11-11.csv
 weirdest fonts on google docs,110,13,0,Informational,doc google weirdest,targeted,/fonts/old-english/google-docs,font_all-keywords_us_2026-11-11.csv
 welcome sign font,110,13,0,Informational,sign welcome,backlog,,font_all-keywords_us_2026-11-11.csv
 what are cursive fonts in word,110,7,0,Informational,are cursive word,targeted,/fonts/old-english/word,font_all-keywords_us_2026-11-11.csv
-what font does facebook use for posts,110,6,0,Informational,doe facebook post use,backlog,,font_all-keywords_us_2026-11-11.csv
+what font does facebook use for posts,110,6,0,Informational,doe facebook post use,targeted,/old-english-font-facebook,font_all-keywords_us_2026-11-11.csv
 what font does hollow knight use,110,13,0,Informational,doe hollow knight use,backlog,,font_all-keywords_us_2026-11-11.csv
 what font is snapchat,110,14,0,Informational,snapchat,targeted,/old-english-font-snapchat,font_all-keywords_us_2026-11-11.csv
 what is the biggest font style on google docs,110,9,0,Informational,biggest doc google,targeted,/fonts/old-english/google-docs,font_all-keywords_us_2026-11-11.csv
@@ -488,7 +488,7 @@ best fonts for shirts,90,11,1.52,Commercial,shirt,targeted,/blog/best-fonts-for-
 best script fonts on canva,90,5,0,Commercial,canva script,targeted,/fonts/old-english/canva,font_all-keywords_us_2026-11-11.csv
 block embroidery font,90,2,0.4,Informational,block embroidery,targeted,/blog/best-fonts-for-embroidery-blackletter,font_all-keywords_us_2026-11-11.csv
 calligraphic serif font,90,12,0,Informational,calligraphic serif,backlog,,font_all-keywords_us_2026-11-11.csv
-calligraphy fonts happy birthday,90,13,0,Informational,birthday calligraphy happy,backlog,,font_all-keywords_us_2026-11-11.csv
+calligraphy fonts happy birthday,90,13,0,Informational,birthday calligraphy happy,targeted,/happy-birthday-font,font_all-keywords_us_2026-11-11.csv
 calligraphy serif font,90,12,0,Informational,calligraphy serif,backlog,,font_all-keywords_us_2026-11-11.csv
 canva varsity font,90,12,0,Informational,canva varsity,targeted,/fonts/old-english/canva,font_all-keywords_us_2026-11-11.csv
 chalk font in canva,90,14,0,Informational,canva chalk,targeted,/fonts/old-english/canva,font_all-keywords_us_2026-11-11.csv
@@ -563,7 +563,7 @@ gothicus font,90,6,0,Informational,gothicu,backlog,,font_all-keywords_us_2026-11
 goudy old style font free download,90,14,0,Informational,goudy old,backlog,,font_all-keywords_us_2026-11-11.csv
 halloween font canva,90,3,0,Informational,canva halloween,targeted,/fonts/halloween,font_all-keywords_us_2026-11-11.csv
 halloween font copy paste,90,13,0,Informational,halloween,targeted,/fonts/halloween,font_all-keywords_us_2026-11-11.csv
-happy birthday calligraphy font,90,13,0,Informational,birthday calligraphy happy,backlog,,font_all-keywords_us_2026-11-11.csv
+happy birthday calligraphy font,90,13,0,Informational,birthday calligraphy happy,targeted,/happy-birthday-font,font_all-keywords_us_2026-11-11.csv
 how to change font for all slides in powerpoint,90,6,0,Informational,all change how powerpoint slide,targeted,/fonts/old-english/powerpoint,font_all-keywords_us_2026-11-11.csv
 how to change font on all slides in powerpoint,90,7,0,Informational,all change how powerpoint slide,targeted,/fonts/old-english/powerpoint,font_all-keywords_us_2026-11-11.csv
 how to embed fonts in powerpoint for mac,90,9,0,Informational,embed how mac powerpoint,targeted,/fonts/old-english/powerpoint,font_all-keywords_us_2026-11-11.csv
@@ -622,7 +622,7 @@ tiktok captions font,90,13,0,Informational,caption tiktok,targeted,/old-english-
 vampire font copy and paste,90,11,0,Informational,vampire,targeted,/horror-font-generator,font_all-keywords_us_2026-11-11.csv
 vampire fonts copy and paste,90,12,0,Informational,vampire,targeted,/horror-font-generator,font_all-keywords_us_2026-11-11.csv
 varsity embroidery font,90,1,0.36,Informational,embroidery varsity,targeted,/blog/best-fonts-for-embroidery-blackletter,font_all-keywords_us_2026-11-11.csv
-victorian cursive script font,90,9,0,Informational,cursive script victorian,backlog,,font_all-keywords_us_2026-11-11.csv
+victorian cursive script font,90,9,0,Informational,cursive script victorian,targeted,/victorian-font-generator,font_all-keywords_us_2026-11-11.csv
 vintage blackletter font,90,14,0,Informational,blackletter vintage,targeted,/blackletter-generator,font_all-keywords_us_2026-11-11.csv
 vintage monogram font,90,14,0.81,Informational,monogram vintage,targeted,/blog/best-monogram-fonts-blackletter,font_all-keywords_us_2026-11-11.csv
 wedding fonts on canva,90,14,0,Informational,canva wedding,targeted,/fonts/old-english/canva,font_all-keywords_us_2026-11-11.csv
@@ -699,7 +699,7 @@ embroidery script fonts,70,8,0.36,Informational,embroidery script,targeted,/blog
 engravers script font,70,12,0,Informational,engraver script,backlog,,font_all-keywords_us_2026-11-11.csv
 engraving fonts for jewelry,70,2,0,Informational,engraving jewelry,targeted,/blog/best-engraving-fonts,font_all-keywords_us_2026-11-11.csv
 engraving fonts script,70,11,0,Informational,engraving script,targeted,/blog/best-engraving-fonts,font_all-keywords_us_2026-11-11.csv
-facebook sans font,70,10,0,Informational,facebook san,backlog,,font_all-keywords_us_2026-11-11.csv
+facebook sans font,70,10,0,Informational,facebook san,targeted,/old-english-font-facebook,font_all-keywords_us_2026-11-11.csv
 fancy cursive fonts for tattoos,70,11,0,Informational,cursive fancy tattoo,targeted,/fonts/tattoo,font_all-keywords_us_2026-11-11.csv
 fancy cursive fonts tattoos,70,12,1.17,Informational,cursive fancy tattoo,targeted,/fonts/tattoo,font_all-keywords_us_2026-11-11.csv
 fancy handwriting fonts for tattoos,70,13,0,Informational,fancy handwriting tattoo,targeted,/fonts/tattoo,font_all-keywords_us_2026-11-11.csv
@@ -718,7 +718,7 @@ free machine embroidery fonts,70,12,0.33,Informational,embroidery machine,target
 gangster blessed font,70,14,0,Informational,blessed gangster,targeted,/gangster-font-generator,font_all-keywords_us_2026-11-11.csv
 gangster gothic graffiti font,70,11,0,Informational,gangster gothic graffiti,targeted,/gangster-font-generator,font_all-keywords_us_2026-11-11.csv
 gangster tagging fonts,70,14,0,Informational,gangster tagging,targeted,/gangster-font-generator,font_all-keywords_us_2026-11-11.csv
-gillies gothic font,70,8,0,Informational,gillie gothic,targeted,/fonts/gothic,font_all-keywords_us_2026-11-11.csv
+gillies gothic font,70,8,0,Informational,gillie gothic,targeted,/blog/why-sans-serif-fonts-are-called-gothic,font_all-keywords_us_2026-11-11.csv
 google docs harry potter font,70,11,0,Informational,doc google harry potter,targeted,/fonts/old-english/google-docs,font_all-keywords_us_2026-11-11.csv
 gothic e font,70,13,0,Informational,e gothic,backlog,,font_all-keywords_us_2026-11-11.csv
 gothic font -ai,70,7,1.43,Informational,ai gothic,backlog,,font_all-keywords_us_2026-11-11.csv
@@ -807,7 +807,7 @@ varsity fonts for cricut,70,14,0,Commercial,cricut varsity,targeted,/fonts/old-e
 vertical font tattoo,70,12,0,Informational,tattoo vertical,targeted,/fonts/tattoo,font_all-keywords_us_2026-11-11.csv
 vertical fonts for tattoos,70,12,0,Informational,tattoo vertical,targeted,/fonts/tattoo,font_all-keywords_us_2026-11-11.csv
 vertical tattoo font generator,70,14,0.94,Informational,tattoo vertical,targeted,/tattoo-font-generator,font_all-keywords_us_2026-11-11.csv
-victorian gothic font generator,70,13,0,Commercial,gothic victorian,targeted,/gothic-font-generator,font_all-keywords_us_2026-11-11.csv
+victorian gothic font generator,70,13,0,Commercial,gothic victorian,targeted,/victorian-font-generator,font_all-keywords_us_2026-11-11.csv
 viking font free,70,10,0,Informational,viking,targeted,/viking-font-generator,font_all-keywords_us_2026-11-11.csv
 viking fonts free,70,10,0,Informational,viking,targeted,/viking-font-generator,font_all-keywords_us_2026-11-11.csv
 vintage font on canva,70,11,0,Informational,canva vintage,targeted,/fonts/old-english/canva,font_all-keywords_us_2026-11-11.csv
@@ -847,7 +847,7 @@ black valentine tattoo font,50,12,0,Informational,black tattoo valentine,targete
 block letter font tattoo,50,11,0,Informational,block letter tattoo,targeted,/fonts/tattoo,font_all-keywords_us_2026-11-11.csv
 calligraphy copy paste,50,12,0,Informational,calligraphy,backlog,,font_all-keywords_us_2026-11-11.csv
 canvas sans bold font free download,50,12,0,Informational,bold canva san,targeted,/fonts/old-english/canva,font_all-keywords_us_2026-11-11.csv
-champion gothic welterweight font free download,50,4,0,Informational,champion gothic welterweight,backlog,,font_all-keywords_us_2026-11-11.csv
+champion gothic welterweight font free download,50,4,0,Informational,champion gothic welterweight,targeted,/blog/why-sans-serif-fonts-are-called-gothic,font_all-keywords_us_2026-11-11.csv
 change line number font in word,50,12,0,Informational,change line number word,targeted,/fonts/old-english/word,font_all-keywords_us_2026-11-11.csv
 charlie brown font canva,50,12,0,Informational,brown canva charlie,targeted,/fonts/old-english/canva,font_all-keywords_us_2026-11-11.csv
 chicano fonts free,50,6,0,Commercial,chicano,targeted,/fonts/chicano,font_all-keywords_us_2026-11-11.csv
@@ -882,11 +882,11 @@ embed fonts word,50,6,0,Informational,embed word,backlog,,font_all-keywords_us_2
 embroidery bx fonts,50,3,0.59,Informational,bx embroidery,targeted,/blog/best-fonts-for-embroidery-blackletter,font_all-keywords_us_2026-11-11.csv
 embroidery fonts generator,50,8,0.97,Informational,embroidery,targeted,/blog/best-fonts-for-embroidery-blackletter,font_all-keywords_us_2026-11-11.csv
 extra old bold font free download,50,6,0,Informational,bold extra old,backlog,,font_all-keywords_us_2026-11-11.csv
-facebook font free,50,11,0,Informational,facebook,backlog,,font_all-keywords_us_2026-11-11.csv
+facebook font free,50,11,0,Informational,facebook,targeted,/old-english-font-facebook,font_all-keywords_us_2026-11-11.csv
 farmhouse font alphabet,50,13,0,Informational,alphabet farmhouse,backlog,,font_all-keywords_us_2026-11-11.csv
 feminine fonts on canva,50,6,0,Informational,canva feminine,targeted,/fonts/old-english/canva,font_all-keywords_us_2026-11-11.csv
 font academy engraved,50,12,0,Informational,academy engraved,backlog,,font_all-keywords_us_2026-11-11.csv
-font bell gothic,50,13,0,Informational,bell gothic,backlog,,font_all-keywords_us_2026-11-11.csv
+font bell gothic,50,13,0,Informational,bell gothic,targeted,/blog/why-sans-serif-fonts-are-called-gothic,font_all-keywords_us_2026-11-11.csv
 font chữ facebook,50,14,0,Commercial,ch facebook,backlog,,font_all-keywords_us_2026-11-11.csv
 font for tshirts,50,10,0.97,Informational,tshirt,targeted,/blog/best-fonts-for-t-shirts,font_all-keywords_us_2026-11-11.csv
 font gothic metal,50,14,1.85,Informational,gothic metal,targeted,/metal-font-generator,font_all-keywords_us_2026-11-11.csv
@@ -911,7 +911,7 @@ gangsta font generator,50,10,0,Informational,gangsta,targeted,/gangster-font-gen
 gangster chicano graffiti font,50,12,0,Informational,chicano gangster graffiti,targeted,/fonts/chicano,font_all-keywords_us_2026-11-11.csv
 gangster grotesk font,50,5,0,Informational,gangster grotesk,targeted,/gangster-font-generator,font_all-keywords_us_2026-11-11.csv
 gangster loyalty cursive font,50,12,0,Informational,cursive gangster loyalty,targeted,/gangster-font-generator,font_all-keywords_us_2026-11-11.csv
-gillies gothic bold font,50,9,0,Informational,bold gillie gothic,backlog,,font_all-keywords_us_2026-11-11.csv
+gillies gothic bold font,50,9,0,Informational,bold gillie gothic,targeted,/blog/why-sans-serif-fonts-are-called-gothic,font_all-keywords_us_2026-11-11.csv
 goth metal font,50,14,0.82,Informational,goth metal,targeted,/metal-font-generator,font_all-keywords_us_2026-11-11.csv
 gothic font ig,50,12,0,Informational,gothic ig,targeted,/old-english-font-instagram,font_all-keywords_us_2026-11-11.csv
 gothic stencil font,50,12,0,Informational,gothic stencil,backlog,,font_all-keywords_us_2026-11-11.csv
@@ -943,7 +943,7 @@ monogram fonts for guys,50,7,0.14,Commercial,guy monogram,targeted,/blog/best-mo
 monotype old english font free download,50,3,0,Commercial,english monotype old,targeted,/fonts/old-english-text-mt,font_all-keywords_us_2026-11-11.csv
 old dreadful no 7 font,50,3,0,Informational,7 dreadful no old,backlog,,font_all-keywords_us_2026-11-11.csv
 original gangsta font,50,12,0,Informational,gangsta original,targeted,/gangster-font-generator,font_all-keywords_us_2026-11-11.csv
-p22 victorian font,50,9,0,Informational,p22 victorian,backlog,,font_all-keywords_us_2026-11-11.csv
+p22 victorian font,50,9,0,Informational,p22 victorian,targeted,/victorian-font-generator,font_all-keywords_us_2026-11-11.csv
 peace sign font,50,12,0,Informational,peace sign,backlog,,font_all-keywords_us_2026-11-11.csv
 poynter old style font free download,50,3,0,Informational,old poynter,backlog,,font_all-keywords_us_2026-11-11.csv
 prison font tattoo,50,10,0,Informational,prison tattoo,targeted,/fonts/tattoo,font_all-keywords_us_2026-11-11.csv
@@ -971,7 +971,7 @@ uploading font to cricut,50,8,0,Informational,cricut uploading,targeted,/fonts/o
 viking rune font,50,14,0,Informational,rune viking,targeted,/viking-font-generator,font_all-keywords_us_2026-11-11.csv
 wedding day font,50,11,0,Informational,day wedding,backlog,,font_all-keywords_us_2026-11-11.csv
 what font does twitch use,50,11,0,Informational,doe twitch use,targeted,/old-english-font-twitch,font_all-keywords_us_2026-11-11.csv
-what font is facebook,50,12,0,Informational,facebook,backlog,,font_all-keywords_us_2026-11-11.csv
+what font is facebook,50,12,0,Informational,facebook,targeted,/old-english-font-facebook,font_all-keywords_us_2026-11-11.csv
 what font is sesame street sign,50,11,0,Informational,sesame sign street,backlog,,font_all-keywords_us_2026-11-11.csv
 what font is the sesame street sign,50,12,0,Informational,sesame sign street,backlog,,font_all-keywords_us_2026-11-11.csv
 what is the best font for powerpoint presentations,50,12,0,"Informational, Commercial",powerpoint presentation,targeted,/fonts/old-english/powerpoint,font_all-keywords_us_2026-11-11.csv
@@ -1155,7 +1155,7 @@ the letter h in different fonts,40,5,0,Informational,different h letter,targeted
 times new roman embroidery font,40,3,0,Informational,embroidery new roman time,targeted,/blog/best-fonts-for-embroidery-blackletter,font_all-keywords_us_2026-11-11.csv
 valentines font alphabet,40,13,0,Informational,alphabet valentine,backlog,,font_all-keywords_us_2026-11-11.csv
 wedding monogram fonts,40,14,0.81,Informational,monogram wedding,targeted,/blog/best-monogram-fonts-blackletter,font_all-keywords_us_2026-11-11.csv
-what font does facebook login page use,40,10,0,"Informational, Transactional",doe facebook login page use,backlog,,font_all-keywords_us_2026-11-11.csv
+what font does facebook login page use,40,10,0,"Informational, Transactional",doe facebook login page use,targeted,/old-english-font-facebook,font_all-keywords_us_2026-11-11.csv
 what font is charlie kirk's freedom shirt,40,10,0,Informational, charlie freedom kirk shirt,skipped,,font_all-keywords_us_2026-11-11.csv
 what fonts does discord use,40,9,0,Informational,discord doe use,targeted,/old-english-font-discord,font_all-keywords_us_2026-11-11.csv
 what is the biggest font style in google docs,40,7,0,Informational,biggest doc google,targeted,/fonts/old-english/google-docs,font_all-keywords_us_2026-11-11.csv

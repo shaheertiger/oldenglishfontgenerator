@@ -47,6 +47,9 @@ export const TOOL_LINKS: ToolLink[] = [
   { group: "theme", href: "/ancient-font-generator", label: "Ancient Font Generator", blurb: "Your name in hieroglyphs, Phoenician, Ogham, runes and the Gothic alphabet." },
   { group: "theme", href: "/renaissance-font-generator", label: "Renaissance Font Generator", blurb: "Chancery italic, Roman capitals, long s and fleurons from 15th-century Italy." },
   { group: "theme", href: "/old-english-font-twitch", label: "Old English Font for Twitch", blurb: "Gothic stream titles, chat and bios, counted against Twitch's 140-character title limit." },
+  { group: "theme", href: "/victorian-font-generator", label: "Victorian Font Generator", blurb: "Copperplate-style cursive, Gothic Revival blackletter and ornate 1800s poster lettering." },
+  { group: "theme", href: "/happy-birthday-font", label: "Happy Birthday Font", blurb: "Happy Birthday in calligraphy, Old English and decorated styles to copy and paste." },
+  { group: "theme", href: "/old-english-font-pinterest", label: "Old English Font for Pinterest", blurb: "Gothic board names and pin titles, without hurting Pinterest search." },
   { group: "theme", href: "/old-english-font-facebook", label: "Old English Font for Facebook", blurb: "Gothic text for posts, comments and your intro, and where Facebook blocks it." },
 ];
 

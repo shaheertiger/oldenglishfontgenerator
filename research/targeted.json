@@ -1,6 +1,26 @@
 {
   "_about": "Which keywords each page already targets. Patterns are case-insensitive regexes matched against every keyword in research/semrush/*.csv; the first page whose pattern matches claims the keyword. `npm run keywords` skips claimed keywords and suggests the rest. Add a page here when you publish it (or run: npm run keywords -- --use /page \"pattern\").",
   "pages": {
+    "/blog/why-sans-serif-fonts-are-called-gothic": [
+      "sackers",
+      "block gothic",
+      "(franklin|news|century|trade|letter|copperplate|bell|champion|ms|gillies) gothic",
+      "gothic (sans|vs sans)"
+    ],
+    "/victorian-font-generator": [
+      "victorian",
+      "steam ?punk"
+    ],
+    "/happy-birthday-font": [
+      "birthday"
+    ],
+    "/old-english-font-pinterest": [
+      "pinterest"
+    ],
+    "/fonts/germania-one": [
+      "germania",
+      "font deutsch gothic"
+    ],
     "/gothic-letters": [
       "gothic (letters?|alphabet)",
       "goth letters",
@@ -176,6 +196,9 @@
       "tiktok"
     ],
     "/old-english-font-facebook": [
+      "what font (does|is) facebook",
+      "facebook (logo|sans) font",
+      "facebook font free",
       "font generator for facebook",
       "fonts for facebook",
       "facebook post",

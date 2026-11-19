@@ -14,6 +14,7 @@ import unifrakturcook from "./unifrakturcook";
 import uncialAntiqua from "./uncial-antiqua";
 import pirataOne from "./pirata-one";
 import metalMania from "./metal-mania";
+import germaniaOne from "./germania-one";
 
 const f = (page: FontPage) => ({ file: `content/fonts/${page.style}.ts`, page });
 
@@ -21,5 +22,5 @@ export const FONT_PAGE_FILES: { file: string; page: FontPage }[] = [
   // Collections
   f(chicano), f(tattoo), f(halloween), f(fantasy), f(clothingBrand), f(calligraphy),
   // Individual fonts
-  f(oldEnglishTextMt), f(oldLondon), f(cloisterBlack), f(unifrakturcook), f(uncialAntiqua), f(pirataOne), f(metalMania),
+  f(oldEnglishTextMt), f(oldLondon), f(cloisterBlack), f(unifrakturcook), f(uncialAntiqua), f(pirataOne), f(metalMania), f(germaniaOne),
 ];

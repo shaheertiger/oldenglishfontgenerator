@@ -49,6 +49,13 @@ const page: PageContent = {
       ],
     },
     {
+      h2: "What font does Facebook use?",
+      blocks: [
+        { p: "For the text you read in the app and on the website, Facebook mostly uses each device's own system font rather than one font of its own: San Francisco on iPhone and Mac, Roboto on most Android phones and Segoe UI on Windows. That's why a post looks slightly different on your phone and your laptop, and why there's no setting to change Facebook's font." },
+        { p: "The logo is a separate story. For years the wordmark was based on the typeface Klavika; Facebook has since moved to custom lettering, and its brand refresh introduced a company typeface called Facebook Sans, which is not available to download. If you want your own text to stand out, the only route is the Unicode trick on this page: characters that look like blackletter, which Facebook displays in whatever system font the reader has." },
+      ],
+    },
+    {
       h2: "Why can't I put Old English letters in my Facebook name?",
       blocks: [
         { p: "Facebook asks people to use the name they go by in everyday life and filters out symbols, unusual capitalisation and characters from mixed alphabets. Fraktur letters are technically mathematical symbols, so the name editor treats them as invalid. Trying to sneak them through can also trigger a name review, which is more hassle than it's worth." },
@@ -73,9 +80,10 @@ const page: PageContent = {
     "Styles use Mathematical Fraktur (U+1D504–U+1D537) and Bold Fraktur (U+1D56C–U+1D59F); decorations come from the Dingbats and Miscellaneous Symbols blocks. The counter measures UTF-16 code units, which counts most Fraktur letters as two.",
   related: {
     heading: "Old English for other platforms",
-    hrefs: ["/old-english-font-instagram", "/old-english-font-tiktok", "/old-english-font-discord", "/old-english-text-to-image", "/old-english-name-generator", "/gothic-symbols"],
+    hrefs: ["/happy-birthday-font", "/old-english-font-instagram", "/old-english-font-tiktok", "/old-english-font-discord", "/old-english-text-to-image", "/old-english-name-generator", "/gothic-symbols"],
   },
   faq: [
+    { q: "What font does Facebook use for posts?", a: "Facebook shows posts in your device's system font: San Francisco on Apple devices, Roboto on most Android phones and Segoe UI on Windows. You can't change it, but styled Unicode letters from this page appear in posts as a different-looking font." },
     { q: "How do I get a different font on Facebook?", a: "Facebook doesn't offer fonts, but you can paste Unicode-styled text. Type here, copy a style and paste it into a post, comment or your intro." },
     { q: "Can I change my Facebook name to Old English letters?", a: "No. Facebook's name rules reject symbols and unusual characters, and Fraktur letters count as symbols." },
     { q: "How long is the Facebook intro?", a: "101 characters. Styled letters usually count as two each, so the counter here helps you stay under." },
