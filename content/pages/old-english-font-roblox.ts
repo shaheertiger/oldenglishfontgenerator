@@ -66,7 +66,7 @@ const page: PageContent = {
     "Styles are built from Unicode's Mathematical Fraktur and Bold Fraktur letters plus symbols such as ⚔, ♛ and ☠. Whether Roblox shows them depends on its text filters, not on the characters themselves.",
   related: {
     heading: "Gothic text for gamers",
-    hrefs: ["/old-english-font-discord", "/old-english-font-youtube", "/old-english-text-to-image", "/medieval-font-generator", "/viking-font-generator", "/gothic-symbols"],
+    hrefs: ["/old-english-font-discord", "/old-english-font-youtube", "/old-english-text-to-image", "/font-generator/medieval", "/viking-font-generator", "/gothic-symbols"],
   },
   faq: [
     { q: "Can I copy and paste fonts into Roblox?", a: "Sometimes, but not reliably. Usernames reject them, and chat often filters unusual characters. They work best off-platform and as real fonts inside your own experience." },

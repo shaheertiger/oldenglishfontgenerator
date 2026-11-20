@@ -53,7 +53,7 @@ const post: BlogPost = {
       "**Windows:** hold Alt and type 383 on the number pad in many apps, or in Word type 017F and press Alt+X.",
       "**Mac:** open the Character Viewer (Control+Command+Space) and search for \"long s\".",
       "**Anywhere:** copy it from here: ſ",
-      "**A whole phrase:** type normally and pick the Long S Manuscript style in the [medieval font generator](/medieval-font-generator). It changes every s that is followed by another lowercase letter into ſ and leaves word endings round.",
+      "**A whole phrase:** type normally and pick the Long S Manuscript style in the [medieval font generator](/font-generator/medieval). It changes every s that is followed by another lowercase letter into ſ and leaves word endings round.",
     ] },
     { type: "p", text: "That automatic rule is simpler than a real printer's judgement. Check words where s comes before f, or compound words, and fix them by hand if accuracy matters." },
 
@@ -67,7 +67,7 @@ const post: BlogPost = {
       { q: "Is there a capital long s?", a: "No. The long s only exists as a lowercase letter; capitals always use S." },
       { q: "Which free blackletter font has the long s?", a: "Of the fonts we measured, UnifrakturMaguntia, UnifrakturCook, Grenze Gotisch, Manufacturing Consent and Germania One are the blackletter options that include it." },
     ] },
-    { type: "cta", text: "Turn any phrase into period spelling with the Long S style in the", href: "/medieval-font-generator", label: "medieval font generator" },
+    { type: "cta", text: "Turn any phrase into period spelling with the Long S style in the", href: "/font-generator/medieval", label: "medieval font generator" },
   ],
 };
 

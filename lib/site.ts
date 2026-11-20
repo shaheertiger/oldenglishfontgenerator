@@ -8,6 +8,7 @@ export const CONTACT_EMAIL = "hello@oldenglishfontgenerator.com";
 export type ToolLink = { href: string; label: string; blurb: string; group?: "theme" };
 
 export const TOOL_LINKS: ToolLink[] = [
+  { href: "/font-generator/old-english", label: "Old English Copy & Paste", blurb: "Ready-made Old English words and letters to copy in one tap." },
   { href: "/old-english-tattoo-font", label: "Old English Tattoo Font", blurb: "Preview names and dates on a skin mockup, then download a PNG for your artist." },
   { href: "/old-english-alphabet", label: "Old English Alphabet", blurb: "Every letter A–Z and a–z, one tap to copy, with a printable sheet." },
   { href: "/old-english-letters", label: "Old English Letters", blurb: "Single letters, initials and monograms." },
@@ -18,7 +19,7 @@ export const TOOL_LINKS: ToolLink[] = [
   { href: "/fraktur-generator", label: "Fraktur Generator", blurb: "German Fraktur with umlauts, ß and the long s." },
   { href: "/chicano-font-generator", label: "Chicano Font Generator", blurb: "Lowrider and cholo-style lettering for captions and flash ideas." },
   { href: "/old-english-name-generator", label: "Old English Name Generator", blurb: "Your name in blackletter, with date and bio presets." },
-  { href: "/medieval-font-generator", label: "Medieval Font Generator", blurb: "Manuscript-style text with thorns, long s and fleurons." },
+  { href: "/font-generator/medieval", label: "Medieval Font Generator", blurb: "Blackletter and manuscript-style text for games, D&D and fantasy names." },
   { href: "/old-english-font-instagram", label: "Old English Font for Instagram", blurb: "Bio templates that fit the 150-character limit." },
   { href: "/old-english-font-discord", label: "Old English Discord Names", blurb: "Display names and nicknames that fit 32 characters." },
   { href: "/fonts/old-english", label: "Old English Fonts (Free)", blurb: "Ten free, open-licence blackletter fonts to download, with live preview." },
@@ -43,7 +44,7 @@ export const TOOL_LINKS: ToolLink[] = [
   { group: "theme", href: "/old-english-font-youtube", label: "Old English Font for YouTube", blurb: "Blackletter channel names, video titles and comments that paste cleanly." },
   { group: "theme", href: "/old-english-font-roblox", label: "Old English Font for Roblox", blurb: "Where gothic text works on Roblox, where the filter blocks it, and what to use instead." },
   { group: "theme", href: "/viking-font-generator", label: "Viking Font Generator", blurb: "Elder Futhark, Viking-age and Anglo-Saxon runes, plus Norse-style blackletter." },
-  { group: "theme", href: "/gothic-letters", label: "Gothic Letters", blurb: "Capital and small blackletter A–Z, plus the real 27-letter Gothic alphabet of Wulfila." },
+  { group: "theme", href: "/font-generator/gothic-letters", label: "Gothic Letters", blurb: "Capital and small blackletter A–Z, plus the real 27-letter Gothic alphabet of Wulfila." },
   { group: "theme", href: "/ancient-font-generator", label: "Ancient Font Generator", blurb: "Your name in hieroglyphs, Phoenician, Ogham, runes and the Gothic alphabet." },
   { group: "theme", href: "/renaissance-font-generator", label: "Renaissance Font Generator", blurb: "Chancery italic, Roman capitals, long s and fleurons from 15th-century Italy." },
   { group: "theme", href: "/old-english-font-twitch", label: "Old English Font for Twitch", blurb: "Gothic stream titles, chat and bios, counted against Twitch's 140-character title limit." },

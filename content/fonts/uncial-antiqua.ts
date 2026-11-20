@@ -41,7 +41,7 @@ const page: FontPage = {
       ],
     },
   ],
-  tools: ["/medieval-font-generator", "/illuminated-letters", "/blackletter-generator"],
+  tools: ["/font-generator/medieval", "/illuminated-letters", "/blackletter-generator"],
   faq: [
     { q: "Is Uncial Antiqua free to use?", a: "Yes. It's published under the SIL Open Font License, so personal and commercial use are both allowed." },
     { q: "Does Uncial Antiqua have lowercase letters?", a: "It has lowercase characters mapped, but like historical uncial they look much like small capitals, so the text reads as a single case." },

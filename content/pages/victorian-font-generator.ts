@@ -42,7 +42,7 @@ const page: PageContent = {
             ],
           },
         },
-        { p: "The Gothic Revival is why blackletter feels Victorian as well as medieval. Architects such as Augustus Pugin, who designed much of the interior of the Palace of Westminster, pushed medieval forms back into fashion, and lettering followed. The [medieval font generator](/medieval-font-generator) has the older, manuscript side of the same letters." },
+        { p: "The Gothic Revival is why blackletter feels Victorian as well as medieval. Architects such as Augustus Pugin, who designed much of the interior of the Palace of Westminster, pushed medieval forms back into fashion, and lettering followed. The [medieval font generator](/font-generator/medieval) has the older, manuscript side of the same letters." },
       ],
     },
     {
@@ -77,7 +77,7 @@ const page: PageContent = {
     "Cursive rows use Mathematical Script (U+1D49C–U+1D4CF, with eleven letters from the Letterlike Symbols block) and Bold Script (U+1D4D0–U+1D503). Blackletter rows use Mathematical Fraktur and Bold Fraktur. The outline row uses Double-Struck letters (U+1D538–U+1D56B), and the fleurons ❦ and ❧ are U+2766 and U+2767.",
   related: {
     heading: "More historical lettering",
-    hrefs: ["/medieval-font-generator", "/renaissance-font-generator", "/old-english-cursive", "/newspaper-masthead-font", "/diploma-font", "/old-english-text-to-image"],
+    hrefs: ["/font-generator/medieval", "/renaissance-font-generator", "/old-english-cursive", "/newspaper-masthead-font", "/diploma-font", "/old-english-text-to-image"],
   },
   faq: [
     { q: "What fonts were used in the Victorian era?", a: "Handwriting was mostly copperplate in Britain and Spencerian in the US. Printers used blackletter for formal and religious work and a huge range of bold, decorated display types, including slab serifs and wood types, for posters and advertising." },

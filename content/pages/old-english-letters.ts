@@ -28,7 +28,7 @@ const page: PageContent = {
     {
       h2: "All Old English letters, A to Z",
       blocks: [
-        { p: "Tap any letter to copy it. Capitals sit on the top rows and small letters below; five capitals (ℭ ℌ ℑ ℜ ℨ) come from an older Unicode block, so some fonts draw them a little differently. For bold, framed and outlined versions of one letter, open its page in the [alphabet index](/old-english-alphabet), and for the separate 4th-century Gothic script, see [gothic letters](/gothic-letters)." },
+        { p: "Tap any letter to copy it. Capitals sit on the top rows and small letters below; five capitals (ℭ ℌ ℑ ℜ ℨ) come from an older Unicode block, so some fonts draw them a little differently. For bold, framed and outlined versions of one letter, open its page in the [alphabet index](/old-english-alphabet), and for the separate 4th-century Gothic script, see [gothic letters](/font-generator/gothic-letters)." },
         { widget: "alphabet-full" },
       ],
     },
@@ -64,7 +64,7 @@ const page: PageContent = {
     "Monograms and initials use Bold Fraktur capitals from U+1D56C–U+1D585. The bubble and boxed variations add the combining enclosing circle (U+20DD) or enclosing square (U+20DE) after each letter, so their appearance depends heavily on your device's fonts.",
   related: {
     heading: "More ways to use Old English letters",
-    hrefs: ["/old-english-alphabet", "/old-english-name-generator", "/old-english-tattoo-font", "/medieval-font-generator", "/old-english-text-to-image", "/old-english-font-instagram", "/illuminated-letters"],
+    hrefs: ["/old-english-alphabet", "/old-english-name-generator", "/old-english-tattoo-font", "/font-generator/medieval", "/old-english-text-to-image", "/old-english-font-instagram", "/illuminated-letters"],
   },
   faq: [
     { q: "How do I get just my initials in Old English?", a: "Type your full name. The first three styles in the list take the first letter of each word and convert only those letters." },

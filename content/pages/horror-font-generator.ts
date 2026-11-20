@@ -86,7 +86,7 @@ const page: PageContent = {
     "The letters are Mathematical Fraktur and Bold Fraktur. Cursed and distressed styles add combining marks such as U+0334 and U+0337 after each letter; the frames are ordinary symbols and emoji placed before and after your text.",
   related: {
     heading: "More dark lettering tools",
-    hrefs: ["/gothic-font-generator", "/gothic-symbols", "/metal-font-generator", "/death-note-font", "/medieval-font-generator", "/old-english-text-to-image"],
+    hrefs: ["/gothic-font-generator", "/gothic-symbols", "/metal-font-generator", "/death-note-font", "/font-generator/medieval", "/old-english-text-to-image"],
   },
   faq: [
     { q: "How do I copy and paste scary fonts?", a: "Type your text in the box, find a style you like and tap Copy. Then paste it wherever you want; it's Unicode text, not an image." },

@@ -8,7 +8,7 @@ type Params = { slug: string };
 export const dynamicParams = false;
 
 export function generateStaticParams(): Params[] {
-  return CLUSTERS.map((c) => ({ slug: c.slug }));
+  return CLUSTERS.filter((c) => !c.slug.includes("/")).map((c) => ({ slug: c.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<Params> }): Promise<Metadata> {

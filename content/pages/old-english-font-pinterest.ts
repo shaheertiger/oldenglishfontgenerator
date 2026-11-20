@@ -82,7 +82,7 @@ const page: PageContent = {
     "Every style starts from Unicode's Mathematical Fraktur (U+1D504–U+1D537) or Bold Fraktur (U+1D56C–U+1D59F). Each of those letters takes two UTF-16 code units, which is why the counter rises faster than the letters you type. Roses, hearts and stars are standard symbols or emoji.",
   related: {
     heading: "Old English for other apps",
-    hrefs: ["/old-english-font-instagram", "/old-english-font-tiktok", "/old-english-font-facebook", "/old-english-font-youtube", "/gothic-letters", "/old-english-text-to-image"],
+    hrefs: ["/old-english-font-instagram", "/old-english-font-tiktok", "/old-english-font-facebook", "/old-english-font-youtube", "/font-generator/gothic-letters", "/old-english-text-to-image"],
   },
   faq: [
     { q: "How do I change my font on Pinterest?", a: "Pinterest doesn't let you change its font, but you can paste Unicode letters that look like a different font. Copy a style here and paste it into your display name, a board name or a pin title." },

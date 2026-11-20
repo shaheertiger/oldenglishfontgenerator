@@ -1,7 +1,8 @@
 import type { PageContent } from "./types";
 
 const page: PageContent = {
-  slug: "gothic-letters",
+  slug: "font-generator/gothic-letters",
+  file: "gothic-letters",
   title: "Gothic Letters A–Z — Copy & Paste in 14 Styles",
   description:
     "Gothic letters to copy and paste: capital and small blackletter A–Z in 14 styles, plus the real 4th-century Gothic alphabet of Wulfila with all 27 letters.",
@@ -97,7 +98,7 @@ const page: PageContent = {
     "Blackletter rows use Mathematical Fraktur (U+1D504–U+1D537) and Bold Fraktur (U+1D56C–U+1D59F), with five capitals taken from the Letterlike Symbols block (ℭ ℌ ℑ ℜ ℨ). The Gothic Alphabet row substitutes letters from Unicode's Gothic block (U+10330–U+1034A), added in Unicode 3.1 in 2001; th and hw become single letters first. Fonts that cover that block include Noto Sans Gothic and, on Windows, Segoe UI Historic.",
   related: {
     heading: "More gothic and blackletter tools",
-    hrefs: ["/gothic-font-generator", "/old-english-alphabet", "/blackletter-generator", "/fraktur-generator", "/illuminated-letters", "/gothic-symbols", "/medieval-font-generator"],
+    hrefs: ["/gothic-font-generator", "/old-english-alphabet", "/blackletter-generator", "/fraktur-generator", "/illuminated-letters", "/gothic-symbols", "/font-generator/medieval"],
   },
   faq: [
     { q: "Are gothic letters the same as Old English letters?", a: "In everyday use, yes: both names describe blackletter, the medieval script used in tattoos and mastheads. Strictly speaking, the Gothic alphabet is a separate 4th-century script, and Old English is a language that was mostly written in plain insular letters." },

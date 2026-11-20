@@ -49,7 +49,7 @@ const page: FontPage = {
       h2: "Can I use these fonts in a game or a published adventure?",
       blocks: [
         { p: "Yes. The SIL Open Font License lets you embed the fonts in games and apps and use them in printed or PDF products you sell, including adventures on community marketplaces. You can't sell the font files on their own. Keep the licence file with your game's other third-party notices." },
-        { p: "For a decorated first letter on a chapter or handout, use [illuminated letters](/illuminated-letters); for manuscript-style text you can paste into a VTT chat or Discord, try the [medieval font generator](/medieval-font-generator)." },
+        { p: "For a decorated first letter on a chapter or handout, use [illuminated letters](/illuminated-letters); for manuscript-style text you can paste into a VTT chat or Discord, try the [medieval font generator](/font-generator/medieval)." },
       ],
     },
   ],
@@ -61,7 +61,7 @@ const page: FontPage = {
     { q: "What is a good dark fantasy font?", a: "Pirata One for legible gothic text, or Metamorphous for a title that feels ancient and ominous." },
     { q: "Can I use these fonts on a book cover I sell?", a: "Yes. All 11 are under the SIL Open Font License, which allows commercial use on covers, interiors and merchandise." },
   ],
-  tools: ["/medieval-font-generator", "/illuminated-letters"],
+  tools: ["/font-generator/medieval", "/illuminated-letters"],
 };
 
 export default page;

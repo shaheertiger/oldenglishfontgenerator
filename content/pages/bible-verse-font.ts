@@ -83,7 +83,7 @@ const page: PageContent = {
     "The verse styles use Unicode Mathematical Fraktur and Bold Fraktur. The Long S style swaps s for ſ inside words, as 17th-century printers did; the Thorn style writes th as þ. Crosses and leaves are standard symbols from the Miscellaneous Symbols and Dingbats blocks.",
   related: {
     heading: "More lettering for faith and tradition",
-    hrefs: ["/old-english-tattoo-font", "/blackletter-generator", "/medieval-font-generator", "/latin-tattoo-font", "/gothic-symbols", "/illuminated-letters"],
+    hrefs: ["/old-english-tattoo-font", "/blackletter-generator", "/font-generator/medieval", "/latin-tattoo-font", "/gothic-symbols", "/illuminated-letters"],
   },
   faq: [
     { q: "What font is used for Bible verses?", a: "There's no single one, but gothic blackletter is the traditional choice because the first printed Bibles used it. Modern Bibles are set in readable serif fonts; blackletter is used for headings, cards and tattoos." },

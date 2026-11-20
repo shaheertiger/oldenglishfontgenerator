@@ -1,21 +1,22 @@
 import type { PageContent } from "./types";
 
 const page: PageContent = {
-  slug: "medieval-font-generator",
-  title: "Medieval Font Generator — Manuscript Text Copy & Paste",
+  slug: "font-generator/medieval",
+  file: "medieval-font-generator",
+  title: "Medieval Font Generator – Copy & Paste Medieval Text",
   description:
-    "Medieval text generator with manuscript touches: thorn, long s, word dots, fleurons and illuminated capitals. Copy and paste for games and posts.",
+    "Medieval font generator: turn text into blackletter, illuminated capitals and manuscript styles. Copy and paste into games, Discord, bios and posts. Free.",
   h1: "Medieval Font Generator",
   crumb: "Medieval Font Generator",
   intro:
-    "A medieval font generator should feel like a page from a manuscript, not just a heavy typeface. Besides blackletter letters, the styles here bring in details a scribe would recognise: the thorn letter þ, the long s, raised dots between words, leaf-shaped fleurons and a dark illuminated capital at the start of a line.",
+    "Type below and copy your text in medieval lettering: classic blackletter first, then manuscript styles. A medieval font generator should feel like a page from a manuscript, not just a heavy typeface. Besides blackletter letters, the styles here bring in details a scribe would recognise: the thorn letter þ, the long s, raised dots between words, leaf-shaped fleurons and a dark illuminated capital at the start of a line.",
   tool: {
-    styles: ["thorn", "illuminated", "long-s", "interpunct", "word-dots", "deco-fleuron", "deco-hedera", "drop-cap", "deco-maltese", "frame-lenticular", "fraktur", "deco-swords", "overline", "frame-white"],
+    styles: ["fraktur", "bold-fraktur", "illuminated", "fraktur-small-caps", "thorn", "long-s", "interpunct", "word-dots", "deco-fleuron", "deco-hedera", "drop-cap", "deco-maltese", "frame-lenticular", "deco-swords", "deco-crown", "gothic-framed", "frame-white"],
     sample: "Here beginneth the tale",
     placeholder: "Type a title, quest name or proclamation…",
     presets: ["Here beginneth the tale", "The Kingdom of Aethelwold", "Hear ye, hear ye", "Thou shalt not pass"],
   },
-  stylesHeading: "Manuscript-style text",
+  stylesHeading: "Medieval Text Styles",
   howTo: {
     heading: "How to give text a manuscript feel",
     steps: [

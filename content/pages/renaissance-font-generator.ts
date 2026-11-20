@@ -44,7 +44,7 @@ const page: PageContent = {
             ],
           },
         },
-        { p: "If you want the darker manuscript look instead, the [medieval font generator](/medieval-font-generator) has thorns, illuminated capitals and Fraktur." },
+        { p: "If you want the darker manuscript look instead, the [medieval font generator](/font-generator/medieval) has thorns, illuminated capitals and Fraktur." },
       ],
     },
     {
@@ -85,7 +85,7 @@ const page: PageContent = {
     "Italic rows use Mathematical Italic (U+1D434–U+1D467, with ℎ U+210E for h) and Bold Italic (U+1D468–U+1D49B). Roman rows use Mathematical Bold (U+1D400–U+1D433). The long s is U+017F, the word dot is U+00B7 and the fleurons are U+2766 and U+2767. Script rows come from Mathematical Script, which looks closer to later copperplate than to Renaissance hands.",
   related: {
     heading: "More historical lettering",
-    hrefs: ["/medieval-font-generator", "/victorian-font-generator", "/latin-tattoo-font", "/illuminated-letters", "/ancient-font-generator", "/old-english-cursive", "/diploma-font"],
+    hrefs: ["/font-generator/medieval", "/victorian-font-generator", "/latin-tattoo-font", "/illuminated-letters", "/ancient-font-generator", "/old-english-cursive", "/diploma-font"],
   },
   faq: [
     { q: "What font was used in the Renaissance?", a: "Scribes wrote humanist minuscule and chancery italic by hand, and printers cut roman and italic types based on them, such as those of Nicolas Jenson, Aldus Manutius and later Claude Garamond. Blackletter stayed common in Germany and for legal and religious texts." },

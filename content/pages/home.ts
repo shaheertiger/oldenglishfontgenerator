@@ -73,7 +73,7 @@ const home: PageContent = {
               ["West Coast and lowrider lettering", "[Gangster font generator](/gangster-font-generator), [biker patches](/biker-font-generator)", "[Chicano fonts](/fonts/chicano)"],
               ["Band names and dark titles", "[Metal font generator](/metal-font-generator), [horror text](/horror-font-generator)", "[Halloween fonts](/fonts/halloween), [Metal Mania](/fonts/metal-mania)"],
               ["Diplomas, mastheads and documents", "[Diploma font](/diploma-font), [newspaper mastheads](/newspaper-masthead-font)", "[Old English Text MT and free lookalikes](/fonts/old-english-text-mt)"],
-              ["Manuscripts and fantasy", "[Illuminated letters](/illuminated-letters), [medieval generator](/medieval-font-generator)", "[Fantasy fonts](/fonts/fantasy), [calligraphy fonts](/fonts/calligraphy)"],
+              ["Manuscripts and fantasy", "[Illuminated letters](/illuminated-letters), [medieval generator](/font-generator/medieval)", "[Fantasy fonts](/fonts/fantasy), [calligraphy fonts](/fonts/calligraphy)"],
               ["Shirts, hoodies and brands", "[Text to image export](/old-english-text-to-image)", "[Clothing brand fonts](/fonts/clothing-brand)"],
               ["TikTok and Facebook", "[TikTok names and bios](/old-english-font-tiktok), [Facebook posts](/old-english-font-facebook)", "Not needed: copy-paste text works in the app"],
             ],

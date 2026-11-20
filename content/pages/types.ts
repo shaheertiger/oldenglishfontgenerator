@@ -22,8 +22,10 @@ export type Widget =
 export type Section = { h2: string; blocks: Block[] };
 
 export type PageContent = {
-  /** URL path without leading slash; "" for the homepage. */
+  /** URL path without leading slash; "" for the homepage. May contain one "/" (font-generator/<x>). */
   slug: string;
+  /** Source file name in content/pages/ when it differs from the slug. */
+  file?: string;
   /** <title>, ≤ 60 characters. */
   title: string;
   /** Meta description, ≤ 155 characters, keyword first. */

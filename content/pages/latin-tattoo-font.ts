@@ -80,7 +80,7 @@ const page: PageContent = {
     "The Roman Inscription row uses Mathematical Bold capitals (U+1D400–U+1D419) with U→V and J→I swaps, digits converted to Roman numerals and · (U+00B7) between words. The blackletter rows use Mathematical Fraktur and Bold Fraktur; the script row uses Mathematical Script.",
   related: {
     heading: "More tattoo lettering tools",
-    hrefs: ["/tattoo-font-generator", "/old-english-tattoo-font", "/bible-verse-font", "/old-english-numbers", "/medieval-font-generator", "/old-english-text-to-image", "/renaissance-font-generator"],
+    hrefs: ["/tattoo-font-generator", "/old-english-tattoo-font", "/bible-verse-font", "/old-english-numbers", "/font-generator/medieval", "/old-english-text-to-image", "/renaissance-font-generator"],
   },
   faq: [
     { q: "What font is best for a Latin tattoo?", a: "Bold blackletter and Roman inscription capitals are the two classic choices, because both were used to write Latin historically. Blackletter feels medieval; Roman capitals feel ancient." },

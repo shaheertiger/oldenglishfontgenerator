@@ -266,6 +266,10 @@ export async function renderMarkdown(segments: string[]): Promise<string | null>
       if (first === "blog") return blogPost(second);
       if (first === "old-english-alphabet") return letterPage(second);
       if (first === "fonts") return fontsPage(second);
+      if (first === "font-generator") {
+        const c = getCluster(`font-generator/${second}`);
+        if (c) return toolPage(c);
+      }
     } else {
       if (first === "index") return toolPage(home);
       if (first === "blog") return blogIndex();

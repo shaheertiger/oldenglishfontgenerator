@@ -1,14 +1,16 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { detectAIBot } from "@dualmark/core";
 import { createDualmarkMiddleware } from "@dualmark/nextjs";
-import { GONE, GONE_PREFIXES } from "./lib/redirects.mjs";
+import { GONE, GONE_PREFIXES, LIVE } from "./lib/redirects.mjs";
 
 const GONE_SET = new Set<string>(GONE);
+const LIVE_SET = new Set<string>(LIVE);
 
 /** Pruned pages with no close equivalent answer 410 so they drop out of the index. */
 function isGone(pathname: string): boolean {
   if (pathname === "/sitemap.md") return false; // markdown sitemap (Dualmark) is live
   const p = pathname.replace(/\.md$/, "").replace(/\/$/, "") || "/";
+  if (LIVE_SET.has(p)) return false;
   return GONE_SET.has(p) || GONE_PREFIXES.some((pre) => p.startsWith(pre));
 }
 

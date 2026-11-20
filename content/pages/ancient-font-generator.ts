@@ -85,7 +85,7 @@ const page: PageContent = {
       h2: "Ogham, runes and the Gothic alphabet",
       blocks: [
         { p: "**Ogham** was carved as notches along the edge of a standing stone and read from the bottom up. Each letter is a group of one to five strokes, and the marks ᚛ and ᚜ open and close a text, which is why the Ogham style wraps your words in them. It suits Irish and Celtic names: Brigid becomes ᚛ᚁᚏᚔᚌᚔᚇ᚜." },
-        { p: "**Runes** are covered in depth, with a full letter table, on the [Viking font generator](/viking-font-generator). **The Gothic alphabet** was created by the bishop Wulfila to write the Bible in Gothic; its 27 letters and their names are on the [gothic letters](/gothic-letters) page, alongside the blackletter that borrowed the word \"gothic\" much later." },
+        { p: "**Runes** are covered in depth, with a full letter table, on the [Viking font generator](/viking-font-generator). **The Gothic alphabet** was created by the bishop Wulfila to write the Bible in Gothic; its 27 letters and their names are on the [gothic letters](/font-generator/gothic-letters) page, alongside the blackletter that borrowed the word \"gothic\" much later." },
       ],
     },
     {
@@ -99,7 +99,7 @@ const page: PageContent = {
     "Each style replaces letters one by one, after handling pairs such as th, sh, ch and ng. Characters come from Unicode's Egyptian Hieroglyphs (U+13000–U+1342F), Phoenician (U+10900–U+1091F), Ogham (U+1680–U+169F), Runic (U+16A0–U+16FF) and Gothic (U+10330–U+1034F) blocks. Google's free Noto Sans fonts cover all five; recent phones show most of them without extra fonts, while older Windows and Android versions may show boxes.",
   related: {
     heading: "More old and historical lettering",
-    hrefs: ["/viking-font-generator", "/gothic-letters", "/medieval-font-generator", "/illuminated-letters", "/latin-tattoo-font", "/old-english-text-to-image"],
+    hrefs: ["/viking-font-generator", "/font-generator/gothic-letters", "/font-generator/medieval", "/illuminated-letters", "/latin-tattoo-font", "/old-english-text-to-image"],
   },
   faq: [
     { q: "Is this a real hieroglyph translator?", a: "No. It spells your word sound by sound with the single-sound signs Egyptologists use for modern names. Translating English into ancient Egyptian would need the Egyptian language itself, which a letter swap can't provide." },
