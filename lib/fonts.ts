@@ -392,6 +392,14 @@ const PHOENICIAN: RuneRow = {
   map: { a: "𐤀", b: "𐤁", c: "𐤂", d: "𐤃", e: "𐤄", f: "𐤅", g: "𐤂", h: "𐤇", i: "𐤉", j: "𐤉", k: "𐤊", l: "𐤋", m: "𐤌", n: "𐤍", o: "𐤏", p: "𐤐", q: "𐤒", r: "𐤓", s: "𐤔", t: "𐤕", u: "𐤅", v: "𐤅", w: "𐤅", x: "𐤎", y: "𐤅", z: "𐤆" },
 };
 
+// Cuneiform (cuneiform translator page). Real cuneiform is syllabic and
+// logographic, so this is a fixed one-sign-per-letter cipher, not a
+// transcription. Kept identical to the pre-2026 site so old links still match.
+const CUNEIFORM: RuneRow = {
+  digraphs: [],
+  map: { a: "𒀀", b: "𒁀", c: "𒍝", d: "𒁕", e: "𒂊", f: "𒁉", g: "𒂵", h: "𒄩", i: "𒅖", j: "𒍞", k: "𒅗", l: "𒆷", m: "𒈠", n: "𒈾", o: "𒌋", p: "𒉺", q: "𒆥", r: "𒊏", s: "𒊓", t: "𒋫", u: "𒌑", v: "𒅴", w: "𒉿", x: "𒍢", y: "𒅀", z: "𒍣" },
+};
+
 // Companion styles for theme pages (tattoo, gangster, diploma, newspaper,
 // Latin, clothing). They pair with blackletter but aren't blackletter, so
 // they are kept off the homepage list.
@@ -415,6 +423,8 @@ const EXTRA: FontStyle[] = [
   { id: "ogham", name: "Ogham ᚛ ᚜", transform: (s) => `᚛${runes(OGHAM, "\u1680")(s)}᚜` },
   { id: "hieroglyphs", name: "Egyptian Hieroglyph Alphabet", transform: runes(HIEROGLYPHS, " ") },
   { id: "phoenician", name: "Phoenician (Oldest Alphabet)", transform: runes(PHOENICIAN, "\u{1091F}") },
+  { id: "cuneiform", name: "Cuneiform", transform: runes(CUNEIFORM, " ") },
+  { id: "cuneiform-tablet", name: "Cuneiform, Word Dividers", transform: runes(CUNEIFORM, " 𒑱 ") },
   { id: "italic-serif", name: "Renaissance Italic", transform: mapWith(ITALIC_SERIF) },
   { id: "bold-italic-serif", name: "Bold Renaissance Italic", transform: mapWith(BOLD_ITALIC_SERIF) },
   { id: "roman-initial-italic", name: "Roman Capital + Italic", transform: initials(BOLD_SERIF, ITALIC_SERIF) },

@@ -10,7 +10,22 @@ Saved Semrush exports and the map of which keywords each page targets, so new pa
 | `daily/<date>.md` | Generated with `--save`. That day's picks. |
 | `gsc/queries_<date>_*.csv` | Search Console query exports (Query, Impressions, Clicks, CTR, Position). Files with the newest date are summed. |
 
-## Daily routine
+## Daily routine (paused 2026-11-20)
+
+**New-page batches are paused.** Vercel Analytics, Nov 2026: search visits fell from ~250/week to ~77/week after the Nov 1 rebuild, and the ~40 pages added since then earn 0–1 search visits each. Almost all search traffic comes from Bing (Bing, DuckDuckGo, Yahoo, Ecosia); Google sends almost none. Until the restored pages recover, spend the time on pages that already earn Bing clicks:
+
+| Page | Why |
+|---|---|
+| `/font-generator/medieval` | #1 page before the rebuild (~90 search visits/week) |
+| `/font-generator/old-english` | #2 (~50/week) |
+| `/` | Homepage |
+| `/font-generator/handwriting`, `/font-generator/gothic-letters`, `/cuneiform-translator` | Ranked before the rebuild; restored at their old URLs |
+| `/death-note-font` | Only post-rebuild page with steady search traffic (~18/week) |
+| `/blackletter-generator`, `/old-english-alphabet`, `/old-english-letters` | Steady 9–20/week |
+
+Each session: check `aggregate_pageviews` by `requestPath` with `referrerHostname ne ''` for the last 7 days, then improve those pages (titles that match the queries, a better first screen, FAQs for the questions people search, internal links pointing to them). Don't add a new page unless one of these pages gets search queries it can't answer. Resume new-page batches only after weekly search visits are back above ~200.
+
+### Previous routine (for when batches resume)
 
 Double down on what already works: start from queries that earn impressions, then fill the rest of the day from Semrush.
 

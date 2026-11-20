@@ -99,7 +99,7 @@ const page: PageContent = {
     "Each style replaces letters one by one, after handling pairs such as th, sh, ch and ng. Characters come from Unicode's Egyptian Hieroglyphs (U+13000–U+1342F), Phoenician (U+10900–U+1091F), Ogham (U+1680–U+169F), Runic (U+16A0–U+16FF) and Gothic (U+10330–U+1034F) blocks. Google's free Noto Sans fonts cover all five; recent phones show most of them without extra fonts, while older Windows and Android versions may show boxes.",
   related: {
     heading: "More old and historical lettering",
-    hrefs: ["/viking-font-generator", "/font-generator/gothic-letters", "/font-generator/medieval", "/illuminated-letters", "/latin-tattoo-font", "/old-english-text-to-image"],
+    hrefs: ["/cuneiform-translator", "/viking-font-generator", "/font-generator/gothic-letters", "/font-generator/medieval", "/illuminated-letters", "/latin-tattoo-font", "/old-english-text-to-image"],
   },
   faq: [
     { q: "Is this a real hieroglyph translator?", a: "No. It spells your word sound by sound with the single-sound signs Egyptologists use for modern names. Translating English into ancient Egyptian would need the Egyptian language itself, which a letter swap can't provide." },

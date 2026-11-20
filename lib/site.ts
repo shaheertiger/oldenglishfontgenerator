@@ -45,6 +45,8 @@ export const TOOL_LINKS: ToolLink[] = [
   { group: "theme", href: "/old-english-font-roblox", label: "Old English Font for Roblox", blurb: "Where gothic text works on Roblox, where the filter blocks it, and what to use instead." },
   { group: "theme", href: "/viking-font-generator", label: "Viking Font Generator", blurb: "Elder Futhark, Viking-age and Anglo-Saxon runes, plus Norse-style blackletter." },
   { group: "theme", href: "/font-generator/gothic-letters", label: "Gothic Letters", blurb: "Capital and small blackletter A–Z, plus the real 27-letter Gothic alphabet of Wulfila." },
+  { group: "theme", href: "/cuneiform-translator", label: "Cuneiform Translator", blurb: "English to Sumerian-style cuneiform signs, with an A–Z key." },
+  { group: "theme", href: "/font-generator/handwriting", label: "Handwriting Font Generator", blurb: "Script, cursive and italic text to copy and paste." },
   { group: "theme", href: "/ancient-font-generator", label: "Ancient Font Generator", blurb: "Your name in hieroglyphs, Phoenician, Ogham, runes and the Gothic alphabet." },
   { group: "theme", href: "/renaissance-font-generator", label: "Renaissance Font Generator", blurb: "Chancery italic, Roman capitals, long s and fleurons from 15th-century Italy." },
   { group: "theme", href: "/old-english-font-twitch", label: "Old English Font for Twitch", blurb: "Gothic stream titles, chat and bios, counted against Twitch's 140-character title limit." },

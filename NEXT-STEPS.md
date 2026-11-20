@@ -66,9 +66,15 @@ The Semrush export and the keyword → page map live in `research/` (see `resear
 python3 -m venv .venv && .venv/bin/pip install fonttools && .venv/bin/python scripts/fontstats.py
 ```
 
-## 6. What not to do
+## 6. November 20, 2026: double down on what works
 
-- Don't re-add unrelated tools "for traffic". Topic focus is the point of this rebuild.
+Search visits fell ~70% after the Nov 1 rebuild because the URLs Bing ranked were redirected or removed. Restored at their old URLs: `/font-generator/medieval`, `/font-generator/old-english`, `/font-generator/gothic-letters`, `/font-generator/handwriting`, `/cuneiform-translator` (the newer URLs 301 to them). Daily new-page batches are paused; see `research/README.md`.
+
+After deploy: in Bing Webmaster Tools submit those five URLs and resubmit `sitemap.xml`, then run `npm run indexnow`.
+
+## 7. What not to do
+
+- Don't add new unrelated tools "for traffic". The two off-topic pages restored in Nov 2026 (handwriting, cuneiform) came back only because Bing already ranked them.
 - Don't bulk-bump dates in the sitemap.
 - Don't add ratings or review schema unless you collect and show real ratings.
 - Don't reintroduce `/es` unless every page is fully translated.

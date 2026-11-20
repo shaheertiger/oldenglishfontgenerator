@@ -42,12 +42,14 @@ import victorian from "./victorian-font-generator";
 import birthday from "./happy-birthday-font";
 import pinterest from "./old-english-font-pinterest";
 import oldEnglishCopy from "./font-generator-old-english";
+import handwriting from "./font-generator-handwriting";
+import cuneiform from "./cuneiform-translator";
 
 export { home };
 
 export const CLUSTERS: PageContent[] = [
   // Restored /font-generator/ URLs that Bing still ranks (Nov 2026)
-  oldEnglishCopy,
+  oldEnglishCopy, handwriting, cuneiform,
   tattoo, alphabet, letters, numbers, cursive, gothic, blackletter, fraktur,
   chicano, names, medieval, instagram, discord, image, symbols, howto,
   // Lettering by theme (Nov 2026)
