@@ -8,7 +8,7 @@ const page: PageContent = {
   h1: "Old English Alphabet",
   crumb: "Old English Alphabet",
   intro:
-    "The Old English alphabet is the 26 letters A–Z drawn in blackletter, and here they all are in two weights, capitals and lowercase, with Old English numbers 0–9 below. Tap one letter to copy it, or type in the box to turn a whole word into Old English alphabet letters. Use it for an initial, to check how a capital looks, or print the chart for hand-lettering practice. Every letter also has its own page in 40+ styles.",
+    "The Old English alphabet is the 26 letters A–Z drawn in blackletter, and here they all are in two weights, capitals and lowercase, with Old English font numbers 0–9 below. Tap one letter to copy it, or type in the box to turn a whole word into Old English alphabet letters. Use it for an initial, to check how a capital looks, or print the chart for hand-lettering practice. Every letter also has its own page in 40+ styles.",
   tool: {
     styles: ["fraktur", "bold-fraktur", "fraktur-caps", "bold-fraktur-caps", "fraktur-lower", "wide", "wide-bold", "interpunct", "fraktur-small-caps", "gothic-framed", "circled", "boxed", "roman-date", "fraktur-outline-digits"],
     sample: "Aa Bb Cc Dd Ee Ff Gg",

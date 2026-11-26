@@ -10,7 +10,7 @@ const page: PageContent = {
   h1: "Hieroglyphics Translator",
   crumb: "Hieroglyphics Translator",
   intro:
-    "This hieroglyphics translator replaces each English letter with the Egyptian hieroglyph that stood for a similar sound, giving you real Unicode signs to copy and paste. It works like an Egyptian hieroglyphics translator for names and short phrases, not for full sentences: going from English to Egyptian hieroglyphs this way spells your words sound by sound with the scribes' one-consonant signs, the same small set Egyptologists call the uniliteral alphabet. Type below, then pick plain signs, a royal cartouche, or dotted word breaks.",
+    "This hieroglyphics translator replaces each English letter with the Egyptian hieroglyph that stood for a similar sound, giving you real Unicode signs to copy and paste. It works like an Egyptian hieroglyphics translator for names and short phrases, not for full sentences: going from English to hieroglyphics this way spells your words sound by sound with the scribes' one-consonant signs, the same small set Egyptologists call the uniliteral alphabet. Type below, then pick plain signs, a royal cartouche, or dotted word breaks.",
   tool: {
     styles: ["hieroglyphs", "hieroglyphs-cartouche", "hieroglyphs-dotted", "cuneiform", "cuneiform-tablet", "phoenician", "gothic-wulfila"],
     sample: "Cleopatra",

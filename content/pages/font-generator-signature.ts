@@ -12,7 +12,7 @@ const page: PageContent = {
   h1: "Signature Font Copy and Paste",
   crumb: "Signature Font",
   intro:
-    "A signature font copy and paste tool turns your typed name into flowing script letters you can paste as text; this one gives you 12 name layouts, from a full cursive name to initials and an underlined sign-off. Think of it as a signature font generator for places that never let you pick a font: type your name once and every layout updates. If you have been searching for fonts to copy and paste for signatures, start with the plain script, then try the bold and underlined versions to see which one still looks like you at a small size.",
+    "A signature font copy and paste tool turns your typed name into flowing script letters you can paste as text; this one gives you 12 name layouts, from a full cursive name to initials and an underlined sign-off. Think of it as a signature font generator for places that never let you pick a font: type your name once and every layout updates. If you need a copy and paste signature font, start with the plain script, then try the bold and underlined versions to see which one still looks like you at a small size.",
   tool: {
     styles: [
       "script", "bold-script", "u-cursive-underline", "u-cursive-bold-spaced", "oe-cursive", "bold-cursive",

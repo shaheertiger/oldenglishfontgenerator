@@ -10,6 +10,7 @@ import { readdirSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import { isServed } from "../lib/redirects.mjs";
+import { OWNER_BY_PATH } from "../lib/owners.ts";
 
 const OVERLAP_MAX = 30;
 // Reference sources only. Never add a site we own or run.
@@ -90,6 +91,13 @@ for (const p of pages) {
   for (const u of links(p)) {
     const host = new URL(u).host;
     if (!ALLOWED_HOSTS.includes(host)) errors.push(`${p.path}: external link to ${host} (not an allowed reference host)`);
+  }
+  // Owner pages (growth plan step 4): FAQ answers of 1–3 sentences, so Copilot and snippets can lift them.
+  if (OWNER_BY_PATH[p.path === "/" ? "/" : p.path]) {
+    for (const f of p.faq ?? []) {
+      const n = strip(f.a).replace(/\b(e\.g|i\.e|etc|vs|U\.S|No|St)\./g, "$1").split(/(?<=[.!?])\s+(?=[A-Z0-9"“(])/).filter(Boolean).length;
+      if (n > 3) errors.push(`${p.path}: FAQ answer has ${n} sentences (max 3): "${f.q}"`);
+    }
   }
   const internal = [...JSON.stringify(p).matchAll(/\]\((\/[^)\s#]*)/g)].map((m) => m[1]);
   for (const h of [...internal, ...(p.related?.hrefs ?? [])]) {

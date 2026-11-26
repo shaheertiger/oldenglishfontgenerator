@@ -8,7 +8,7 @@ const page: PageContent = {
   h1: "Death Note Font",
   crumb: "Death Note Font",
   intro:
-    "The Death Note look comes from gothic blackletter lettering, and this page gives you 16 copy-and-paste styles that get close to it, from all-capital Fraktur for a notebook cover to a single framed blackletter capital in the spirit of L's emblem. There's no official downloadable Death Note font: the lettering in the series and its merchandise is custom artwork, so what you'll find here and elsewhere are fan matches.",
+    "The Death Note look comes from gothic blackletter lettering, and this page gives you 16 copy-and-paste styles that get close to it, from all-capital Fraktur for a notebook cover to a single framed blackletter capital in the spirit of L's emblem. There's no official downloadable Death Note font: the lettering in the series and its merchandise is custom artwork, so what you'll find here and elsewhere are fan matches. Everything below is Death Note font copy and paste text, and the all-capital styles give a Death Note title font look for a notebook cover.",
   tool: {
     styles: [
       "fraktur-caps", "bold-fraktur-caps", "fraktur", "bold-fraktur", "illuminated", "drop-cap",

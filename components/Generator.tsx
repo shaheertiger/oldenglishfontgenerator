@@ -38,12 +38,15 @@ export default function Generator({
   sample,
   placeholder = "Type your name or phrase…",
   presets,
-  initialVisible = 12,
+  initialVisible = 8,
   limit,
   readQuery = false,
 }: Props) {
   const [text, setText] = useState("");
   const [showAll, setShowAll] = useState(false);
+  const [previewId, setPreviewId] = useState<string | null>(null);
+  const [previewKind, setPreviewKind] = useState<"bio" | "name">("bio");
+  const [previewOpen, setPreviewOpen] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -125,6 +128,58 @@ export default function Generator({
           );
         })}
       </ul>
+
+      <div className="gen-extras">
+        <button
+          type="button"
+          className="load-more copy-all"
+          onClick={() => copy(`all ${styleObjs.length} styles`, styleObjs.map((st) => `${st.name}: ${st.transform(source)}`).join("\n"))}
+        >
+          Copy all {styleObjs.length} styles
+        </button>
+        <details className="preview-mock" onToggle={(e) => setPreviewOpen((e.target as HTMLDetailsElement).open)}>
+          <summary>Preview it in a profile</summary>
+          {previewOpen && (<>
+          <div className="mock-controls">
+            <label>
+              Style{" "}
+              <select value={previewId ?? styleObjs[0]?.id} onChange={(e) => setPreviewId(e.target.value)}>
+                {styleObjs.map((st) => (
+                  <option key={st.id} value={st.id}>{st.name}</option>
+                ))}
+              </select>
+            </label>
+            <span className="mock-tabs" role="group" aria-label="Preview type">
+              <button type="button" aria-pressed={previewKind === "bio"} onClick={() => setPreviewKind("bio")}>Bio (Instagram-style)</button>
+              <button type="button" aria-pressed={previewKind === "name"} onClick={() => setPreviewKind("name")}>Display name (Discord-style)</button>
+            </span>
+          </div>
+          {(() => {
+            const st = styleObjs.find((x) => x.id === previewId) ?? styleObjs[0];
+            const out = st ? st.transform(source) : source;
+            return previewKind === "bio" ? (
+              <div className="mock mock-bio" aria-label="Mock-up of a profile bio">
+                <div className="mock-avatar" aria-hidden="true" />
+                <div>
+                  <div className="mock-handle">@your.username</div>
+                  <div className="mock-text">{out}</div>
+                  <div className="mock-sub">Rest of your bio in plain text</div>
+                </div>
+              </div>
+            ) : (
+              <div className="mock mock-chat" aria-label="Mock-up of a chat message">
+                <div className="mock-avatar round" aria-hidden="true" />
+                <div>
+                  <div className="mock-text">{out} <span className="mock-time">Today at 9:41</span></div>
+                  <div className="mock-sub">hey, does my new name look ok?</div>
+                </div>
+              </div>
+            );
+          })()}
+          </>)}
+          <p className="mock-note">A mock-up drawn with your device&apos;s fonts, not the real app. Usernames (@handles) usually accept only plain letters.</p>
+        </details>
+      </div>
 
       {!showAll && styleObjs.length > initialVisible && (
         <div className="load-more-wrap">

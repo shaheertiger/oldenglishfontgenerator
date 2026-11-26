@@ -11,7 +11,7 @@ const page: PageContent = {
   h1: "Fancy Letters Alphabet",
   crumb: "Fancy Letters",
   intro:
-    "The fancy letters alphabet is the ordinary A to Z swapped for decorative Unicode look-alikes, and the chart below gives you every capital and lowercase letter in four of them, each one a tap to copy. Use it as a fancy alphabet letters sheet when you only need a single initial, or type a whole name into the box to get it in 16 fancy letter alphabet styles at once. Because each glyph is a real character rather than an image, these are copy paste letters: they go wherever you can type text.",
+    "The fancy letters alphabet is the ordinary A to Z swapped for decorative Unicode look-alikes, and the chart below gives you every capital and lowercase letter in four of them, each one a tap to copy. Use it as a fancy alphabet letters sheet when you only need a single initial, or type a whole name into the box to get it in 16 fancy letter alphabet styles at once. Because each glyph is a real character rather than an image, these are copy and paste letters: they go wherever you can type text.",
   tool: {
     styles: [
       "script", "bold-script", "fraktur", "bold-fraktur", "oe-cursive", "illuminated",

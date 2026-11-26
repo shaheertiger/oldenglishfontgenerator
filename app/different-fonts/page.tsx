@@ -5,6 +5,8 @@ import Faq from "@/components/Faq";
 import Generator from "@/components/Generator";
 import JsonLd from "@/components/JsonLd";
 import Updated from "@/components/Updated";
+import Lead from "@/components/Lead";
+import { OWNER_BY_PATH, relatedOwners } from "@/lib/owners";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import { ALL_STYLES, ALPHABET_UPPER } from "@/lib/fonts";
 import { CHARS, isDigit } from "@/lib/different-fonts";
@@ -42,12 +44,17 @@ export default function DifferentFontsHub() {
           </nav>
           <section className="hero">
             <h1>Letters in Different Fonts</h1>
-            <p className="lead">
-              Pick any letter or number below to see it in 40+ different fonts, from Old English and script to bubble
-              and squared, each one a Unicode character you can tap to copy. To style a whole word at once, type it here:
-            </p>
-            <Updated file="lib/different-fonts.ts" />
+            <Lead>
+              Letters in different fonts: pick any letter or number below to see it in 40+ different fonts, from Old English
+              and script to bubble and squared, each one a Unicode character you can tap to copy. To see a letter in different
+              fonts, open it below; to style a whole word or the alphabet in different fonts at once, type it here:
+            </Lead>
             <Generator styles={["fraktur", "script", "bold-serif", "u-double-struck", "u-bubble", "u-squared", "u-small-caps", "u-fullwidth", "italic-serif", "u-sans-bold"]} sample="Letters" initialVisible={10} />
+            <Updated file="lib/different-fonts.ts" />
+            <nav className="related-owners" aria-label="Related styles">
+              <span>Related styles:</span>
+              {relatedOwners("/different-fonts").map((r) => <Link key={r.href} href={r.href}>{r.anchor}</Link>)}
+            </nav>
             <h2 className="tool-h">Choose a letter or number</h2>
             <ul className="letter-nav">
               {CHARS.map((c) => (
@@ -60,6 +67,12 @@ export default function DifferentFontsHub() {
             </ul>
           </section>
         </div>
+
+        <section className="section definition-block" aria-label="What are letters in different fonts?">
+          <div className="container">
+            <p className="definition">{OWNER_BY_PATH["/different-fonts"].definition}</p>
+          </div>
+        </section>
 
         <section className="section">
           <div className="container">

@@ -15,6 +15,9 @@
     "keywords": "node scripts/keywords.mjs",
     "gsc": "node scripts/gsc.mjs",
     "bing": "node scripts/bing.mjs",
+    "perf": "node scripts/lighthouse.mjs",
+    "fold": "node scripts/above-fold.mjs",
+    "query-map": "node scripts/query-map.mjs",
     "check": "node --experimental-strip-types --no-warnings --import ./scripts/lib/ts-register.mjs scripts/check-content.mjs"
   },
   "dependencies": {

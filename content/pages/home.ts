@@ -9,7 +9,7 @@ const home: PageContent = {
   h1: "Blackletter & Old English Text Generator",
   crumb: "Home",
   intro:
-    "This blackletter text generator turns whatever you type into 60+ Old English styles you can copy and paste: classic Fraktur, heavy Bold Fraktur, tattoo layouts, gothic frames and decorated variations, plus a tattoo preview and PNG export further down. Want just the classic look fast? The [Old English font](/font-generator/old-english) page has the 14 most-used styles and ready-made words.",
+    "This blackletter text generator, an Old English text generator and gothic text generator in one, turns whatever you type into 60+ styles you can copy and paste: classic Fraktur, heavy Bold Fraktur, tattoo layouts, gothic frames and decorated variations, plus a tattoo preview and PNG export further down. Want just the classic look fast? The [Old English font](/font-generator/old-english) page has the 14 most-used styles and ready-made words.",
   tool: {
     styles: HOME_STYLES,
     sample: "Old English Font",

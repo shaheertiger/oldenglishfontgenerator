@@ -27,7 +27,7 @@ for (const url of urls) {
   // Copy only: drop tool output (style rows, letter grids, tables of glyphs).
   const copyHtml = main
     .replace(/<ul class="results">[\s\S]*?<\/ul>/g, " ")
-    .replace(/<ul class="letter-grid">[\s\S]*?<\/ul>/g, " ")
+    .replace(/<ul class="letter-grid[^"]*">[\s\S]*?<\/ul>/g, " ")
     .replace(/<div class="presets"[\s\S]*?<\/div>/g, " ")
     .replace(/<p class="sr-only"[\s\S]*?<\/p>/g, " ")
     .replace(/<p class="updated"[\s\S]*?<\/p>/g, " ")
