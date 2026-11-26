@@ -14,7 +14,7 @@ const page: PageContent = {
   h1: "Cuneiform Translator",
   crumb: "Cuneiform Translator",
   intro:
-    "This cuneiform translator turns English into cuneiform signs letter by letter, using one fixed sign per letter, so any name or word gets the look of a Sumerian or Babylonian clay tablet. Type below to use it as an English to cuneiform translator or a cuneiform text generator; every sign is a real Unicode character you can copy and paste. Real cuneiform wrote syllables and words, not letters, so treat the result as a cipher with an ancient look. The A–Z chart below shows the full key.",
+    "This cuneiform translator turns English into cuneiform signs letter by letter, using one fixed sign per letter, so any name or word gets the look of a Sumerian or Babylonian clay tablet. Type below to use it as an English to cuneiform translator or a cuneiform text generator; every sign is a real Unicode character, so cuneiform copy and paste works like ordinary text. Real cuneiform wrote syllables and words, not letters, so treat the result as a cipher with an ancient look. The A–Z chart below shows the full key.",
   tool: {
     styles: ["cuneiform", "cuneiform-tablet", "hieroglyphs", "phoenician", "runes-elder", "gothic-wulfila"],
     sample: "Babylon",

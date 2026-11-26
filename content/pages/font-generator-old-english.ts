@@ -18,7 +18,7 @@ const page: PageContent = {
   h1: "Old English Font Generator",
   crumb: "Old English Font Generator",
   intro:
-    "An Old English font is blackletter lettering, the dense, angular script of late-medieval Europe, and this Old English font generator turns anything you type into 14 blackletter styles you can copy and paste. It works as an Old English text generator for names, captions and short phrases: type below, tap Copy, paste. Nothing to install, free, no sign-up. Below the tool are ready-made Old English words and the A–Z letters, and the main [Old English text generator](/) has all 60+ styles and a tattoo preview.",
+    "An Old English font is blackletter lettering, the dense, angular script of late-medieval Europe, and this Old English font generator turns anything you type into 14 blackletter styles you can copy and paste. It works as an Old English text generator for names, captions and short phrases, and the quickest Old English font copy and paste: type below, tap Copy, paste. Nothing to install, free, no sign-up. Below the tool are ready-made Old English words and the A–Z letters, and the main [Old English text generator](/) has all 60+ styles and a tattoo preview.",
   tool: {
     styles: [
       "fraktur", "bold-fraktur", "fraktur-small-caps", "bold-fraktur-small-caps", "fraktur-caps", "bold-fraktur-caps",

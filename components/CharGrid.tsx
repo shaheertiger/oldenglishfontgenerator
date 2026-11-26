@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 export type CharGroup = { label: string; cells: { glyph: string; hint: string }[] };
 
 /** Grid of single characters; each tile copies its glyph. */
-export default function CharGrid({ groups, printable = false }: { groups: CharGroup[]; printable?: boolean }) {
+export default function CharGrid({ groups, printable = false, compact = false }: { groups: CharGroup[]; printable?: boolean; compact?: boolean }) {
   const [toast, setToast] = useState<string | null>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -32,13 +32,17 @@ export default function CharGrid({ groups, printable = false }: { groups: CharGr
       {groups.map((g) => (
         <div key={g.label}>
           <div className="grid-label">{g.label}</div>
-          <ul className="letter-grid">
+          <ul className={compact ? "letter-grid compact" : "letter-grid"}>
             {g.cells.map((c) => (
               <li key={g.label + c.hint}>
-                <button type="button" onClick={() => copy(c.glyph, c.hint)} aria-label={`Copy ${c.hint}`}>
-                  <span className="g" aria-hidden="true">{c.glyph}</span>
-                  <small>{c.hint.replace(/^.* /, "")}</small>
-                </button>
+                {compact ? (
+                  <button type="button" className="g" onClick={() => copy(c.glyph, c.hint)} aria-label={`Copy ${c.hint}`}>{c.glyph}</button>
+                ) : (
+                  <button type="button" onClick={() => copy(c.glyph, c.hint)} aria-label={`Copy ${c.hint}`}>
+                    <span className="g" aria-hidden="true">{c.glyph}</span>
+                    <small>{c.hint.replace(/^.* /, "")}</small>
+                  </button>
+                )}
               </li>
             ))}
           </ul>

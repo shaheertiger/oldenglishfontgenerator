@@ -11,7 +11,7 @@ const page: PageContent = {
   h1: "Handwriting Font Generator",
   crumb: "Handwriting Font Generator",
   intro:
-    "Type below to make your text look handwritten: flowing script, bold cursive, italic and fine-line styles, plus blackletter cursive if you want an older hand. Each result is plain Unicode text, so you can copy and paste it into Instagram, TikTok, Discord, texts and documents without installing a font.",
+    "A handwriting font generator turns typed text into letters that look written by hand: flowing script, bold cursive, italic and fine-line styles, plus blackletter cursive for an older hand. Use it as a handwritten font generator for names, notes and captions, or for quick handwriting font copy and paste: each result is plain Unicode text, so it pastes into messages and documents without installing a font.",
   tool: {
     styles: ["script", "bold-script", "script-spaced", "italic-serif", "bold-italic-serif", "oe-cursive", "bold-cursive", "roman-initial-italic", "gangster-initials", "typewriter"],
     sample: "Handwritten notes",

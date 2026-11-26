@@ -26,7 +26,7 @@ const page: PageContent = {
   h1: "Gothic Symbols Copy and Paste",
   crumb: "Symbols",
   intro:
-    "Gothic symbols are Unicode characters such as the Maltese cross ✠, the dagger †, the skull ☠ and the ivy leaf ❦, and this page gives you 43 of them to copy and paste in one tap. The chart of gothic symbols comes first, sorted into crosses, daggers, occult signs, mourning symbols, manuscript ornaments and frames, so the goth symbols you want are easy to find. If you only need gothic symbols to copy around a name, type the name in the box and pick a framed version. Further down are separate sets for Greek letters, alchemy signs, number styles, brackets and arrows.",
+    "Gothic symbols are Unicode characters such as the Maltese cross ✠, the dagger †, the skull ☠ and the ivy leaf ❦, and this page is gothic symbols copy and paste for 43 of them, one tap each. The chart of gothic symbols comes first, sorted into crosses, daggers, occult signs, mourning symbols, manuscript ornaments and frames, so the goth symbols you want are easy to find. If you only need gothic symbols to copy around a name, type the name in the box and pick a framed version. Further down are separate sets for Greek letters, alchemy signs, number styles, brackets and arrows.",
   tool: {
     styles: [
       "deco-maltese", "deco-cross", "deco-dagger", "deco-pentagram", "deco-skull", "deco-swords",

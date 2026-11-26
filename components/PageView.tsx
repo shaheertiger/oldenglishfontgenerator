@@ -7,6 +7,7 @@ import ImageExport from "@/components/ImageExport";
 import Updated from "@/components/Updated";
 import JsonLd from "@/components/JsonLd";
 import RichText from "@/components/RichText";
+import Lead from "@/components/Lead";
 import { SiteHeader, SiteFooter, Breadcrumb } from "@/components/SiteChrome";
 import type { Block, ChartSet, PageContent, Widget } from "@/content/pages/types";
 import { ALL_STYLES, ALPHABET_LOWER, ALPHABET_UPPER } from "@/lib/fonts";
@@ -15,6 +16,7 @@ import { toolLinks } from "@/lib/site";
 import { sourceFile } from "@/content/pages";
 import { lastModified } from "@/lib/lastmod";
 import { LETTERS } from "@/lib/letters";
+import { OWNER_BY_PATH, relatedOwners, tableStyles, unicodeBlocks } from "@/lib/owners";
 import { SYMBOL_GROUPS } from "@/lib/symbols";
 
 export function pagePath(p: PageContent) {
@@ -159,7 +161,16 @@ function chartGroups(styles: string[], sets: ChartSet[]): CharGroup[] {
   });
 }
 
+const BLACKLETTER = new Set(["/", "/font-generator/old-english", "/font-generator/gothic-letters", "/font-generator/medieval", "/font-generator/old-english-letters", "/old-english-alphabet", "/death-note-font"]);
+
+/** Glyph cells from a page's tables (symbol pages), for the Unicode block list. */
+function tableGlyphs(p: PageContent): string {
+  return p.sections.flatMap((s) => s.blocks).flatMap((b) => ("table" in b ? b.table.rows.flatMap((r) => r.filter((_, j) => b.table.glyphCols?.includes(j))) : [])).join("");
+}
+
 export function renderBlock(b: Block, i: number, p?: PageContent) {
+  const owner = p ? OWNER_BY_PATH[pagePath(p)] : undefined;
+  if (owner && ("chart" in b || ("widget" in b && (b.widget === "alphabet-compact" || b.widget === "alphabet-full")))) return null;
   if ("chart" in b) return <CharGrid key={i} groups={chartGroups(b.chart.styles, b.chart.sets)} />;
   if ("p" in b) return <p key={i}><RichText text={b.p} /></p>;
   if ("ul" in b)
@@ -211,6 +222,9 @@ const UI = {
 export default function PageView({ page, home = false }: { page: PageContent; home?: boolean }) {
   const path = pagePath(page);
   const ui = UI[page.lang ?? "en"];
+  const owner = OWNER_BY_PATH[path];
+  const fullTable = owner ? tableStyles(page.tool.styles) : [];
+  const blocks = owner ? unicodeBlocks(page.tool.styles, tableGlyphs(page)) : [];
   const related = toolLinks(page.related.hrefs);
   const ld: object[] = [
     appLd(page.h1, path, page.description, lastModified(sourceFile(page))),
@@ -227,8 +241,7 @@ export default function PageView({ page, home = false }: { page: PageContent; ho
           {!home && <Breadcrumb current={page.crumb} />}
           <section className="hero" aria-labelledby="h1">
             <h1 id="h1">{page.h1}</h1>
-            <p className="lead"><RichText text={page.intro} /></p>
-            <Updated file={sourceFile(page)} />
+            <Lead><RichText text={page.intro} /></Lead>
             <h2 className="tool-h">{page.stylesHeading}</h2>
             <Generator
               styles={page.tool.styles}
@@ -238,8 +251,23 @@ export default function PageView({ page, home = false }: { page: PageContent; ho
               limit={page.tool.limit}
               readQuery={home}
             />
+            <Updated file={sourceFile(page)} />
+            <nav className="related-owners" aria-label="Related styles">
+              <span>Related styles:</span>
+              {relatedOwners(path).map((r) => (
+                <Link key={r.href} href={r.href}>{r.anchor}</Link>
+              ))}
+            </nav>
           </section>
         </div>
+
+        {owner && (
+          <section className="section definition-block" aria-label={`What is ${owner.term.replace(/^(A|An|The) /, "")}?`}>
+            <div className="container">
+              <p className="definition"><RichText text={owner.definition} /></p>
+            </div>
+          </section>
+        )}
 
         <section className="section">
           <div className="container">
@@ -263,6 +291,46 @@ export default function PageView({ page, home = false }: { page: PageContent; ho
             </div>
           </section>
         ))}
+
+        {owner && fullTable.length > 0 && (
+          <section className="section">
+            <div className="container">
+              <h2>Copy any character: A–Z, a–z, 0–9 and symbols</h2>
+              <p>Every character in {fullTable.length === 1 ? "this style" : `the ${fullTable.length} letter styles on this page`}; tap one to copy it.</p>
+              <CharGrid compact groups={chartGroups(fullTable, ["upper", "lower", "digits", "punct"])} />
+            </div>
+          </section>
+        )}
+
+        {owner && blocks.length > 0 && (
+          <section className="section">
+            <div className="container">
+              <h2>How it works</h2>
+              <p>
+                Nothing here is a font. Each style swaps your characters for different Unicode characters, listed below by
+                block with a link to the official chart on unicode.org.
+                {blocks.some((b) => b.block === "Letterlike Symbols") &&
+                  " Five Fraktur capitals (ℭ ℌ ℑ ℜ ℨ) were encoded in Letterlike Symbols before the Mathematical Alphanumeric Symbols block existed, so the Fraktur alphabet takes them from there."}
+              </p>
+              <div className="table-wrap stats">
+                <table className="compare">
+                  <thead><tr><th scope="col">Unicode block</th><th scope="col">Range</th><th scope="col">Used here by</th></tr></thead>
+                  <tbody>
+                    {blocks.map((b) => (
+                      <tr key={b.block}><td><a href={b.url}>{b.block}</a></td><td>{b.range}</td><td>{b.usedBy}</td></tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              {BLACKLETTER.has(path) && (
+                <p className="note">
+                  On the history of the letter shapes, see <a href="https://en.wikipedia.org/wiki/Blackletter">Blackletter</a> on Wikipedia,
+                  which covers textura, rotunda, schwabacher and Fraktur and cites its sources.
+                </p>
+              )}
+            </div>
+          </section>
+        )}
 
         {page.built && (
           <section className="section">

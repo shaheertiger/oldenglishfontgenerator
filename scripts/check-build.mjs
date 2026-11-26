@@ -91,9 +91,12 @@ const pages = await pool(urls, 8, async (u) => {
   }
   const main = (html.match(/<main[^>]*>([\s\S]*?)<\/main>/)?.[1] ?? "")
     .replace(/<ul class="results">[\s\S]*?<\/ul>/g, " ")
-    .replace(/<ul class="letter-grid">[\s\S]*?<\/ul>/g, " ")
+    .replace(/<ul class="letter-grid[^"]*">[\s\S]*?<\/ul>/g, " ")
     .replace(/<div class="grid-label">[\s\S]*?<\/div>/g, " ")
     .replace(/<div class="presets"[\s\S]*?<\/div>/g, " ")
+    // Tool chrome shared by every generator (Copy all + profile mock-up), like the input box.
+    .replace(/<div class="gen-extras">[\s\S]*?<p class="mock-note">[\s\S]*?<\/p><\/details><\/div>/g, " ")
+    .replace(/<nav class="related-owners"[\s\S]*?<\/nav>/g, " ")
     .replace(/<p class="sr-only"[\s\S]*?<\/p>/g, " ")
     .replace(/<p class="updated"[\s\S]*?<\/p>/g, " ")
     .replace(/<nav class="breadcrumb"[\s\S]*?<\/nav>/g, " ")
