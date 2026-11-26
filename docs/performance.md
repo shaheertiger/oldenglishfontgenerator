@@ -43,3 +43,24 @@ Target on every owner page: Lighthouse mobile performance ≥ 90 and CLS < 0.1. 
 | /font-generator/signature | 94 | 0 | 2502 | 201 | 1037 |
 | /different-fonts | 97 | 0 | 2441 | 96 | 1001 |
 | /death-note-font | 97 | 0 | 1846 | 183 | 1070 |
+
+## 2026-11-26 (https://www.oldenglishfontgenerator.com)
+
+| Page | Performance | CLS | LCP (ms) | TBT (ms) | DOM nodes |
+|---|---|---|---|---|---|
+| / | 92 | 0 | 1170 | 340 | 1216 |
+| /font-generator/old-english | 97 | 0 | 1698 | 175 | 1131 |
+| /font-generator/fancy-letters | 98 | 0 | 1735 | 163 | 1091 |
+| /font-generator/gothic-letters | 96 | 0 | 1535 | 216 | 1313 |
+| /font-generator/medieval | 95 | 0 | 1882 | 231 | 1092 |
+| /font-generator/old-english-letters | 99 | 0 | 1885 | 119 | 1066 |
+| /font-generator/handwriting | 97 | 0 | 1382 | 195 | 1014 |
+| /old-english-alphabet | 92 | 0 | 2013 | 322 | 1300 |
+| /font-generator/thank-you | 96 | 0 | 1576 | 228 | 1122 |
+| /hieroglyphics-translator | 91 | 0 | 1540 | 390 | 1232 |
+| /font-generator/italic | 98 | 0 | 1836 | 158 | 1050 |
+| /symbols | 94 | 0 | 1665 | 268 | 1151 |
+| /cuneiform-translator | 96 | 0 | 1436 | 214 | 1121 |
+| /font-generator/signature | 95 | 0 | 1437 | 262 | 1037 |
+| /different-fonts | 95 | 0 | 1875 | 245 | 1001 |
+| /death-note-font | 93 | 0 | 1387 | 321 | 1070 |
