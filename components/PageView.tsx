@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Generator from "@/components/Generator";
 import CharGrid, { type CharGroup } from "@/components/CharGrid";
+import CopyGrid from "@/components/CopyGrid";
 import Faq from "@/components/Faq";
 import ImageExport from "@/components/ImageExport";
 import Updated from "@/components/Updated";
@@ -223,7 +224,7 @@ export default function PageView({ page, home = false }: { page: PageContent; ho
   const path = pagePath(page);
   const ui = UI[page.lang ?? "en"];
   const owner = OWNER_BY_PATH[path];
-  const fullTable = owner ? tableStyles(page.tool.styles) : [];
+  const fullTable = owner ? tableStyles(page.tool.styles, 4) : [];
   const blocks = owner ? unicodeBlocks(page.tool.styles, tableGlyphs(page)) : [];
   const related = toolLinks(page.related.hrefs);
   const ld: object[] = [
@@ -297,7 +298,7 @@ export default function PageView({ page, home = false }: { page: PageContent; ho
             <div className="container">
               <h2>Copy any character: A–Z, a–z, 0–9 and symbols</h2>
               <p>Every character in {fullTable.length === 1 ? "this style" : `the ${fullTable.length} letter styles on this page`}; tap one to copy it.</p>
-              <CharGrid compact groups={chartGroups(fullTable, ["upper", "lower", "digits", "punct"])} />
+              <CopyGrid groups={chartGroups(fullTable, ["upper", "lower", "digits", "punct"])} />
             </div>
           </section>
         )}

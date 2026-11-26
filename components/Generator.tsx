@@ -38,7 +38,7 @@ export default function Generator({
   sample,
   placeholder = "Type your name or phrase…",
   presets,
-  initialVisible = 12,
+  initialVisible = 8,
   limit,
   readQuery = false,
 }: Props) {
@@ -46,6 +46,7 @@ export default function Generator({
   const [showAll, setShowAll] = useState(false);
   const [previewId, setPreviewId] = useState<string | null>(null);
   const [previewKind, setPreviewKind] = useState<"bio" | "name">("bio");
+  const [previewOpen, setPreviewOpen] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -136,8 +137,9 @@ export default function Generator({
         >
           Copy all {styleObjs.length} styles
         </button>
-        <details className="preview-mock">
+        <details className="preview-mock" onToggle={(e) => setPreviewOpen((e.target as HTMLDetailsElement).open)}>
           <summary>Preview it in a profile</summary>
+          {previewOpen && (<>
           <div className="mock-controls">
             <label>
               Style{" "}
@@ -174,6 +176,7 @@ export default function Generator({
               </div>
             );
           })()}
+          </>)}
           <p className="mock-note">A mock-up drawn with your device&apos;s fonts, not the real app. Usernames (@handles) usually accept only plain letters.</p>
         </details>
       </div>

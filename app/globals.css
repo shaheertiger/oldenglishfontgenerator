@@ -199,7 +199,7 @@ a:hover { color: var(--accent); }
 .toast.show { opacity: 1; transform: translate(-50%, 0); }
 
 /* ===== Sections ===== */
-.section { padding: 34px 0; border-top: 1px solid var(--border); }
+.section { padding: 34px 0; border-top: 1px solid var(--border); content-visibility: auto; contain-intrinsic-size: auto 700px; }
 .section h2 { font-size: 25px; line-height: 1.25; margin: 0 0 12px; letter-spacing: -0.01em; }
 .section h3 { font-size: 17px; margin: 18px 0 6px; }
 .section p, .section li { color: var(--text-soft); }

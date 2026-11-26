@@ -62,7 +62,7 @@ const phase0 = (() => {
 })();
 const redirectSources = new Set(REDIRECTS.map((r) => r.source));
 const restored = [...new Set([...LIVE, ...phase0.filter((r) => r.decision === "restore").map((r) => r.url)])].filter((u) => !redirectSources.has(u));
-const TOOL = /class="gen"|class="letter-grid"|class="table-wrap"/;
+const TOOL = /class="gen"|class="letter-grid[^"]*"|class="table-wrap"/;
 await pool(restored, 8, async (u) => {
   const r = await get(u);
   if (r.status !== 200) return errors.push(`restored ${u} returns ${r.status}`);
