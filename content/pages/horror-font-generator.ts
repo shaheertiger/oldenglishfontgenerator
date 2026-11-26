@@ -8,7 +8,7 @@ const page: PageContent = {
   h1: "Horror Font Generator",
   crumb: "Horror Font Generator",
   intro:
-    "Type anything and this horror font generator turns it into 20 scary text styles to copy and paste: glitchy cursed gothic, worn-out print, vampire blackletter, upside-down text and names framed with bats, skulls and candles. It's built for Halloween captions, haunted-house signs, horror game usernames and spooky party invitations. Need font files for a poster instead? See the [free Halloween fonts](/fonts/halloween).",
+    "Type anything and this horror font generator turns it into 20 scary text styles to copy and paste: glitchy cursed gothic, worn-out print, vampire blackletter, upside-down text and names framed with bats, skulls and candles. It's built for Halloween captions, haunted-house signs, horror game usernames and spooky party invitations. Need font files for a poster instead? See the free Halloween fonts.",
   tool: {
     styles: [
       "cursed", "distressed", "deco-bat", "deco-skull", "deco-candle", "deco-pentagram", "deco-rose",
@@ -45,7 +45,7 @@ const page: PageContent = {
     {
       h2: "Will Halloween symbols show up on every phone?",
       blocks: [
-        { p: "Symbols appear only if the viewer's device knows them. The older the Unicode version that added a character, the more phones and computers can show it. Everything in this table is supported on current iOS, Android, Windows and macOS, but if your audience uses older devices, prefer the symbols near the top." },
+        { p: "Symbols appear only if the viewer's device knows them. The older the Unicode version that added a character, the more phones and computers can show it. Whether each symbol shows depends on the reader's device fonts; if your audience may use older devices, prefer the symbols near the top." },
         {
           table: {
             head: ["Symbol", "Name", "Code point", "Added in Unicode"],
@@ -66,7 +66,7 @@ const page: PageContent = {
             ],
           },
         },
-        { p: "More crosses, daggers and ornaments are on the [gothic symbols](/gothic-symbols) page, each one tap to copy." },
+        { p: "More crosses, daggers and ornaments are on the [gothic symbols](/symbols) page, each one tap to copy." },
       ],
     },
     {
@@ -78,7 +78,7 @@ const page: PageContent = {
     {
       h2: "Is there a horror movie font I can download?",
       blocks: [
-        { p: "Famous horror titles are usually custom lettering, not fonts you can buy. For posters, flyers and video thumbnails, open-licence display fonts with drips, slashes or heavy blackletter get you close; the [Halloween fonts collection](/fonts/halloween) compares ten of them, all free for commercial use. For darker, more traditional blackletter, try the [gothic font generator](/gothic-font-generator) or the [gothic fonts](/fonts/gothic) directory." },
+        { p: "Famous horror titles are usually custom lettering, not fonts you can buy. For posters, flyers and video thumbnails, open-licence display fonts with drips, slashes or heavy blackletter get you close; the Halloween fonts collection compares ten of them, all free for commercial use. For darker, more traditional blackletter, try the [gothic font generator](/font-generator/gothic-letters) or the gothic fonts directory." },
       ],
     },
   ],
@@ -86,7 +86,7 @@ const page: PageContent = {
     "The letters are Mathematical Fraktur and Bold Fraktur. Cursed and distressed styles add combining marks such as U+0334 and U+0337 after each letter; the frames are ordinary symbols and emoji placed before and after your text.",
   related: {
     heading: "More dark lettering tools",
-    hrefs: ["/gothic-font-generator", "/gothic-symbols", "/metal-font-generator", "/death-note-font", "/font-generator/medieval", "/old-english-text-to-image"],
+    hrefs: ["/font-generator/gothic-letters", "/symbols", "/metal-font-generator", "/death-note-font", "/font-generator/medieval", "/old-english-text-to-image"],
   },
   faq: [
     { q: "How do I copy and paste scary fonts?", a: "Type your text in the box, find a style you like and tap Copy. Then paste it wherever you want; it's Unicode text, not an image." },
@@ -94,7 +94,7 @@ const page: PageContent = {
     { q: "Can I use scary text in my Instagram or TikTok bio?", a: "Yes. Most styles work in bios and captions. Cursed Gothic may be clipped or stripped in some name fields, so check how it looks after saving." },
     { q: "Why do some symbols appear as empty boxes?", a: "The device viewing them doesn't have that character. The table above lists when each symbol was added to Unicode; older ones display on more devices." },
     { q: "Is there a Halloween font for Canva or Word?", a: "These copy-paste styles work in any text box, but for print and design you'll get sharper results with an installed font. See the free Halloween fonts collection for downloadable options." },
-    { q: "Can I make text that drips blood?", a: "Unicode has no dripping letters. A font such as Nosifer does that as a real font file; the [Halloween fonts](/fonts/halloween) page lets you preview it with your own words." },
+    { q: "Can I make text that drips blood?", a: "Unicode has no dripping letters. A font such as Nosifer does that as a real font file; the Halloween fonts page lets you preview it with your own words." },
     { q: "Is the text I type stored?", a: "No. Everything is converted in your browser." },
   ],
 };

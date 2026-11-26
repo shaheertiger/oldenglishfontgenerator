@@ -4,7 +4,7 @@ import { POSTS } from "@/lib/blog";
 import { lastModified } from "@/lib/lastmod";
 import { STATIC_SOURCES } from "@/lib/sitemap-files";
 import { SITE_URL } from "@/lib/site";
-import { LETTERS } from "@/lib/letters";
+import { CHARS } from "@/lib/different-fonts";
 import { APP_GUIDES, FONT_PAGES, appGuideSource, fontPageSource } from "@/lib/fontpages";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -16,7 +16,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     entry("/", sourceFile(home), 1),
     ...CLUSTERS.map((c) => entry(`/${c.slug}`, sourceFile(c), 0.8)),
-    ...LETTERS.map((x) => entry(`/old-english-alphabet/${x.l}`, "lib/letters.ts", 0.6)),
+    entry("/different-fonts", "lib/different-fonts.ts", 0.7),
+    ...CHARS.map((c) => entry(`/different-fonts/${c}`, "lib/different-fonts.ts", 0.6)),
     entry("/fonts", "lib/fontstats.json", 0.8),
     ...FONT_PAGES.map((p) => entry(`/fonts/${p.style}`, fontPageSource(p.style), 0.7)),
     ...APP_GUIDES.map((a) => entry(`/fonts/old-english/${a.app}`, appGuideSource(a.app), 0.5)),

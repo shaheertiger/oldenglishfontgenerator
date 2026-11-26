@@ -24,7 +24,7 @@ const post: BlogPost = {
         ["Roman and collegiate capitals", "Cinzel Decorative, IM Fell English, Graduate", "Rings, stamps, minimal logos, team gear", "Can look plain without a frame or rule"],
       ],
     },
-    { type: "p", text: "You can preview every one of these with your own initials in the [calligraphy fonts](/fonts/calligraphy) and [Old English fonts](/fonts/old-english) collections. If you only need the letters for a bio or a caption, copy Unicode initials from the [Old English letters](/old-english-letters) page instead; nothing has to be installed." },
+    { type: "p", text: "You can preview every one of these with your own initials in the [calligraphy fonts](/fonts/calligraphy) and [Old English fonts](/fonts/old-english) collections. If you only need the letters for a bio or a caption, copy Unicode initials from the [Old English letters](/font-generator/old-english-letters) page instead; nothing has to be installed." },
     { type: "h2", text: "What order do the letters go in a monogram?" },
     { type: "p", text: "There is no law, only conventions, and they differ between countries and families. The most common English-language conventions are these:" },
     {
@@ -43,9 +43,9 @@ const post: BlogPost = {
     { type: "p", text: "Blackletter capitals were designed to be ornamental. Medieval scribes drew them larger and more elaborate than the text around them, and Fraktur printers kept that habit. As a result, a single blackletter capital already looks like a finished emblem. Set three of them in a frame and you have something that reads as heraldic without any extra drawing." },
     { type: "p", text: "The catch is legibility. Several Fraktur capitals look alike to modern eyes: I and J are near twins, and C, E and G can blur at small sizes. If the monogram will be small, or the people reading it are not familiar with blackletter, test it on someone who doesn't know the initials. The [illuminated letters](/illuminated-letters) page shows decorated single capitals if you want one large letter instead of three." },
     { type: "h2", text: "How do you make a monogram in Word or Canva?" },
-    { type: "p", text: "Type each initial in its own text box so you can size and nudge them separately. Make the centre letter about one and a half times the height of the side letters for a traditional layout, then group the boxes. For embroidery or engraving, export the arrangement as a PNG or SVG with the [text to image tool](/old-english-text-to-image) and send that file, because the workshop may not have your font installed. Our guides for [Word](/fonts/old-english/word) and [Canva](/fonts/old-english/canva) cover installing the font itself." },
+    { type: "p", text: "Type each initial in its own text box so you can size and nudge them separately. Make the centre letter about one and a half times the height of the side letters for a traditional layout, then group the boxes. For embroidery or engraving, export the arrangement as a PNG or SVG with the [text to image tool](/old-english-text-to-image) and send that file, because the workshop may not have your font installed. Our guides for Word and [Canva](/fonts/old-english/canva) cover installing the font itself." },
     { type: "h2", text: "Script or blackletter for a wedding monogram?" },
-    { type: "p", text: "Script is the default because it feels soft and romantic, and overlapping script letters can be woven together beautifully. Blackletter suits gothic, medieval, winter or castle weddings, and it pairs well with a script for everything else on the stationery. Our post on [Old English wedding invitations](/blog/old-english-wedding-invitations) covers how to combine the two without the invitation becoming hard to read." },
+    { type: "p", text: "Script is the default because it feels soft and romantic, and overlapping script letters can be woven together beautifully. Blackletter suits gothic, medieval, winter or castle weddings, and it pairs well with a script for everything else on the stationery. Our post on Old English wedding invitations covers how to combine the two without the invitation becoming hard to read." },
     {
       type: "faq",
       items: [
@@ -56,7 +56,7 @@ const post: BlogPost = {
         { q: "Can I put a monogram in my Instagram bio?", a: "Yes, as Unicode letters. Copy blackletter initials from the Old English letters page; installed fonts don't work inside Instagram." },
       ],
     },
-    { type: "cta", text: "Copy blackletter initials and framed monograms from the", href: "/old-english-letters", label: "Old English letters page" },
+    { type: "cta", text: "Copy blackletter initials and framed monograms from the", href: "/font-generator/old-english-letters", label: "Old English letters page" },
   ],
 };
 

@@ -7,7 +7,11 @@ export type Block =
   | { ul: string[] }
   | { table: { head: string[]; rows: string[][]; glyphCols?: number[] } }
   | { cards: { h: string; p: string }[] }
-  | { widget: Widget };
+  | { widget: Widget }
+  /** Full tap-to-copy character chart: one group per style, every cell a copy button. */
+  | { chart: { styles: string[]; sets: ChartSet[] } };
+
+export type ChartSet = "upper" | "lower" | "digits" | "punct";
 
 export type Widget =
   | "alphabet-compact"
@@ -51,4 +55,8 @@ export type PageContent = {
   built?: string;
   related: { heading: string; hrefs: string[] };
   faq: { q: string; a: string }[];
+  /** Page language when not English (the Spanish pages under /es). */
+  lang?: "es";
+  /** Extra words masked by the overlap check (the page's own style/tool names). */
+  mask?: string[];
 };

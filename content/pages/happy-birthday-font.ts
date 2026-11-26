@@ -44,7 +44,7 @@ const page: PageContent = {
             ],
           },
         },
-        { p: "Writing the age? Unicode has no blackletter digits, so numbers stay plain or switch to an outlined style; our [Old English numbers](/old-english-numbers) page explains why and shows Roman numerals as an alternative, such as XXX for a 30th." },
+        { p: "Writing the age? Unicode has no blackletter digits, so numbers stay plain or switch to an outlined style; our [Old English numbers](/old-english-alphabet) page explains why and shows Roman numerals as an alternative, such as XXX for a 30th." },
       ],
     },
     {
@@ -63,7 +63,7 @@ const page: PageContent = {
             ],
           },
         },
-        { p: "Cutting a cake topper or vinyl decal on a Cricut? Script fonts need letters that touch so the word comes out in one piece; our [Cricut guide](/fonts/old-english/cricut) covers welding and minimum sizes. To turn a styled line into a PNG for a digital card, use [Old English text to image](/old-english-text-to-image)." },
+        { p: "Cutting a cake topper or vinyl decal on a Cricut? Script fonts need letters that touch so the word comes out in one piece; our Cricut guide covers welding and minimum sizes. To turn a styled line into a PNG for a digital card, use [Old English text to image](/old-english-text-to-image)." },
       ],
     },
     {
@@ -89,7 +89,7 @@ const page: PageContent = {
     "Calligraphy rows use Mathematical Script and Bold Script letters; Old English rows use Mathematical Fraktur and Bold Fraktur, all from Unicode's Mathematical Alphanumeric Symbols block. Accents are kept as combining marks after each letter. Stars, hearts, crowns and roses are standard symbols or emoji, so they look slightly different on iPhone and Android.",
   related: {
     heading: "More ways to style a message",
-    hrefs: ["/old-english-font-facebook", "/old-english-font-instagram", "/old-english-name-generator", "/old-english-cursive", "/old-english-numbers", "/old-english-text-to-image"],
+    hrefs: ["/font-generator/old-english-ig", "/old-english-name-generator", "/font-generator/old-cursive", "/old-english-alphabet", "/old-english-text-to-image"],
   },
   faq: [
     { q: "How do I write Happy Birthday in calligraphy to copy and paste?", a: "Type Happy Birthday and a name in the box, then copy one of the script rows. They are Unicode letters, so they paste anywhere text is accepted." },

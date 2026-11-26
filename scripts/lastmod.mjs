@@ -9,6 +9,7 @@ const files = [
   ...readdirSync("content/pages").filter((f) => f.endsWith(".ts") && !["types.ts", "index.ts"].includes(f)).map((f) => `content/pages/${f}`),
   ...["content/fonts", "content/apps"].flatMap((d) => readdirSync(d).filter((f) => f.endsWith(".ts") && f !== "index.ts").map((f) => `${d}/${f}`)),
   "lib/letters.ts",
+  "lib/different-fonts.ts",
   "lib/fontpages.ts",
   "lib/fontstats.json",
   "app/about/page.tsx",

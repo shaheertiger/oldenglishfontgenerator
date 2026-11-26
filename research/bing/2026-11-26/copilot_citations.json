@@ -1,0 +1,707 @@
+{
+ "window": "2026-08-26..2026-11-24",
+ "note": "inferred from grounding query text; Bing gives no page column; recomputed with scripts/lib/citations.mjs",
+ "pages": {
+  "/font-generator/fancy-letters": 2567,
+  "/font-generator/gothic-letters": 929,
+  "/font-generator/old-english": 857,
+  "/font-generator/medieval": 848,
+  "/font-generator/old-english-letters": 765,
+  "/font-generator/thank-you": 429,
+  "/old-english-alphabet": 388,
+  "/font-generator/handwriting": 338,
+  "/symbols": 279,
+  "/font-generator/signature": 178,
+  "/font-generator/fancy-writing": 174,
+  "/different-fonts/e": 155,
+  "/different-fonts/n": 138,
+  "/different-fonts/y": 132,
+  "/different-fonts/t": 129,
+  "/symbols/up-arrow": 111,
+  "/different-fonts/u": 97,
+  "/different-fonts/k": 91,
+  "/different-fonts/h": 88,
+  "/different-fonts/c": 80,
+  "/different-fonts/l": 77,
+  "/font-generator/calligraphy": 68,
+  "/fonts/old-english-text-mt": 64,
+  "/death-note-font": 55,
+  "/hieroglyphics-translator": 46,
+  "/cuneiform-translator": 46,
+  "/font-generator/blackletter": 41,
+  "/different-fonts/6": 34,
+  "/different-fonts/i": 30,
+  "/different-fonts/5": 30,
+  "/different-fonts/b": 28,
+  "/different-fonts/g": 18,
+  "/different-fonts/4": 16,
+  "/different-fonts/3": 12,
+  "/different-fonts/a": 12,
+  "/different-fonts/s": 11,
+  "/different-fonts/1": 10,
+  "/emoticons/shrug": 6,
+  "(unattributed)": 5
+ },
+ "queries": [
+  {
+   "query": "gothic letters",
+   "citations": 577,
+   "page": "/font-generator/gothic-letters"
+  },
+  {
+   "query": "old english font alphabet",
+   "citations": 526,
+   "page": "/old-english-alphabet"
+  },
+  {
+   "query": "fancy letters alphabet",
+   "citations": 522,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "fancy alphabet letters",
+   "citations": 470,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "old english font copy paste",
+   "citations": 446,
+   "page": "/font-generator/old-english"
+  },
+  {
+   "query": "medieval font copy and paste",
+   "citations": 425,
+   "page": "/font-generator/medieval"
+  },
+  {
+   "query": "gothic symbols copy and paste",
+   "citations": 279,
+   "page": "/symbols"
+  },
+  {
+   "query": "old english font numbers",
+   "citations": 260,
+   "page": "/old-english-numbers"
+  },
+  {
+   "query": "copy paste letters",
+   "citations": 211,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "thank you font",
+   "citations": 192,
+   "page": "/font-generator/thank-you"
+  },
+  {
+   "query": "fancy letter alphabet",
+   "citations": 187,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "medieval font generator",
+   "citations": 179,
+   "page": "/font-generator/medieval"
+  },
+  {
+   "query": "old english alphabet font",
+   "citations": 165,
+   "page": "/old-english-alphabet"
+  },
+  {
+   "query": "handwriting font copy and paste",
+   "citations": 165,
+   "page": "/font-generator/handwriting"
+  },
+  {
+   "query": "goth letters",
+   "citations": 136,
+   "page": "/font-generator/gothic-letters"
+  },
+  {
+   "query": "y in different fonts",
+   "citations": 132,
+   "page": "/different-fonts/y"
+  },
+  {
+   "query": "old english generator",
+   "citations": 124,
+   "page": "/font-generator/old-english"
+  },
+  {
+   "query": "fancy capital letters",
+   "citations": 120,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "old english font copy and paste",
+   "citations": 117,
+   "page": "/font-generator/old-english"
+  },
+  {
+   "query": "up arrow copy and paste",
+   "citations": 111,
+   "page": "/symbols/up-arrow"
+  },
+  {
+   "query": "t font styles",
+   "citations": 111,
+   "page": "/different-fonts/t"
+  },
+  {
+   "query": "n in different fonts",
+   "citations": 108,
+   "page": "/different-fonts/n"
+  },
+  {
+   "query": "letter copy and paste",
+   "citations": 107,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "letters copy and paste",
+   "citations": 106,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "old english copy and paste",
+   "citations": 105,
+   "page": "/font-generator/old-english"
+  },
+  {
+   "query": "old english numbers font",
+   "citations": 100,
+   "page": "/old-english-numbers"
+  },
+  {
+   "query": "signature font copy and paste",
+   "citations": 97,
+   "page": "/font-generator/signature"
+  },
+  {
+   "query": "fancy writing alphabet",
+   "citations": 96,
+   "page": "/font-generator/fancy-writing"
+  },
+  {
+   "query": "e in different fonts",
+   "citations": 95,
+   "page": "/different-fonts/e"
+  },
+  {
+   "query": "k in different font",
+   "citations": 91,
+   "page": "/different-fonts/k"
+  },
+  {
+   "query": "thank you font style",
+   "citations": 90,
+   "page": "/font-generator/thank-you"
+  },
+  {
+   "query": "letters to copy",
+   "citations": 90,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "thank you written in style",
+   "citations": 90,
+   "page": "/font-generator/thank-you"
+  },
+  {
+   "query": "medieval text generator",
+   "citations": 89,
+   "page": "/font-generator/medieval"
+  },
+  {
+   "query": "nice letters",
+   "citations": 88,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "goth letter text",
+   "citations": 85,
+   "page": "/font-generator/gothic-letters"
+  },
+  {
+   "query": "cool alphabet letters",
+   "citations": 84,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "copy and paste letters alphabet",
+   "citations": 80,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "letter copy paste",
+   "citations": 73,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "fancy writing",
+   "citations": 68,
+   "page": "/font-generator/fancy-writing"
+  },
+  {
+   "query": "old english calligraphy alphabet",
+   "citations": 68,
+   "page": "/old-english-alphabet"
+  },
+  {
+   "query": "medieval letters font",
+   "citations": 64,
+   "page": "/font-generator/medieval"
+  },
+  {
+   "query": "alphabet to copy",
+   "citations": 60,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "old english letters font",
+   "citations": 60,
+   "page": "/old-english-alphabet"
+  },
+  {
+   "query": "alphabet copy and paste letters",
+   "citations": 57,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "e  font",
+   "citations": 56,
+   "page": "/different-fonts/e"
+  },
+  {
+   "query": "gothic copy and paste",
+   "citations": 56,
+   "page": "/font-generator/gothic-letters"
+  },
+  {
+   "query": "fansy letters",
+   "citations": 56,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "fancy letter c",
+   "citations": 56,
+   "page": "/different-fonts/c"
+  },
+  {
+   "query": "english letters copy and paste",
+   "citations": 55,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "death note font copy and paste",
+   "citations": 55,
+   "page": "/death-note-font"
+  },
+  {
+   "query": "gothic letter",
+   "citations": 53,
+   "page": "/font-generator/gothic-letters"
+  },
+  {
+   "query": "capital u font",
+   "citations": 52,
+   "page": "/different-fonts/u"
+  },
+  {
+   "query": "capital l font",
+   "citations": 49,
+   "page": "/different-fonts/l"
+  },
+  {
+   "query": "special letters copy and paste",
+   "citations": 48,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "u in different fonts",
+   "citations": 45,
+   "page": "/different-fonts/u"
+  },
+  {
+   "query": "medieval writing font",
+   "citations": 42,
+   "page": "/font-generator/medieval"
+  },
+  {
+   "query": "h in different fonts",
+   "citations": 42,
+   "page": "/different-fonts/h"
+  },
+  {
+   "query": "h font style",
+   "citations": 40,
+   "page": "/different-fonts/h"
+  },
+  {
+   "query": "thank you font style text",
+   "citations": 37,
+   "page": "/font-generator/thank-you"
+  },
+  {
+   "query": "old english mt font",
+   "citations": 36,
+   "page": "/fonts/old-english-text-mt"
+  },
+  {
+   "query": "egyptian translator hieroglyphics",
+   "citations": 35,
+   "page": "/hieroglyphics-translator"
+  },
+  {
+   "query": "nice handwriting to copy",
+   "citations": 35,
+   "page": "/font-generator/handwriting"
+  },
+  {
+   "query": "nice writing",
+   "citations": 34,
+   "page": "/font-generator/handwriting"
+  },
+  {
+   "query": "6 font",
+   "citations": 34,
+   "page": "/different-fonts/6"
+  },
+  {
+   "query": "handwritten font generator",
+   "citations": 33,
+   "page": "/font-generator/handwriting"
+  },
+  {
+   "query": "letter i in diffirent style",
+   "citations": 30,
+   "page": "/different-fonts/i"
+  },
+  {
+   "query": "capital b font",
+   "citations": 28,
+   "page": "/different-fonts/b"
+  },
+  {
+   "query": "l in different fonts",
+   "citations": 28,
+   "page": "/different-fonts/l"
+  },
+  {
+   "query": "old english text mt font",
+   "citations": 28,
+   "page": "/fonts/old-english-text-mt"
+  },
+  {
+   "query": "signature copy and paste font",
+   "citations": 28,
+   "page": "/font-generator/signature"
+  },
+  {
+   "query": "capital alphabet copy and paste",
+   "citations": 27,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "handwriting fonts copy and paste",
+   "citations": 25,
+   "page": "/font-generator/handwriting"
+  },
+  {
+   "query": "english to cuneiform translator",
+   "citations": 25,
+   "page": "/cuneiform-translator"
+  },
+  {
+   "query": "black letter alphabet",
+   "citations": 25,
+   "page": "/font-generator/old-english"
+  },
+  {
+   "query": "fancy letter lowercase",
+   "citations": 24,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "fancy c letter",
+   "citations": 24,
+   "page": "/different-fonts/c"
+  },
+  {
+   "query": "handwriting font generator",
+   "citations": 23,
+   "page": "/font-generator/handwriting"
+  },
+  {
+   "query": "signature font copy paste",
+   "citations": 22,
+   "page": "/font-generator/signature"
+  },
+  {
+   "query": "capital n font",
+   "citations": 20,
+   "page": "/different-fonts/n"
+  },
+  {
+   "query": "5 in different fonts",
+   "citations": 20,
+   "page": "/different-fonts/5"
+  },
+  {
+   "query": "medieval font on word",
+   "citations": 20,
+   "page": "/font-generator/medieval"
+  },
+  {
+   "query": "thank you stylish text",
+   "citations": 20,
+   "page": "/font-generator/thank-you"
+  },
+  {
+   "query": "fonts to copy and paste for signatures",
+   "citations": 19,
+   "page": "/font-generator/signature"
+  },
+  {
+   "query": "old cursive font",
+   "citations": 19,
+   "page": "/font-generator/old-cursive"
+  },
+  {
+   "query": "fancy letter g",
+   "citations": 18,
+   "page": "/different-fonts/g"
+  },
+  {
+   "query": "t in different fonts",
+   "citations": 18,
+   "page": "/different-fonts/t"
+  },
+  {
+   "query": "funky letters",
+   "citations": 18,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "old text",
+   "citations": 17,
+   "page": "/font-generator/old-english"
+  },
+  {
+   "query": "cuneiform copy and paste",
+   "citations": 16,
+   "page": "/cuneiform-translator"
+  },
+  {
+   "query": "blackletter font copy and paste",
+   "citations": 16,
+   "page": "/font-generator/old-english"
+  },
+  {
+   "query": "4 in different fonts",
+   "citations": 16,
+   "page": "/different-fonts/4"
+  },
+  {
+   "query": "old english script font",
+   "citations": 14,
+   "page": "/font-generator/old-english"
+  },
+  {
+   "query": "old english font alphabet letters",
+   "citations": 14,
+   "page": "/old-english-alphabet"
+  },
+  {
+   "query": "specil letters",
+   "citations": 12,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "fancy letters a to z",
+   "citations": 12,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "copy and paste signature font",
+   "citations": 12,
+   "page": "/font-generator/signature"
+  },
+  {
+   "query": "old english font text",
+   "citations": 12,
+   "page": "/font-generator/old-english"
+  },
+  {
+   "query": "copy letters",
+   "citations": 12,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "3 in different fonts",
+   "citations": 12,
+   "page": "/different-fonts/3"
+  },
+  {
+   "query": "alphabet old english style writing",
+   "citations": 12,
+   "page": "/old-english-alphabet"
+  },
+  {
+   "query": "old english text",
+   "citations": 12,
+   "page": "/font-generator/old-english"
+  },
+  {
+   "query": "old english number fonts",
+   "citations": 12,
+   "page": "/old-english-numbers"
+  },
+  {
+   "query": "letter a in different fonts",
+   "citations": 12,
+   "page": "/different-fonts/a"
+  },
+  {
+   "query": "s in different fonts",
+   "citations": 11,
+   "page": "/different-fonts/s"
+  },
+  {
+   "query": "hyreoglyphics font generator",
+   "citations": 11,
+   "page": "/hieroglyphics-translator"
+  },
+  {
+   "query": "n font",
+   "citations": 10,
+   "page": "/different-fonts/n"
+  },
+  {
+   "query": "old english font",
+   "citations": 10,
+   "page": "/font-generator/old-english"
+  },
+  {
+   "query": "speciel letters",
+   "citations": 10,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "medieval font copy paste",
+   "citations": 10,
+   "page": "/font-generator/medieval"
+  },
+  {
+   "query": "1 in different fonts",
+   "citations": 10,
+   "page": "/different-fonts/1"
+  },
+  {
+   "query": "5 font",
+   "citations": 10,
+   "page": "/different-fonts/5"
+  },
+  {
+   "query": "gothic alphabet",
+   "citations": 10,
+   "page": "/font-generator/gothic-letters"
+  },
+  {
+   "query": "fancey writing",
+   "citations": 10,
+   "page": "/font-generator/fancy-writing"
+  },
+  {
+   "query": "copy alphabet",
+   "citations": 8,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "how to type  medieval",
+   "citations": 8,
+   "page": "/font-generator/medieval"
+  },
+  {
+   "query": "copy n paste letters",
+   "citations": 8,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "copy the alphabet",
+   "citations": 8,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "medieval script font",
+   "citations": 7,
+   "page": "/font-generator/medieval"
+  },
+  {
+   "query": "fancy letter h",
+   "citations": 6,
+   "page": "/different-fonts/h"
+  },
+  {
+   "query": "copy paste alphabet letters",
+   "citations": 6,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "font copy and paste gothic",
+   "citations": 6,
+   "page": "/font-generator/gothic-letters"
+  },
+  {
+   "query": "gothic font generator copy paste",
+   "citations": 6,
+   "page": "/font-generator/gothic-letters"
+  },
+  {
+   "query": "shrug emoticon",
+   "citations": 6,
+   "page": "/emoticons/shrug"
+  },
+  {
+   "query": "cuneiform copy paste",
+   "citations": 5,
+   "page": "/cuneiform-translator"
+  },
+  {
+   "query": "pastebin letters",
+   "citations": 5,
+   "page": "/font-generator/fancy-letters"
+  },
+  {
+   "query": "what font is it",
+   "citations": 5,
+   "page": "(unattributed)"
+  },
+  {
+   "query": "old english cursive",
+   "citations": 4,
+   "page": "/font-generator/old-cursive"
+  },
+  {
+   "query": "old english font l",
+   "citations": 4,
+   "page": "/old-english-alphabet"
+  },
+  {
+   "query": "medevil font",
+   "citations": 4,
+   "page": "/font-generator/medieval"
+  },
+  {
+   "query": "weird letter e",
+   "citations": 4,
+   "page": "/different-fonts/e"
+  },
+  {
+   "query": "a to z lettering",
+   "citations": 3,
+   "page": "/font-generator/fancy-letters"
+  }
+ ]
+}

@@ -3,18 +3,18 @@ import type { PageContent } from "./types";
 const page: PageContent = {
   slug: "font-generator/gothic-letters",
   file: "gothic-letters",
-  title: "Gothic Letters A–Z — Copy & Paste in 14 Styles",
+  title: "Gothic Letters: Copy and Paste A–Z in 16 Styles",
   description:
-    "Gothic letters to copy and paste: capital and small blackletter A–Z in 14 styles, plus the real 4th-century Gothic alphabet of Wulfila with all 27 letters.",
+    "Gothic letters A–Z in 16 styles: capital and small blackletter, dark decorated sets and the real Gothic alphabet. Tap Copy, paste anywhere. Free.",
   h1: "Gothic Letters",
   crumb: "Gothic Letters",
   intro:
-    "Type anything and get it back in 14 sets of gothic letters: capital and small blackletter, bold, framed and worn versions, plus the actual alphabet of the Goths, which looks nothing like blackletter. \"Gothic letters\" means two different things, and this page covers both. Tap Copy on any row; the letters are standard Unicode characters, so they paste into bios, chats, documents and game names.",
+    "Gothic letters are blackletter letters, the dense, pointed script of medieval manuscripts, and here you can copy and paste them A–Z in 16 styles. Type below for gothic font copy and paste in capital and small blackletter, bold, framed, worn and dark decorated versions, plus goth letters with crosses, skulls and bats. The page also covers the actual alphabet of the Goths, which looks nothing like blackletter. Every row is plain Unicode text, so it pastes wherever you can type.",
   tool: {
     styles: [
       "bold-fraktur", "fraktur", "bold-fraktur-caps", "fraktur-caps", "fraktur-lower", "fraktur-small-caps",
       "gothic-framed", "drop-cap", "distressed", "deco-cross", "frame-block", "fraktur-outline-digits",
-      "gothic-wulfila", "runes-futhorc",
+      "deco-skull", "deco-bat", "gothic-wulfila", "runes-futhorc",
     ],
     sample: "Gothic Letters",
     placeholder: "Type a word or a single letter…",
@@ -31,7 +31,7 @@ const page: PageContent = {
   },
   sections: [
     {
-      h2: "Two kinds of gothic letters",
+      h2: "1. What are gothic letters?",
       blocks: [
         { p: "Most people searching for gothic letters want **blackletter**: the dense, angular script of medieval manuscripts and newspaper mastheads, also sold as Old English. The name is an insult that stuck. Italian Renaissance scholars called the northern script \"gothic\" because, to them, it looked barbaric, and the Goths were their shorthand for barbarians. The Goths themselves never wrote it." },
         { p: "The Goths did have an alphabet of their own. In the 4th century, the bishop **Wulfila** (also spelled Ulfilas) devised one to translate the Bible into the Gothic language, borrowing mostly from Greek letters with some Latin and runic shapes. Its best-known survivor is the Codex Argenteus, the 6th-century \"Silver Bible\" written in silver ink on purple parchment and now kept in Uppsala, Sweden. The Gothic Alphabet row in the generator uses those letters." },
@@ -51,14 +51,14 @@ const page: PageContent = {
       ],
     },
     {
-      h2: "Capital and small gothic letters, A to Z",
+      h2: "2. How do I copy and paste gothic letters A to Z?",
       blocks: [
-        { p: "Every blackletter capital and small letter, one tap to copy each. Capitals are the ornate part, so a word in all capitals turns into a dark texture that's hard to read; capitalise the first letter and keep the rest small. For a single decorated initial, see [illuminated letters](/illuminated-letters), and for one page per letter with 14 styles each, use the [letter index](/old-english-alphabet)." },
+        { p: "Every blackletter capital and small letter, one tap to copy each. Capitals are the ornate part, so a word in all capitals turns into a dark texture that's hard to read; capitalise the first letter and keep the rest small. For a single decorated initial, see [illuminated letters](/illuminated-letters), and for one page per letter in 40+ styles, see [letters in different fonts](/different-fonts)." },
         { widget: "alphabet-full" },
       ],
     },
     {
-      h2: "The 27 letters of the Gothic alphabet",
+      h2: "3. What does the real Gothic alphabet look like?",
       blocks: [
         { p: "Each letter had a name, mostly words for everyday things, and a number value, as in Greek. This is the mapping the Gothic Alphabet style uses to turn English into Gothic letters. Gothic had no letter for c, v or y, so the generator writes c as 𐌺 (k) and both v and y as 𐍅." },
         {
@@ -80,15 +80,35 @@ const page: PageContent = {
       ],
     },
     {
-      h2: "Which gothic letters should I use?",
+      h2: "4. How do I make goth letters look darker?",
+      blocks: [
+        { p: "Gothic as a mood is about contrast and decay: heavy black strokes against empty space, sharp points instead of curves, church and graveyard symbols, and a feeling of age. Bold Fraktur gives you the contrast, a cross or dagger adds the graveyard feel, and the worn row adds tiny marks so the text looks scratched. One symbol on each side of a name looks more deliberate than a row of them." },
+        {
+          table: {
+            head: ["Symbol", "Name", "Typical mood"],
+            glyphCols: [0],
+            rows: [
+              ["✠", "Maltese cross", "Knights, heraldry"],
+              ["☩", "Cross of Jerusalem", "Medieval, church"],
+              ["†", "Dagger", "Memorial, old print footnotes"],
+              ["☠", "Skull and crossbones", "Horror, danger"],
+              ["🦇", "Bat", "Vampire, Halloween"],
+              ["🥀", "Wilted rose", "Romantic goth"],
+            ],
+          },
+        },
+      ],
+    },
+    {
+      h2: "5. Which gothic letters should I use?",
       blocks: [
         {
           ul: [
             "**A name or a short title:** Bold Fraktur. It stays readable on small phone screens.",
             "**A long sentence:** the small-letter row, or Fraktur with small caps. Ten words of capitals are tiring to read.",
-            "**A single initial:** the framed or drop-cap rows, or a monogram from [Old English letters](/old-english-letters).",
+            "**A single initial:** the framed or drop-cap rows, or a monogram from the [Old English font alphabet](/font-generator/old-english-letters).",
             "**Something that looks truly ancient:** the Gothic Alphabet row. Few people can read it, which is the point.",
-            "**Darker decoration:** crosses and worn letters here, or skulls and bats on the [gothic font generator](/gothic-font-generator).",
+            "**Darker decoration:** the skull, bat and cross rows here, or more in [gothic symbols copy and paste](/symbols).",
           ],
         },
       ],
@@ -98,14 +118,17 @@ const page: PageContent = {
     "Blackletter rows use Mathematical Fraktur (U+1D504–U+1D537) and Bold Fraktur (U+1D56C–U+1D59F), with five capitals taken from the Letterlike Symbols block (ℭ ℌ ℑ ℜ ℨ). The Gothic Alphabet row substitutes letters from Unicode's Gothic block (U+10330–U+1034A), added in Unicode 3.1 in 2001; th and hw become single letters first. Fonts that cover that block include Noto Sans Gothic and, on Windows, Segoe UI Historic.",
   related: {
     heading: "More gothic and blackletter tools",
-    hrefs: ["/gothic-font-generator", "/old-english-alphabet", "/blackletter-generator", "/fraktur-generator", "/illuminated-letters", "/gothic-symbols", "/font-generator/medieval"],
+    hrefs: ["/symbols", "/font-generator/old-english-letters", "/font-generator/blackletter", "/font-generator/fraktur", "/font-generator/small-gothic", "/illuminated-letters", "/font-generator/medieval"],
   },
   faq: [
     { q: "Are gothic letters the same as Old English letters?", a: "In everyday use, yes: both names describe blackletter, the medieval script used in tattoos and mastheads. Strictly speaking, the Gothic alphabet is a separate 4th-century script, and Old English is a language that was mostly written in plain insular letters." },
     { q: "How do I type small gothic letters?", a: "Type in lowercase and copy the Fraktur Lowercase row, or use the Fraktur row, which keeps your capitals as you typed them. Each small letter is its own Unicode character, from 𝔞 to 𝔷." },
     { q: "Why are some gothic capitals a different size from the rest?", a: "Five Fraktur capitals (C, H, I, R and Z) were already in Unicode before the full set, so they come from a different block. Some fonts draw those five slightly larger or lighter." },
     { q: "Can anyone read the Gothic alphabet?", a: "Very few people. It is studied by historical linguists, and the language died out centuries ago. Use it for decoration or worldbuilding, not for a message you need people to read." },
-    { q: "Will gothic letters work in my username?", a: "Display names on Instagram, TikTok and Discord usually accept them. Usernames and handles normally allow only plain letters, numbers and a few symbols, so they will reject gothic letters." },
+    { q: "How do I copy and paste gothic letters?", a: "Type your text in the box, tap Copy on a row and paste it. For a single letter, tap it in the A–Z grid." },
+    { q: "What are goth letters?", a: "The same thing: blackletter letters, often with dark symbols such as crosses, skulls or bats added around them." },
+    { q: "Is there a gothic font I can copy and paste?", a: "Yes. These rows are gothic text made of Unicode characters, so you copy them like any text. A gothic font you install only works in apps that let you pick fonts." },
+    { q: "Why doesn't my username accept gothic letters?", a: "Many username fields allow only plain letters, numbers and a few symbols. Display names and bios are usually more permissive, but each site sets its own rules." },
     { q: "Is it gothic or Gothic?", a: "Writers often use lowercase gothic for the blackletter style and the mood, and capital G for the Goths, their language and their alphabet. Either is understood." },
   ],
 };

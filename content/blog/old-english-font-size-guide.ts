@@ -19,7 +19,7 @@ const post: BlogPost = {
       ["Running text (paragraphs)", "Avoid", "Avoid", "Modern readers slow down noticeably; keep paragraphs in a plain serif or sans"],
       ["Print headings and titles", "About 18 pt", "24–48 pt", "Certificates and diplomas often use 28 pt or more for the institution name"],
       ["Web and app headings", "About 28 px", "36–64 px", "Use a real web font such as UnifrakturMaguntia, not Unicode characters"],
-      ["Signs and storefronts", "Bigger than plain lettering at the same distance", "Test from the reading distance", "See our [sign fonts guide](/blog/best-fonts-for-signs-blackletter)"],
+      ["Signs and storefronts", "Bigger than plain lettering at the same distance", "Test from the reading distance", "See our sign fonts guide"],
       ["Tattoo lettering", "Often around 1 cm per letter", "Larger for dense styles", "Ask your artist; ink spreads over the years"],
       ["Embroidery", "About 1/4 in (6 mm) letter height", "1/2 in (12 mm) and up", "Thin hairlines may be dropped by the digitiser below this"],
     ] },
@@ -37,10 +37,10 @@ const post: BlogPost = {
     { type: "p", text: "Use blackletter for a site name, a section heading or a pull quote, set with a real font file via CSS. Around 28 px is the floor where most blackletter still reads on a phone; 36 px or more feels comfortable. Copy-paste Unicode \"fonts\" are a poor choice for web headings: screen readers spell them out character by character, search engines may not treat them as normal words, and the shapes depend on whatever font the visitor's device has." },
 
     { type: "h2", text: "What size works for tattoos?" },
-    { type: "p", text: "There is no universal minimum, and anyone giving you an exact number without seeing your skin and the design is guessing. Fine-needle artists can hold detail smaller than traditional shops, and placement matters too: fingers and hands blur faster than a forearm. As a starting conversation, around 1 cm per letter is a common floor for heavy blackletter, and lighter Fraktur styles can sometimes go slightly smaller. Plan the layout with the [tattoo font preview](/old-english-tattoo-font), then let your artist set the final size." },
+    { type: "p", text: "There is no universal minimum, and anyone giving you an exact number without seeing your skin and the design is guessing. Fine-needle artists can hold detail smaller than traditional shops, and placement matters too: fingers and hands blur faster than a forearm. As a starting conversation, around 1 cm per letter is a common floor for heavy blackletter, and lighter Fraktur styles can sometimes go slightly smaller. Plan the layout with the [tattoo font preview](/font-generator/old-english-tattoo), then let your artist set the final size." },
 
     { type: "h2", text: "How small can embroidered blackletter go?" },
-    { type: "p", text: "Embroidery shops commonly quote about 1/4 inch (6 mm) as the smallest letter height they'll stitch cleanly, and blackletter usually needs more than a plain block font because of its hairlines. If your design is small, such as a cap side or a chest logo, pick a heavy, simple face like UnifrakturCook or Pirata One, and ask the digitiser for a sample sew-out. More advice is in [blackletter fonts for embroidery](/blog/best-fonts-for-embroidery-blackletter)." },
+    { type: "p", text: "Embroidery shops commonly quote about 1/4 inch (6 mm) as the smallest letter height they'll stitch cleanly, and blackletter usually needs more than a plain block font because of its hairlines. If your design is small, such as a cap side or a chest logo, pick a heavy, simple face like UnifrakturCook or Pirata One, and ask the digitiser for a sample sew-out. More advice is in blackletter fonts for embroidery." },
 
     { type: "h2", text: "How do I test a size before printing?" },
     { type: "ol", items: [

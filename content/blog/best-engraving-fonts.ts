@@ -31,10 +31,10 @@ const post: BlogPost = {
     ]},
     { type: "p", text: "All seven are free under the SIL Open Font License, which allows commercial engraving work. Compare them on [Old English fonts](/fonts/old-english), [calligraphy fonts](/fonts/calligraphy) and the full [font comparison](/fonts)." },
     { type: "h2", text: "What is Engravers Old English, and is there a free version?" },
-    { type: "p", text: "Engravers Old English is a blackletter released by American Type Founders in the early 1900s and commonly attributed to Morris Fuller Benton. It became the standard look for trophies, diplomas and stationery, and digital versions are sold commercially (Bitstream's is labelled Engravers' Old English BT). There is no official free version. Files labelled with that name on free-download sites are usually unlicensed copies. The closest free alternatives are UnifrakturMaguntia for the lighter book feel and [Cloister Black](/fonts/cloister-black)-style lookalikes for the heavier one." },
+    { type: "p", text: "Engravers Old English is a blackletter released by American Type Founders in the early 1900s and commonly attributed to Morris Fuller Benton. It became the standard look for trophies, diplomas and stationery, and digital versions are sold commercially (Bitstream's is labelled Engravers' Old English BT). There is no official free version. Files labelled with that name on free-download sites are usually unlicensed copies. The closest free alternatives are UnifrakturMaguntia for the lighter book feel and Cloister Black-style lookalikes for the heavier one." },
     { type: "h2", text: "How do I prepare blackletter text for an engraver?" },
     { type: "ol", items: [
-      "Set the text in your font, then convert it to outlines or paths so the engraver's software can't swap the font. In Inkscape that's Path → Object to Path; see the [Inkscape guide](/fonts/old-english/inkscape).",
+      "Set the text in your font, then convert it to outlines or paths so the engraver's software can't swap the font. In Inkscape that's Path → Object to Path; see the Inkscape guide.",
       "Check the smallest stroke against the engraver's minimum line width; ask them, since it varies by machine and material.",
       "For curved surfaces like rings or tumblers, keep text short and give the engraver the real measurements.",
       "Proof at actual size on paper. Blackletter that looks fine on screen is often too small in real life.",

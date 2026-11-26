@@ -42,7 +42,7 @@ const page: FontPage = {
     {
       h2: "Are fantasy fonts historically accurate?",
       blocks: [
-        { p: "Some are closer than others. Uncial Antiqua follows a real early-medieval script, and IM Fell English is a revival of actual 17th-century type. MedievalSharp, Eagle Lake and Macondo are modern inventions that only suggest the past. For a fantasy world that doesn't matter, but if you want a period look, see the timeline on the [blackletter and medieval fonts](/fonts/blackletter) page and the single-font guide to [Uncial Antiqua](/fonts/uncial-antiqua)." },
+        { p: "Some are closer than others. Uncial Antiqua follows a real early-medieval script, and IM Fell English is a revival of actual 17th-century type. MedievalSharp, Eagle Lake and Macondo are modern inventions that only suggest the past. For a fantasy world that doesn't matter, but if you want a period look, see the timeline on the [blackletter and medieval fonts](/fonts/blackletter) page and the single-font guide to Uncial Antiqua." },
       ],
     },
     {

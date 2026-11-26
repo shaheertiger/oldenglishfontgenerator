@@ -8,7 +8,7 @@ const page: PageContent = {
   h1: "Tattoo Font Generator",
   crumb: "Tattoo Font Generator",
   intro:
-    "This tattoo font generator shows your words in 24 lettering styles at once, from thin cursive script and typewriter text to heavy blackletter, Roman numeral dates and a vertical spine stack. Type a name, date or short phrase, scroll the list, and copy the two or three you want to take to your artist. If you already know you want Old English lettering, the [Old English tattoo font](/old-english-tattoo-font) page adds a skin mockup and PNG download.",
+    "This tattoo font generator shows your words in 24 lettering styles at once, from thin cursive script and typewriter text to heavy blackletter, Roman numeral dates and a vertical spine stack. Type a name, date or short phrase, scroll the list, and copy the two or three you want to take to your artist. If you already know you want Old English lettering, the [Old English tattoo font](/font-generator/old-english-tattoo) page adds a skin mockup and PNG download.",
   tool: {
     styles: [
       "script", "bold-script", "script-spaced", "typewriter", "bold-fraktur", "fraktur",
@@ -53,13 +53,13 @@ const page: PageContent = {
       h2: "Is script or blackletter better for a small tattoo?",
       blocks: [
         { p: "Neither is automatically better, but they fail in different ways. Script relies on thin joining strokes and open loops; as ink spreads, the loops in letters like e, l and o can fill in. Blackletter relies on tight black shapes with small gaps between them; at small sizes those gaps vanish and the word becomes a dark bar." },
-        { p: "If you want something tiny, typewriter lettering and Roman numerals are usually the safest, because their strokes are even and widely spaced. For the most popular script look, keep the word short. For blackletter, see the size and spacing notes on the [Old English tattoo font](/old-english-tattoo-font) page." },
+        { p: "If you want something tiny, typewriter lettering and Roman numerals are usually the safest, because their strokes are even and widely spaced. For the most popular script look, keep the word short. For blackletter, see the size and spacing notes on the [Old English tattoo font](/font-generator/old-english-tattoo) page." },
       ],
     },
     {
       h2: "How do I turn a date into tattoo lettering?",
       blocks: [
-        { p: "Type the date with dots, slashes or dashes, such as 23.06.2018. The Roman Numeral Date style converts each group of digits separately, so it becomes XXIII.VI.MMXVIII. The Roman Inscription style writes the same idea in bold capitals with a centred dot between words, the way Latin was carved in stone. The [Old English numbers](/old-english-numbers) page explains why blackletter has no digits of its own." },
+        { p: "Type the date with dots, slashes or dashes, such as 23.06.2018. The Roman Numeral Date style converts each group of digits separately, so it becomes XXIII.VI.MMXVIII. The Roman Inscription style writes the same idea in bold capitals with a centred dot between words, the way Latin was carved in stone. The [Old English numbers](/old-english-alphabet) page explains why blackletter has no digits of its own." },
         { ul: [
           "**Check the order.** Day-month-year and month-day-year produce different numerals. Write down which order you mean.",
           "**Count the characters.** MMXVIII is seven letters long. Long years make Roman dates wider than you might expect.",
@@ -70,7 +70,7 @@ const page: PageContent = {
     {
       h2: "Can I use these tattoo fonts for free?",
       blocks: [
-        { p: "Yes. The styles here are Unicode characters, not font files, so there's nothing to license or download, and you can copy them as often as you like. If you or your artist want real font files to trace or print, the [free tattoo fonts](/fonts/tattoo) collection lists open-licence script, blackletter and typewriter fonts that allow commercial use." },
+        { p: "Yes. The styles here are Unicode characters, not font files, so there's nothing to license or download, and you can copy them as often as you like. If you or your artist want real font files to trace or print, the free tattoo fonts collection lists open-licence script, blackletter and typewriter fonts that allow commercial use." },
       ],
     },
   ],
@@ -78,7 +78,7 @@ const page: PageContent = {
     "Script styles come from Unicode's Mathematical Script and Bold Script alphabets (U+1D49C onwards), typewriter from Mathematical Monospace (U+1D670), and the blackletter rows from Mathematical Fraktur and Bold Fraktur. Roman numerals are ordinary capital letters chosen by a converter that handles 1 to 3999.",
   related: {
     heading: "More tattoo lettering tools",
-    hrefs: ["/old-english-tattoo-font", "/latin-tattoo-font", "/bible-verse-font", "/gangster-font-generator", "/old-english-numbers", "/chicano-font-generator", "/old-english-text-to-image"],
+    hrefs: ["/font-generator/old-english-tattoo", "/latin-tattoo-font", "/bible-verse-font", "/font-generator/gangster", "/old-english-alphabet", "/chicano-font-generator", "/old-english-text-to-image"],
   },
   faq: [
     { q: "What is the most popular tattoo font style?", a: "Script and blackletter are the two most requested families. Script is chosen for names and soft phrases; blackletter (Old English) for family names, chest pieces and anything meant to look bold." },
@@ -86,7 +86,7 @@ const page: PageContent = {
     { q: "Which tattoo font holds up best over time?", a: "Styles with even, open strokes, such as typewriter lettering and Roman numerals, tend to stay readable longest. Very thin script and tightly packed blackletter need more size to age well." },
     { q: "Is there a fine line tattoo font here?", a: "Yes. Fine Line Spaced Script puts a space between every letter of a thin script so you can judge how a delicate, airy layout reads. Your artist will set the final spacing." },
     { q: "How do I write a vertical tattoo?", a: "Use the Vertical Spine Stack style, which puts one letter per line. It suits spines, ribs and the side of a finger; expect your artist to adjust the spacing by hand." },
-    { q: "Do these fonts work on my phone?", a: "Yes. They are standard Unicode characters that display on current iPhone, Android, Windows and Mac devices, so you can paste them into notes or messages to share with your artist." },
+    { q: "Do these fonts work on my phone?", a: "Yes. They are standard Unicode characters, so you can paste them into notes or messages to share with your artist." },
     { q: "Is anything I type saved?", a: "No. The conversion runs in your browser and nothing you type is sent to us." },
   ],
 };

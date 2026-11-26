@@ -50,14 +50,14 @@ const page: PageContent = {
             ],
           },
         },
-        { p: "As a rough guide, a verse over about 60 characters will need several lines in blackletter. If it's for skin, the [Old English tattoo font](/old-english-tattoo-font) page has a mockup where you can test line breaks." },
+        { p: "As a rough guide, a verse over about 60 characters will need several lines in blackletter. If it's for skin, the [Old English tattoo font](/font-generator/old-english-tattoo) page has a mockup where you can test line breaks." },
       ],
     },
     {
       h2: "Why do Bibles look gothic?",
       blocks: [
         { p: "Because the earliest printed ones were. Johannes Gutenberg's Bible, finished in Mainz around 1455 and often called the 42-line Bible after the number of lines on most pages, was printed in textura, the tall, tightly packed blackletter of church manuscripts. When the King James Bible appeared in 1611, it too was printed in blackletter, with words the translators had supplied for sense set in lighter roman type; later editions show those words in italics." },
-        { p: "Bibles moved to roman type over the following centuries, but the association stuck. Blackletter still signals scripture, liturgy and tradition, which is why it appears on church signs, confirmation certificates and memorial cards. The [blackletter generator](/blackletter-generator) explains how textura differs from the Fraktur your phone actually displays." },
+        { p: "Bibles moved to roman type over the following centuries, but the association stuck. Blackletter still signals scripture, liturgy and tradition, which is why it appears on church signs, confirmation certificates and memorial cards. The [blackletter generator](/font-generator/blackletter) explains how textura differs from the Fraktur your phone actually displays." },
       ],
     },
     {
@@ -83,7 +83,7 @@ const page: PageContent = {
     "The verse styles use Unicode Mathematical Fraktur and Bold Fraktur. The Long S style swaps s for ſ inside words, as 17th-century printers did; the Thorn style writes th as þ. Crosses and leaves are standard symbols from the Miscellaneous Symbols and Dingbats blocks.",
   related: {
     heading: "More lettering for faith and tradition",
-    hrefs: ["/old-english-tattoo-font", "/blackletter-generator", "/font-generator/medieval", "/latin-tattoo-font", "/gothic-symbols", "/illuminated-letters"],
+    hrefs: ["/font-generator/old-english-tattoo", "/font-generator/blackletter", "/font-generator/medieval", "/latin-tattoo-font", "/symbols", "/illuminated-letters"],
   },
   faq: [
     { q: "What font is used for Bible verses?", a: "There's no single one, but gothic blackletter is the traditional choice because the first printed Bibles used it. Modern Bibles are set in readable serif fonts; blackletter is used for headings, cards and tattoos." },
@@ -91,7 +91,7 @@ const page: PageContent = {
     { q: "Is there a Christian or Catholic font?", a: "No font belongs to one church, but blackletter, uncial and decorated initials are strongly associated with Christian manuscripts. Adding a Maltese cross ✠ or Jerusalem cross ☩ makes the theme clear." },
     { q: "How many characters is John 3:16?", a: "In the King James Version, 141 characters including spaces and punctuation, 113 letters and 25 words." },
     { q: "What is the shortest popular verse for a tattoo?", a: "Of the ten in our table, Psalm 23:1 is the shortest at 42 characters. Many people shorten longer verses to a key phrase, such as Be still, and know." },
-    { q: "Can I copy a gothic Bible verse into Word or Canva?", a: "Yes, it pastes as text. For printing, it's sharper to install a blackletter font and type the verse normally; see the [Word guide](/fonts/old-english/word)." },
+    { q: "Can I copy a gothic Bible verse into Word or Canva?", a: "Yes, it pastes as text. For printing, it's sharper to install a blackletter font and type the verse normally; see the Word guide." },
     { q: "Is the KJV text free to use?", a: "The King James Version is in the public domain in most countries. In the United Kingdom it is still under Crown rights, so check the rules if you're publishing there." },
   ],
 };

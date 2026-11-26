@@ -36,7 +36,7 @@ const page: FontPage = {
     {
       h2: "What should I pair with Pirata One?",
       blocks: [
-        { p: "Pirata One has a single weight, so pair it with a plain serif or sans for body text, and with a heavier blackletter such as UnifrakturCook when you need a dramatic headline. For different weights within the blackletter style, Grenze Gotisch is the better fit. More options sit in the [gothic fonts](/fonts/gothic) and [clothing brand fonts](/fonts/clothing-brand) collections." },
+        { p: "Pirata One has a single weight, so pair it with a plain serif or sans for body text, and with a heavier blackletter such as UnifrakturCook when you need a dramatic headline. For different weights within the blackletter style, Grenze Gotisch is the better fit. More options sit in the gothic fonts and clothing brand fonts collections." },
       ],
     },
   ],

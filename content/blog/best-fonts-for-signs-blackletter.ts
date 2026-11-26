@@ -31,7 +31,7 @@ const post: BlogPost = {
       ["Manufacturing Consent", "Medium", "Tattoo shops, streetwear stores, venue names", "Sharp details get lost on rough surfaces"],
       ["Rye", "High; not blackletter", "Western, whiskey-bar or saloon themes", "Very decorative, so use it for one word"],
     ]},
-    { type: "p", text: "All six are free under the SIL Open Font License, which allows commercial signage. Preview your business name in each on the [Old English fonts](/fonts/old-english) and [gothic fonts](/fonts/gothic) pages, or browse [all free fonts compared](/fonts)." },
+    { type: "p", text: "All six are free under the SIL Open Font License, which allows commercial signage. Preview your business name in each on the [Old English fonts](/fonts/old-english) and gothic fonts pages, or browse [all free fonts compared](/fonts)." },
     { type: "h2", text: "How tall should sign letters be for the viewing distance?" },
     { type: "p", text: "The chart uses the sign-trade rule of thumb of about 1 inch of capital height per 10 feet for comfortable reading. The blackletter column is our own suggestion of 1.5× that, because broken strokes and ornate capitals need extra size. Treat both as starting points and test on site." },
     { type: "table", head: ["Viewing distance", "Plain font (rule of thumb)", "Blackletter (our suggestion)"], rows: [
@@ -44,7 +44,7 @@ const post: BlogPost = {
     { type: "p", text: "Contrast matters as much as size. Gold or cream on deep green, black or oxblood is the classic pub combination for a reason; mid-grey on beige will fail at any height." },
     { type: "h2", text: "How do I get the lettering made?" },
     { type: "ol", items: [
-      "Set the name in your chosen font and export it as a vector (SVG or PDF) with the text converted to outlines. The [Inkscape guide](/fonts/old-english/inkscape) covers that step.",
+      "Set the name in your chosen font and export it as a vector (SVG or PDF) with the text converted to outlines. The Inkscape guide covers that step.",
       "Print it at full size on paper, tape it up and look from the street. Adjust size and spacing before anything gets cut or painted.",
       "Give the sign maker the vector file and the font name. For hand-painted signs, a good sign writer will adapt the letters rather than trace them.",
     ]},
@@ -55,7 +55,7 @@ const post: BlogPost = {
       { q: "Can I use a free font on a commercial sign?", a: "Yes, if it's under an open licence such as the SIL Open Font License. Fonts bundled with an operating system or app may have different terms, so check before using them." },
       { q: "What colours work best with blackletter signs?", a: "High contrast: gold, cream or white on a dark ground, or black on a pale ground. Avoid busy textures behind the letters." },
     ]},
-    { type: "cta", text: "Try your business name in a dozen gothic styles with the", href: "/gothic-font-generator", label: "gothic font generator" },
+    { type: "cta", text: "Try your business name in a dozen gothic styles with the", href: "/font-generator/gothic-letters", label: "gothic font generator" },
   ],
 };
 

@@ -37,7 +37,7 @@ const page: FontPage = {
           ["Fantasy map or game", "Uncial Antiqua for place names, MedievalSharp for labels"],
           ["Gothic medieval look", "Choose Texturina or UnifrakturMaguntia instead"],
         ] } },
-        { p: "Celtic knot fonts, where each letter is woven from interlace, are a separate decorative category; Uncial Antiqua has plain strokes. Browse more in the [fantasy fonts](/fonts/fantasy) and [blackletter & medieval fonts](/fonts/blackletter) collections." },
+        { p: "Celtic knot fonts, where each letter is woven from interlace, are a separate decorative category; Uncial Antiqua has plain strokes. Browse more in the fantasy fonts and [blackletter & medieval fonts](/fonts/blackletter) collections." },
       ],
     },
   ],

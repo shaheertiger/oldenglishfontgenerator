@@ -85,13 +85,13 @@ const page: PageContent = {
             ],
           },
         },
-        { p: "That missing-letter quirk is the practical reason many people prefer the bold set: a name like Charlie or Rachel looks even in Bold Fraktur, while in the light version the C or R can look slightly out of place. If you need the lighter look, umlauts or the long s, the [Fraktur generator](/fraktur-generator) covers those." },
+        { p: "That missing-letter quirk is the practical reason many people prefer the bold set: a name like Charlie or Rachel looks even in Bold Fraktur, while in the light version the C or R can look slightly out of place. If you need the lighter look, umlauts or the long s, the [Fraktur generator](/font-generator/fraktur) covers those." },
       ],
     },
     {
       h2: "What about numbers and punctuation?",
       blocks: [
-        { p: "Unicode never added Fraktur digits, light or bold. The styles above swap 0–9 for Mathematical Bold digits (U+1D7CE–U+1D7D7), which sit well next to heavy blackletter. Punctuation such as full stops, commas and ampersands stays as ordinary characters. For dates, the [Old English numbers](/old-english-numbers) page shows Roman numeral options." },
+        { p: "Unicode never added Fraktur digits, light or bold. The styles above swap 0–9 for Mathematical Bold digits (U+1D7CE–U+1D7D7), which sit well next to heavy blackletter. Punctuation such as full stops, commas and ampersands stays as ordinary characters. For dates, the [Old English numbers](/old-english-alphabet) page shows Roman numeral options." },
       ],
     },
     {
@@ -111,7 +111,7 @@ const page: PageContent = {
     "Every style here starts from Mathematical Bold Fraktur (U+1D56C–U+1D59F), introduced with the Mathematical Alphanumeric Symbols block in Unicode 3.1. Digits come from Mathematical Bold (U+1D7CE–U+1D7D7); the underline, strike and slash styles add combining marks after each letter.",
   related: {
     heading: "More blackletter tools",
-    hrefs: ["/fraktur-generator", "/old-english-alphabet", "/gothic-font-generator", "/old-english-numbers", "/old-english-letters", "/old-english-text-to-image"],
+    hrefs: ["/font-generator/fraktur", "/old-english-alphabet", "/font-generator/gothic-letters", "/font-generator/old-english-letters", "/old-english-text-to-image"],
   },
   faq: [
     { q: "How do I copy Bold Fraktur letters?", a: "Type your text in the box and press Copy on the Bold Fraktur row, or tap a single letter in the table. Either way you get Unicode characters that paste as text." },
@@ -120,7 +120,7 @@ const page: PageContent = {
     { q: "Are there Bold Fraktur numbers?", a: "No. Unicode has no Fraktur digits in any weight, so the generator substitutes mathematical bold digits, which match the weight." },
     { q: "Is Bold Fraktur the same as Old English?", a: "In everyday use, yes: most people calling a heavy blackletter style Old English mean something that looks like this. Technically Fraktur is one branch of the blackletter family." },
     { q: "Can I use Bold Fraktur in Word or Google Docs?", a: "You can paste it, but it's better to install a real blackletter font for documents. The text stays editable and prints sharper." },
-    { q: "Does Bold Fraktur show on every phone?", a: "Current iPhone, Android, Windows and macOS versions display it. Very old systems may show empty boxes." },
+    { q: "Does Bold Fraktur show on every phone?", a: "Whether it displays depends on the fonts on the reader's device. Very old systems may show empty boxes." },
   ],
 };
 

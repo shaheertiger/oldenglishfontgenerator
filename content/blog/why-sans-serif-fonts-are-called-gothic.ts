@@ -11,7 +11,7 @@ const post: BlogPost = {
     "In American type and in Japanese, \"gothic\" means sans-serif, the opposite of the spiky blackletter most people picture. Here's how one word ended up meaning both.",
   related: ["blackletter-gothic-fraktur-difference", "identify-blackletter-font-from-image", "blackletter-font-pairings"],
   body: [
-    { type: "p", text: "Century Gothic, Franklin Gothic and MS Gothic are plain sans-serif fonts because, in American type-founding and later in Japanese, **\"gothic\" became a name for sans-serif type**. It has nothing to do with blackletter, the spiky medieval script most people mean by a gothic font. If you came here looking for that, the [gothic font generator](/gothic-font-generator) and [gothic letters](/font-generator/gothic-letters) pages have it; if you want to know why one word means two opposite things, read on." },
+    { type: "p", text: "Century Gothic, Franklin Gothic and MS Gothic are plain sans-serif fonts because, in American type-founding and later in Japanese, **\"gothic\" became a name for sans-serif type**. It has nothing to do with blackletter, the spiky medieval script most people mean by a gothic font. If you came here looking for that, the [gothic font generator](/font-generator/gothic-letters) and [gothic letters](/font-generator/gothic-letters) pages have it; if you want to know why one word means two opposite things, read on." },
     { type: "h2", text: "How did \"gothic\" come to mean sans-serif?" },
     { type: "p", text: "Letters without serifs appeared in British type foundries in the early 1800s, and the trade had no settled name for them. British founders called them grotesque or sans-serif. American founders called them gothic; the Boston Type and Stereotype Foundry is usually credited with using the name for sans-serif type in the 1830s, and the label stuck in the United States for more than a century." },
     { type: "p", text: "Nobody recorded why. The most common explanation is that \"gothic\" was a loose 19th-century word for anything that looked old, plain or crude, the same way Renaissance scholars had called blackletter \"gothic\" to mean barbaric. Bare, serifless letters looked primitive next to the elegant serif types of the day, so they got the same insulting label. Over time the insult faded and gothic simply meant sans-serif in American printing." },
@@ -51,7 +51,7 @@ const post: BlogPost = {
       { q: "Is MS Gothic the same as Century Gothic?", a: "No. MS Gothic is a Japanese system font from Microsoft and Century Gothic is a Latin geometric sans-serif. Both are sans-serifs that happen to share the word gothic." },
       { q: "How do I get real gothic (blackletter) letters?", a: "Install a free blackletter font such as UnifrakturCook, or, for apps without a font menu, copy Unicode blackletter letters from the gothic font generator." },
     ]},
-    { type: "cta", text: "Want the spiky kind of gothic? Try the", href: "/gothic-font-generator", label: "gothic font generator" },
+    { type: "cta", text: "Want the spiky kind of gothic? Try the", href: "/font-generator/gothic-letters", label: "gothic font generator" },
   ],
 };
 

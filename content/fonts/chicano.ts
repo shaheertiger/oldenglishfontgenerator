@@ -40,10 +40,10 @@ const page: FontPage = {
         { table: { head: ["Layout", "Top line", "Second line", "Tip"], rows: [
           ["Name and surname", "UnifrakturCook", "Mrs Saint Delafield", "Make the blackletter line about twice the height of the script."],
           ["Barrio or city piece", "Grenze Gotisch at its heaviest weight", "Pirata One", "Arch the top line; keep the second line straight."],
-          ["Memorial with dates", "Mr De Haviland for the name", "UnifrakturMaguntia for the dates", "Roman numerals often look cleaner than digits; try the [Old English numbers](/old-english-numbers) page."],
+          ["Memorial with dates", "Mr De Haviland for the name", "UnifrakturMaguntia for the dates", "Roman numerals often look cleaner than digits; try the [Old English numbers](/old-english-alphabet) page."],
           ["Shirt or flyer", "UnifrakturCook", "Kaushan Script", "Add a thick outline in your design app so both fonts share one edge colour."],
         ] } },
-        { p: "Heavier mixes like this also appear in [gangster lettering](/gangster-font-generator), which leans more on script. For more blackletter options, see the main [Old English fonts](/fonts/old-english) collection or the single-font guide to [UnifrakturCook](/fonts/unifrakturcook)." },
+        { p: "Heavier mixes like this also appear in [gangster lettering](/font-generator/gangster), which leans more on script. For more blackletter options, see the main [Old English fonts](/fonts/old-english) collection or the single-font guide to [UnifrakturCook](/fonts/unifrakturcook)." },
       ],
     },
     {
@@ -59,7 +59,7 @@ const page: FontPage = {
     { q: "Are there free Chicano fonts for commercial use?", a: "The 10 fonts on this page are free for commercial use under the SIL Open Font License. Fonts sold or shared elsewhere as Chicano fonts have their own licences, so read them before printing anything for sale." },
     { q: "Which free font is best for a Chicano name tattoo?", a: "Mrs Saint Delafield for a script name, or UnifrakturCook if you want the whole name in heavy Old English. Show your artist both and let them adjust the spacing." },
     { q: "How do I get Chicano letters on Instagram?", a: "Installed fonts don't work in Instagram bios. Use the [Chicano font generator](/chicano-font-generator), which turns your text into Unicode characters you can paste." },
-    { q: "Can I use these fonts in Cricut or Canva?", a: "Yes. Install them on your computer for Cricut Design Space, or upload them to Canva on a paid plan. See the [Cricut guide](/fonts/old-english/cricut) and [Canva guide](/fonts/old-english/canva)." },
+    { q: "Can I use these fonts in Cricut or Canva?", a: "Yes. Install them on your computer for Cricut Design Space, or upload them to Canva on a paid plan. See the Cricut guide and [Canva guide](/fonts/old-english/canva)." },
   ],
   tools: ["/chicano-font-generator", "/gangster-font-generator", "/old-english-tattoo-font"],
 };

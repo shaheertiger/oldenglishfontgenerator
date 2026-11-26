@@ -22,7 +22,7 @@ const post: BlogPost = {
       ["[UnifrakturCook](/fonts/unifrakturcook)", "Courier Prime", "Raw, zine-like", "Tattoo flash sheets, punk flyers, merch tags"],
       ["Manufacturing Consent", "Graduate", "Streetwear", "Lookbooks, drop announcements, hang tags"],
       ["Fruktur", "Fondamento", "Warm and handmade", "Cafés, bakeries, craft-beer labels"],
-      ["[Metal Mania](/fonts/metal-mania)", "Pirata One", "Gig poster", "Band name over readable dates and venues"],
+      ["Metal Mania", "Pirata One", "Gig poster", "Band name over readable dates and venues"],
       ["Jacquard 24", "Courier Prime", "Retro pixel", "Game title screens, devlogs, chiptune covers"],
     ]},
     { type: "p", text: "Of the seven body fonts, four are serif or slab faces (IM Fell English, Texturina, Almendra, Graduate), Fondamento is a broad-pen italic hand, Courier Prime is a typewriter mono, and Pirata One doubles as a body font because it's the most open blackletter here. You can preview every headline font with your own words on the [font comparison](/fonts) page." },
@@ -35,7 +35,7 @@ const post: BlogPost = {
     { type: "h2", text: "Which serif fonts are best for body text next to Old English?" },
     { type: "p", text: "From the free fonts on this site, **IM Fell English** (a revival of 17th-century English type, with an italic), **Texturina** (variable weights 100–900 plus italics) and **Almendra** (calligraphic details, weights 400 and 700 with italics) carry long text best. Outside this directory, any well-made book serif already on your computer is a fine choice too; the pairing rules matter more than the specific face." },
     { type: "h2", text: "How do I apply a pairing in Word, Canva or Google Docs?" },
-    { type: "p", text: "Install both fonts (or enable them in the app's font menu), then set them as styles: Heading 1 for the blackletter and Normal for the body. That way you change the pairing once instead of word by word. Step-by-step help: [Word](/fonts/old-english/word), [Google Docs](/fonts/old-english/google-docs), [Canva](/fonts/old-english/canva) and [PowerPoint](/fonts/old-english/powerpoint)." },
+    { type: "p", text: "Install both fonts (or enable them in the app's font menu), then set them as styles: Heading 1 for the blackletter and Normal for the body. That way you change the pairing once instead of word by word. Step-by-step help: Word, Google Docs, [Canva](/fonts/old-english/canva) and PowerPoint." },
     { type: "faq", items: [
       { q: "What font goes well with Old English?", a: "A readable serif such as IM Fell English or Texturina, or a mono like Courier Prime for a rougher look. Avoid pairing it with another blackletter or a busy script." },
       { q: "Can I use two blackletter fonts together?", a: "Rarely. If you must, use one heavy face for the title and a much simpler one, such as Pirata One, for subtitles. Body text should still be a non-blackletter font." },
@@ -43,7 +43,7 @@ const post: BlogPost = {
       { q: "How much bigger should the blackletter heading be?", a: "Roughly two to three times the body size is a good starting point. Blackletter at body size is hard to read." },
       { q: "Are these font pairings free for commercial use?", a: "Yes. Every font named here uses the SIL Open Font License, which allows commercial projects, logos and products." },
     ]},
-    { type: "cta", text: "Preview your headline in Old English styles with the", href: "/blackletter-generator", label: "blackletter generator" },
+    { type: "cta", text: "Preview your headline in Old English styles with the", href: "/font-generator/blackletter", label: "blackletter generator" },
   ],
 };
 

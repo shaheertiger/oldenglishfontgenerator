@@ -39,9 +39,9 @@ const post: BlogPost = {
     { type: "p", text: "The millimetre column is simple conversion (points × 0.3528). If you are choosing a Bible for someone with low vision, judge from a sample page photo rather than the label alone, because x-height, paper colour and line spacing matter as much as the number." },
     { type: "h2", text: "Is there a free font that looks like an old Bible?" },
     { type: "p", text: "Yes. For the Gutenberg look, Texturina is a free typeface modelled on textura and redrawn to be readable. For the later German printed look, UnifrakturMaguntia is a faithful free Fraktur. For an English 17th-century book feel without blackletter, IM Fell English revives type from that period, irregular inking included. All three are open-licence; compare them in the [blackletter and medieval fonts](/fonts/blackletter) and [calligraphy fonts](/fonts/calligraphy) collections." },
-    { type: "p", text: "Old printed Bibles also use the long s (ſ), which looks like an f without the full crossbar. It is a common source of misreading; our post on [the long s](/blog/long-s-explained) explains when it was used." },
+    { type: "p", text: "Old printed Bibles also use the long s (ſ), which looks like an f without the full crossbar. It is a common source of misreading; our post on the long s explains when it was used." },
     { type: "h2", text: "Should a church bulletin or verse card use blackletter?" },
-    { type: "p", text: "Use it for a heading or a single short verse, not for paragraphs. Blackletter is slow to read for most people today, so a title such as Holy Communion or a short line such as Be still works well, while announcements and readings belong in a plain serif. The [blackletter generator](/blackletter-generator) explains the differences between textura, rotunda and Fraktur if you want the heading to match a particular era." },
+    { type: "p", text: "Use it for a heading or a single short verse, not for paragraphs. Blackletter is slow to read for most people today, so a title such as Holy Communion or a short line such as Be still works well, while announcements and readings belong in a plain serif. The [blackletter generator](/font-generator/blackletter) explains the differences between textura, rotunda and Fraktur if you want the heading to match a particular era." },
     {
       type: "faq",
       items: [

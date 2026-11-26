@@ -34,7 +34,7 @@ const page: FontPage = {
           ["Vampire, witch or gothic ball", "UnifrakturCook, Pirata One", "Blackletter suggests castles, candles and old books rather than gore."],
           ["Metal or rock Halloween gig", "Metal Mania, New Rocker", "Spikes and flared capitals borrowed from band logos."],
         ] } },
-        { p: "Add bats, skulls and candles around a title with the [gothic symbols](/gothic-symbols) page, or browse more dark blackletter in the [gothic fonts](/fonts/gothic) collection." },
+        { p: "Add bats, skulls and candles around a title with the [gothic symbols](/symbols) page, or browse more dark blackletter in the gothic fonts collection." },
       ],
     },
     {
@@ -46,7 +46,7 @@ const page: FontPage = {
     {
       h2: "How do I make Halloween text for Instagram or TikTok?",
       blocks: [
-        { p: "Installed fonts don't work in captions, bios or usernames. For those, use the [horror font generator](/horror-font-generator), which turns your text into cursed, distressed and bat-framed gothic characters you can paste anywhere. The [gothic font generator](/gothic-font-generator) has more blackletter variations." },
+        { p: "Installed fonts don't work in captions, bios or usernames. For those, use the [horror font generator](/horror-font-generator), which turns your text into cursed, distressed and bat-framed gothic characters you can paste anywhere. The [gothic font generator](/font-generator/gothic-letters) has more blackletter variations." },
       ],
     },
   ],
@@ -55,7 +55,7 @@ const page: FontPage = {
     { q: "Are these Halloween fonts free for commercial use?", a: "Yes. All 10 use the SIL Open Font License, so you can use them on tickets, merch and paid event posters. You just can't sell the font files." },
     { q: "What font looks like blood dripping?", a: "Nosifer, which has drips running from the base of every letter. Creepster has a lighter dripping effect." },
     { q: "What is a good vampire font?", a: "A heavy blackletter such as UnifrakturCook gives the old-world, Dracula feel. Add a bat or rose symbol for extra atmosphere." },
-    { q: "Do Halloween fonts work on Cricut?", a: "Yes, after you install them on your computer. Chunky faces such as Creepster and Jolly Lodger cut and weed more easily than thin ones; see the [Cricut guide](/fonts/old-english/cricut)." },
+    { q: "Do Halloween fonts work on Cricut?", a: "Yes, after you install them on your computer. Chunky faces such as Creepster and Jolly Lodger cut and weed more easily than thin ones; see the Cricut guide." },
     { q: "Why does the preview look plain for a second?", a: "The fonts load from Google Fonts after the page appears, so a fallback font shows briefly on slow connections." },
   ],
   tools: ["/horror-font-generator", "/gothic-font-generator", "/gothic-symbols"],

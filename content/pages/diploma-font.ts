@@ -45,7 +45,7 @@ const page: PageContent = {
             ],
           },
         },
-        { p: "Details on each blackletter face, including licences and closer matches, are on the [Old English Text MT](/fonts/old-english-text-mt) and [Cloister Black](/fonts/cloister-black) pages. Script options are in the [calligraphy fonts](/fonts/calligraphy) collection." },
+        { p: "Details on each blackletter face, including licences and closer matches, are on the [Old English Text MT](/fonts/old-english-text-mt) and Cloister Black pages. Script options are in the [calligraphy fonts](/fonts/calligraphy) collection." },
       ],
     },
     {
@@ -71,8 +71,8 @@ const page: PageContent = {
       h2: "How do I make a certificate in Word or Google Docs?",
       blocks: [
         { ul: [
-          "**Word on Windows or Mac:** Old English Text MT usually comes with Microsoft Office. Type the school name and pick it from the font box. The [Word guide](/fonts/old-english/word) covers what to do if it's missing and how to embed it.",
-          "**Google Docs:** Docs can't use Old English Text MT, but More fonts includes UnifrakturMaguntia and Pinyon Script. See the [Google Docs guide](/fonts/old-english/google-docs).",
+          "**Word on Windows or Mac:** Old English Text MT usually comes with Microsoft Office. Type the school name and pick it from the font box. The Word guide covers what to do if it's missing and how to embed it.",
+          "**Google Docs:** Docs can't use Old English Text MT, but More fonts includes UnifrakturMaguntia and Pinyon Script. See the Google Docs guide.",
           "**Canva:** search its font library or paste the copied styles from this page into a text box.",
           "**Print on heavy card:** 200 gsm or heavier cream stock looks far more like a real diploma than office paper.",
         ] },
@@ -89,7 +89,7 @@ const page: PageContent = {
     "The blackletter rows use Unicode Mathematical Fraktur and Bold Fraktur; the script rows use Mathematical Script and Bold Script; Bold Serif and Roman Inscription use Mathematical Bold. They're for screens and quick mockups: for printing, install a real font.",
   related: {
     heading: "More lettering for certificates",
-    hrefs: ["/old-english-name-generator", "/newspaper-masthead-font", "/illuminated-letters", "/blackletter-generator", "/old-english-text-to-image", "/fonts/old-english"],
+    hrefs: ["/old-english-name-generator", "/newspaper-masthead-font", "/illuminated-letters", "/font-generator/blackletter", "/old-english-text-to-image", "/fonts/old-english"],
   },
   faq: [
     { q: "What font is used on most diplomas?", a: "Most commonly, an Old English blackletter such as Old English Text MT, Engravers Old English or Cloister Black for the school name, a formal script for the graduate's name, and a serif for the rest." },

@@ -58,12 +58,12 @@ const page: PageContent = {
       blocks: [
         {
           ul: [
-            "**Before blackletter:** uncial capitals were used for early medieval initials. [Uncial Antiqua](/fonts/uncial-antiqua) is a free version.",
+            "**Before blackletter:** uncial capitals were used for early medieval initials. Uncial Antiqua is a free version.",
             "**Classic gothic manuscript:** textura and Fraktur fonts such as Texturina and UnifrakturMaguntia, listed with others in the [blackletter and medieval fonts](/fonts/blackletter) collection.",
-            "**Fantasy books and games:** decorative faces like Cinzel Decorative, in the [fantasy fonts](/fonts/fantasy) collection.",
+            "**Fantasy books and games:** decorative faces like Cinzel Decorative, in the fantasy fonts collection.",
           ],
         },
-        { p: "For single letters, initials and monograms to copy, see [Old English letters](/old-english-letters). For whole lines of manuscript-style text with thorns and the long s, use the [medieval font generator](/font-generator/medieval)." },
+        { p: "For single letters, initials and monograms to copy, see [Old English letters](/font-generator/old-english-letters). For whole lines of manuscript-style text with thorns and the long s, use the [medieval font generator](/font-generator/medieval)." },
       ],
     },
   ],
@@ -71,7 +71,7 @@ const page: PageContent = {
     "Initials use Mathematical Bold Fraktur (U+1D56C–U+1D59F) with the rest of the text in Mathematical Fraktur. Frames come from CJK brackets 【】 〖〗, the Tibetan ornaments ༺ ༻, and fleurons ☙ ❧ ❦ from the Dingbats and Miscellaneous Symbols blocks.",
   related: {
     heading: "More medieval lettering",
-    hrefs: ["/old-english-letters", "/font-generator/medieval", "/old-english-text-to-image", "/gothic-symbols", "/old-english-alphabet", "/how-to-write-old-english"],
+    hrefs: ["/font-generator/old-english-letters", "/font-generator/medieval", "/old-english-text-to-image", "/symbols", "/old-english-alphabet", "/how-to-write-old-english"],
   },
   faq: [
     { q: "What is an illuminated letter?", a: "The decorated first capital of a section in a medieval manuscript, usually painted in colour and sometimes gold. Illumination refers to the way gold and colour light up the page." },

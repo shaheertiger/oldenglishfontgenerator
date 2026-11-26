@@ -40,7 +40,7 @@ const page: FontPage = {
           ["Fine-line script", "Small wrist, rib and collarbone text", "Thin lines are more prone to spreading and fading over time; your artist will advise on size."],
           ["Typewriter", "Quotes, coordinates, dates, book lines", "Plain at large sizes; it shines small and in one line."],
         ] } },
-        { p: "Still deciding on blackletter? The [Old English tattoo font](/old-english-tattoo-font) page has a skin-tone mockup and PNG download. For phrases, the [Latin tattoo font](/latin-tattoo-font) page lists popular Latin lines with their meanings and letter counts." },
+        { p: "Still deciding on blackletter? The [Old English tattoo font](/font-generator/old-english-tattoo) page has a skin-tone mockup and PNG download. For phrases, the [Latin tattoo font](/latin-tattoo-font) page lists popular Latin lines with their meanings and letter counts." },
       ],
     },
     {

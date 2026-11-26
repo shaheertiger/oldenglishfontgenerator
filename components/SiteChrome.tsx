@@ -3,10 +3,10 @@ import { TOOL_LINKS } from "@/lib/site";
 
 const NAV = [
   { href: "/", label: "Home" },
-  { href: "/old-english-tattoo-font", label: "Tattoo" },
+  { href: "/font-generator/old-english-tattoo", label: "Tattoo" },
   { href: "/old-english-alphabet", label: "Alphabet" },
-  { href: "/gothic-font-generator", label: "Gothic" },
-  { href: "/fraktur-generator", label: "Fraktur" },
+  { href: "/font-generator/gothic-letters", label: "Gothic" },
+  { href: "/font-generator/fraktur", label: "Fraktur" },
   { href: "/fonts", label: "Fonts" },
   { href: "/blog", label: "Blog" },
 ];

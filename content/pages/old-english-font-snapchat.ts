@@ -1,3 +1,4 @@
+// @retired 2026-11-26: daily-batch page (Nov 2-19) with 0 Bing impressions; now 410. Source kept on purpose (we don't delete files); not registered or served.
 import type { PageContent } from "./types";
 
 const page: PageContent = {

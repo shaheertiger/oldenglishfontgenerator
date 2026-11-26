@@ -1,3 +1,4 @@
+// @retired 2026-11-26: platform-name page with 0 Bing impressions whose content was untested Discord limits; now 410. Source kept on purpose (we do not delete files).
 import type { PageContent } from "./types";
 
 const page: PageContent = {

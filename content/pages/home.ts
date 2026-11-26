@@ -3,13 +3,13 @@ import { HOME_STYLES } from "@/lib/fonts";
 
 const home: PageContent = {
   slug: "",
-  title: "Old English Font Generator — Copy & Paste Blackletter Text",
+  title: "Blackletter Text Generator: 60+ Old English Styles, Free",
   description:
-    "Old English font generator with 60+ gothic, fraktur & blackletter styles. Copy and paste into Instagram, Discord or a tattoo preview. Free, no sign-up.",
-  h1: "Old English Font Generator",
+    "Blackletter text generator with 60+ Old English, gothic and Fraktur styles, a tattoo preview and image export. Type once, tap Copy. Free, no sign-up.",
+  h1: "Blackletter & Old English Text Generator",
   crumb: "Home",
   intro:
-    "This Old English font generator turns whatever you type into blackletter text you can copy and paste: classic Fraktur, heavy Bold Fraktur, tattoo layouts, gothic frames and more than sixty other variations. Type below, tap Copy on the style you like, and paste it anywhere that accepts text.",
+    "This blackletter text generator turns whatever you type into 60+ Old English styles you can copy and paste: classic Fraktur, heavy Bold Fraktur, tattoo layouts, gothic frames and decorated variations, plus a tattoo preview and PNG export further down. Want just the classic look fast? The [Old English font](/font-generator/old-english) page has the 14 most-used styles and ready-made words.",
   tool: {
     styles: HOME_STYLES,
     sample: "Old English Font",
@@ -30,7 +30,7 @@ const home: PageContent = {
       h2: "Old English vs. Gothic vs. Blackletter vs. Fraktur",
       blocks: [
         {
-          p: "People use these four words almost interchangeably, but each one comes from a different world. Here is the short version; the [blackletter generator](/blackletter-generator) page goes deeper into the history.",
+          p: "People use these four words almost interchangeably, but each one comes from a different world. Here is the short version; the [blackletter generator](/font-generator/blackletter) page goes deeper into the history.",
         },
         {
           table: {
@@ -51,10 +51,9 @@ const home: PageContent = {
       blocks: [
         {
           cards: [
-            { h: "Instagram bio", p: "Put your name or a one-line motto in blackletter and keep the rest plain so the bio stays easy to read. See the [Instagram bio templates](/old-english-font-instagram)." },
-            { h: "Tattoo preview", p: "Try a name or date in several styles before your consultation, then show the artist the one you like best." },
-            { h: "Discord", p: "Display names and server nicknames accept these letters. Your unique @username does not." },
-            { h: "Gaming names", p: "Clan tags and lobby names look sharper with a framed gothic style. Check each game's own character rules first." },
+            { h: "Bios and display names", p: "Put your name or a one-line motto in blackletter and keep the rest plain so it stays easy to read. Username fields often allow only plain letters, so use the name or bio field." },
+            { h: "Tattoo preview", p: "Try a name or date in several styles before your consultation, then show the artist the one you like best. The [Old English tattoo font](/font-generator/old-english-tattoo) page adds stencil-style layouts." },
+            { h: "Gaming names", p: "Clan tags and lobby names look sharper with a framed gothic style. Each game sets its own character rules, so test it first." },
             { h: "Logos and merch mockups", p: "Sketch a band name or shop sign quickly. For print, switch to a real blackletter typeface." },
             { h: "Weddings and certificates", p: "Draft headings for invitations, awards or diplomas, then hand the wording to whoever sets the final type. The [diploma font](/diploma-font) page explains what printers actually use." },
           ],
@@ -69,17 +68,34 @@ const home: PageContent = {
           table: {
             head: ["Project", "Start here", "Free fonts to install"],
             rows: [
-              ["Script or blackletter tattoo", "[Tattoo font generator](/tattoo-font-generator), [Latin phrases](/latin-tattoo-font), [Bible verses](/bible-verse-font)", "[Tattoo fonts](/fonts/tattoo)"],
-              ["West Coast and lowrider lettering", "[Gangster font generator](/gangster-font-generator), [biker patches](/biker-font-generator)", "[Chicano fonts](/fonts/chicano)"],
-              ["Band names and dark titles", "[Metal font generator](/metal-font-generator), [horror text](/horror-font-generator)", "[Halloween fonts](/fonts/halloween), [Metal Mania](/fonts/metal-mania)"],
+              ["Script or blackletter tattoo", "[Tattoo font generator](/tattoo-font-generator), [Latin phrases](/latin-tattoo-font), [Bible verses](/bible-verse-font)", "Tattoo fonts"],
+              ["West Coast and lowrider lettering", "[Gangster font generator](/font-generator/gangster), [Chicano lettering](/chicano-font-generator)", "[Free blackletter fonts](/fonts)"],
+              ["Band names and dark titles", "[Metal font generator](/metal-font-generator), [horror text](/horror-font-generator)", "[Pirata One](/fonts/pirata-one)"],
               ["Diplomas, mastheads and documents", "[Diploma font](/diploma-font), [newspaper mastheads](/newspaper-masthead-font)", "[Old English Text MT and free lookalikes](/fonts/old-english-text-mt)"],
-              ["Manuscripts and fantasy", "[Illuminated letters](/illuminated-letters), [medieval generator](/font-generator/medieval)", "[Fantasy fonts](/fonts/fantasy), [calligraphy fonts](/fonts/calligraphy)"],
-              ["Shirts, hoodies and brands", "[Text to image export](/old-english-text-to-image)", "[Clothing brand fonts](/fonts/clothing-brand)"],
-              ["TikTok and Facebook", "[TikTok names and bios](/old-english-font-tiktok), [Facebook posts](/old-english-font-facebook)", "Not needed: copy-paste text works in the app"],
+              ["Manuscripts and fantasy", "[Illuminated letters](/illuminated-letters), [medieval font](/font-generator/medieval)", "[Calligraphy fonts](/fonts/calligraphy)"],
+              ["Shirts, hoodies and brands", "[Text to image export](/old-english-text-to-image)", "[UnifrakturCook](/fonts/unifrakturcook)"],
             ],
           },
         },
         { p: "Every free font on the site, with our glyph and character-support measurements, is in [one comparison table](/fonts)." },
+      ],
+    },
+    {
+      h2: "Popular lettering tools",
+      blocks: [
+        { p: "The pages people search for most, each with its own styles and a full copyable table:" },
+        {
+          ul: [
+            "[Old English font alphabet](/font-generator/old-english-letters): every blackletter letter A–Z and a–z with copy buttons.",
+            "[Gothic letters](/font-generator/gothic-letters): blackletter A–Z plus dark decorated sets and the real Gothic alphabet.",
+            "[Medieval font](/font-generator/medieval): manuscript styles with thorn and the long s.",
+            "[Italics generator](/font-generator/italic): serif and sans italic text without a font menu.",
+            "[Hieroglyphics translator](/hieroglyphics-translator): English to Egyptian sign alphabet, with the sign key.",
+            "[Cuneiform translator](/cuneiform-translator): English to cuneiform signs, letter by letter.",
+            "[Letters in different fonts](/different-fonts): one letter or number in 40+ styles.",
+            "[Fancy letters alphabet](/font-generator/fancy-letters): script, bubble, squared and more, A–Z.",
+          ],
+        },
       ],
     },
     {
@@ -94,18 +110,7 @@ const home: PageContent = {
     "Every style starts from Unicode's Mathematical Fraktur letters (U+1D504–U+1D537) or Mathematical Bold Fraktur (U+1D56C–U+1D59F). Five regular Fraktur capitals were encoded earlier in the Letterlike Symbols block, so ℭ, ℌ, ℑ, ℜ and ℨ come from there. Frames, crosses and underlines are separate symbols or combining marks added around those letters.",
   related: {
     heading: "More Old English Tools",
-    hrefs: [
-      "/old-english-tattoo-font",
-      "/old-english-alphabet",
-      "/old-english-name-generator",
-      "/gothic-font-generator",
-      "/fraktur-generator",
-      "/old-english-cursive",
-      "/old-english-numbers",
-      "/old-english-font-instagram",
-      "/old-english-font-discord",
-      "/old-english-text-to-image",
-    ],
+    hrefs: ["/font-generator/old-english-tattoo", "/old-english-alphabet", "/old-english-name-generator", "/font-generator/blackletter", "/font-generator/fraktur", "/font-generator/old-cursive", "/symbols", "/old-english-text-to-image"],
   },
   faq: [
     {
@@ -118,11 +123,11 @@ const home: PageContent = {
     },
     {
       q: "Why are there no Old English numbers?",
-      a: "Unicode only includes Fraktur letters, not Fraktur digits. The generator uses bold serif digits, which sit well next to blackletter, and the Roman numeral style turns dates into letters. The Old English numbers page lists every option.",
+      a: "Unicode only includes Fraktur letters, not Fraktur digits. The generator uses bold serif digits, which sit well next to blackletter, and the Roman numeral style turns dates into letters. The [Old English alphabet](/old-english-alphabet) page lists every number option.",
     },
     {
-      q: "Will it work in Instagram, TikTok or Discord usernames?",
-      a: "Usually not in the handle itself. Instagram, TikTok and Discord all restrict usernames to plain letters, numbers, dots and underscores. The styled text does work in the places shown to other people: Instagram's Name field and bio, TikTok's bio and Discord display names or nicknames.",
+      q: "Can I use Old English letters in a username?",
+      a: "Often not in the handle itself: many sites limit usernames to plain letters, numbers and a few symbols. Name, bio and caption fields are usually less strict, but each site sets its own rules.",
     },
     {
       q: "Is it safe for screen readers and search engines?",

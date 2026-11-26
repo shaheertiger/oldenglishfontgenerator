@@ -35,7 +35,7 @@ const page: FontPage = {
     {
       h2: "Do I already have Old English Text MT?",
       blocks: [
-        { p: "If Microsoft Word, PowerPoint or Excel is installed, probably yes. Open the font box and type the full name. In Microsoft 365 some fonts download on demand the first time you pick them, so it may appear after a short wait. Step-by-step instructions are in the guides for [Word](/fonts/old-english/word) and [PowerPoint](/fonts/old-english/powerpoint)." },
+        { p: "If Microsoft Word, PowerPoint or Excel is installed, probably yes. Open the font box and type the full name. In Microsoft 365 some fonts download on demand the first time you pick them, so it may appear after a short wait. Step-by-step instructions are in the guides for Word and PowerPoint." },
         { p: "Google Docs, Canva's free plan and most phone apps don't include it, because it isn't part of the Google Fonts library. There, UnifrakturMaguntia is the usual stand-in." },
       ],
     },

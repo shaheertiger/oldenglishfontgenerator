@@ -33,14 +33,14 @@ const page: FontPage = {
           ["Embroidery", "Small, detailed letters lose shape. Many embroiderers want lettering at least about 0.25 in (6 mm) tall, and more for blackletter.", "Pirata One or Germania One for small text; save Fraktur for large chest or back pieces."],
           ["Vinyl / heat transfer", "Every enclosed counter and hairline must be weeded by hand.", "Chunky fonts weed fastest; avoid thin scripts below a few centimetres tall."],
         ] } },
-        { p: "Always send your printer a vector file with the text converted to outlines, so their computer doesn't swap the font. The [Inkscape guide](/fonts/old-english/inkscape) and [Photoshop guide](/fonts/old-english/photoshop) show how to set up the lettering." },
+        { p: "Always send your printer a vector file with the text converted to outlines, so their computer doesn't swap the font. The Inkscape guide and Photoshop guide show how to set up the lettering." },
       ],
     },
     {
       h2: "Can I use a free font for my clothing brand logo?",
       blocks: [
         { p: "Yes, if it's under the SIL Open Font License like these 10. The licence allows logos, printed garments and products you sell. Two things it doesn't settle: trademarks, which protect brand names and logos regardless of the font, and the font name, which you shouldn't use to market a modified copy of the font. If you're building a brand to last, customise the lettering (spacing, a ligature, a redrawn capital) so the mark is distinctly yours, and get trademark advice for the name." },
-        { p: "Want to mock up Old English lettering quickly? Set it in the [gothic font generator](/gothic-font-generator) or export real blackletter as a transparent PNG with the [text to image tool](/old-english-text-to-image)." },
+        { p: "Want to mock up Old English lettering quickly? Set it in the [gothic font generator](/font-generator/gothic-letters) or export real blackletter as a transparent PNG with the [text to image tool](/old-english-text-to-image)." },
       ],
     },
     {
@@ -49,7 +49,7 @@ const page: FontPage = {
         { ul: [
           "**One heavy word, big.** A single blackletter word across the chest or back reads from across the street; whole sentences don't.",
           "**Add a script or varsity partner.** Kaushan Script or Graduate under the main word gives contrast without a third font.",
-          "**Arch it.** Curving the top line, as on a jersey or rocker patch, instantly reads as merch. See the [biker font generator](/biker-font-generator) for rocker-style layouts.",
+          "**Arch it.** Curving the top line, as on a jersey or rocker patch, instantly reads as merch. See the biker font generator for rocker-style layouts.",
           "**Keep a small version.** Have a simpler mark (an initial in Pirata One, for example) for labels, tags and embroidery.",
         ] },
       ],

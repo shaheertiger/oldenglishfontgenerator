@@ -106,7 +106,7 @@ const page: PageContent = {
     { q: "What is the oldest alphabet I can copy and paste?", a: "Phoenician, from about 1050 BC, is the oldest alphabet with good Unicode support, and nearly every European alphabet descends from it. Earlier Proto-Sinaitic inscriptions exist but have no standard Unicode encoding." },
     { q: "Why do I see boxes instead of hieroglyphs?", a: "Your device doesn't have a font with those characters. The text is still correct: paste it on a newer phone, install Noto Sans Egyptian Hieroglyphs, or export it as an image." },
     { q: "Can I use ancient letters in a tattoo?", a: "Yes, but check the spelling with someone who reads the script and give your artist an image, not copied text, so the shapes don't change between devices. Remember these are letter swaps, not translations." },
-    { q: "Do ancient scripts work in Instagram or Discord names?", a: "Usually, in display names and bios, since they are standard Unicode. Whether your followers see the signs depends on their device fonts. Usernames and handles will reject them." },
+    { q: "Can I use ancient scripts in a display name?", a: "Usually, in display names and bios, since they are standard Unicode. Whether your followers see the signs depends on their device fonts. Usernames and handles will reject them." },
     { q: "Why does my Phoenician text appear backwards?", a: "Phoenician is written right to left, and its Unicode characters tell apps to display them that way. The first letter you typed appears on the right." },
   ],
 };
