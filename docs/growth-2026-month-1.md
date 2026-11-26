@@ -36,7 +36,7 @@ On each owner page:
 
 ## Step 5: speed and crawl
 
-- Lighthouse mobile on the 16 owner pages: see `docs/performance.md` (`npm run perf`).
+- Lighthouse mobile on the 16 owner pages (local production build, 2026-11-26): **90–97, CLS 0 on all** (homepage 90, the lowest). First Month 1 build scored 81–88; fixed by rendering the character tables as plain HTML with one shared copy handler (max 4 styles each), showing 8 rows initially, building the profile mock-up only when opened, `content-visibility` on below-the-fold sections, and loading Google Analytics on the first interaction or after 8 s. Trade-off: GA misses visitors who leave within 8 s without interacting; Vercel Analytics still counts everyone. Full table: `docs/performance.md` (`npm run perf`). Re-measure on the live site after deploy; Vercel numbers can differ.
 - Static HTML: every owner page is prerendered; JavaScript only adds typing, copying and the mock-up.
 - Sitemap lists only indexable 200 URLs with real lastmod (checked by the build since #37).
 - IndexNow with only changed URLs: `node scripts/changed-urls.mjs <previous deploy sha> > /tmp/changed.txt && npm run indexnow -- --file /tmp/changed.txt`.

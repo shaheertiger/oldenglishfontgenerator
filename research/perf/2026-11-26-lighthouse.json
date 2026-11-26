@@ -1,134 +1,134 @@
 {
- "at": "2026-11-26T18:36:00.870Z",
- "base": "http://localhost:3401",
+ "at": "2026-11-26T18:43:38.737Z",
+ "base": "http://localhost:3404",
  "rows": [
   {
    "path": "/",
-   "score": 85,
+   "score": 90,
    "cls": 0,
-   "lcp": 2433,
-   "tbt": 526,
-   "dom": 1930
+   "lcp": 2583,
+   "tbt": 322,
+   "dom": 1216
   },
   {
    "path": "/font-generator/old-english",
-   "score": 84,
+   "score": 92,
    "cls": 0,
-   "lcp": 2534,
-   "tbt": 515,
-   "dom": 1793
+   "lcp": 2571,
+   "tbt": 248,
+   "dom": 1131
   },
   {
    "path": "/font-generator/fancy-letters",
-   "score": 83,
+   "score": 91,
    "cls": 0,
-   "lcp": 2149,
-   "tbt": 615,
-   "dom": 1756
+   "lcp": 2554,
+   "tbt": 287,
+   "dom": 1091
   },
   {
    "path": "/font-generator/gothic-letters",
-   "score": 85,
+   "score": 93,
    "cls": 0,
-   "lcp": 2487,
-   "tbt": 490,
-   "dom": 1978
+   "lcp": 1867,
+   "tbt": 295,
+   "dom": 1313
   },
   {
    "path": "/font-generator/medieval",
-   "score": 86,
+   "score": 94,
    "cls": 0,
-   "lcp": 2484,
-   "tbt": 478,
-   "dom": 1757
+   "lcp": 1851,
+   "tbt": 286,
+   "dom": 1092
   },
   {
    "path": "/font-generator/old-english-letters",
-   "score": 85,
+   "score": 95,
    "cls": 0,
-   "lcp": 2492,
-   "tbt": 493,
-   "dom": 1728
+   "lcp": 1848,
+   "tbt": 247,
+   "dom": 1066
   },
   {
    "path": "/font-generator/handwriting",
-   "score": 87,
+   "score": 92,
    "cls": 0,
-   "lcp": 1806,
-   "tbt": 495,
-   "dom": 1652
+   "lcp": 2590,
+   "tbt": 252,
+   "dom": 1014
   },
   {
    "path": "/old-english-alphabet",
-   "score": 82,
+   "score": 95,
    "cls": 0,
-   "lcp": 2510,
-   "tbt": 609,
-   "dom": 1962
+   "lcp": 1860,
+   "tbt": 234,
+   "dom": 1300
   },
   {
    "path": "/font-generator/thank-you",
-   "score": 85,
+   "score": 92,
    "cls": 0,
-   "lcp": 2489,
-   "tbt": 514,
-   "dom": 1780
+   "lcp": 2527,
+   "tbt": 257,
+   "dom": 1122
   },
   {
    "path": "/hieroglyphics-translator",
-   "score": 84,
+   "score": 94,
    "cls": 0,
-   "lcp": 2486,
-   "tbt": 532,
-   "dom": 1388
+   "lcp": 1884,
+   "tbt": 266,
+   "dom": 1232
   },
   {
    "path": "/font-generator/italic",
-   "score": 84,
+   "score": 96,
    "cls": 0,
-   "lcp": 2498,
-   "tbt": 540,
-   "dom": 1688
+   "lcp": 1855,
+   "tbt": 206,
+   "dom": 1050
   },
   {
    "path": "/symbols",
-   "score": 81,
+   "score": 95,
    "cls": 0,
-   "lcp": 1851,
-   "tbt": 747,
-   "dom": 1204
+   "lcp": 1870,
+   "tbt": 253,
+   "dom": 1151
   },
   {
    "path": "/cuneiform-translator",
-   "score": 84,
+   "score": 96,
    "cls": 0,
-   "lcp": 2522,
-   "tbt": 511,
-   "dom": 1276
+   "lcp": 1859,
+   "tbt": 224,
+   "dom": 1121
   },
   {
    "path": "/font-generator/signature",
-   "score": 82,
+   "score": 94,
    "cls": 0,
-   "lcp": 2514,
-   "tbt": 617,
-   "dom": 1695
+   "lcp": 2502,
+   "tbt": 201,
+   "dom": 1037
   },
   {
    "path": "/different-fonts",
-   "score": 88,
+   "score": 97,
    "cls": 0,
-   "lcp": 2487,
-   "tbt": 398,
-   "dom": 1025
+   "lcp": 2441,
+   "tbt": 96,
+   "dom": 1001
   },
   {
    "path": "/death-note-font",
-   "score": 85,
+   "score": 97,
    "cls": 0,
-   "lcp": 1855,
-   "tbt": 590,
-   "dom": 1734
+   "lcp": 1846,
+   "tbt": 183,
+   "dom": 1070
   }
  ]
 }
