@@ -14,6 +14,14 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Apex URLs that redirect go straight to their final www URL (one hop),
+      // so Bing sees each old apex URL redirect one-to-one.
+      ...REDIRECTS.map((r) => ({
+        source: r.source,
+        has: [{ type: "host", value: "oldenglishfontgenerator.com" }],
+        destination: `https://www.oldenglishfontgenerator.com${r.destination}`,
+        statusCode: 301,
+      })),
       // Apex -> www (HTTPS is enforced by the Vercel edge).
       {
         source: "/:path*",

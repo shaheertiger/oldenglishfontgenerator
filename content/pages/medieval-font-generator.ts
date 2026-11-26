@@ -62,13 +62,18 @@ const page: PageContent = {
     "Base letters come from Mathematical Fraktur and Bold Fraktur. Thorn (U+00FE, U+00DE), ash (U+00E6, U+00C6) and long s (U+017F) are ordinary Latin characters that stay unconverted, since Unicode has no Fraktur versions of them. Fleurons are U+2619 and U+2767, and the hedera is U+2766 from the Dingbats block.",
   related: {
     heading: "More medieval and blackletter tools",
-    hrefs: ["/blackletter-generator", "/fraktur-generator", "/gothic-font-generator", "/old-english-letters", "/old-english-alphabet", "/old-english-text-to-image", "/illuminated-letters", "/renaissance-font-generator", "/ancient-font-generator", "/victorian-font-generator"],
+    hrefs: ["/font-generator/blackletter", "/font-generator/fraktur", "/font-generator/gothic-letters", "/font-generator/old-english-letters", "/old-english-alphabet", "/old-english-text-to-image", "/illuminated-letters", "/ancient-font-generator"],
   },
   faq: [
-    { q: "Does this translate modern English into medieval English?", a: "No. It changes the appearance of letters and can swap th for þ, but the words stay as you typed them." },
+    { q: "Does this translate modern English into medieval English?", a: "No. It changes the appearance of letters and can swap th for þ, but the words stay as you typed them. For thee-and-thou wording, use the [medieval translator](/medieval-translator)." },
     { q: "Why is þ not in blackletter style?", a: "Unicode has no Fraktur thorn, so the normal þ is used. It looks close enough next to Fraktur letters." },
     { q: "Was the long s really used everywhere?", a: "In English and many European languages, yes, from medieval times until the late 18th century, when printers dropped it." },
-    { q: "Can I use these in a game?", a: "Many games allow these characters in chat or guild names but not in character names. Check the game's rules or test in a private message first." },
+    { q: "Can I use these in a game?", a: "Each game sets its own rules for names and chat, and some strip special characters. Test it in a private message first." },
+    { q: "How do I copy and paste a medieval font?", a: "Type your text in the box, tap Copy on the style you like and paste it. The letters are Unicode characters, so no font needs installing." },
+    { q: "What is the medieval font called?", a: "Most people mean blackletter, also called gothic script or textura; the Germans called their version Fraktur. On a computer, the best-known installed font of this kind is Old English Text MT." },
+    { q: "How do I get a medieval font in Word?", a: "Pasted text is fine for a heading; for a whole document, install a blackletter font and choose it from the font menu. [Old English Text MT](/fonts/old-english-text-mt) explains the options." },
+    { q: "How do I type in medieval writing?", a: "Type normally in the box above; the generator swaps each letter for its medieval form, and some styles add þ (thorn) and the long s (ſ) for an older spelling." },
+    { q: "What does medieval script look like?", a: "Tall, narrow, angular letters with thick vertical strokes and diamond-shaped feet, packed closely so a page looks like woven texture." },
     { q: "What font did medieval scribes use?", a: "They wrote by hand in various scripts, the formal one being textura. Fonts in the modern sense only arrived with printing." },
   ],
 };

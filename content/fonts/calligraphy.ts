@@ -38,7 +38,7 @@ const page: FontPage = {
       h2: "Which calligraphy fonts look vintage or antique?",
       blocks: [
         { p: "For an antique look, pick a font based on a historical model: UnifrakturMaguntia (German Fraktur printing), Texturina (late-medieval textura), Uncial Antiqua (early-medieval uncial) and Pinyon Script (Victorian copperplate). Eagle Lake and Great Vibes feel more modern. Printing on cream paper and choosing a dark brown instead of pure black makes any of them look older." },
-        { p: "For the history behind each blackletter style, see [blackletter and medieval fonts](/fonts/blackletter); for joined capitals and script, the [Old English cursive](/old-english-cursive) generator mixes both in copy-paste text." },
+        { p: "For the history behind each blackletter style, see [blackletter and medieval fonts](/fonts/blackletter); for joined capitals and script, the [Old English cursive](/font-generator/old-cursive) generator mixes both in copy-paste text." },
       ],
     },
     {
@@ -51,9 +51,9 @@ const page: FontPage = {
   faq: [
     { q: "What is the best free Old English calligraphy font?", a: "UnifrakturMaguntia for traditional Fraktur, or Texturina if you need several weights and an italic for longer text." },
     { q: "What calligraphy fonts are good for beginners to copy?", a: "Fondamento, a broad-nib italic, and Uncial Antiqua, whose rounded capitals are simple to trace and practise." },
-    { q: "Which calligraphy font is best for a tattoo?", a: "Great Vibes for a readable script, UnifrakturMaguntia for blackletter. Let your artist adjust thin strokes, which can fade at small sizes. The [tattoo fonts](/fonts/tattoo) page has more options." },
+    { q: "Which calligraphy font is best for a tattoo?", a: "Great Vibes for a readable script, UnifrakturMaguntia for blackletter. Let your artist adjust thin strokes, which can fade at small sizes. The tattoo fonts page has more options." },
     { q: "Are these calligraphy fonts free for commercial use?", a: "Yes. All 10 are under the SIL Open Font License, which allows commercial printing, logos and products." },
-    { q: "Do calligraphy fonts work in Word and Google Docs?", a: "In Word, install the font first; in Google Docs, add it from More fonts. See the [Word guide](/fonts/old-english/word) and [Google Docs guide](/fonts/old-english/google-docs)." },
+    { q: "Do calligraphy fonts work in Word and Google Docs?", a: "In Word, install the font first; in Google Docs, add it from More fonts. See the Word guide and Google Docs guide." },
     { q: "Which of these fonts has the long s (ſ)?", a: "UnifrakturMaguntia, Grenze Gotisch, Pinyon Script and Italianno include it, according to our check of the font files." },
   ],
   tools: ["/old-english-cursive", "/how-to-write-old-english", "/illuminated-letters"],

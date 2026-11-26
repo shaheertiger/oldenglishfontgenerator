@@ -59,10 +59,10 @@ const page: PageContent = {
     {
       h2: "What free font is closest to the New York Times logo?",
       blocks: [
-        { p: "No free font matches it exactly, because the Times nameplate is drawn, not typeset. The closest everyday options are Old English Text MT, which comes with Microsoft Office, and free open-licence Fraktur such as UnifrakturMaguntia. See [Old English Text MT](/fonts/old-english-text-mt) for where to find it and its licence, and [Old London](/fonts/old-london) for a freeware alternative people often use for newsletter mastheads." },
+        { p: "No free font matches it exactly, because the Times nameplate is drawn, not typeset. The closest everyday options are Old English Text MT, which comes with Microsoft Office, and free open-licence Fraktur such as UnifrakturMaguntia. See [Old English Text MT](/fonts/old-english-text-mt) for where to find it and its licence, and Old London for a freeware alternative people often use for newsletter mastheads." },
         {
           ul: [
-            "**For a school or club newsletter:** UnifrakturMaguntia in Google Docs or Word. Our [Word guide](/fonts/old-english/word) shows how.",
+            "**For a school or club newsletter:** UnifrakturMaguntia in Google Docs or Word. Our Word guide shows how.",
             "**For a printed poster or prop newspaper:** export the title as a PNG from the [text to image tool](/old-english-text-to-image) so it prints sharply.",
             "**For a social post:** copy a style from the generator above; it pastes as text.",
           ],
@@ -74,7 +74,7 @@ const page: PageContent = {
     "The masthead rows use Mathematical Fraktur (U+1D504–U+1D537) and Bold Fraktur (U+1D56C–U+1D59F). The banner style adds box-drawing rules (━), the fleuron style adds ☙ and ❧, and the year style turns digits into Roman numerals before converting to blackletter.",
   related: {
     heading: "More Old English tools",
-    hrefs: ["/old-english-text-to-image", "/diploma-font", "/old-english-numbers", "/blackletter-generator", "/fraktur-generator", "/illuminated-letters"],
+    hrefs: ["/old-english-text-to-image", "/diploma-font", "/old-english-alphabet", "/font-generator/blackletter", "/font-generator/fraktur", "/illuminated-letters"],
   },
   faq: [
     { q: "What font is the New York Times logo?", a: "It isn't a font. The nameplate is custom blackletter lettering owned by the paper. Old English Text MT and UnifrakturMaguntia are the closest commonly available alternatives." },

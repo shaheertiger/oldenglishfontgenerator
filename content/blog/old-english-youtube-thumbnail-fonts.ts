@@ -26,7 +26,7 @@ const post: BlogPost = {
       ["Nosifer", "Dripping horror", "400", "337", "Horror and Halloween videos where gothic alone feels too calm"],
       ["Rye", "Western wood type", "400", "271", "Outdoor, cowboy or whiskey content that wants old-fashioned without gothic"],
     ]},
-    { type: "p", text: "Heavier isn't always better: [Metal Mania](/fonts/metal-mania) and the spikier display faces look great as a channel logo but can be hard to read as a two-word title. Try them on the [free fonts page](/fonts) with your own words before committing." },
+    { type: "p", text: "Heavier isn't always better: Metal Mania and the spikier display faces look great as a channel logo but can be hard to read as a two-word title. Try them on the [free fonts page](/fonts) with your own words before committing." },
     { type: "h2", text: "What size and format should a YouTube thumbnail be?" },
     { type: "p", text: "Per YouTube's help pages at the time of writing, upload thumbnails at 1280 × 720 pixels (16:9), at least 640 pixels wide, as JPG, PNG or GIF, and under 2 MB. Check the current help page before a big redesign, as limits change." },
     { type: "table", head: ["Setting", "Value", "Why it matters for blackletter"], rows: [
@@ -42,10 +42,10 @@ const post: BlogPost = {
       "**Capitalise only the first letter.** Blackletter capitals are ornate; a word in all capitals reads as a texture, not a word.",
       "**Put the text on the calmer side of the image.** Faces and bright areas compete with dense letter shapes.",
       "**Test it small.** Zoom out until the thumbnail is about phone size, or view it on your own phone, and ask someone who hasn't seen it to read it.",
-      "**Pair it.** If you need a second line, set it in a plain sans-serif; our [font pairing guide](/blog/blackletter-font-pairings) has combinations that work.",
+      "**Pair it.** If you need a second line, set it in a plain sans-serif; our font pairing guide has combinations that work.",
     ]},
     { type: "h2", text: "Do I need a font generator for thumbnails?" },
-    { type: "p", text: "Not usually. A thumbnail is an image, so any installed font works in your editor, and installed fonts render more cleanly than copy-paste Unicode letters. If you don't have an editor that loads fonts, type your words into [Old English text to image](/old-english-text-to-image) and download a transparent PNG to drop onto your frame. For the title, description and comments, where you can't choose a font, use the [Old English font for YouTube](/old-english-font-youtube) generator instead." },
+    { type: "p", text: "Not usually. A thumbnail is an image, so any installed font works in your editor, and installed fonts render more cleanly than copy-paste Unicode letters. If you don't have an editor that loads fonts, type your words into [Old English text to image](/old-english-text-to-image) and download a transparent PNG to drop onto your frame. For the title, description and comments, where you can't choose a font, use the Old English font for YouTube generator instead." },
     { type: "faq", items: [
       { q: "What is the best Old English font for YouTube thumbnails?", a: "UnifrakturCook for a traditional look and Pirata One for maximum readability. Both are free, heavy enough to survive scaling, and allowed on monetised channels under the SIL Open Font License." },
       { q: "Can I use these fonts on a monetised channel?", a: "Yes. All eight are under the SIL Open Font License, which allows commercial use, including thumbnails and channel art." },

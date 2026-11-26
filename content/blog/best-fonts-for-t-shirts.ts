@@ -33,7 +33,7 @@ const post: BlogPost = {
       ["Classic, elegant, monogram", "Cinzel Decorative", "Roman capitals", "400, 700, 900", "353"],
       ["Halloween, horror events", "Creepster", "Dripping horror", "400", "230"],
     ]},
-    { type: "p", text: "Great Vibes is the delicate one in this list: print it large, or by DTG or DTF rather than vinyl, so its thin joins survive. Starting a brand rather than a one-off shirt? The [clothing brand fonts](/fonts/clothing-brand) page compares the streetwear options and has a table of what each print method (screen, DTF, embroidery, vinyl) can handle. Every font also has a live preview on the [free fonts page](/fonts)." },
+    { type: "p", text: "Great Vibes is the delicate one in this list: print it large, or by DTG or DTF rather than vinyl, so its thin joins survive. Starting a brand rather than a one-off shirt? The clothing brand fonts page compares the streetwear options and has a table of what each print method (screen, DTF, embroidery, vinyl) can handle. Every font also has a live preview on the [free fonts page](/fonts)." },
     { type: "h2", text: "How big should text be on a t-shirt?" },
     { type: "p", text: "Print areas vary by printer and shirt size, so treat these as common starting points rather than rules, and confirm with your print shop." },
     { type: "table", head: ["Placement", "Typical width", "Font tip"], rows: [
@@ -44,14 +44,14 @@ const post: BlogPost = {
     ]},
     { type: "p", text: "Send artwork as vector (SVG, PDF or AI) or as a PNG at 300 DPI at the final print size. Outline the text, or include the font file, so the printer doesn't substitute something else. Blackletter is harder to read than plain type at the same size, so size it up; our [font size guide](/blog/old-english-font-size-guide) has minimums by use." },
     { type: "h2", text: "Can I use Old English Text MT on shirts I sell?" },
-    { type: "p", text: "Not automatically. Old English Text MT is a commercial Monotype font, and whether your copy covers merchandise depends on the licence that came with it. The free fonts above avoid the question. Our article on [commercial use of Old English fonts](/blog/is-old-english-font-free-commercial-use) explains the four common cases. Copy-and-paste Unicode text from a generator isn't a font at all, so for a shirt, export real type instead with [Old English text to image](/old-english-text-to-image)." },
+    { type: "p", text: "Not automatically. Old English Text MT is a commercial Monotype font, and whether your copy covers merchandise depends on the licence that came with it. The free fonts above avoid the question. Our article on commercial use of Old English fonts explains the four common cases. Copy-and-paste Unicode text from a generator isn't a font at all, so for a shirt, export real type instead with [Old English text to image](/old-english-text-to-image)." },
     { type: "h2", text: "How do I pair fonts on a shirt?" },
     { type: "ul", items: [
       "**One decorative font per shirt.** Blackletter or script for the main word, then a plain sans-serif or the typewriter face for the small line.",
       "**Contrast size, not just style.** Make the main word clearly larger, so the eye knows where to start.",
       "**Match the era.** Old English with a varsity number reads as streetwear; Old English with a delicate script reads as a wedding favour.",
     ]},
-    { type: "p", text: "Our [font pairing guide](/blog/blackletter-font-pairings) lists combinations that work with blackletter." },
+    { type: "p", text: "Our font pairing guide lists combinations that work with blackletter." },
     { type: "faq", items: [
       { q: "What is the most popular font for t-shirts?", a: "There's no single answer, but bold, simple fonts dominate: varsity block letters for team and college shirts, heavy Old English for streetwear, and plain bold sans-serifs for slogans. Choose by the style of shirt rather than by popularity." },
       { q: "Are free fonts allowed on shirts I sell?", a: "Fonts under the SIL Open Font License, such as all 10 here, can be used on merchandise you sell. What you can't do is sell the font file itself. Fonts labelled free for personal use only are not allowed on products for sale." },

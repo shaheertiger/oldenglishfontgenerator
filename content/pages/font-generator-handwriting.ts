@@ -39,7 +39,7 @@ const page: PageContent = {
               ["Bold Script", "Thick brush lettering", "Headlines, bios, short captions"],
               ["Fine Line Spaced Script", "Light, airy handwriting", "Aesthetic bios and quotes"],
               ["Italic", "Neat slanted print", "Longer lines that still need to be readable"],
-              ["Blackletter Cursive", "Old pen-and-ink hand", "Vintage, gothic or tattoo-style text. More on the [Old English cursive](/old-english-cursive) page"],
+              ["Blackletter Cursive", "Old pen-and-ink hand", "Vintage, gothic or tattoo-style text. More on the [Old English cursive](/font-generator/old-cursive) page"],
             ],
           },
         },
@@ -48,7 +48,7 @@ const page: PageContent = {
     {
       h2: "Handwriting text vs. a handwriting font",
       blocks: [
-        { p: "This tool gives you characters, not a font. That is why it works in apps that never let you change fonts, like Instagram and TikTok. The trade-off is that you get a few fixed styles and no lowercase in some of them. If you are designing something to print, such as an invitation or a shirt, install a real handwriting or calligraphy font instead; our [calligraphy fonts](/fonts/calligraphy) page lists free ones." },
+        { p: "This tool gives you characters, not a font. That is why it pastes into apps that never let you change fonts. The trade-off is that you get a few fixed styles and no lowercase in some of them. If you are designing something to print, such as an invitation or a shirt, install a real handwriting or calligraphy font instead; our [calligraphy fonts](/fonts/calligraphy) page lists free ones." },
       ],
     },
   ],
@@ -56,12 +56,12 @@ const page: PageContent = {
     "Script styles use Unicode's Mathematical Script (U+1D49C–U+1D4CF) and Bold Script (U+1D4D0–U+1D503) letters, with the older Letterlike Symbols forms ℬ ℰ ℱ ℋ ℐ ℒ ℳ ℛ ℯ ℊ ℴ filling the gaps. Italic uses Mathematical Italic.",
   related: {
     heading: "More lettering tools",
-    hrefs: ["/old-english-cursive", "/", "/font-generator/old-english", "/tattoo-font-generator", "/old-english-name-generator", "/fonts/calligraphy"],
+    hrefs: ["/font-generator/old-cursive", "/", "/font-generator/old-english", "/tattoo-font-generator", "/old-english-name-generator", "/fonts/calligraphy"],
   },
   faq: [
     { q: "How do I make my text look handwritten?", a: "Type it in the box above and copy a script or cursive style. It pastes as handwritten-looking text anywhere." },
     { q: "Can I use this as a signature?", a: "It works as a styled name in emails and profiles, but it is not a legal e-signature. Use an e-signature service for documents." },
-    { q: "Does handwriting text work on Instagram?", a: "Yes, in your bio, name field, captions and comments. Not in the @username." },
+    { q: "Where can I paste handwriting text?", a: "Anywhere you can type: it is plain Unicode text. Username fields are often stricter and may reject it." },
     { q: "Why do some letters look different from the rest?", a: "A few script capitals were added to Unicode earlier than the others, so your phone may draw them from a different font." },
   ],
 };

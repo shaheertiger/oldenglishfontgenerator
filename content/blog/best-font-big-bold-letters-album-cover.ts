@@ -26,7 +26,7 @@ const post: BlogPost = {
       ["Manufacturing Consent", "Modern sharp blackletter", "400", "355", "Clean, aggressive wordmarks; electronic and drill"],
       ["Grenze Gotisch", "Gothic with roman bones", "100–900 (variable)", "1,111", "One family for a bold title and a thin tracklist"],
       ["Germania One", "Condensed, straight-cut", "400", "282", "Tall, narrow layouts and stacked words"],
-      ["[Metal Mania](/fonts/metal-mania)", "Spiky metal logo", "400", "268", "Metal and hardcore; one word only"],
+      ["Metal Mania", "Spiky metal logo", "400", "268", "Metal and hardcore; one word only"],
       ["New Rocker", "Rock-poster blackletter", "400", "442", "Rock, rockabilly, tour-poster energy"],
       ["[Pirata One](/fonts/pirata-one)", "Simplified, open blackletter", "400", "386", "Small sizes, subtitles and long album names"],
       ["Graduate", "Varsity slab capitals", "400", "408", "When gothic is wrong: sports, soul, retro collegiate"],
@@ -34,7 +34,7 @@ const post: BlogPost = {
     { type: "h2", text: "Which one should I pick for my genre?" },
     { type: "p", text: "Genre cues are habits, not rules, but they help a listener place a record in a second." },
     { type: "ul", items: [
-      "**Rap and West Coast:** UnifrakturCook, or Manufacturing Consent for a newer look. Pair the title with a script for a featured artist name; the [gangster font generator](/gangster-font-generator) shows that mix as text.",
+      "**Rap and West Coast:** UnifrakturCook, or Manufacturing Consent for a newer look. Pair the title with a script for a featured artist name; the [gangster font generator](/font-generator/gangster) shows that mix as text.",
       "**Metal:** Metal Mania for the spikes, or Germania One if the logo is drawn separately and the title needs to stay readable. The [metal font generator](/metal-font-generator) covers band-style text.",
       "**Punk and hardcore:** UnifrakturCook set tight and slightly rough (print it, scan it, use the scan).",
       "**Indie, folk, ambient:** Grenze Gotisch at a light weight feels old-book rather than tough.",

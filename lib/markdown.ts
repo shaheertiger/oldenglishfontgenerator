@@ -16,7 +16,7 @@ import { SITE_URL } from "@/lib/site";
 import { toolLinks } from "@/lib/site";
 import { CLUSTERS, getCluster, home } from "@/content/pages";
 import type { Block, PageContent } from "@/content/pages/types";
-import { LETTERS, LETTER_BY_L, codepoints, hex } from "@/lib/letters";
+import * as DF from "@/lib/different-fonts";
 import { SYMBOL_GROUPS } from "@/lib/symbols";
 import { APP_BY_SLUG, APP_GUIDES, FONT_PAGES, FONT_PAGE_BY_STYLE } from "@/lib/fontpages";
 import { FONT_BY_FAMILY, REAL_FONTS, fontsByName, specimenUrl, GROUP_LABEL } from "@/lib/realfonts";
@@ -71,7 +71,7 @@ function widget(b: Extract<Block, { widget: string }>["widget"]): string {
     case "symbols":
       return SYMBOL_GROUPS.map((g) => `- **${g.label}**: ${g.items.map(([glyph, name]) => `${glyph} (${name})`).join(", ")}`).join("\n") + "\n";
     case "letter-index":
-      return LETTERS.map((x) => `[${x.l.toUpperCase()}](${SITE_URL}/old-english-alphabet/${x.l})`).join(" · ") + "\n";
+      return DF.CHARS.filter((c) => !DF.isDigit(c)).map((c) => `[${c.toUpperCase()}](${SITE_URL}/different-fonts/${c})`).join(" · ") + "\n";
   }
 }
 
@@ -83,6 +83,12 @@ function block(b: Block): string {
       .map((r) => `| ${r.map(abs).join(" | ")} |`)
       .join("\n")}\n`;
   if ("cards" in b) return `${b.cards.map((c) => `- **${c.h}**: ${abs(c.p)}`).join("\n")}\n`;
+  if ("chart" in b)
+    return b.chart.styles
+      .map((id) => ALL_STYLES[id])
+      .filter(Boolean)
+      .map((st) => `- **${st.name}**: ${st.transform("ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789")}`)
+      .join("\n") + "\n";
   return widget(b.widget);
 }
 
@@ -165,21 +171,22 @@ async function readStatic(segments: string[]): Promise<string | null> {
  * (["index"] for the homepage, ["old-english-alphabet"], ["blog", "slug"], ...).
  * Returns null when the page has no twin.
  */
-function letterPage(l: string): string | null {
-  const info = LETTER_BY_L[l];
-  if (!info) return null;
-  const U = l.toUpperCase();
-  const cp = codepoints(l);
-  const fr = ALL_STYLES["fraktur"].transform;
-  const bfr = ALL_STYLES["bold-fraktur"].transform;
+function differentFontsPage(c: string): string | null {
+  if (!DF.CHARS.includes(c)) return null;
+  const m = DF.meta(c);
+  const i = DF.info(c);
+  const digit = DF.isDigit(c);
+  const U = c.toUpperCase();
+  const list = (ch: string) => DF.forms(ch).map((f) => `- ${f.style}: ${f.glyph}`).join("\n");
   return join(
-    header(`Letter ${U} in Old English Fonts`, `The Old English (Fraktur) letter ${U}: copyable forms, how it is built and what it is confused with.`, `/old-english-alphabet/${l}`),
-    `| Form | Character | Code point |\n| --- | --- | --- |\n| Fraktur capital | ${fr(U)} | ${hex(cp.upper)}${cp.letterlike ? " (Letterlike Symbols)" : ""} |\n| Fraktur lowercase | ${fr(l)} | ${hex(cp.lower)} |\n| Bold Fraktur capital | ${bfr(U)} | ${hex(cp.boldUpper)} |\n| Bold Fraktur lowercase | ${bfr(l)} | ${hex(cp.boldLower)} |\n`,
-    `## How the Old English ${U} is built\n\n${info.shape}\n`,
-    `## Easily confused with\n\n${info.confused}\n`,
-    `## Where people use it\n\n${info.use}\n`,
-    `## Example words\n\n${info.words.map((w) => `- ${w}: ${bfr(w)}`).join("\n")}\n`,
-    `[Full Old English alphabet](${SITE_URL}/old-english-alphabet)\n`
+    header(m.h1, m.description, `/different-fonts/${c}`),
+    `${m.answer}\n`,
+    digit ? `## The number ${c}\n\n${list(c)}\n` : `## Capital ${U}\n\n${list(U)}\n\n## Lowercase ${c}\n\n${list(c)}\n`,
+    `## Shape\n\n${i.shape}\n\n${i.use}\n`,
+    `## History\n\n${DF.history(c)}\n`,
+    `## Unicode forms\n\n${DF.facts(c).join("\n\n")}\n\n${mdTable(["Alphabet", "Character", "Code point"], DF.codeTable(digit ? c : U))}`,
+    `## Frequently Asked Questions\n\n${DF.faq(c).map((f) => `### ${f.q}\n\n${f.a}`).join("\n\n")}\n`,
+    `[All letters and numbers in different fonts](${SITE_URL}/different-fonts)\n`
   );
 }
 
@@ -243,7 +250,7 @@ function sitemapMd(): string {
         return `- [${p.h1}](${SITE_URL}${path}) ([markdown](${SITE_URL}${md})): ${p.description}`;
       })
       .join("\n")}\n`,
-    `## Old English letters\n\n${LETTERS.map((x) => `- [Letter ${x.l.toUpperCase()}](${SITE_URL}/old-english-alphabet/${x.l}) ([markdown](${SITE_URL}/old-english-alphabet/${x.l}.md))`).join("\n")}\n`,
+    `## Letters and numbers in different fonts\n\n${DF.CHARS.map((c) => `- [${c.toUpperCase()} in different fonts](${SITE_URL}/different-fonts/${c}) ([markdown](${SITE_URL}/different-fonts/${c}.md))`).join("\n")}\n`,
     `## Font collections and app guides\n\n${[
       { t: "All free fonts", u: "/fonts" },
       ...FONT_PAGES.map((p) => ({ t: p.h1, u: `/fonts/${p.style}` })),
@@ -261,15 +268,17 @@ function sitemapMd(): string {
 export async function renderMarkdown(segments: string[]): Promise<string | null> {
   const [first, second, ...rest] = segments;
   if (first === "fonts" && second === "old-english" && rest.length === 1) return appPage(rest[0]);
+  if (rest.length === 1) {
+    const deep = getCluster(`${first}/${second}/${rest[0]}`);
+    if (deep) return toolPage(deep);
+  }
   if (rest.length === 0) {
     if (second !== undefined) {
       if (first === "blog") return blogPost(second);
-      if (first === "old-english-alphabet") return letterPage(second);
+      if (first === "different-fonts") return differentFontsPage(second);
       if (first === "fonts") return fontsPage(second);
-      if (first === "font-generator") {
-        const c = getCluster(`font-generator/${second}`);
-        if (c) return toolPage(c);
-      }
+      const nested = getCluster(`${first}/${second}`);
+      if (nested) return toolPage(nested);
     } else {
       if (first === "index") return toolPage(home);
       if (first === "blog") return blogIndex();

@@ -31,7 +31,7 @@ const post: BlogPost = {
 
     { type: "h2", text: "When did the long s disappear?" },
     { type: "p", text: "In English it faded over a few decades around 1800. Reformist printers began dropping it in the 1780s and 1790s, and by the early 19th century most new books and newspapers used the round s everywhere. The Times of London is often cited as one of the papers that switched in 1803. Reprints and some legal and church printing held on longer." },
-    { type: "p", text: "German printing kept it much longer because it kept Fraktur. Books and newspapers set in Fraktur used ſ into the 1930s, until the 1941 order that pushed German printing over to roman type, which you can read about in [our history of the 1941 Fraktur ban](/blog/blackletter-history-1941-ban). Roman (Antiqua) German texts had already mostly dropped it." },
+    { type: "p", text: "German printing kept it much longer because it kept Fraktur. Books and newspapers set in Fraktur used ſ into the 1930s, until the 1941 order that pushed German printing over to roman type, which you can read about in our history of the 1941 Fraktur ban. Roman (Antiqua) German texts had already mostly dropped it." },
 
     { type: "h2", text: "Which free fonts include the long s?" },
     { type: "p", text: "We opened the font file of every open-licence font on this site and checked whether it contains U+017F. 9 of the 41 do:" },

@@ -14,7 +14,7 @@ const post: BlogPost = {
     { type: "p", text: "No, blackletter is not offensive in itself. It was the normal printing type for German-speaking readers for about 400 years, it's on newspaper mastheads, diplomas and beer labels, and the Nazi regime, often assumed to have owned the style, actually banned Fraktur on 3 January 1941. Context decides how it reads: the same letters signal tradition on a bakery sign and something very different next to extremist symbols." },
 
     { type: "h2", text: "Where did blackletter come from?" },
-    { type: "p", text: "Blackletter grew out of the Gothic book hands that scribes across Europe used from around the 12th century. When Johannes Gutenberg printed his Bible in Mainz in the 1450s, he cut type that imitated textura, the formal manuscript hand of the day. Over the next century, printers in German-speaking lands developed Schwabacher and then Fraktur, which became the standard type for books, newspapers and official documents. The [blackletter generator](/blackletter-generator) shows how the main families differ." },
+    { type: "p", text: "Blackletter grew out of the Gothic book hands that scribes across Europe used from around the 12th century. When Johannes Gutenberg printed his Bible in Mainz in the 1450s, he cut type that imitated textura, the formal manuscript hand of the day. Over the next century, printers in German-speaking lands developed Schwabacher and then Fraktur, which became the standard type for books, newspapers and official documents. The [blackletter generator](/font-generator/blackletter) shows how the main families differ." },
     { type: "p", text: "Most of Europe moved to roman type (Antiqua) during the 16th and 17th centuries. German-speaking printing kept Fraktur for everyday text, while using Antiqua for Latin and many scientific works. By the 19th century, which typeface to use had become a cultural argument, known in German as the Antiqua–Fraktur dispute." },
 
     { type: "h2", text: "What happened to Fraktur in Nazi Germany?" },
@@ -41,7 +41,7 @@ const post: BlogPost = {
       "**Newspapers:** many mastheads use blackletter, from American dailies to the Frankfurter Allgemeine Zeitung. See [newspaper masthead fonts](/newspaper-masthead-font).",
       "**Diplomas and certificates:** school names are often set in a blackletter such as Old English Text MT. See the [diploma font guide](/diploma-font).",
       "**Beer, bread and wine labels:** a signal of tradition, especially in German-speaking regions.",
-      "**Chicano and West Coast lettering:** a central part of an art tradition built in Mexican-American communities. See [Chicano fonts](/fonts/chicano).",
+      "**Chicano and West Coast lettering:** a central part of an art tradition built in Mexican-American communities. See Chicano fonts.",
       "**Hip hop and streetwear:** names and logos in Old English lettering have been common for decades.",
       "**Metal and goth music:** band logos and album art. See the [metal font generator](/metal-font-generator).",
       "**Tattoos:** names, dates and phrases in blackletter remain one of the most requested lettering styles.",
@@ -62,7 +62,7 @@ const post: BlogPost = {
       { q: "Why is blackletter used on diplomas and newspapers?", a: "It signals age, authority and tradition, because it was the type of early printing and official documents." },
       { q: "Is Fraktur still used in Germany?", a: "Rarely for running text, but it's common on signs, mastheads, labels and traditional branding." },
     ] },
-    { type: "cta", text: "Compare textura, rotunda and Fraktur side by side in the", href: "/blackletter-generator", label: "blackletter generator" },
+    { type: "cta", text: "Compare textura, rotunda and Fraktur side by side in the", href: "/font-generator/blackletter", label: "blackletter generator" },
   ],
 };
 

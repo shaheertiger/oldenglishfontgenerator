@@ -26,8 +26,8 @@ const page: FontPage = {
       blocks: [
         { ul: [
           "**Short, bold titles.** One or two words: a shop name, an album title, a team name.",
-          "**Vinyl and cutting machines.** The thick strokes weed more easily than thin blackletter. The [Cricut guide](/fonts/old-english/cricut) covers installing it.",
-          "**Tattoo references.** Its weight resembles the heavy Old English lettering most people ask for; preview it on skin with the [Old English tattoo font](/old-english-tattoo-font) tool.",
+          "**Vinyl and cutting machines.** The thick strokes weed more easily than thin blackletter. The Cricut guide covers installing it.",
+          "**Tattoo references.** Its weight resembles the heavy Old English lettering most people ask for; preview it on skin with the [Old English tattoo font](/font-generator/old-english-tattoo) tool.",
           "**German text.** It draws ß, umlauts and the long s, so historical German spellings set correctly.",
         ] },
         { p: "It is less suited to paragraphs. At body size the counters of e, a and o close up and words become hard to read; switch to UnifrakturMaguntia or Pirata One there." },
@@ -42,7 +42,7 @@ const page: FontPage = {
           ["Long s (ſ)", "Yes", "Yes"],
           ["Best size", "Large display", "Headings and short lines"],
         ] } },
-        { p: "Both come from the same project and pair well: Cook for the main word, Maguntia for a subtitle. More options are in the [Old English fonts](/fonts/old-english) and [gothic fonts](/fonts/gothic) collections." },
+        { p: "Both come from the same project and pair well: Cook for the main word, Maguntia for a subtitle. More options are in the [Old English fonts](/fonts/old-english) and gothic fonts collections." },
       ],
     },
   ],

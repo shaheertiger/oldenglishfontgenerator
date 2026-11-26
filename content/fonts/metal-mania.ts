@@ -37,7 +37,7 @@ const page: FontPage = {
           "**Add symmetry.** Many logos stretch the first and last letters into long spikes; draw these after converting the text to outlines.",
           "**Pair it with a readable font** such as Pirata One for album titles and dates.",
         ] },
-        { p: "For copy-paste band names on Instagram, Discord or a Bandcamp bio, use the [metal font generator](/metal-font-generator). More downloadable options are in the [gothic fonts](/fonts/gothic) and [Halloween fonts](/fonts/halloween) collections." },
+        { p: "For copy-paste band names on Instagram, Discord or a Bandcamp bio, use the [metal font generator](/metal-font-generator). More downloadable options are in the gothic fonts and Halloween fonts collections." },
       ],
     },
   ],

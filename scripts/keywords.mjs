@@ -26,6 +26,16 @@ const opt = (name, def) => {
 };
 const flag = (name) => args.includes(`--${name}`);
 
+// Daily page batches are switched off for good (docs/fix-2026-11.md, Nov 26 2026):
+// the Nov 2–19 batches earned no Bing impressions and look like scaled content.
+// This script can still show keyword data, but it no longer saves daily picks
+// or claims keywords for new pages. New pages need 50+ Bing impressions a month,
+// no owner page and a genuinely different output (max 2 a month).
+if (flag("save") || flag("use")) {
+  console.error("Daily page batches are disabled (docs/fix-2026-11.md). Improve an owner page instead: npm run bing");
+  process.exit(1);
+}
+
 // ---------- topic filter ----------
 // On-topic: blackletter, Old English and the uses this site serves.
 const TOPIC = new RegExp(

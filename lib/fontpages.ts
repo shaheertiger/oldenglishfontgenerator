@@ -4,6 +4,7 @@
 import type { Block } from "@/content/pages/types";
 import { FONT_PAGE_FILES } from "@/content/fonts";
 import { APP_GUIDE_FILES } from "@/content/apps";
+import { isServed } from "@/lib/redirects.mjs";
 
 export type FontPage = {
   style: string;
@@ -55,7 +56,7 @@ const CORE_FONT_PAGES: FontPage[] = [
             "**Posters and band names:** New Rocker or Manufacturing Consent.",
             "**Games and pixel art:** Jacquard 24.",
           ] },
-          { p: "Want the font inside a specific app? See the step-by-step guides for [Google Docs](/fonts/old-english/google-docs), [Microsoft Word](/fonts/old-english/word), [Canva](/fonts/old-english/canva) and [Cricut](/fonts/old-english/cricut)." },
+          { p: "Want the font inside a specific app? See the step-by-step guides for Google Docs, Microsoft Word, [Canva](/fonts/old-english/canva) and Cricut." },
         ],
       },
       {
@@ -112,7 +113,7 @@ const CORE_FONT_PAGES: FontPage[] = [
             ["Gothic romance, goth fashion", "Grenze Gotisch, Fruktur", "Elegant contrast; Grenze also comes in light weights."],
             ["Retro games", "Jacquard 12", "Blackletter on a pixel grid."],
           ] } },
-          { p: "Want to add crosses, daggers or bats around the name? Copy them from the [gothic symbols](/gothic-symbols) page, or style the text instantly with the [gothic font generator](/gothic-font-generator)." },
+          { p: "Want to add crosses, daggers or bats around the name? Copy them from the [gothic symbols](/symbols) page, or style the text instantly with the [gothic font generator](/font-generator/gothic-letters)." },
         ],
       },
     ],
@@ -157,7 +158,7 @@ const CORE_FONT_PAGES: FontPage[] = [
             ["Fraktur", "16th–20th century", "UnifrakturMaguntia, UnifrakturCook, Fruktur"],
             ["Modern blackletter", "20th century onwards", "Pirata One, Grenze Gotisch, Manufacturing Consent"],
           ] } },
-          { p: "For a game set in the early Middle Ages, uncial is more accurate than blackletter. For anything that should feel like a printed Bible or a German beer label, choose textura or Fraktur. The [blackletter generator](/blackletter-generator) explains the differences in more detail." },
+          { p: "For a game set in the early Middle Ages, uncial is more accurate than blackletter. For anything that should feel like a printed Bible or a German beer label, choose textura or Fraktur. The [blackletter generator](/font-generator/blackletter) explains the differences in more detail." },
         ],
       },
       {
@@ -333,8 +334,9 @@ const CORE_APP_GUIDES: AppGuide[] = [
   },
 ];
 
-export const FONT_PAGES: FontPage[] = [...CORE_FONT_PAGES, ...FONT_PAGE_FILES.map((x) => x.page)];
-export const APP_GUIDES: AppGuide[] = [...CORE_APP_GUIDES, ...APP_GUIDE_FILES.map((x) => x.guide)];
+// Pages 410'd or redirected in lib/redirects.mjs are dropped here (their copy files stay).
+export const FONT_PAGES: FontPage[] = [...CORE_FONT_PAGES, ...FONT_PAGE_FILES.map((x) => x.page)].filter((p) => isServed(`/fonts/${p.style}`));
+export const APP_GUIDES: AppGuide[] = [...CORE_APP_GUIDES, ...APP_GUIDE_FILES.map((x) => x.guide)].filter((a) => isServed(`/fonts/old-english/${a.app}`));
 
 /** Source file holding a font page's copy (for its sitemap lastmod). */
 export function fontPageSource(style: string): string {

@@ -8,7 +8,7 @@ import Updated from "@/components/Updated";
 import JsonLd from "@/components/JsonLd";
 import RichText from "@/components/RichText";
 import { SiteHeader, SiteFooter, Breadcrumb } from "@/components/SiteChrome";
-import type { Block, PageContent, Widget } from "@/content/pages/types";
+import type { Block, ChartSet, PageContent, Widget } from "@/content/pages/types";
 import { ALL_STYLES, ALPHABET_LOWER, ALPHABET_UPPER } from "@/lib/fonts";
 import { appLd, breadcrumbLd, faqLd, orgLd, websiteLd, abs } from "@/lib/seo";
 import { toolLinks } from "@/lib/site";
@@ -111,7 +111,7 @@ function renderWidget(w: Widget, p: PageContent) {
         <ul className="letter-nav">
           {LETTERS.map((x) => (
             <li key={x.l}>
-              <Link href={`/old-english-alphabet/${x.l}`} aria-label={`Old English letter ${x.l.toUpperCase()}`}>
+              <Link href={`/different-fonts/${x.l}`} aria-label={`${x.l.toUpperCase()} in different fonts`}>
                 {x.l.toUpperCase()}
               </Link>
             </li>
@@ -141,7 +141,26 @@ export function StatsTable({ head, rows }: { head: string[]; rows: string[][] })
   );
 }
 
+const CHART_CHARS: Record<ChartSet, [string, string[]]> = {
+  upper: ["A–Z", ALPHABET_UPPER],
+  lower: ["a–z", ALPHABET_LOWER],
+  digits: ["0–9", "0123456789".split("")],
+  punct: ["symbols", [..."&!?.,'-@#"]],
+};
+
+function chartGroups(styles: string[], sets: ChartSet[]): CharGroup[] {
+  return styles.flatMap((id) => {
+    const s = ALL_STYLES[id];
+    if (!s) return [];
+    return sets.map((set) => {
+      const [label, chars] = CHART_CHARS[set];
+      return { label: `${s.name} ${label}`, cells: chars.map((c) => ({ glyph: s.transform(c), hint: `${s.name} ${c}` })) };
+    });
+  });
+}
+
 export function renderBlock(b: Block, i: number, p?: PageContent) {
+  if ("chart" in b) return <CharGrid key={i} groups={chartGroups(b.chart.styles, b.chart.sets)} />;
   if ("p" in b) return <p key={i}><RichText text={b.p} /></p>;
   if ("ul" in b)
     return (
@@ -184,8 +203,14 @@ export function renderBlock(b: Block, i: number, p?: PageContent) {
   return p ? <div key={i}>{renderWidget(b.widget, p)}</div> : null;
 }
 
+const UI = {
+  en: { built: "How we built this style", back: "Need every style in one place? Go back to the", home: "Old English font generator", faq: "Frequently Asked Questions" },
+  es: { built: "Cómo se crearon estos estilos", back: "¿Quieres todos los estilos juntos? Vuelve al", home: "generador de letras Old English", faq: "Preguntas frecuentes" },
+};
+
 export default function PageView({ page, home = false }: { page: PageContent; home?: boolean }) {
   const path = pagePath(page);
+  const ui = UI[page.lang ?? "en"];
   const related = toolLinks(page.related.hrefs);
   const ld: object[] = [
     appLd(page.h1, path, page.description, lastModified(sourceFile(page))),
@@ -197,7 +222,7 @@ export default function PageView({ page, home = false }: { page: PageContent; ho
   return (
     <>
       <SiteHeader />
-      <main>
+      <main lang={page.lang}>
         <div className="container">
           {!home && <Breadcrumb current={page.crumb} />}
           <section className="hero" aria-labelledby="h1">
@@ -242,7 +267,7 @@ export default function PageView({ page, home = false }: { page: PageContent; ho
         {page.built && (
           <section className="section">
             <div className="container">
-              <h2>How we built this style</h2>
+              <h2>{ui.built}</h2>
               <p className="note"><RichText text={page.built} /></p>
             </div>
           </section>
@@ -263,14 +288,14 @@ export default function PageView({ page, home = false }: { page: PageContent; ho
             </ul>
             {!home && (
               <p>
-                Need every style in one place? Go back to the{" "}
-                <Link href="/">Old English font generator</Link>.
+                {ui.back}{" "}
+                <Link href={page.lang === "es" ? "/es" : "/"}>{ui.home}</Link>.
               </p>
             )}
           </div>
         </section>
 
-        <Faq items={page.faq} />
+        <Faq items={page.faq} heading={ui.faq} />
       </main>
       <SiteFooter />
       <JsonLd data={ld} />

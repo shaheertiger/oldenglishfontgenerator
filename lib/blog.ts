@@ -1,4 +1,5 @@
 import { BLOG_FILES } from "@/content/blog";
+import { isServed } from "@/lib/redirects.mjs";
 
 export type BlogBlock =
   | { type: "p"; text: string }
@@ -50,7 +51,7 @@ const CORE_POSTS: BlogPost[] = [
       { type: "h2", text: "So what should you call yours?" },
       { type: "p", text: "If you're talking to a typographer, say blackletter. If you're talking to most other people, gothic and Old English are fine — they're casual umbrella terms. If you mean specifically the German-print style with the broken curves, fraktur is the right word. And if you're being unusually precise about a medieval manuscript script, name the subgenre." },
       { type: "p", text: "For our generator, the styles labelled 'Old English' and 'Blackletter' are technically Unicode fraktur, because that's the only blackletter subgenre Unicode actually covers. The other subgenres don't have dedicated codepoints — they only exist as real installed fonts." },
-      { type: "cta", text: "Compare the look of each family in the", href: "/blackletter-generator", label: "blackletter generator" },
+      { type: "cta", text: "Compare the look of each family in the", href: "/font-generator/blackletter", label: "blackletter generator" },
     ],
   },
   {
@@ -88,7 +89,7 @@ const CORE_POSTS: BlogPost[] = [
       { type: "p", text: "Some Unicode characters count as two units against the 150-character limit. Watch the counter as you paste. If you're near the cap, the heavier styles (outline, bubble) will eat your budget fastest." },
       { type: "h2", text: "What this costs you in search" },
       { type: "p", text: "Instagram indexes the underlying characters, not their visual style. A bio that's 100% Unicode 'fonts' is invisible to keyword search. The pattern most growth-focused accounts use: one styled line for personality, plus 1–2 plain-text lines with the keywords people would actually search to find you." },
-      { type: "cta", text: "Check your bio against the 150-character limit with the", href: "/old-english-font-instagram", label: "Old English Instagram font tool" },
+      { type: "cta", text: "Check your bio against the 150-character limit with the", href: "/font-generator/old-english-ig", label: "Old English Instagram font tool" },
     ],
   },
   {
@@ -124,7 +125,7 @@ const CORE_POSTS: BlogPost[] = [
       ]},
       { type: "h2", text: "A note on legibility" },
       { type: "p", text: "Blackletter is famously hard to read at a glance, especially the textura subgenre. If the words are personally meaningful and you don't care whether anyone else can read them quickly, that's fine. If they need to be readable to others — say, a memorial date — pick a more open subgenre like schwabacher, or use blackletter only for one prominent word and keep the rest in a cleaner script." },
-      { type: "cta", text: "Preview your wording on a skin mockup with the", href: "/old-english-tattoo-font", label: "Old English tattoo font tool" },
+      { type: "cta", text: "Preview your wording on a skin mockup with the", href: "/font-generator/old-english-tattoo", label: "Old English tattoo font tool" },
     ],
   },
   {
@@ -193,12 +194,13 @@ const CORE_POSTS: BlogPost[] = [
         "If your gothic name keeps getting flagged as impersonation, you may have accidentally picked a character that visually duplicates another user's handle. Try a less common variant.",
         "Pings still work for Unicode nicknames most of the time, but some screen-reader users can't type them. Decide whether being mention-able matters more than the look.",
       ]},
-      { type: "cta", text: "Test display names against the 32-character limit with the", href: "/old-english-font-discord", label: "Old English Discord name tool" },
+      { type: "cta", text: "Make a gothic display name with the", href: "/font-generator/old-english", label: "Old English font generator" },
     ],
   },
 ];
 
-export const POSTS: BlogPost[] = [...CORE_POSTS, ...BLOG_FILES];
+// Posts 410'd in lib/redirects.mjs are dropped here (their copy files stay).
+export const POSTS: BlogPost[] = [...CORE_POSTS, ...BLOG_FILES].filter((p) => isServed(`/blog/${p.slug}`));
 
 export function relatedPosts(post: BlogPost, n = 3): BlogPost[] {
   const picked = (post.related ?? []).map((s) => POSTS.find((p) => p.slug === s)).filter((p): p is BlogPost => Boolean(p));

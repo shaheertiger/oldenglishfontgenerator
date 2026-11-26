@@ -61,7 +61,7 @@ const page: PageContent = {
     {
       h2: "Can I use the L symbol as a username?",
       blocks: [
-        { p: "Yes, as copy-paste text. Type L into the box and copy Bold Fraktur (𝕷), Fraktur (𝔏) or the framed version. Discord, Instagram and TikTok accept these characters in display names, but most platforms don't allow them in the @handle itself. Single-character names may be rejected for being too short, so add a word or a symbol." },
+        { p: "Yes, as copy-paste text. Type L into the box and copy Bold Fraktur (𝕷), Fraktur (𝔏) or the framed version. Display-name and bio fields are usually less strict than @handles, which often allow only plain letters and numbers; each site sets its own rules. Single-character names may be rejected for being too short, so add a word or a symbol." },
       ],
     },
     {
@@ -75,7 +75,7 @@ const page: PageContent = {
     "These styles use Unicode Mathematical Fraktur (U+1D504 block) and Bold Fraktur (U+1D56C block). Five regular Fraktur capitals, including the H in Death Note, come from the Letterlike Symbols block. Nothing here reproduces the official Death Note artwork.",
   related: {
     heading: "More gothic lettering",
-    hrefs: ["/gothic-font-generator", "/horror-font-generator", "/old-english-letters", "/old-english-font-discord", "/old-english-text-to-image", "/gothic-symbols"],
+    hrefs: ["/font-generator/gothic-letters", "/horror-font-generator", "/font-generator/old-english-letters", "/old-english-text-to-image", "/symbols"],
   },
   faq: [
     { q: "Is there an official Death Note font?", a: "No downloadable official font exists. The notebook lettering is custom artwork; fans recreate it with blackletter fonts and copy-paste styles like the ones on this page." },

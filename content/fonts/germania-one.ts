@@ -31,7 +31,7 @@ const page: FontPage = {
           ["German text with ſ and ß in paragraphs", "Grenze Gotisch", "More weights and better for running text"],
           ["Readable menus and subtitles", "Pirata One", "More open letter shapes"],
         ] } },
-        { p: "For the history of why Germany stopped using blackletter, and why the 1941 decree is often misremembered, read [blackletter's 1941 ban](/blog/blackletter-history-1941-ban). For copy-and-paste Fraktur in apps without fonts, use the [Fraktur generator](/fraktur-generator)." },
+        { p: "For the history of why Germany stopped using blackletter, and why the 1941 decree is often misremembered, read blackletter's 1941 ban. For copy-and-paste Fraktur in apps without fonts, use the [Fraktur generator](/font-generator/fraktur)." },
       ],
     },
     {
@@ -39,11 +39,11 @@ const page: FontPage = {
       blocks: [
         { ul: [
           "**Signs and labels with long words.** Condensed letters keep a word like Brauhaus or Oktoberfest on one line.",
-          "**YouTube thumbnails and posters.** Its heavy, flat strokes survive being scaled down; see our [thumbnail font guide](/blog/old-english-youtube-thumbnail-fonts).",
+          "**YouTube thumbnails and posters.** Its heavy, flat strokes survive being scaled down; see our thumbnail font guide.",
           "**Sleeves and narrow print areas** on shirts, where a wide blackletter would have to shrink.",
           "**Not for paragraphs.** At text sizes the narrow letters crowd together; switch to a plain font for anything longer than a line.",
         ] },
-        { p: "Germania One has a single regular weight and no italic, so pair it with a plain sans-serif for supporting text. More options are in the [gothic fonts](/fonts/gothic) and [clothing brand fonts](/fonts/clothing-brand) collections." },
+        { p: "Germania One has a single regular weight and no italic, so pair it with a plain sans-serif for supporting text. More options are in the gothic fonts and clothing brand fonts collections." },
       ],
     },
   ],
@@ -53,7 +53,7 @@ const page: FontPage = {
     { q: "Does Germania One have German characters?", a: "Yes. Our check of the font file found ß, ä, ö and ü, and the long s (ſ). It does not cover Central European letters such as ł, ř or ő." },
     { q: "Is Germania One a Fraktur font?", a: "It is Fraktur-inspired rather than a historical Fraktur. The letter shapes are simplified, squared and condensed for display use." },
     { q: "Does Germania One come in bold?", a: "No, Google Fonts has one regular weight, though it is already heavy. For more weights, use Grenze Gotisch." },
-    { q: "How do I use Germania One in Canva or Word?", a: "Canva includes many Google Fonts, or you can upload it with a paid plan; in Word, download it from Google Fonts and install it. Our [Canva guide](/fonts/old-english/canva) and [Word guide](/fonts/old-english/word) cover both." },
+    { q: "How do I use Germania One in Canva or Word?", a: "Canva includes many Google Fonts, or you can upload it with a paid plan; in Word, download it from Google Fonts and install it. Our [Canva guide](/fonts/old-english/canva) and Word guide cover both." },
   ],
 };
 

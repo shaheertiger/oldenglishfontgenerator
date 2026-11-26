@@ -44,7 +44,7 @@ const page: FontPage = {
           "**Newspaper nameplates and old-fashioned signage.** Compare real mastheads on the [newspaper masthead font](/newspaper-masthead-font) page.",
           "**Tattoo lettering and streetwear.** Many \"Old English\" tattoo references are Cloister Black or a close relative.",
         ] },
-        { p: "For text you can paste into a bio or caption, a font file doesn't help; use the [blackletter generator](/blackletter-generator) for Unicode text with a similar look." },
+        { p: "For text you can paste into a bio or caption, a font file doesn't help; use the [blackletter generator](/font-generator/blackletter) for Unicode text with a similar look." },
       ],
     },
   ],

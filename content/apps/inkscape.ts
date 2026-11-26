@@ -17,7 +17,7 @@ const guide: AppGuide = {
     "Keep an unconverted copy of the text on a hidden layer; once it's a path you can't edit the wording.",
     "Blackletter letters overlap at their joins. For cutting, use Path, Union on the converted letters so each word cuts as one shape.",
     "Some recent Inkscape versions also let you load fonts from extra folders in Preferences; menu names vary by version, so installing system-wide is the reliable route.",
-    "Heavier fonts such as UnifrakturCook or Pirata One have fewer hairlines that can tear when weeding vinyl. See the [Cricut guide](/fonts/old-english/cricut) for sizes.",
+    "Heavier fonts such as UnifrakturCook or Pirata One have fewer hairlines that can tear when weeding vinyl. See the Cricut guide for sizes.",
   ],
   faq: [
     { q: "Why can't Inkscape find my font?", a: "Inkscape loads fonts when it starts. Restart it after installing. On Windows, if it still doesn't appear, try installing the font for all users." },

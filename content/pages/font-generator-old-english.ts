@@ -12,25 +12,25 @@ const WORDS = ["Love", "Family", "Blessed", "Loyalty", "Faith", "Est. 2025", "Re
 const page: PageContent = {
   slug: "font-generator/old-english",
   file: "font-generator-old-english",
-  title: "Old English Font Copy & Paste – Old English Text Generator",
+  title: "Old English Font Generator: 14 Styles to Copy and Paste",
   description:
-    "Old English font copy and paste: type text and copy it in blackletter, or grab ready-made Old English words and letters. Works in Instagram, Discord, Word.",
-  h1: "Old English Font Copy and Paste",
-  crumb: "Old English Copy & Paste",
+    "Old English font generator: type once, get 14 blackletter styles, tap Copy and paste anywhere. Plus ready-made words and A–Z letters. Free, no sign-up.",
+  h1: "Old English Font Generator",
+  crumb: "Old English Font Generator",
   intro:
-    "Type anything and copy it in Old English letters, or grab a ready-made word from the tables below. Every result is plain Unicode text, so it pastes straight into Instagram, TikTok, Discord, text messages, Word and Google Docs without installing a font. For all 60+ styles and the tattoo preview, use the main [Old English font generator](/).",
+    "An Old English font is blackletter lettering, the dense, angular script of late-medieval Europe, and this Old English font generator turns anything you type into 14 blackletter styles you can copy and paste. It works as an Old English text generator for names, captions and short phrases: type below, tap Copy, paste. Nothing to install, free, no sign-up. Below the tool are ready-made Old English words and the A–Z letters, and the main [Old English text generator](/) has all 60+ styles and a tattoo preview.",
   tool: {
     styles: [
       "fraktur", "bold-fraktur", "fraktur-small-caps", "bold-fraktur-small-caps", "fraktur-caps", "bold-fraktur-caps",
       "tattoo", "gothic-framed", "fraktur-underline", "distressed", "deco-cross", "deco-crown", "frame-block", "roman-date",
     ],
     sample: "Old English Text",
-    placeholder: "Type the text you want to copy…",
+    placeholder: "Type the text you want in Old English…",
     presets: ["Old English Text", "Your Name", "Est. 1999", "Only God Can Judge Me"],
   },
-  stylesHeading: "Copy & Paste Old English Text",
+  stylesHeading: "Old English Font: 14 Styles",
   howTo: {
-    heading: "How to copy and paste Old English text",
+    heading: "How to use the Old English font generator",
     steps: [
       ["Type or pick", "Type your own words in the box, or use one of the ready-made words further down the page."],
       ["Copy", "Press Copy next to the style you like. On a phone, the Copy button is more reliable than long-pressing the text."],
@@ -39,9 +39,9 @@ const page: PageContent = {
   },
   sections: [
     {
-      h2: "Ready-made Old English words",
+      h2: "1. How do I copy and paste Old English font?",
       blocks: [
-        { p: "The most-requested words, already converted. Select one and copy it, or type your own text in the generator above." },
+        { p: "Type your text in the box above, press Copy on the style you want, then paste it. Or copy a finished word from this table; the most-requested ones are already converted." },
         {
           table: {
             head: ["Word", "Old English", "Bold Old English"],
@@ -52,49 +52,40 @@ const page: PageContent = {
       ],
     },
     {
-      h2: "Old English letters A–Z to copy",
+      h2: "2. What do the Old English font letters look like, A to Z?",
       blocks: [
-        { p: "Tap any letter to copy it on its own, for an initial, a monogram or a one-letter logo. The [Old English alphabet](/old-english-alphabet) page has a printable chart and a page for every letter." },
+        { p: "Tap any letter to copy it on its own, for an initial, a monogram or a one-letter logo. The full [Old English font alphabet](/font-generator/old-english-letters) has every letter with copy buttons and the [Old English alphabet](/old-english-alphabet) adds a printable chart and numbers." },
         { widget: "alphabet-compact" },
       ],
     },
     {
-      h2: "Where Old English text pastes correctly",
+      h2: "3. Why do some Old English letters show up as boxes?",
       blocks: [
-        {
-          table: {
-            head: ["Place", "Works?", "Notes"],
-            rows: [
-              ["Instagram bio and Name field", "Yes", "Not in the @username. See [Instagram bio ideas](/old-english-font-instagram)."],
-              ["TikTok bio and nickname", "Yes", "The @handle only accepts plain letters, numbers, dots and underscores."],
-              ["Discord display name and messages", "Yes", "The unique username does not. See [Discord names](/old-english-font-discord)."],
-              ["Word, Google Docs, Pages", "Yes", "It pastes as text. For print, install a real blackletter font from [our font list](/fonts) instead."],
-              ["Text messages and WhatsApp", "Yes", "Very old phones may show boxes."],
-              ["Game usernames", "Sometimes", "Many games strip special characters. Test it in a display name first."],
-            ],
-          },
-        },
+        { p: "A box (or a question mark) means the reader's device has no font that contains that character. The usual suspects are the five capitals ℭ ℌ ℑ ℜ ℨ, which come from an older Unicode block and are drawn from a different font, and the rarer decorated styles. If a style shows boxes for you, switch to plain Fraktur or Bold Fraktur, which have the widest font support." },
       ],
     },
     {
-      h2: "Copy and paste vs. installing an Old English font",
+      h2: "4. Old English font generator or an installed font?",
       blocks: [
-        { p: "Copy-paste text is for places where you cannot choose a font: social bios, chats and usernames. If you are designing something to print, such as a shirt, a certificate or a tattoo stencil, install a real font so the letters stay sharp at any size. [Old English Text MT and its free lookalikes](/fonts/old-english-text-mt) covers which one to use, and the [text to image tool](/old-english-text-to-image) exports a PNG if you just need a picture." },
+        { p: "Copy-paste text is for places where you cannot choose a font: bios, chats and display names. If you are designing something to print, such as a shirt, a certificate or a tattoo stencil, install a real font so the letters stay sharp at any size. [Old English Text MT and its free lookalikes](/fonts/old-english-text-mt) covers which one to use, and the [Old English text to image](/old-english-text-to-image) tool exports a PNG if you just need a picture." },
       ],
     },
   ],
   built:
-    "The letters come from Unicode's Mathematical Fraktur (U+1D504–U+1D537) and Mathematical Bold Fraktur (U+1D56C–U+1D59F) blocks, plus the five older Fraktur capitals ℭ ℌ ℑ ℜ ℨ from Letterlike Symbols. Digits are not part of Fraktur, so numbers stay plain or become Roman numerals.",
+    "The letters come from Unicode's Mathematical Fraktur (U+1D504–U+1D537) and Mathematical Bold Fraktur (U+1D56C–U+1D59F) blocks, plus the five older Fraktur capitals ℭ ℌ ℑ ℜ ℨ from Letterlike Symbols. Unicode has no Fraktur digits, so numbers become Mathematical Bold digits (U+1D7CE–U+1D7D7) or, in the Roman Numeral Date style, Roman numerals.",
   related: {
     heading: "More Old English tools",
-    hrefs: ["/", "/old-english-alphabet", "/old-english-letters", "/old-english-numbers", "/old-english-tattoo-font", "/font-generator/medieval", "/font-generator/gothic-letters", "/blackletter-generator", "/death-note-font", "/old-english-name-generator"],
+    hrefs: ["/", "/font-generator/old-english-letters", "/old-english-alphabet", "/font-generator/old-english-tattoo", "/font-generator/medieval", "/font-generator/gothic-letters", "/font-generator/blackletter", "/death-note-font", "/old-english-name-generator"],
   },
   faq: [
     { q: "How do I copy and paste Old English font?", a: "Type your text in the box, press Copy on the style you like and paste it wherever you want it. Nothing to install." },
-    { q: "Why does the pasted text change back to normal letters?", a: "Some apps and username fields strip special characters. Try the bio or display name field instead, or a different style." },
-    { q: "Can I paste Old English text into Microsoft Word?", a: "Yes, it pastes as text. Word may show a few letters in a fallback font. For a document you will print, install a blackletter font instead." },
-    { q: "Is the Old English text free to use?", a: "Yes. The characters are part of Unicode, so anyone can use them anywhere, including commercially." },
-    { q: "Is this the Old English language?", a: "No. It changes how the letters look. Your words stay in modern English." },
+    { q: "Is there a free Old English font generator?", a: "Yes, this one: it is free, needs no sign-up and runs in your browser. Type once and all 14 styles update." },
+    { q: "What is the Old English font called?", a: "The look is called blackletter, and its German form is Fraktur. The best-known installed font with this name is Old English Text MT." },
+    { q: "What is the Old English font called in Word?", a: "Old English Text MT. The [Old English Text MT](/fonts/old-english-text-mt) page covers it and free alternatives." },
+    { q: "Why does the pasted text change back to normal letters?", a: "Some fields only accept plain letters and strip special characters. Try a different field, such as a bio instead of a username." },
+    { q: "Can I use Old English text in a document?", a: "It pastes as text into documents, but a few capitals may come from a fallback font. For anything you print, install a blackletter font instead." },
+    { q: "Is Old English font text free to use commercially?", a: "Yes. The characters are part of Unicode, so anyone can use them anywhere. Installed fonts have their own licences, so check those separately." },
+    { q: "Is this the Old English language?", a: "No. It changes how the letters look; your words stay in modern English. For thee-and-thou wording try the [medieval translator](/medieval-translator)." },
   ],
 };
 

@@ -39,9 +39,9 @@ const post: BlogPost = {
       "Have an embroiderer digitize your text by hand from the font. Send them the lettering as a vector file with text converted to outlines.",
       "Auto-convert a TTF yourself, then edit the result. Heavy fonts like those above convert more cleanly than delicate ones.",
     ]},
-    { type: "p", text: "All seven fonts in the table are under the SIL Open Font License, so digitizing them and selling the embroidered products is allowed. For more garment-focused picks, see [clothing brand fonts](/fonts/clothing-brand); for cursive name ideas, see [tattoo fonts](/fonts/tattoo), which share many of the same scripts." },
+    { type: "p", text: "All seven fonts in the table are under the SIL Open Font License, so digitizing them and selling the embroidered products is allowed. For more garment-focused picks, see clothing brand fonts; for cursive name ideas, see tattoo fonts, which share many of the same scripts." },
     { type: "h2", text: "What about cursive names on towels, hats and baby blankets?" },
-    { type: "p", text: "Pick a script with a strong, consistent stroke and moderate loops. Signature-style scripts with long, thin swashes look elegant on screen and thin in thread. Keep names on one line where possible and avoid all-capital script, which is hard to read in any medium. Preview the wording first with the [Old English cursive](/old-english-cursive) styles, then choose the font file." },
+    { type: "p", text: "Pick a script with a strong, consistent stroke and moderate loops. Signature-style scripts with long, thin swashes look elegant on screen and thin in thread. Keep names on one line where possible and avoid all-capital script, which is hard to read in any medium. Preview the wording first with the [Old English cursive](/font-generator/old-cursive) styles, then choose the font file." },
     { type: "faq", items: [
       { q: "What is the best Old English font for embroidery?", a: "Pirata One for small text and UnifrakturCook for large pieces. Both are free for commercial use." },
       { q: "How small can embroidered letters be?", a: "Many embroiderers set a floor of about 1/4 inch (6 mm) for simple fonts. Blackletter and script need more; ask for a sample stitch-out." },

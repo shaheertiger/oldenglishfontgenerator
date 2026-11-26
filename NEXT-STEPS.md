@@ -72,7 +72,11 @@ Search visits fell ~70% after the Nov 1 rebuild because the URLs Bing ranked wer
 
 After deploy: in Bing Webmaster Tools submit those five URLs and resubmit `sitemap.xml`, then run `npm run indexnow`.
 
-## 7. What not to do
+## 7. November 26, 2026: Bing recovery release
+
+Everything Bing or Copilot ranked before the Nov 1 rebuild is back at its original URL, duplicates 301 to it, zero-impression batch pages are 410, and daily batches are off for good. Read `docs/fix-2026-11.md` (what changed and the after-merge steps) and run the weekly routine in `research/README.md`.
+
+## 8. What not to do
 
 - Don't add new unrelated tools "for traffic". The two off-topic pages restored in Nov 2026 (handwriting, cuneiform) came back only because Bing already ranked them.
 - Don't bulk-bump dates in the sitemap.

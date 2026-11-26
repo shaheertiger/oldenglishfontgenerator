@@ -1,3 +1,4 @@
+// @retired 2026-11-26: merged into /font-generator/old-english-letters (the URL Bing ranked before 00a2b7f); this URL 301s there. Source kept on purpose (we don't delete files); not registered or served.
 import type { PageContent } from "./types";
 
 const page: PageContent = {

@@ -12,6 +12,9 @@
 // Accented letters are decomposed (NFD) first, so "é" becomes 𝔢 + U+0301 and
 // "ü" becomes 𝔲 + U+0308. That is how German umlauts survive conversion.
 
+import { ALL_STYLES as LEGACY_STYLES } from "./legacy-fonts";
+import { toMedieval, toPirate } from "./translators";
+
 type CharMap = Record<string, string>;
 
 const UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -431,7 +434,30 @@ const EXTRA: FontStyle[] = [
   { id: "roman-inscription", name: "Roman Inscription · Capitals", transform: (s) => mapWith(BOLD_SERIF)(romanize(s).toUpperCase().replace(/U/g, "V").replace(/J/g, "I").trim().split(/\s+/).join("·")) },
 ];
 
-export const ALL_STYLES: Record<string, FontStyle> = Object.fromEntries([...LIST, ...EXTRA].map((s) => [s.id, s]));
+// Translators (word-level) and the pre-Nov-2026 engine for restored pages.
+const TRANSLATE: FontStyle[] = [
+  { id: "pirate", name: "Pirate Speak", transform: toPirate },
+  { id: "pirate-bold-fraktur", name: "Pirate Speak in Bold Fraktur ☠", transform: (s) => `☠ ${bfr(toPirate(s))} ☠` },
+  { id: "pirate-caps", name: "Pirate Shout", transform: (s) => `${toPirate(s).toUpperCase()}, ARRR!` },
+  { id: "medieval-speech", name: "Thee & Thou English", transform: toMedieval },
+  { id: "medieval-speech-fraktur", name: "Thee & Thou in Fraktur", transform: (s) => fr(toMedieval(s)) },
+  { id: "medieval-speech-scroll", name: "Thee & Thou on a Scroll ☙", transform: (s) => `☙ ${fr(longS(thorn(toMedieval(s))))} ❧` },
+  { id: "hieroglyphs-cartouche", name: "Hieroglyphs in a Cartouche 𓍹 𓍺", transform: (s) => `𓍹${runes(HIEROGLYPHS, "")(s)}𓍺` },
+  { id: "hieroglyphs-dotted", name: "Hieroglyphs, Letter by Letter", transform: (s) => runes(HIEROGLYPHS, " ")(s).split(" ").map((w) => [...w].join("·")).join(" / ") },
+  // Mocking-text page: case alternates per letter; spaces and punctuation don't count.
+  { id: "mocking", name: "Mocking (aLtErNaTiNg)", transform: (s) => { let i = 0; return [...s].map((c) => (/\p{L}/u.test(c) ? (i++ % 2 ? c.toUpperCase() : c.toLowerCase()) : c)).join(""); } },
+  { id: "mocking-upper", name: "Mocking (AlTeRnAtInG)", transform: (s) => { let i = 0; return [...s].map((c) => (/\p{L}/u.test(c) ? (i++ % 2 ? c.toLowerCase() : c.toUpperCase()) : c)).join(""); } },
+  // Coquette and shrug pages.
+  { id: "coquette-bow", name: "Bow Script 🎀", transform: (s) => `🎀 ${toScript(s)} 🎀` },
+  { id: "coquette-ribbon", name: "Ribbon Small Caps ୨୧", transform: (s) => `୨୧ ${LEGACY_STYLES["small-caps"].transform(s)} ୨୧` },
+  { id: "coquette-heart", name: "Heart Script ♡", transform: (s) => `♡ ${toScript(s)} ♡` },
+  { id: "shrug-after", name: "Text + Shrug", transform: (s) => `${s} ¯\\_(ツ)_/¯` },
+  { id: "shrug-before", name: "Shrug + Text", transform: (s) => `¯\\_(ツ)_/¯ ${s}` },
+  { id: "shrug-script", name: "Script + Shrug", transform: (s) => `${toScript(s)} ¯\\_(ツ)_/¯` },
+];
+const LEGACY: FontStyle[] = Object.values(LEGACY_STYLES).map((s) => ({ ...s, id: `u-${s.id}` }));
+
+export const ALL_STYLES: Record<string, FontStyle> = Object.fromEntries([...LIST, ...EXTRA, ...TRANSLATE, ...LEGACY].map((s) => [s.id, s]));
 
 /** The homepage order. Every other page re-orders a subset of these. */
 export const HOME_STYLES = LIST.map((s) => s.id);

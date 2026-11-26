@@ -34,7 +34,7 @@ const post: BlogPost = {
       "If there is no licence file, assume you don't have commercial permission.",
       "If the terms are unclear, email the designer. Many reply.",
     ] },
-    { type: "p", text: "Background on both fonts: [Old London](/fonts/old-london) and [Cloister Black](/fonts/cloister-black)." },
+    { type: "p", text: "Background on both fonts: Old London and Cloister Black." },
 
     { type: "h2", text: "What does the SIL Open Font License actually allow?" },
     { type: "p", text: "All 41 fonts in our [free font directory](/fonts) use the SIL Open Font License 1.1. In plain terms it lets you:" },

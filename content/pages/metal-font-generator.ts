@@ -8,7 +8,7 @@ const page: PageContent = {
   h1: "Metal Font Generator",
   crumb: "Metal Font Generator",
   intro:
-    "This metal font generator turns your band name, album title or gamertag into 18 heavy metal text styles to copy and paste, from clean Bold Fraktur to worn, cursed and spiked versions framed with pentagrams, daggers and crossed swords. It's copy-paste Unicode for bios, setlists and posts. For posters and merch mockups you'll want a real font file such as [Metal Mania](/fonts/metal-mania).",
+    "This metal font generator turns your band name, album title or gamertag into 18 heavy metal text styles to copy and paste, from clean Bold Fraktur to worn, cursed and spiked versions framed with pentagrams, daggers and crossed swords. It's copy-paste Unicode for bios, setlists and posts. For posters and merch mockups you'll want a real font file such as Metal Mania.",
   tool: {
     styles: [
       "bold-fraktur", "bold-fraktur-caps", "fraktur-caps", "distressed", "cursed", "slashed",
@@ -51,7 +51,7 @@ const page: PageContent = {
       h2: "Can I get the Metallica font here?",
       blocks: [
         { p: "No, and nobody can give you an official one. The Metallica logo is a custom drawing, widely credited to frontman James Hetfield, not a typeface you can download. It's also not blackletter: its long, pointed first and last letters are closer to angular display lettering. Fan-made lookalike fonts exist, but a band logo is a trademark, so using a copy on merch you sell can get you into trouble." },
-        { p: "What you can do is make your own name look metal. Bold Fraktur All Capitals and Slashed Gothic give a hard, sharp feel without imitating anyone's logo, and the [Metal Mania font page](/fonts/metal-mania) shows a free, open-licence font built in that spirit." },
+        { p: "What you can do is make your own name look metal. Bold Fraktur All Capitals and Slashed Gothic give a hard, sharp feel without imitating anyone's logo, and the Metal Mania font page shows a free, open-licence font built in that spirit." },
       ],
     },
     {
@@ -65,9 +65,9 @@ const page: PageContent = {
       blocks: [
         { ul: [
           "**Instagram, TikTok and X bios:** all styles paste in. Keep cursed styles to one word so they don't overlap your other lines.",
-          "**Discord and gaming names:** stick to Bold Fraktur or Bold Fraktur All Capitals; some games reject symbols. Check the [Discord name guide](/old-english-font-discord) for length limits.",
+          "**Discord and gaming names:** stick to Bold Fraktur or Bold Fraktur All Capitals; some games reject symbols. Check the Discord name guide for length limits.",
           "**Spotify and Bandcamp descriptions:** most styles show, but search won't find your band if the name is in Unicode letters. Keep the plain spelling somewhere in the text.",
-          "**Posters and shirts:** use an installed font from the [gothic fonts](/fonts/gothic) directory instead, so the print is sharp.",
+          "**Posters and shirts:** use an installed font from the gothic fonts directory instead, so the print is sharp.",
         ] },
       ],
     },
@@ -76,7 +76,7 @@ const page: PageContent = {
     "All styles start from Mathematical Fraktur or Bold Fraktur. Distressed and cursed versions add combining marks after each letter; the pentagram ⛧, skull ☠, swords ⚔ and dagger † are standard Unicode symbols placed around your text.",
   related: {
     heading: "More dark lettering tools",
-    hrefs: ["/gothic-font-generator", "/horror-font-generator", "/gothic-symbols", "/biker-font-generator", "/blackletter-generator", "/old-english-text-to-image"],
+    hrefs: ["/font-generator/gothic-letters", "/horror-font-generator", "/symbols", "/font-generator/blackletter", "/old-english-text-to-image"],
   },
   faq: [
     { q: "What font do metal bands use?", a: "Most metal logos are drawn by hand rather than set in a font. Display fonts such as Metal Mania and New Rocker imitate the look and are useful for mockups." },

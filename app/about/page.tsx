@@ -36,17 +36,26 @@ export default function AboutPage() {
 
         <section className="section">
           <div className="container">
-            <h2>Why a site about only one style</h2>
+            <h2>What the site covers</h2>
             <p>
-              Most text generators throw dozens of unrelated styles onto one page.
-              That's fine if you want bubble letters one minute and upside-down
-              text the next, but people looking for blackletter usually have a
-              specific goal: a name for a tattoo consultation, a bio that fits
-              Instagram's limit, a Discord display name, a heading for a
-              certificate. Focusing on one family lets each page answer those
-              questions properly, from the 32-character Discord limit to why
-              Unicode has no blackletter digits.
+              Old English, blackletter and gothic lettering come first: the
+              generator, the alphabet and numbers, tattoo layouts and free fonts.
+              Next to them are the lettering tools people already used here and
+              asked for again: letters in different fonts, fancy and script
+              letters, symbols, and the hieroglyph, cuneiform and rune
+              translators. Every page has its own output and a full copyable
+              table, and we add a page only when people search for something no
+              existing page answers.
             </p>
+            <h2>How pages are written and checked</h2>
+            <ul>
+              <li>Character facts come from the Unicode charts, for example the{" "}
+                <a href="https://www.unicode.org/charts/PDF/U1D400.pdf">Mathematical Alphanumeric Symbols</a> and{" "}
+                <a href="https://www.unicode.org/charts/PDF/U2100.pdf">Letterlike Symbols</a> blocks.</li>
+              <li>We don&apos;t say a style works in a particular app unless we have tested it there, and then we give the date and device.</li>
+              <li>Translators (hieroglyphs, cuneiform, runes, pirate, thee-and-thou) are letter or word swaps, and each page says so.</li>
+              <li>Pages show the date they last changed; that date only moves when the content does.</li>
+            </ul>
           </div>
         </section>
 
@@ -74,7 +83,7 @@ export default function AboutPage() {
               The image export on the{" "}
               <Link href="/old-english-text-to-image">text to image</Link> page
               and the{" "}
-              <Link href="/old-english-tattoo-font">tattoo preview</Link> work
+              <Link href="/font-generator/old-english-tattoo">tattoo preview</Link> work
               differently: they draw real blackletter typefaces, UnifrakturCook
               and UnifrakturMaguntia, which are published under the SIL Open Font
               License and hosted on this site.

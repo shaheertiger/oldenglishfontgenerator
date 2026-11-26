@@ -77,7 +77,7 @@ const page: PageContent = {
       h2: "Why do runes show as boxes on some devices?",
       blocks: [
         { p: "Runes live in Unicode's Runic block (U+16A0–U+16FF), which was added in Unicode 3.0 in 1999, so the characters themselves are old and standard. Display depends on a font: on Windows, Segoe UI Historic usually covers them; Google's free Noto Sans Runic does too, and most recent phones show them without help. If a friend sees empty squares, the text is fine but their device has no runic font. For a poster or tattoo reference, export an image instead with [Old English text to image](/old-english-text-to-image)." },
-        { p: "Need an installable font with a Norse or ancient mood? [Uncial Antiqua](/fonts/uncial-antiqua) and the [fantasy fonts](/fonts/fantasy) collection are free for commercial use. Some runes have also been taken up by extremist groups, so think about context and pairing before printing them on merchandise; our piece on [blackletter's history](/blog/blackletter-history-1941-ban) covers how symbols pick up baggage." },
+        { p: "Need an installable font with a Norse or ancient mood? Uncial Antiqua and the fantasy fonts collection are free for commercial use. Some runes have also been taken up by extremist groups, so think about context and pairing before printing them on merchandise; our piece on blackletter's history covers how symbols pick up baggage." },
       ],
     },
   ],
@@ -85,7 +85,7 @@ const page: PageContent = {
     "The rune styles replace each Latin letter (after handling th, ng, ea, ae and oe) with a character from the Unicode Runic block, joined by ᛫ (U+16EB). The Norse lettering styles use Mathematical Bold Fraktur with symbols such as ⚔ and ♛.",
   related: {
     heading: "More ancient and dark lettering",
-    hrefs: ["/font-generator/medieval", "/illuminated-letters", "/metal-font-generator", "/gothic-symbols", "/old-english-tattoo-font", "/fonts/old-english", "/ancient-font-generator", "/font-generator/gothic-letters"],
+    hrefs: ["/font-generator/medieval", "/illuminated-letters", "/metal-font-generator", "/symbols", "/font-generator/old-english-tattoo", "/fonts/old-english", "/ancient-font-generator", "/font-generator/gothic-letters"],
   },
   faq: [
     { q: "Is this a real rune translator?", a: "No. It swaps each letter for a rune, which is close enough for names and decoration. A proper transcription spells by sound and follows the conventions of one period, so a runologist would write some names differently." },
